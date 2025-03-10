@@ -1,20 +1,20 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Menu_niveles.uss?fileID=7433441132597879392&amp;guid=a6ef8e4173d218c459d4441ee3dc167c&amp;type=3#Menu_niveles" />
     <engine:VisualElement name="Menu" class="Menu" style="flex-grow: 1;">
-        <engine:Label text="Selecciona un nivel" name="Titulo" class="Titulo" />
+        <engine:Label text="Selecciona un nivel" name="Titulo" class="Titulo" style="font-size: 50px;" />
         <engine:VisualElement name="Botonesf1" class="Botones" style="flex-grow: 1;">
-            <engine:Button text="Button" name="N1" class="Boton_nivel" />
-            <engine:Button text="Button" name="N2" class="Boton_nivel" />
-            <engine:Button text="Button" name="N3" class="Boton_nivel" />
-            <engine:Button text="Button" name="N4" class="Boton_nivel" />
-            <engine:Button text="Button" name="N5" class="Boton_nivel" />
+            <engine:Button text="1" name="N1" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="2&#10;" name="N2" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="3" name="N3" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="4" name="N4" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="5" name="N5" class="Boton_nivel" style="font-size: 50px;" />
         </engine:VisualElement>
     </engine:VisualElement>
     <engine:VisualElement name="Botones_f2" class="Botones" style="flex-grow: 1;">
-        <engine:Button text="Button" name="N6" class="Boton_nivel" />
-        <engine:Button text="Button" name="N7" class="Boton_nivel" />
-        <engine:Button text="Button" name="N8" class="Boton_nivel" />
-        <engine:Button text="Button" name="N9" class="Boton_nivel" />
-        <engine:Button text="Button" name="N10" class="Boton_nivel" />
+        <engine:Button text="6" name="N6" class="Boton_nivel" style="font-size: 50px;" />
+        <engine:Button text="7" name="N7" class="Boton_nivel" style="font-size: 50px;" />
+        <engine:Button text="8" name="N8" class="Boton_nivel" style="font-size: 50px;" />
+        <engine:Button text="9" name="N9" class="Boton_nivel" style="font-size: 50px;" />
+        <engine:Button text="10" name="N10" class="Boton_nivel" style="font-size: 50px;" />
     </engine:VisualElement>
 </engine:UXML>

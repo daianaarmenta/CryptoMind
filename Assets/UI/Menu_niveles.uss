@@ -13,8 +13,8 @@
     background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-panels.png?fileID=389128130&guid=84873522082196348b931e3f46de09e9&type=3#ui-panels_0");
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 200px;
-    height: 150px;
+    width: 180px;
+    height: 125px;
 }
 
 .Menu {
@@ -32,4 +32,6 @@
     flex-wrap: wrap-reverse;
     height: 900px;
     margin-top: 0;
+    -unity-text-outline-color: rgba(59, 59, 59, 0);
+    background-color: rgba(55, 55, 55, 0);
 }
