@@ -32,6 +32,8 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    color: rgb(255, 251, 251);
 }
 
 .Boton_nivel:hover {
@@ -51,5 +53,5 @@
     background-color: rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-    -unity-background-image-tint-color: rgb(199, 13, 255);
+    -unity-background-image-tint-color: rgb(136, 136, 136);
 }

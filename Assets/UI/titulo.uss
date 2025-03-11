@@ -10,16 +10,17 @@
     width: 350px;
     height: 300px;
     font-size: 50px;
-    background-image: url("project://database/Assets/Buttons/PNG/17bttn-little.png?fileID=21300000&guid=458a99bacc6c65340806334f4d449fc7&type=3#17bttn-little");
+    background-image: url("project://database/Assets/Buttons/PNG/30button_red.png?fileID=21300000&guid=8fc9feebf624bba43a9df1301ccf1d8e&type=3#30button_red");
     -unity-background-image-tint-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
     color: rgb(248, 244, 244);
-    -unity-font-style: bold;
+    -unity-font-style: normal;
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&guid=8a2b9e2a607dd2143b58c44bc32410b4&type=3#Electronic Highway Sign");
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    background-size: 350px 250px;
 }
 
 .pregunta {
@@ -30,10 +31,10 @@
 
 .titulo {
     width: 80%;
-    align-self: center;
+    align-self: stretch;
     margin-top: 100px;
-    font-size: 80px;
-    -unity-font-style: bold;
+    font-size: 70px;
+    -unity-font-style: normal;
     margin-left: 450px;
     background-color: rgba(243, 240, 240, 0);
     border-left-color: rgba(12, 12, 12, 0);
@@ -43,6 +44,14 @@
     -unity-text-outline-color: rgba(56, 56, 56, 0);
     text-shadow: 0 0 0 rgb(253, 247, 247);
     color: rgb(236, 228, 228);
+    translate: -250px 100px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    -unity-text-align: upper-center;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    -unity-paragraph-spacing: 0;
 }
 
 .boton:hover {
