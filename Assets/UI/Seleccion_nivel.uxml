@@ -5,16 +5,17 @@
         <engine:VisualElement name="Botonesf1" class="Botones" style="flex-grow: 1;">
             <engine:Button text="1" name="N1" class="Boton_nivel" style="font-size: 50px;" />
             <engine:Button text="2&#10;" name="N2" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="3" name="N3" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="3" name="N3" class="Boton_nivel" style="font-size: 50px; border-left-color: rgba(51, 28, 28, 0); border-right-color: rgba(51, 28, 28, 0); border-top-color: rgba(51, 28, 28, 0); border-bottom-color: rgba(51, 28, 28, 0); -unity-background-image-tint-color: rgb(255, 255, 255);" />
             <engine:Button text="4" name="N4" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="5" name="N5" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="5" name="N5" class="Boton_nivel" style="font-size: 50px; background-color: rgba(188, 188, 188, 0);" />
         </engine:VisualElement>
-    </engine:VisualElement>
-    <engine:VisualElement name="Botones_f2" class="Botones" style="flex-grow: 1;">
-        <engine:Button text="6" name="N6" class="Boton_nivel" style="font-size: 50px;" />
-        <engine:Button text="7" name="N7" class="Boton_nivel" style="font-size: 50px;" />
-        <engine:Button text="8" name="N8" class="Boton_nivel" style="font-size: 50px;" />
-        <engine:Button text="9" name="N9" class="Boton_nivel" style="font-size: 50px;" />
-        <engine:Button text="10" name="N10" class="Boton_nivel" style="font-size: 50px;" />
+        <engine:VisualElement name="Botones_f2" class="Botones" style="flex-grow: 1;">
+            <engine:Button text="6" name="N6" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="7" name="N7" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="8" name="N8" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="9" name="N9" class="Boton_nivel" style="font-size: 50px;" />
+            <engine:Button text="10" name="N10" class="Boton_nivel" style="font-size: 50px;" />
+        </engine:VisualElement>
+        <engine:Button name="Nuevo" class="Boton_nivel" style="background-image: url(&quot;project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=-1218110833&amp;guid=a11ea103d81f8dd4b896a5dcd08d3fcc&amp;type=3#ui-small-buttons_24&quot;); background-size: 100% 100%; width: 5%; height: 10%; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(55, 55, 55, 0); border-right-color: rgba(55, 55, 55, 0); border-top-color: rgba(55, 55, 55, 0); border-bottom-color: rgba(55, 55, 55, 0);" />
     </engine:VisualElement>
 </engine:UXML>
