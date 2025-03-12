@@ -1,0 +1,30 @@
+.contenedor {
+    width: 100%;
+    height: 100%;
+}
+
+.boton {
+    width: 300px;
+    height: 100px;
+    align-self: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-content: stretch;
+    translate: 0 800px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    color: rgb(255, 255, 255);
+}
+
+.boton:hover {
+}
+
+.boton {
+    width: 300px;
+    height: 100px;
+    align-self: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-content: stretch;
+    translate: 0 800px;
+}
