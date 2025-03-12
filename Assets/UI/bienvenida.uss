@@ -1,0 +1,37 @@
+.botones {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 300%;
+    align-content: flex-start;
+    align-items: stretch;
+    align-self: center;
+    margin-left: 150px;
+}
+
+.bienvenida {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 20, 20);
+    cursor: initial;
+}
+
+.titulo {
+    align-self: center;
+    width: 80%;
+    color: rgb(243, 233, 233);
+    margin-top: 50px;
+    font-size: 50px;
+    flex-direction: column;
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&guid=8a2b9e2a607dd2143b58c44bc32410b4&type=3#Electronic Highway Sign");
+}
+
+.boton {
+    width: 300px;
+    height: 100px;
+}
+
+.boton:hover {
+    color: rgba(27, 27, 27, 0);
+}
