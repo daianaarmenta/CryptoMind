@@ -14,7 +14,7 @@
 }
 
 .boton {
-    width: 300px;
+    width: 200px;
     height: 100px;
     align-self: center;
     align-content: flex-start;
