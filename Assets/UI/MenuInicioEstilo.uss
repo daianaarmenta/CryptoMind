@@ -14,11 +14,11 @@
 }
 
 .boton {
-    width: 200px;
+    width: 300px;
     height: 100px;
     align-self: center;
     align-content: flex-start;
-    background-image: url('project://database/Assets/Imagenes/boton.png?fileID=2800000&guid=a7b43e1fa36ac594aad910c66d37eb99&type=3#boton');
+    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-panels.png?fileID=1025206984&guid=84873522082196348b931e3f46de09e9&type=3#ui-panels_2");
     background-color: rgba(55, 55, 55, 0);
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
