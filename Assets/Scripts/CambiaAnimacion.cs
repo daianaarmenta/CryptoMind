@@ -22,6 +22,6 @@ public class CambiaAnimacion : MonoBehaviour
         //Modificar el parámetro del animator "Velocidad"
         animator.SetFloat("velocidad", Mathf.Abs(rb.linearVelocityX));
         spRenderer.flipX = rb.linearVelocityX < 0;  
-        //animator.SetBool("enPiso", EstadoPersonaje.enPiso);
+        animator.SetBool("enPiso", EstadoPersonaje.enPiso);
     }
 }

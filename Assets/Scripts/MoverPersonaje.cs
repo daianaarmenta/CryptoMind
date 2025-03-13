@@ -24,9 +24,11 @@ public class MueveChabelito : MonoBehaviour
         float movHorizontal = Input.GetAxis("Horizontal");
         float movVertical = Input.GetAxis("Vertical");
 
-        if (movVertical >0)
+        if (movVertical > 0)
         {
-            rb.linearVelocity =  new Vector2(rb.linearVelocityX, movVertical * velocidadY);
+            //rb.linearVelocity =  new Vector2(rb.linearVelocityX, movVertical * velocidadY);
+             rb.linearVelocity = new Vector2(movHorizontal*velocidadX, movVertical*velocidadY);
+
         } else{
             rb.linearVelocity =  new Vector2(movHorizontal * velocidadX, rb.linearVelocityY);
         }    
