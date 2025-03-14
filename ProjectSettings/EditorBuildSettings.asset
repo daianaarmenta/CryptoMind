@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Incorrecto.unity
     guid: 3dd592a083d60b54fb59935c55331449
+  - enabled: 1
+    path: Assets/Scenes/Tienda.unity
+    guid: b820e8771d11d564cbfca911d13ee8e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
