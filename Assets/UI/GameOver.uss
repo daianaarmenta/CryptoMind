@@ -1,0 +1,18 @@
+.contenedor {
+}
+
+.texto {
+    align-items: center;
+    justify-content: center;
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    -unity-text-align: upper-center;
+}
+
+.boton {
+}
+
+.boton:hover {
+}
+
+.boton:active {
+}
