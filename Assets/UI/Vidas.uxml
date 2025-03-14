@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Vidas.uss?fileID=7433441132597879392&amp;guid=972bfcffd27762444a47f1578e2160c7&amp;type=3#Vidas" />
+    <engine:VisualElement name="Contenedor" class="contenedor" style="flex-grow: 1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0);">
+        <engine:VisualElement name="Vidas" class="vidas" style="flex-grow: 1;">
+            <engine:VisualElement name="Vida_1" class="vida" style="flex-grow: 1;" />
+            <engine:VisualElement name="Vida_2" class="vida" style="flex-grow: 1;" />
+            <engine:VisualElement name="Vida_3" class="vida" style="flex-grow: 1;" />
+        </engine:VisualElement>
+        <engine:Button text="Button" name="Button" class="boton" />
+    </engine:VisualElement>
+</engine:UXML>

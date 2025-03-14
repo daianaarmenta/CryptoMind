@@ -1,0 +1,30 @@
+.vidas {
+    width: 500px;
+    height: 150px;
+    flex-direction: row;
+    background-size: 100% 150px;
+    padding-top: 15px;
+    padding-right: 125px;
+}
+
+.vida {
+    background-image: url("project://database/Assets/HealthHeartSystem/Graphics/mini-heart.png?fileID=21300000&guid=fed24bd82cefc0c4a8ef64dab6231b53&type=3#mini-heart_0");
+    background-size: 128px 128px;
+    background-position-y: top 0;
+    left: 45px;
+    top: -180px;
+    scale: 0.5 0.5;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.boton {
+}
+
+.boton:active {
+}
