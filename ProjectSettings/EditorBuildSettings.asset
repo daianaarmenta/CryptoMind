@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: d01d37662ab4b6b449acdba02b04a447
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CorreoEnviado.unity
     guid: 335023cb120cd37438533657d280e946
   - enabled: 1
