@@ -6,12 +6,26 @@
     justify-content: center;
     -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
     -unity-text-align: upper-center;
+    width: 100%;
+    height: 50%;
 }
 
 .boton {
+    width: 20%;
+    height: 15%;
+    align-items: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    margin-top: 0;
+    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Examples/Graphics/ui-large-buttons-horizontal.png?fileID=-697223426185652446&guid=3316aabd5dd7e2743ad1214e35350560&type=3#ui-large-buttons-horizontal_0");
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    color: rgb(253, 253, 253);
 }
 
 .boton:hover {
+    scale: 1.15 1.15;
+    transition-timing-function: ease-in-out;
 }
 
 .boton:active {
