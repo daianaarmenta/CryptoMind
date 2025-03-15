@@ -1,13 +1,72 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TriggerPreguntas : MonoBehaviour
 {
-    [SerializeField] private string SceneName = "Preguntas";
-    void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private GameObject marker;  // El marcador que aparece cuando el jugador está cerca
+    [SerializeField] private GameObject preguntasPanel; // El panel de preguntas que aparecerá al presionar "E"
+    [SerializeField] private Pregunta preguntaAsociada; // La pregunta asociada a este checkpoint
+
+    private bool isPlayerInRange;  // Indica si el jugador está en el rango
+
+    private void Update()
     {
-        if(other.CompareTag("Player")){
-            SceneManager.LoadScene(SceneName);
+        // Si el jugador está en el rango y presiona la tecla "E"
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            MostrarPanelPreguntas();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Verificar si el jugador entró en el área
+        if (collision.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+            marker.SetActive(true);  // Mostrar el marcador
+            Debug.Log("Marcador activado.");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Verificar si el jugador salió del área
+        if (collision.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+            if (marker != null)  // Verificar si el objeto existe
+            {
+                marker.SetActive(false);  // Ocultar el marcador
+                Debug.Log("Marcador desactivado.");
+            }
+            if (preguntasPanel != null)  // Verificar si el objeto existe
+            {
+                preguntasPanel.SetActive(false); // Ocultar el panel de preguntas
+                Debug.Log("Panel desactivado.");
+            }
+        }
+    }
+
+    private void MostrarPanelPreguntas()
+    {
+        if (PreguntaManager.instance == null)
+        {
+            Debug.LogError("PreguntaManager no está configurado como singleton.");
+            return;
+        }
+
+        if (preguntasPanel != null && preguntaAsociada != null)
+        {
+            preguntasPanel.SetActive(true);  // Activar el panel de preguntas
+            PreguntaManager.instance.MostrarPregunta(preguntaAsociada);  // Mostrar la pregunta
+            Debug.Log("Panel de preguntas activado.");
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado el panel de preguntas o la pregunta asociada en el Inspector.");
+        }
+
+    }
 }
+
+

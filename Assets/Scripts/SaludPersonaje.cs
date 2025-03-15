@@ -42,8 +42,8 @@ public class SaludPersonaje : MonoBehaviour
         }
     }
 
-    public void RegresarAEscenaPrincipal(string nombreEscena)
+    /*public void RegresarAEscenaPrincipal(string nombreEscena)
     {
         SceneManager.LoadScene(nombreEscena);
-    }
+    }*/
 }
