@@ -6,6 +6,6 @@
             <engine:VisualElement name="Vida_2" class="vida" style="flex-grow: 1;" />
             <engine:VisualElement name="Vida_3" class="vida" style="flex-grow: 1;" />
         </engine:VisualElement>
-        <engine:Button text="Button" name="Button" class="boton" />
+        <engine:Button text="- 1 vida&#10;" name="Button" class="boton" />
     </engine:VisualElement>
 </engine:UXML>

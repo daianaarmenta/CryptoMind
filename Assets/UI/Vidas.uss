@@ -24,6 +24,17 @@
 }
 
 .boton {
+    width: 100px;
+    height: 80px;
+    align-items: auto;
+    justify-content: flex-end;
+    align-self: center;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    translate: 0 -900px;
+    font-size: 20px;
+    -unity-font-style: bold;
 }
 
 .boton:active {
