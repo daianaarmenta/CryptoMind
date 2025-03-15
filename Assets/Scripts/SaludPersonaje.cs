@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SaludPersonaje : MonoBehaviour
@@ -14,6 +15,11 @@ public class SaludPersonaje : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // No destruir al cambiar de escena
+        }
+        else
+        {
+            Destroy(gameObject); 
         }
     }
 
@@ -22,25 +28,22 @@ public class SaludPersonaje : MonoBehaviour
         if (vidas > 0)
         {
             vidas--;
-            VidasHUD.instance.ActualizarVidas();
             Debug.Log("Vida perdida. Vidas restantes: " + vidas);
 
-            StartCoroutine(RegenerarVida());
-        }
-        else
-        {
-            Debug.Log("No quedan más vidas.");
+            if (VidasHUD.instance != null)
+            {
+                VidasHUD.instance.ActualizarVidas();
+            }
+
+            if (vidas <= 0)
+            {
+                SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
+            }
         }
     }
 
-    private IEnumerator RegenerarVida()
+    public void RegresarAEscenaPrincipal(string nombreEscena)
     {
-        while (vidas < vidasMaximas)
-        {
-            yield return new WaitForSeconds(tiempoRegeneracion);
-            vidas++;
-            VidasHUD.instance.ActualizarVidas();
-            Debug.Log("Vida regenerada. Vidas actuales: " + vidas);
-        }
+        SceneManager.LoadScene(nombreEscena);
     }
 }

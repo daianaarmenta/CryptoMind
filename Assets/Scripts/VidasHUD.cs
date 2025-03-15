@@ -7,7 +7,20 @@ public class VidasHUD : MonoBehaviour
     private VisualElement vida_1;
     private VisualElement vida_2;
     private VisualElement vida_3;
-    private Button botonPerderVida; 
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // No destruir el HUD al cambiar de escena
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnEnable()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -15,22 +28,7 @@ public class VidasHUD : MonoBehaviour
         vida_2 = root.Q<VisualElement>("Vida_2");
         vida_3 = root.Q<VisualElement>("Vida_3");
 
-        botonPerderVida = root.Q<Button>("Button");
-
-        if (botonPerderVida != null)
-        {
-            botonPerderVida.clicked += PerderVida; 
-        }
-
         ActualizarVidas();
-    }
-
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
     }
 
     public void ActualizarVidas()
@@ -43,14 +41,5 @@ public class VidasHUD : MonoBehaviour
         vida_3.style.visibility = (vidas >= 3) ? Visibility.Visible : Visibility.Hidden;
 
         Debug.Log("HUD actualizado, vidas actuales: " + vidas);
-    }
-
-    private void PerderVida()
-    {
-        if (SaludPersonaje.instance != null)
-        {
-            SaludPersonaje.instance.PerderVida();
-            Debug.Log("Botón presionado: Se ha perdido una vida.");
-        }
     }
 }
