@@ -1,6 +1,0 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/texto.uss?fileID=7433441132597879392&amp;guid=360ecff2eba10124799ae50d6fa29b94&amp;type=3#texto" />
-    <engine:VisualElement name="Contenedor" style="flex-grow: 1; font-size: 40px; color: rgb(248, 230, 230);">
-        <engine:Label name="Label" text="¡Excelente! Haz terminado el tutorial &#10;Presiona la tecla espaciadora para continuar &#10;¡Diviertete y aprende mucho!" class="bienvenidos texto" style="justify-content: space-evenly; align-items: center; flex-direction: column; flex-wrap: wrap-reverse; align-content: stretch; -unity-text-align: upper-center; font-size: 50px; -unity-font-style: normal;" />
-    </engine:VisualElement>
-</engine:UXML>
