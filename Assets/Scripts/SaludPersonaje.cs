@@ -15,7 +15,7 @@ public class SaludPersonaje : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // No destruir al cambiar de escena
+            //DontDestroyOnLoad(gameObject); // No destruir al cambiar de escena
         }
         else
         {

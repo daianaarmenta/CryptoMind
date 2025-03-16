@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PreguntaManager : MonoBehaviour
 {
@@ -64,6 +65,9 @@ public class PreguntaManager : MonoBehaviour
         if (respuestaIndex == pregunta.respuestaCorrecta)
         {
             Debug.Log("¡Respuesta correcta!");
+            GameManager.Instance.SumarPuntos(100);
+            //SceneManager.LoadScene("Correcto");  // Sumar puntos al GameManager
+
             // Aquí puedes agregar lógica adicional, como dar puntos o recompensas.
         }
         else
@@ -78,6 +82,8 @@ public class PreguntaManager : MonoBehaviour
             {
                 Debug.LogError("No se encontró una instancia de SaludPersonaje.");
             }
+
+            //SceneManager.LoadScene("Incorrecto");  // Cambiar a la escena de respuesta incorrecta
         }
 
         // Desactivar el panel después de responder
