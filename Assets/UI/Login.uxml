@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/estilosLogin.uss?fileID=7433441132597879392&amp;guid=767aa80c9a2a42c47a529d76f70f92fb&amp;type=3#estilosLogin" />
+    <engine:VisualElement name="contenedor" class="contenedor" style="flex-grow: 1;">
+        <engine:Label text="Login" name="Titulo" class="titulo" style="-unity-text-align: upper-center;" />
+        <engine:VisualElement name="contenedorLogin" class="contenedorLogin" style="flex-grow: 1; height: 40%;">
+            <engine:TextField label="Email:" placeholder-text="Email.." name="email" style="font-size: 30px;" />
+            <engine:TextField label="Contraseña:" placeholder-text="Contraseña.." name="contrasena" style="font-size: 30px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="contenedo" style="flex-grow: 1;">
+            <engine:Button text="Button" name="botonRecuperar" class="botones" />
+            <engine:Button text="Button" name="botonLogin" class="botones" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
