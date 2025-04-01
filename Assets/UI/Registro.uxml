@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/estilosRegistro.uss?fileID=7433441132597879392&amp;guid=14c3355417c1d6a42861133abe1ccb99&amp;type=3#estilosRegistro" />
+    <engine:VisualElement name="ContenedorGeneral" class="ContenedorGeneral" style="flex-grow: 1;">
+        <engine:Label text="Register" name="tituloGeneral" class="tituloGeneral" style="width: auto; height: auto;" />
+        <engine:VisualElement name="ContenedorRegistro" class="ContenedorRegistro" style="flex-grow: 1;">
+            <engine:TextField label="Name:" placeholder-text="Name..." name="name" class="campos" />
+            <engine:TextField label="Email" placeholder-text="Email..." name="email" class="campos" />
+            <engine:TextField label="Password: " placeholder-text="Password.." name="password" class="campos" />
+            <engine:TextField label="Birthdate: " placeholder-text="Birthdate..." name="birthday" class="campos" />
+            <engine:DropdownField label="Country" name="pais" class="campos" />
+            <engine:DropdownField name="gender-dropdown" label="Gender&#10;" class="campos" />
+            <engine:Button text="Register" name="Register" class="button buttonR buttonRegister" />
+        </engine:VisualElement>
+        <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
+            <engine:Button text="Return" name="botonReturn" class="buttonReturn" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
