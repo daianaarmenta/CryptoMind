@@ -2,37 +2,28 @@ using UnityEngine;
 
 public class MueveChabelito : MonoBehaviour
 {
-    // Velocidades
-    public float velocidadX;
+    [SerializeField] private float velocidadX;
+    [SerializeField] private float fuerzaSalto;
 
-    [SerializeField] // Permite al editor de Unity acceder a la variable
-    private float velocidadY;
-
-    // Necesito que el personaje se mueva
     private Rigidbody2D rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Inicializar rb
-        rb = GetComponent<Rigidbody2D>();  
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // FixedUpdate is called 60 fps
-    void FixedUpdate()
+    void Update()
     {
         float movHorizontal = Input.GetAxis("Horizontal");
-        float movVertical = Input.GetAxis("Vertical");
 
-        if (movVertical > 0)
+        // Movimiento horizontal
+        rb.linearVelocity = new Vector2(movHorizontal * velocidadX, rb.linearVelocity.y);
+
+        // Salto solo si está en el suelo
+        if (Input.GetKeyDown(KeyCode.UpArrow) && EstadoPersonaje.enPiso)
         {
-            //rb.linearVelocity =  new Vector2(rb.linearVelocityX, movVertical * velocidadY);
-             rb.linearVelocity = new Vector2(movHorizontal*velocidadX, movVertical*velocidadY);
-
-        } else{
-            rb.linearVelocity =  new Vector2(movHorizontal * velocidadX, rb.linearVelocityY);
-        }    
-
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // resetear salto acumulado
+            rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+        }
     }
-
 }
