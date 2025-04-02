@@ -12,7 +12,7 @@
             <engine:Button text="Register" name="Register" class="button buttonR buttonRegister" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
-            <engine:Button text="Return" name="botonReturn" class="buttonReturn" />
+            <engine:Button name="botonReturn" class="buttonReturn" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

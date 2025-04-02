@@ -59,5 +59,10 @@
     align-self: center;
     align-content: flex-start;
     margin-left: 50px;
-    background-image: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-2236324273849735119&guid=f7bf1eb9a05970c488eebdd2d58f118c&type=3#arrow-left@2x");
+    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=1580229689&guid=a11ea103d81f8dd4b896a5dcd08d3fcc&type=3#ui-small-buttons_21");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }

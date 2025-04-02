@@ -1,14 +1,15 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/estilosLogin.uss?fileID=7433441132597879392&amp;guid=767aa80c9a2a42c47a529d76f70f92fb&amp;type=3#estilosLogin" />
-    <engine:VisualElement name="contenedor" class="contenedor" style="flex-grow: 1;">
-        <engine:Label text="Login" name="Titulo" class="titulo" style="-unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;);" />
-        <engine:VisualElement name="contenedorLogin" class="contenedorLogin" style="flex-grow: 1; height: 40%;">
-            <engine:TextField label="Email:" placeholder-text="Email.." name="email" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); color: rgb(255, 255, 255);" />
-            <engine:TextField label="Contraseña:" placeholder-text="Contraseña.." name="contrasena" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); color: rgb(255, 255, 255);" />
+    <engine:VisualElement name="contenedorGeneral" class="contenedorGeneral" style="flex-grow: 1;">
+        <engine:Label text="Login" name="titulo" class="titulo" />
+        <engine:VisualElement name="contenedorLogin" class="contenedorLogin" style="flex-grow: 1;">
+            <engine:TextField label="Email: " placeholder-text="Email.." name="email" class="campos unity-text-input" />
+            <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos unity-text-input" style="background-color: rgba(0, 0, 0, 0);" />
+            <engine:Button text="Login" name="botonLogin" class="botones" />
+            <engine:Button text="Forgot the password" name="botonRecuperar" class="botones" />
         </engine:VisualElement>
-        <engine:VisualElement name="contenedo" style="flex-grow: 1; justify-content: space-around;">
-            <engine:Button text="Login" name="botonLogin" class="botones" style="width: 700px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); background-image: none; color: rgb(255, 255, 255); background-color: rgb(255, 96, 51); border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;" />
-            <engine:Button text="Recuperar Contraseña" name="botonRecuperar" parse-escape-sequences="true" class="botones" style="width: 700px; height: 100px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); background-image: none; font-size: 30px; color: rgb(255, 255, 255); border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; background-color: rgb(255, 96, 51);" />
+        <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
+            <engine:Button name="botonRegresar" class="botonRegresar" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
