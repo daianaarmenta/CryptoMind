@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e222f1d839c1ef248aacd8f7bd7ce70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 1976276264}
+  loginMenuGame: {fileID: 73134029}
 --- !u!1 &102733362
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539563823}
   - component: {fileID: 539563822}
+  - component: {fileID: 539563824}
   m_Layer: 5
   m_Name: UIRegistro
   m_TagString: Untagged
@@ -586,6 +589,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539563824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539563821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8649b3fda206d14f806793920f14093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 1976276264}
+  registerMenuGame: {fileID: 539563821}
 --- !u!1 &846532736
 GameObject:
   m_ObjectHideFlags: 0

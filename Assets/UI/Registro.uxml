@@ -8,7 +8,7 @@
             <engine:TextField label="Password: " placeholder-text="Password.." name="password" class="campos" />
             <engine:TextField label="Birthdate: " placeholder-text="Birthdate..." name="birthday" class="campos" />
             <engine:DropdownField label="Country" name="pais" class="campos" />
-            <engine:DropdownField name="gender-dropdown" label="Gender&#10;" class="campos" />
+            <engine:DropdownField name="gender" label="Gender&#10;" class="campos" />
             <engine:Button text="Register" name="Register" class="button buttonR buttonRegister" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
