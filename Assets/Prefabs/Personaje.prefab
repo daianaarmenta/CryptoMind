@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5220270227676324578}
   - component: {fileID: 1765204887932801010}
   m_Layer: 0
-  m_Name: personaje
+  m_Name: Personaje
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadX: 5
-  velocidadY: 5
+  fuerzaSalto: 5
 --- !u!114 &8506191897626936729
 MonoBehaviour:
   m_ObjectHideFlags: 0
