@@ -1,26 +1,39 @@
 using UnityEngine;
-/**
-Para saber si el personaje está en el piso o no.
-Autor: Daiana Andrea Armenta Maya
-*/
+
 public class EstadoPersonaje : MonoBehaviour
 {
+    public static bool enPiso { get; private set; }
+    public static bool enEscalera { get; private set; }
 
-    public static bool enPiso { get; private set;} //Propiedades
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+    void Start()
     {
         enPiso = false;
-        
+        enEscalera = false;
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        enPiso = true;
-        
-    }
-    void OnTriggerExit2D(Collider2D collision) 
-    {
-        enPiso = false;
+        if (collision.CompareTag("Suelo") && !enEscalera)
+        {
+            enPiso = true;
+        }
+        else if (collision.CompareTag("Escaleras"))
+        {
+            enEscalera = true;
+            enPiso = false;
+        }
     }
 
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Suelo"))
+        {
+            enPiso = false;
+        }
+        else if (collision.CompareTag("Escaleras"))
+        {
+            enEscalera = false;
+        }
+    }
 }
+
