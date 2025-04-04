@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-around;
     align-self: center;
-    width: 63%;
+    width: 90%;
     align-content: flex-start;
     flex-wrap: wrap-reverse;
     height: 900px;
@@ -54,4 +54,8 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
     -unity-background-image-tint-color: rgb(136, 136, 136);
+}
+
+.Boton_nivel:active {
+    -unity-background-image-tint-color: rgb(74, 74, 74);
 }

@@ -3,19 +3,13 @@
     <engine:VisualElement name="Menu" class="Menu" style="flex-grow: 1;">
         <engine:Label text="Selecciona un nivel" name="Titulo" class="Titulo" style="font-size: 50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; -unity-background-image-tint-color: rgba(55, 55, 55, 0); translate: 0 100px;" />
         <engine:VisualElement name="Botonesf1" class="Botones" style="flex-grow: 1;">
-            <engine:Button text="1" name="N1" class="Boton_nivel" style="font-size: 50px; background-color: rgb(0, 0, 0);" />
-            <engine:Button text="2&#10;" name="N2" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="3" name="N3" class="Boton_nivel" style="font-size: 50px; border-left-color: rgba(51, 28, 28, 0); border-right-color: rgba(51, 28, 28, 0); border-top-color: rgba(51, 28, 28, 0); border-bottom-color: rgba(51, 28, 28, 0); -unity-background-image-tint-color: rgb(134, 134, 134);" />
-            <engine:Button text="4" name="N4" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="5" name="N5" class="Boton_nivel" style="font-size: 50px; background-color: rgba(188, 188, 188, 0);" />
+            <engine:Button text="0" name="N1" class="Boton_nivel" style="font-size: 50px; background-color: rgb(0, 0, 0); width: 200px; height: 150px;" />
+            <engine:Button text="1" name="N2" class="Boton_nivel" style="font-size: 50px; width: 200px; height: 150px;" />
+            <engine:Button text="2" name="N3" class="Boton_nivel" style="font-size: 50px; border-left-color: rgba(51, 28, 28, 0); border-right-color: rgba(51, 28, 28, 0); border-top-color: rgba(51, 28, 28, 0); border-bottom-color: rgba(51, 28, 28, 0); -unity-background-image-tint-color: rgb(134, 134, 134); width: 200px; height: 150px;" />
+            <engine:Button text="3" name="N4" class="Boton_nivel" style="font-size: 50px; width: 200px; height: 150px;" />
+            <engine:Button text="4" name="N5" class="Boton_nivel" style="font-size: 50px; background-color: rgba(188, 188, 188, 0); width: 200px; height: 150px;" />
+            <engine:Button text="5" name="N6" class="Boton_nivel" style="font-size: 50px; background-color: rgba(188, 188, 188, 0); width: 200px; height: 150px;" />
         </engine:VisualElement>
-        <engine:VisualElement name="Botones_f2" class="Botones" style="flex-grow: 1;">
-            <engine:Button text="6" name="N6" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="7" name="N7" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="8" name="N8" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="9" name="N9" class="Boton_nivel" style="font-size: 50px;" />
-            <engine:Button text="10" name="N10" class="Boton_nivel" style="font-size: 50px;" />
-        </engine:VisualElement>
-        <engine:Button name="Nuevo" class="Boton_nivel" style="background-image: url(&quot;project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=-292564635&amp;guid=a11ea103d81f8dd4b896a5dcd08d3fcc&amp;type=3#ui-small-buttons_24&quot;); background-size: 100% 100%; width: 5%; height: 10%; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(55, 55, 55, 0); border-right-color: rgba(55, 55, 55, 0); border-top-color: rgba(55, 55, 55, 0); border-bottom-color: rgba(55, 55, 55, 0); -unity-background-image-tint-color: rgb(251, 251, 251); bottom: 30px; left: 30px; translate: 50px -60px;" />
+        <engine:Button name="Nuevo" class="Boton_nivel" style="background-image: url(&quot;project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=-292564635&amp;guid=a11ea103d81f8dd4b896a5dcd08d3fcc&amp;type=3#ui-small-buttons_24&quot;); background-size: 100% 100%; width: 125px; height: 125px; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(55, 55, 55, 0); border-right-color: rgba(55, 55, 55, 0); border-top-color: rgba(55, 55, 55, 0); border-bottom-color: rgba(55, 55, 55, 0); -unity-background-image-tint-color: rgb(251, 251, 251); bottom: 30px; left: 30px; translate: 50px -60px;" />
     </engine:VisualElement>
 </engine:UXML>

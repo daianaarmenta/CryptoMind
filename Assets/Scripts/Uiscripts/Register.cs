@@ -18,6 +18,7 @@ public class Register : MonoBehaviour
     private TextField birthdate;
     private DropdownField countrys; 
     private DropdownField gender;
+    private Label birthdateError;
     
 
     private void OnEnable()
@@ -34,6 +35,9 @@ public class Register : MonoBehaviour
         birthdate = root.Q<TextField>("birthday");
         countrys = root.Q<DropdownField>("pais");
         gender = root.Q<DropdownField>("gender");
+        birthdateError = root.Q<Label>("birthdayError");
+        birthdateError.text = "";
+
 
         password.isPasswordField = true; 
         nameUser.Q("unity-text-input").style.color = new Color(0, 0, 0);
@@ -59,12 +63,32 @@ public class Register : MonoBehaviour
         gender.value=gender.choices[0];
         
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
+        birthdate.RegisterCallback<FocusOutEvent>(OnBirthdateUnfocused);
     }
 
     private void CambiarUI(ClickEvent evt){
         registerMenuGame.SetActive(false);
         mainMenu.SetActive(true);
     }
+
+    private void OnBirthdateUnfocused(FocusOutEvent evt){
+        string raw = birthdate.value;
+
+        if (System.DateTime.TryParseExact(
+            raw,
+            "dd/MM/yyyy",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.None,
+            out _))
+        {
+            birthdateError.text = ""; 
+        }
+        else
+        {
+            birthdateError.text = "Use the format dd/MM/yyy";
+        }
+    }
+
 
     [System.Serializable]
     public class Country
