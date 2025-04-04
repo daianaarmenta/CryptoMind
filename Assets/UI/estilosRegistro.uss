@@ -78,5 +78,6 @@
 .errorTexto {
     color: rgb(255, 0, 0);
     margin-top: 2px;
-    font-size: 40px;
+    font-size: 25px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
 }
