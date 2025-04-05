@@ -19,6 +19,9 @@ public class Register : MonoBehaviour
     private DropdownField countrys; 
     private DropdownField gender;
     private Label birthdateError;
+    private Label nameError; 
+    private Label emailError;
+    private Label passwordError;
     
 
     private void OnEnable()
@@ -30,8 +33,14 @@ public class Register : MonoBehaviour
         regresarEscene = root.Q<Button>("botonReturn");
 
         nameUser = root.Q<TextField>("name");
+        nameError = root.Q<Label>("nameError");
+        nameError.text="";
         email = root.Q<TextField>("email");
+        emailError = root.Q<Label>("emailError");
+        emailError.text = "";
         password = root.Q<TextField>("password");
+        passwordError=root.Q<Label>("passwordError");
+        passwordError.text = "";
         birthdate = root.Q<TextField>("birthday");
         countrys = root.Q<DropdownField>("pais");
         gender = root.Q<DropdownField>("gender");
@@ -63,6 +72,9 @@ public class Register : MonoBehaviour
         gender.value=gender.choices[0];
         
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
+        nameUser.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(nameUser, nameError, "Name"));
+        email.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(email, emailError, "Email"));
+        password.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(password, passwordError, "Password"));
         birthdate.RegisterCallback<FocusOutEvent>(OnBirthdateUnfocused);
     }
 
@@ -88,6 +100,19 @@ public class Register : MonoBehaviour
             birthdateError.text = "Use the format dd/MM/yyy";
         }
     }
+
+    private void UnFocusedText(TextField field, Label errorLabel, string fieldName)
+    {
+        if (string.IsNullOrWhiteSpace(field.value))
+        {
+            errorLabel.text = $"{fieldName} cannot be empty.";
+        }
+        else
+        {
+            errorLabel.text = "";
+        }
+    }
+
 
 
     [System.Serializable]
