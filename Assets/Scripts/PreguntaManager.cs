@@ -3,6 +3,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/* Autora: Daiana Andrea Armenta Maya
+    * Descripción: Clase que gestiona la lógica de las preguntas y respuestas en el juego.
+    * Permite mostrar preguntas, verificar respuestas y gestionar el puntaje del jugador.
+*/
 public class PreguntaManager : MonoBehaviour
 {
     public static PreguntaManager instance;  // Singleton para acceder al manager desde otros scripts

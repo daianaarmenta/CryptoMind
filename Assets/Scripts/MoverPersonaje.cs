@@ -7,6 +7,7 @@ public class MueveChabelito : MonoBehaviour
     [SerializeField] private float velocidadEscalera;
 
     private Rigidbody2D rb;
+    private bool mirandoDerecha = true; // Controla la dirección en la que está mirando el personaje
 
     void Start()
     {
@@ -38,5 +39,23 @@ public class MueveChabelito : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Resetear salto acumulado
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
+
+        // Cambio de dirección (giro del personaje)
+        if (movHorizontal > 0 && !mirandoDerecha)
+        {
+            Girar(); // Si el personaje se mueve a la derecha y no está mirando a la derecha, giramos
+        }
+        else if (movHorizontal < 0 && mirandoDerecha)
+        {
+            Girar(); // Si el personaje se mueve a la izquierda y está mirando a la derecha, giramos
+        }
+    }
+
+    // Método para girar el personaje
+    private void Girar()
+    {
+        mirandoDerecha = !mirandoDerecha;
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 }
+
