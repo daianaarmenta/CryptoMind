@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/*Autora: Daiana Andrea Armenta Maya 
+    
+    * Descripción: Clase que gestiona el estado del personaje en el juego.
+    * Controla si el personaje está en el suelo o en una escalera mediante colisiones con los objetos correspondientes.
+    */
 public class EstadoPersonaje : MonoBehaviour
 {
     public static bool enPiso { get; private set; }

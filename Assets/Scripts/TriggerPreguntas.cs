@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*Autora: Daiana Andrea Armenta Maya
+    * Descripción: Clase que gestiona la activación de un panel de preguntas al entrar en un área específica.
+    * Muestra un marcador cuando el jugador está cerca y activa un panel de preguntas al presionar "E".
+    */
 public class TriggerPreguntas : MonoBehaviour
 {
     [SerializeField] private GameObject marker;  // El marcador que aparece cuando el jugador está cerca

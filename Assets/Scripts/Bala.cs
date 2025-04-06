@@ -1,5 +1,9 @@
 using UnityEngine;
-
+/*Autora: Daiana Andrea Armenta Maya A01751408
+ * Fecha : 05/04/2025
+ * Descripción: Clase que gestiona el comportamiento de las balas en el juego.
+ * Controla la velocidad de la bala y su colisión con los enemigos.
+ */
 public class Bala : MonoBehaviour
 {
     [SerializeField] private float velocidadBala;

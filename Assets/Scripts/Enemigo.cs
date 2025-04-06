@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/*Autora: Daiana Andrea Armenta Maya
+    * Fecha : 05/04/2025
+    * Descripción: Clase que gestiona el comportamiento de los enemigos en el juego.
+    * Controla la vida del enemigo, el daño recibido y la muerte del enemigo.
+    */
 public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float vida;

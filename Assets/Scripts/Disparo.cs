@@ -1,5 +1,9 @@
 using UnityEngine;
-
+/*Autora: Daiana Andrea Armenta Maya
+ * Fecha : 05/04/2025
+ * Descripción: Clase que gestiona el disparo de balas en el juego.
+ * Controla la instanciación de las balas y su posición inicial.
+ */
 public class Disparo : MonoBehaviour
 {
     public GameObject balaPrefab;  // Prefab de la bala
