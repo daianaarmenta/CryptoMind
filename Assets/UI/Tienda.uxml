@@ -1,0 +1,35 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/boton.uss?fileID=7433441132597879392&amp;guid=3888ba5e82796764281ece8755169ef4&amp;type=3#boton" />
+    <engine:VisualElement name="Contenedor" style="flex-grow: 1; width: 100%; height: 100%; margin-top: 0;">
+        <engine:Button name="botonRegresar" class="boton" style="background-color: rgba(0, 0, 0, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+        <engine:VisualElement name="contendorbotones" style="flex-grow: 1; width: 100%; height: 110%; margin-top: 0; margin-right: 0; background-color: rgba(0, 0, 0, 0);">
+            <engine:Button name="botonVida" class="botonT">
+                <engine:Label text="Vida" class="texto">
+                    <engine:VisualElement name="corazon" class="image" style="flex-grow: 1; height: 80px; width: 100px; background-image: url(&quot;project://database/Assets/Scripts/HealthHeartSystem/Graphics/mini-heart.png?fileID=21300000&amp;guid=fed24bd82cefc0c4a8ef64dab6231b53&amp;type=3#mini-heart_0&quot;); margin-left: 70px; margin-top: 10px;">
+                        <engine:Label text="100" class="precio" style="margin-top: 20px;">
+                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 150px;" />
+                        </engine:Label>
+                    </engine:VisualElement>
+                </engine:Label>
+            </engine:Button>
+            <engine:Button name="botonMejora" class="botonT">
+                <engine:Label text="Mejora" class="texto">
+                    <engine:VisualElement name="arma" class="image" style="flex-grow: 1; width: 150px; height: 100px; background-image: url(&quot;project://database/Assets/Warped%20City%20Assets/Artwork/SPRITES/misc/shot/shot-2.png?fileID=21300000&amp;guid=459f16e72cf7847d0b60fed8fd249a54&amp;type=3#shot-2&quot;); margin-left: 35px;">
+                        <engine:Label text="150" class="precio" style="-unity-text-align: middle-center; margin-top: 20px;">
+                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 200px;" />
+                        </engine:Label>
+                    </engine:VisualElement>
+                </engine:Label>
+            </engine:Button>
+            <engine:Button name="botonCarta" double-click-selects-word="false" class="botonT">
+                <engine:Label text="Carta" triple-click-selects-line="false" class="texto">
+                    <engine:VisualElement name="carta" style="flex-grow: 1; width: 100px; height: 95px; background-image: url(&quot;project://database/Assets/Warped%20City%20Assets/Artwork/ENVIRONMENT/tileset.png?fileID=-912588591&amp;guid=e08e6a2f34edd4a7db4285eeddef84a8&amp;type=3#tileset_70&quot;); margin-top: 0; margin-left: 70px;">
+                        <engine:Label text="200&#10;" class="precio" style="margin-top: 20px;">
+                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 150px;" />
+                        </engine:Label>
+                    </engine:VisualElement>
+                </engine:Label>
+            </engine:Button>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
