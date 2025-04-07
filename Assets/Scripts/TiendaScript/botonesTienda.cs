@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/*
+Autor: María Fernanda Pineda Pat
+Este codigo es para que funcione el boton de regresar que se encuentra en la parte superior izquierda*/
+
 public class botonesTienda: MonoBehaviour
 {
     UIDocument boton;

@@ -2,34 +2,22 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int valor = 1;
-    private GameManager gameManager;
-
-    void Start()
-    {
-        // Encuentra el GameManager automáticamente en la escena usando la nueva función recomendada por Unity
-        gameManager = FindFirstObjectByType<GameManager>();
-
-        if (gameManager == null)
-        {
-            Debug.LogError("GameManager no encontrado en la escena. Asegúrate de que existe en la jerarquía.");
-        }
-    }
+    [Header("Valor de la moneda")]
+    public int valor = 10; // Puedes editar esto en el Inspector para monedas con distinto valor
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && GetComponent<SpriteRenderer>().enabled)
         {
-            if (gameManager != null)
+            // Sumar puntos al GameManager (se refleja en el HUD)
+            if (GameManager.Instance != null)
             {
-                gameManager.SumarPuntos(valor);
-                Destroy(gameObject);
+                GameManager.Instance.SumarPuntos(valor);
             }
-            else
-            {
-                Debug.LogError("No se pudo sumar puntos porque gameManager es null.");
-            }
+
+            // Ocultar y destruir moneda
+            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 0.9f);
         }
     }
 }
-    
