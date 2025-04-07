@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuInicio.unity
     guid: 7682f33975905154ca0d2e469137c7c7
-  - enabled: 0
-    path: Assets/Scenes/Registro.unity
-    guid: f6295bb0c2dd31c4d80ac76695f40f0c
-  - enabled: 0
-    path: Assets/Scenes/Login.unity
-    guid: d01d37662ab4b6b449acdba02b04a447
-  - enabled: 0
-    path: Assets/Scenes/CorreoEnviado.unity
-    guid: 335023cb120cd37438533657d280e946
   - enabled: 1
     path: Assets/Scenes/Menu_juego.unity
     guid: 5a032c3794502cd40931976ae54f4300
@@ -26,15 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 0.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/Preguntas.unity
-    guid: fd6672e14573cab438c57cef8df9c8b3
-  - enabled: 1
-    path: Assets/Scenes/Correcto.unity
-    guid: 4938a6d1aa005144ba7039433521f24d
-  - enabled: 1
-    path: Assets/Scenes/Incorrecto.unity
-    guid: 3dd592a083d60b54fb59935c55331449
   - enabled: 1
     path: Assets/Scenes/Tienda.unity
     guid: b820e8771d11d564cbfca911d13ee8e9
