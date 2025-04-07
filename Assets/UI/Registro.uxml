@@ -9,7 +9,7 @@
             <engine:Label name="emailError" class="error-label errorTexto" />
             <engine:TextField label="Password: " placeholder-text="Password.." name="password" class="campos" />
             <engine:Label name="passwordError" class="error-label errorTexto" />
-            <engine:TextField label="Birthdate: " placeholder-text="dd/MM/yyyy" name="birthday" class="campos" />
+            <engine:TextField label="Birthdate: " placeholder-text="yyyy-MM-dd" name="birthday" class="campos" />
             <engine:Label name="birthdayError" class="error-label errorTexto" />
             <engine:DropdownField label="Country" name="pais" class="campos" />
             <engine:DropdownField name="gender" label="Gender&#10;" class="campos" />

@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Collections;
+using UnityEngine.Networking;
 public class Register : MonoBehaviour
 {
     [SerializeField]
@@ -23,6 +26,11 @@ public class Register : MonoBehaviour
     private Label emailError;
     private Label passwordError;
     
+
+    public struct datosUsuario{
+        public string nombre; 
+        public string password;
+    }
 
     private void OnEnable()
     {
@@ -72,10 +80,34 @@ public class Register : MonoBehaviour
         gender.value=gender.choices[0];
         
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
+        botonRegister = root.Q<Button>("Register");
+        botonRegister.clicked += EnviarDatos;
+
         nameUser.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(nameUser, nameError, "Name"));
         email.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(email, emailError, "Email"));
         password.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(password, passwordError, "Password"));
         birthdate.RegisterCallback<FocusOutEvent>(OnBirthdateUnfocused);
+
+    }
+
+    private void EnviarDatos()
+    {
+        StartCoroutine(SubirDatos());
+    }
+
+    private IEnumerator SubirDatos()
+    {
+        datosUsuario datos;
+
+        datos.nombre = nameUser.value;
+        datos.password = password.value;
+        string datosJSON = JsonUtility.ToJson(datos);
+        print(datosJSON);
+
+        UnityWebRequest request = UnityWebRequest.Post("http://44.222.193.128:8080/unity/register", datosJSON, "application/json");
+        yield return request.SendWebRequest();
+
+        //aqui va el if
     }
 
     private void CambiarUI(ClickEvent evt){
@@ -139,4 +171,6 @@ public class Register : MonoBehaviour
         CountryList lista = JsonUtility.FromJson<CountryList>(wrapped);
         return lista.countries;
     }
+
+
 }
