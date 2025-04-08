@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Collections;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 public class Register : MonoBehaviour
 {
     [SerializeField]
@@ -22,7 +26,16 @@ public class Register : MonoBehaviour
     private Label nameError; 
     private Label emailError;
     private Label passwordError;
-    
+
+    [System.Serializable]
+    public class datosUsuario {
+        public string nombre;
+        public string email;
+        public string password;
+        public string birthday;
+        public string country;
+        public string gender;
+    }
 
     private void OnEnable()
     {
@@ -72,10 +85,53 @@ public class Register : MonoBehaviour
         gender.value=gender.choices[0];
         
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
+        botonRegister = root.Q<Button>("Register");
+        botonRegister.clicked += EnviarDatos;
+
         nameUser.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(nameUser, nameError, "Name"));
         email.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(email, emailError, "Email"));
         password.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(password, passwordError, "Password"));
         birthdate.RegisterCallback<FocusOutEvent>(OnBirthdateUnfocused);
+
+    }
+
+    private void EnviarDatos()
+    {
+        if (!AllFieldsValid())
+        {
+            Debug.LogWarning("Some fields are empty");
+            return;
+        }
+
+        StartCoroutine(SubirDatos());
+    }
+
+    private IEnumerator SubirDatos()
+    {
+        datosUsuario datos = new datosUsuario{
+            nombre = nameUser.value,
+            email = email.value,
+            password = password.value,
+            birthday = FormatDateToMySQL(birthdate.value), 
+            country = countrys.value,
+            gender = gender.value
+        };
+
+        string datosJSON = JsonUtility.ToJson(datos);
+        print(datosJSON);
+
+        UnityWebRequest request = UnityWebRequest.Post("http://3.235.251.180:8080/unity/register", datosJSON, "application/json");
+        yield return request.SendWebRequest();
+
+        if(request.result == UnityWebRequest.Result.Success){
+            Debug.Log("Mandado correctamente ");
+            Debug.Log(request.downloadHandler.text);
+            SceneManager.LoadScene("Menu_juego");
+        } else{
+            Debug.LogError("Failed to send: " + request.responseCode + "\n" + request.error);
+        }
+
+        request.Dispose();
     }
 
     private void CambiarUI(ClickEvent evt){
@@ -113,8 +169,6 @@ public class Register : MonoBehaviour
         }
     }
 
-
-
     [System.Serializable]
     public class Country
     {
@@ -138,5 +192,25 @@ public class Register : MonoBehaviour
         string wrapped = file.text;
         CountryList lista = JsonUtility.FromJson<CountryList>(wrapped);
         return lista.countries;
+    }
+
+    private string FormatDateToMySQL(string input)
+    {
+        if (DateTime.TryParseExact(input, "dd/MM/yyyy",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.None,
+            out DateTime date))
+        {
+            return date.ToString("yyyy-MM-dd");
+        }
+        return "";
+    }
+
+    private bool AllFieldsValid()
+    {
+        return !string.IsNullOrWhiteSpace(nameUser.value)
+            && !string.IsNullOrWhiteSpace(email.value)
+            && !string.IsNullOrWhiteSpace(password.value)
+            && !string.IsNullOrWhiteSpace(birthdate.value);
     }
 }
