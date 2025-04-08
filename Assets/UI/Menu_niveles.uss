@@ -38,6 +38,7 @@
 
 .Boton_nivel:hover {
     scale: 1.15 1.15;
+    transition-timing-function: ease-in-out;
 }
 
 .Boton_nivel {
@@ -58,4 +59,23 @@
 
 .Boton_nivel:active {
     -unity-background-image-tint-color: rgb(74, 74, 74);
+}
+
+.botonTienda {
+    width: 200px;
+    height: 150px;
+    align-self: flex-end;
+    margin-top: -50px;
+    margin-right: 50px;
+    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=2006043627&guid=a11ea103d81f8dd4b896a5dcd08d3fcc&type=3#ui-small-buttons_84");
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.botonTienda:hover {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    scale: 1.15 1.15;
+}
+
+.botonTienda:active {
 }

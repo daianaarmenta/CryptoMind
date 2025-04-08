@@ -6,7 +6,8 @@ public class Botones_niveles : MonoBehaviour
 {
     private UIDocument menu; // Objeto de la UI en la escena
     private Button botonRegreso; // Bot�n para regresar a "MenuInicio"
-    private Button nivel1;    // Bot�n para ir a "Nivel1"
+    private Button nivel0;    // Bot�n para ir a "Nivel0"
+    private Button tienda;
 
     void OnEnable()
     {
@@ -14,12 +15,14 @@ public class Botones_niveles : MonoBehaviour
         var root = menu.rootVisualElement; 
 
         // Buscar los botones en el UXML por su nombre
-        botonRegreso = root.Q<Button>("Nuevo");
-        nivel1 = root.Q<Button>("N1");
+        botonRegreso = root.Q<Button>("botonRegresar");
+        nivel0 = root.Q<Button>("n0");
+        tienda = root.Q<Button>("botonTienda");
 
         // Registrar eventos de clic
         botonRegreso.RegisterCallback<ClickEvent, string>(CambiarEscena, "MenuInicio");
-        nivel1.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel 1");
+        nivel0.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel0");
+        tienda.RegisterCallback<ClickEvent, string>(CambiarEscena, "Tienda");
     }
 
     private void CambiarEscena(ClickEvent evt, string escena)
