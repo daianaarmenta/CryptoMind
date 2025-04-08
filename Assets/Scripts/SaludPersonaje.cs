@@ -9,6 +9,7 @@ public class SaludPersonaje : MonoBehaviour
     public float tiempoRegeneracion = 5f; // Tiempo en segundos para regenerar una vida
 
     public static SaludPersonaje instance;
+    internal int numeroMonedas;
 
     private void Awake()
     {

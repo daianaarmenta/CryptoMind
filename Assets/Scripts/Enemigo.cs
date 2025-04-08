@@ -28,12 +28,7 @@ public class Enemigo : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SaludPersonaje.instance.vidas--;
-            VidasHUD.instance.ActualizarVidas();
-            if (SaludPersonaje.instance.vidas == 0)
-            {
-                Destroy(collision.gameObject, 0.1f);
-            }
+            SaludPersonaje.instance.PerderVida(); // Llama al método para perder vida del jugador
         }
     }
 }
