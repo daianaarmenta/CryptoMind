@@ -19,7 +19,7 @@ public class CambiaAnimacion : MonoBehaviour
     void Update()
     {
         animator.SetFloat("velocidad", Mathf.Abs(rb.linearVelocity.x));
-        spRenderer.flipX = rb.linearVelocity.x < 0;
+        //spRenderer.flipX = rb.linearVelocity.x < 0;
         animator.SetBool("enPiso", EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera);
         animator.SetBool("isClimbing", EstadoPersonaje.enEscalera);
 
