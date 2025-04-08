@@ -5,6 +5,7 @@ using System.Linq;
 using System;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 public class Register : MonoBehaviour
 {
     [SerializeField]
@@ -25,11 +26,15 @@ public class Register : MonoBehaviour
     private Label nameError; 
     private Label emailError;
     private Label passwordError;
-    
 
-    public struct datosUsuario{
-        public string nombre; 
+    [System.Serializable]
+    public class datosUsuario {
+        public string nombre;
+        public string email;
         public string password;
+        public string birthday;
+        public string country;
+        public string gender;
     }
 
     private void OnEnable()
@@ -92,22 +97,41 @@ public class Register : MonoBehaviour
 
     private void EnviarDatos()
     {
+        if (!AllFieldsValid())
+        {
+            Debug.LogWarning("Some fields are empty");
+            return;
+        }
+
         StartCoroutine(SubirDatos());
     }
 
     private IEnumerator SubirDatos()
     {
-        datosUsuario datos;
+        datosUsuario datos = new datosUsuario{
+            nombre = nameUser.value,
+            email = email.value,
+            password = password.value,
+            birthday = FormatDateToMySQL(birthdate.value), 
+            country = countrys.value,
+            gender = gender.value
+        };
 
-        datos.nombre = nameUser.value;
-        datos.password = password.value;
         string datosJSON = JsonUtility.ToJson(datos);
         print(datosJSON);
 
-        UnityWebRequest request = UnityWebRequest.Post("http://44.222.193.128:8080/unity/register", datosJSON, "application/json");
+        UnityWebRequest request = UnityWebRequest.Post("http://3.235.251.180:8080/unity/register", datosJSON, "application/json");
         yield return request.SendWebRequest();
 
-        //aqui va el if
+        if(request.result == UnityWebRequest.Result.Success){
+            Debug.Log("Mandado correctamente ");
+            Debug.Log(request.downloadHandler.text);
+            SceneManager.LoadScene("Menu_juego");
+        } else{
+            Debug.LogError("Failed to send: " + request.responseCode + "\n" + request.error);
+        }
+
+        request.Dispose();
     }
 
     private void CambiarUI(ClickEvent evt){
@@ -145,8 +169,6 @@ public class Register : MonoBehaviour
         }
     }
 
-
-
     [System.Serializable]
     public class Country
     {
@@ -172,5 +194,23 @@ public class Register : MonoBehaviour
         return lista.countries;
     }
 
+    private string FormatDateToMySQL(string input)
+    {
+        if (DateTime.TryParseExact(input, "dd/MM/yyyy",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.None,
+            out DateTime date))
+        {
+            return date.ToString("yyyy-MM-dd");
+        }
+        return "";
+    }
 
+    private bool AllFieldsValid()
+    {
+        return !string.IsNullOrWhiteSpace(nameUser.value)
+            && !string.IsNullOrWhiteSpace(email.value)
+            && !string.IsNullOrWhiteSpace(password.value)
+            && !string.IsNullOrWhiteSpace(birthdate.value);
+    }
 }

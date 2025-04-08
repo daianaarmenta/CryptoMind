@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 539563823}
   - component: {fileID: 539563822}
   - component: {fileID: 539563825}
+  - component: {fileID: 539563826}
   m_Layer: 5
   m_Name: UIRegistro
   m_TagString: Untagged
@@ -596,9 +597,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539563821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3205a877e188da4293f2c1b160a08e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 1976276264}
+  registerMenuGame: {fileID: 539563821}
+--- !u!114 &539563826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539563821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8649b3fda206d14f806793920f14093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1976276264}

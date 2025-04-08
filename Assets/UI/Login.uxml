@@ -6,7 +6,6 @@
             <engine:TextField label="Email: " placeholder-text="Email.." name="email" class="campos unity-text-input" />
             <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos unity-text-input" style="background-color: rgba(0, 0, 0, 0);" />
             <engine:Button text="Login" name="botonLogin" class="botones" />
-            <engine:Button text="Forgot the password" name="botonRecuperar" class="botones" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
             <engine:Button name="botonRegresar" class="botonRegresar" />

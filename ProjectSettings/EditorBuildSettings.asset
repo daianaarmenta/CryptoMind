@@ -29,10 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Preguntas.unity
     guid: fd6672e14573cab438c57cef8df9c8b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Correcto.unity
     guid: 4938a6d1aa005144ba7039433521f24d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Incorrecto.unity
     guid: 3dd592a083d60b54fb59935c55331449
   - enabled: 1
