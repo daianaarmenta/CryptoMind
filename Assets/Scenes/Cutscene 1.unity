@@ -2360,7 +2360,7 @@ MonoBehaviour:
   dialogueLines:
   - "Mentor: \xA1LLegaste al final! Bien hecho\n\n(Para continuar presiona la tecla
     E.)"
-  - "Mentor: \xA1OH NO! Te han hackeado, cambiaron tus teclas."
+  - "Mentor: \xA1OH NO! Nos han hackeado, cambiaron tus teclas."
 --- !u!1 &1047772867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,7 +2896,7 @@ PlayableDirector:
     value: {fileID: 1185874990}
   - key: {fileID: 7420471853574699070, guid: cc0a6c7042bbfbb4b9db350cf8a2fddb, type: 2}
     value: {fileID: 1036593276}
-  - key: {fileID: -2832125676396774155, guid: cc0a6c7042bbfbb4b9db350cf8a2fddb, type: 2}
+  - key: {fileID: 7228948737447893700, guid: cc0a6c7042bbfbb4b9db350cf8a2fddb, type: 2}
     value: {fileID: 1036593276}
   m_ExposedReferences:
     m_References: []
@@ -5555,6 +5555,10 @@ PrefabInstance:
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723738805902152977, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_LocalPosition.x
