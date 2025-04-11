@@ -27,7 +27,7 @@ public class Register : MonoBehaviour
     private Label emailError;
     private Label passwordError;
 
-    [System.Serializable]
+    [Serializable]
     public class datosUsuario {
         public string nombre;
         public string email;
@@ -169,13 +169,13 @@ public class Register : MonoBehaviour
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class Country
     {
         public string name;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class CountryList
     {
         public List<Country> countries;
