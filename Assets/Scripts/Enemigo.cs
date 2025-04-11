@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 /*Autora: Daiana Andrea Armenta Maya
     * Fecha : 05/04/2025
@@ -9,6 +11,8 @@ public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float vida;
     [SerializeField] private GameObject efectoMuerte;
+    [SerializeField] private float cantidadPuntos; // Daño que el enemigo inflige al jugador
+    [SerializeField] private PuntajeEnemigo puntaje; // Daño que el enemigo inflige al jugador
 
     public void TomarDaño(float daño)
     {
@@ -20,6 +24,7 @@ public class Enemigo : MonoBehaviour
     }
 
     private void Muerte() {
+        puntaje.SumarPuntos(cantidadPuntos); // Suma puntos al puntaje del jugador
         Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         Destroy(gameObject); // Destruye el objeto enemigo
     }
