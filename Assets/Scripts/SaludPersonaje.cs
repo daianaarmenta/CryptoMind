@@ -8,6 +8,7 @@ public class SaludPersonaje : MonoBehaviour
     public int vidasMaximas = 3;
     public float tiempoRegeneracion = 5f; // Tiempo en segundos para regenerar una vida
 
+    private bool isInstanceAlive = false;
     public static SaludPersonaje instance;
     internal int numeroMonedas;
 
@@ -16,6 +17,7 @@ public class SaludPersonaje : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            isInstanceAlive = true;
             //DontDestroyOnLoad(gameObject); // No destruir al cambiar de escena
         }
         else
@@ -42,6 +44,7 @@ public class SaludPersonaje : MonoBehaviour
             }
         }
     }
+    
 
     /*public void RegresarAEscenaPrincipal(string nombreEscena)
     {

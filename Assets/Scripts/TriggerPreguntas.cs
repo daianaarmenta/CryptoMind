@@ -17,7 +17,9 @@ public class TriggerPreguntas : MonoBehaviour
         // Si el jugador está en el rango y presiona la tecla "E"
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            // Mostrar el panel de preguntas
             MostrarPanelPreguntas();
+            Debug.Log("Tecla 'E' presionada, mostrando panel de preguntas.");
         }
     }
 
@@ -72,5 +74,6 @@ public class TriggerPreguntas : MonoBehaviour
 
     }
 }
+
 
 
