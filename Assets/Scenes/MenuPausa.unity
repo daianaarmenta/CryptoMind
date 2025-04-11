@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguenteEscena: Tienda
+  siguienteEscena: Tienda
 --- !u!4 &361924092
 Transform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ SpriteRenderer:
   m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1914898809
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguenteEscena: Nivel 1
+  siguienteEscena: Menu_juego
 --- !u!4 &1997274741
 Transform:
   m_ObjectHideFlags: 0
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguenteEscena: Menu_juego
+  siguienteEscena: Menu_juego
 --- !u!4 &2106682345
 Transform:
   m_ObjectHideFlags: 0
