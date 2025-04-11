@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-/*
+/*|
 Autor: Fernanda Pineda
 Este codigo es para superponer la tienda al juego y permitir la compra de mejoras
 */
