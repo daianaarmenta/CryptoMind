@@ -4,7 +4,7 @@ using UnityEngine.Playables;
 
 public class CambioCutscene : MonoBehaviour
 {
-    [SerializeField] private string escenaSiguiente = "Menu_juego"; // Nombre de la siguiente escena
+    [SerializeField] public string escenaSiguiente = "Menu_juego"; // Nombre de la siguiente escena
     private PlayableDirector director;
 
     private void Start()
