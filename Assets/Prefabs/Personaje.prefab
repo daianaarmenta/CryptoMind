@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadX: 5
-  fuerzaSalto: 5
-  velocidadEscalera: 0
+  fuerzaSalto: 7
+  velocidadEscalera: 4
 --- !u!114 &8506191897626936729
 MonoBehaviour:
   m_ObjectHideFlags: 0

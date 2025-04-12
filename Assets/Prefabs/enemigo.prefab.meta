@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Prefabs/enemigo.prefab.meta
 guid: abbb8db693656f842ad5ebc5734cd342
+========
+guid: 857e129007a938645907349756e5fd92
+>>>>>>>> Stashed changes:Assets/tiles/New Tile Palette 1.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
