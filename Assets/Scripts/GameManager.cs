@@ -33,10 +33,19 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
-        puntosTotales = PlayerPrefs.GetInt("NumeroMonedas", 0);
-        Debug.Log("🟡 Monedas cargadas en GameManager: " + puntosTotales);
-    }
+{
+    // Cargar monedas desde PlayerPrefs
+    puntosTotales = PlayerPrefs.GetInt("NumeroMonedas", 0);
+    Debug.Log("🟡 Monedas cargadas en GameManager: " + puntosTotales);
+
+    // BONUS: Verificar si hay más de un GameManager
+    if (Object.FindObjectsByType<GameManager>(FindObjectsSortMode.None).Length > 1)
+{
+    Debug.LogWarning("🚨 Hay más de un GameManager en escena. Elimina los duplicados.");
+}
+
+}
+
 
     public void SumarPuntos(int puntosAsumar)
     {
