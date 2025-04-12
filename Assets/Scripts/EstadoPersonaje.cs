@@ -38,7 +38,7 @@ public class EstadoPersonaje : MonoBehaviour
         if (collision.CompareTag("Escaleras"))
         {
             contadorEscalera = Mathf.Max(0, contadorEscalera - 1);
-            //Debug.Log("Salió de escalera. contadorEscalera = " + contadorEscalera);
+            // Debug.Log("Salió de escalera. contadorEscalera = " + contadorEscalera);
         }
     }
 }

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1681220655442181653}
   - component: {fileID: 5220270227676324578}
   - component: {fileID: 1765204887932801010}
+  - component: {fileID: 842153729564781151}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Player
@@ -312,4 +313,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 3
   vidasMaximas: 3
-  tiempoRegeneracion: 5
+--- !u!114 &842153729564781151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563537403233066922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8ae5f63b741d347ba5f55f852ac737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balaPrefab: {fileID: 3085043353424836393, guid: fc6d9222a2367ef4a890853e83122458, type: 3}
+  puntoDeDisparo: {fileID: 2888921563375367343}

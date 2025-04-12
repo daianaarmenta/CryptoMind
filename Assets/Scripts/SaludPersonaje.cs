@@ -6,7 +6,7 @@ public class SaludPersonaje : MonoBehaviour
 {
     public int vidas = 3;
     public int vidasMaximas = 3;
-    public float tiempoRegeneracion = 5f; // Tiempo en segundos para regenerar una vida
+    //public float tiempoRegeneracion = 5f; // Tiempo en segundos para regenerar una vida
 
     private bool isInstanceAlive = false;
     public static SaludPersonaje instance;
