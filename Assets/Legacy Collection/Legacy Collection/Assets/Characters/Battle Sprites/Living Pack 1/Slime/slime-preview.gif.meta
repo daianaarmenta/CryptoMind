@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slime-preview_0: 3077683537649532425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

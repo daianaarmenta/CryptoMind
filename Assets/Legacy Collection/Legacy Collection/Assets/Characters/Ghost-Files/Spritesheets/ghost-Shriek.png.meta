@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghost-Shriek_0: 1935793039305058858
+      ghost-Shriek_1: -497600717271529063
+      ghost-Shriek_2: 8458355805718302752
+      ghost-Shriek_3: -8687706692155196529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

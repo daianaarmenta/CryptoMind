@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ogre-attack_0: -6693695382224108078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

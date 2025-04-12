@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire-haunt5_0: 7350664064575219072
+      Fire-haunt5_1: -3900057904473087934
+      Fire-haunt5_2: -7574764238559579119
+      Fire-haunt5_3: -2081042093436485089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

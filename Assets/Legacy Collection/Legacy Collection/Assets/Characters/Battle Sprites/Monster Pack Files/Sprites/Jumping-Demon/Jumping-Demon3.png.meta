@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jumping-Demon3_0: -6917650469639620836
+      Jumping-Demon3_1: 6740734438392567655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

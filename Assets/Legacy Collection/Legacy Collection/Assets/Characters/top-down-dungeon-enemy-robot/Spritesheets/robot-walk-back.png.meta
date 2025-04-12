@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      robot-walk-back_0: -1412362228993574865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

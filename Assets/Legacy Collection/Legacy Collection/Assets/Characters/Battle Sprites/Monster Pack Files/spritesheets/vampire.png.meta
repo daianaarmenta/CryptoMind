@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vampire_0: -5687666349546342197
+      vampire_1: -759474169626332984
+      vampire_2: -3363743018568964388
+      vampire_3: 3037530889436939321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

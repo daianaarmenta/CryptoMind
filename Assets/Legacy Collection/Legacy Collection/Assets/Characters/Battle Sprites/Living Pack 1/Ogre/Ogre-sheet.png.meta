@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ogre-sheet_0: 5750943477451389048
+      Ogre-sheet_1: -1033472203702394412
+      Ogre-sheet_2: 4183503113564202574
+      Ogre-sheet_3: -1903098729817703143
+      Ogre-sheet_4: 1492189804899813024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

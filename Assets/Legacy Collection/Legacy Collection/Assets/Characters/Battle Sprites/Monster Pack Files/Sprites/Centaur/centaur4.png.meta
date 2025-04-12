@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      centaur4_0: 7068551738908042070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
