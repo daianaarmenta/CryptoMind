@@ -27361,7 +27361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: preguntaAsociada.respuestaCorrecta
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: preguntaAsociada.respuestas.Array.size
