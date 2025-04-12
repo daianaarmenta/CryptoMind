@@ -1,15 +1,18 @@
 using UnityEngine;
 
+/// <summary>
+/// GameManager persistente para manejar monedas, vidas y datos globales entre escenas.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales = 0;
+    public int PuntosTotales => puntosTotales;
 
     public int VidasGuardadas
     {
-        get => PlayerPrefs.GetInt("Vidas", 3); // Por defecto inicia con 3
+        get => PlayerPrefs.GetInt("Vidas", 3); // Valor por defecto: 3
         set
         {
             PlayerPrefs.SetInt("Vidas", Mathf.Clamp(value, 0, 3));
@@ -22,44 +25,43 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persistente entre escenas
+            DontDestroyOnLoad(gameObject); // ❗ Persiste entre escenas
             Debug.Log("🟩 GameManager activo");
         }
         else
         {
-            Destroy(gameObject); // Evitar duplicados
-            Debug.Log("🟥 GameManager duplicado destruido");
+            Debug.LogWarning("🟥 GameManager duplicado destruido");
+            Destroy(gameObject); // ❌ Evita duplicados
+            return;
+        }
+
+        // Revisión extra por si acaso
+        if (FindObjectsByType<GameManager>(FindObjectsSortMode.None).Length > 1)
+        {
+            Debug.LogWarning("🚨 ¡Hay más de un GameManager en la escena!");
         }
     }
 
     private void Start()
-{
-    // Cargar monedas desde PlayerPrefs
-    puntosTotales = PlayerPrefs.GetInt("NumeroMonedas", 0);
-    Debug.Log("🟡 Monedas cargadas en GameManager: " + puntosTotales);
-
-    // BONUS: Verificar si hay más de un GameManager
-    if (Object.FindObjectsByType<GameManager>(FindObjectsSortMode.None).Length > 1)
-{
-    Debug.LogWarning("🚨 Hay más de un GameManager en escena. Elimina los duplicados.");
-}
-
-}
-
-
-    public void SumarPuntos(int puntosAsumar)
     {
-        puntosTotales += puntosAsumar;
+        // Cargar monedas desde PlayerPrefs
+        puntosTotales = PlayerPrefs.GetInt("NumeroMonedas", 0);
+        Debug.Log("🟡 Monedas cargadas: " + puntosTotales);
+    }
+
+    // ✅ Sumar monedas y guardar
+    public void SumarPuntos(int cantidad)
+    {
+        puntosTotales += cantidad;
         PlayerPrefs.SetInt("NumeroMonedas", puntosTotales);
         PlayerPrefs.Save();
-        Debug.Log("🟢 Monedas después de recoger: " + puntosTotales);
+        Debug.Log("🟢 Monedas después de sumar: " + puntosTotales);
     }
 
-    public bool TieneMonedasSuficientes(int cantidad)
-    {
-        return puntosTotales >= cantidad;
-    }
+    // Verificar si alcanza para comprar algo
+    public bool TieneMonedasSuficientes(int cantidad) => puntosTotales >= cantidad;
 
+    // Usar monedas
     public bool GastarMonedas(int cantidad)
     {
         if (TieneMonedasSuficientes(cantidad))
@@ -67,25 +69,26 @@ public class GameManager : MonoBehaviour
             puntosTotales -= cantidad;
             PlayerPrefs.SetInt("NumeroMonedas", puntosTotales);
             PlayerPrefs.Save();
+            Debug.Log("💸 Monedas después de gastar: " + puntosTotales);
             return true;
         }
         return false;
     }
 
-    public bool PuedeComprarVida()
-    {
-        return VidasGuardadas < 3;
-    }
+    // Verifica si puede comprar vida
+    public bool PuedeComprarVida() => VidasGuardadas < 3;
 
+    // Comprar una vida
     public void ComprarVida()
     {
         if (PuedeComprarVida())
         {
             VidasGuardadas++;
-            Debug.Log("❤️ Vida comprada. Vidas ahora: " + VidasGuardadas);
+            Debug.Log("❤️ Vida comprada. Total ahora: " + VidasGuardadas);
         }
     }
 
+    // Reiniciar monedas (ej. al empezar juego nuevo)
     public void ReiniciarMonedas()
     {
         puntosTotales = 0;
@@ -93,8 +96,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void ReiniciarVidas()
-    {
-        VidasGuardadas = 3;
-    }
+    // Reiniciar vidas (por si reinicias el juego)
+    public void ReiniciarVidas() => VidasGuardadas = 3;
 }
+    

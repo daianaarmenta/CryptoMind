@@ -51,6 +51,7 @@ public class PreguntaManager : MonoBehaviour
 
                     botonesRespuestas[i].onClick.RemoveAllListeners();
                     int respuestaIndex = i;
+                    
                     botonesRespuestas[i].onClick.AddListener(() => ComprobarRespuesta(pregunta, respuestaIndex));
                 }
                 else
@@ -75,7 +76,7 @@ public class PreguntaManager : MonoBehaviour
         else
         {
             Debug.Log("❌ Respuesta incorrecta.");
-            if (SaludPersonaje.instance != null)
+            if (SaludPersonaje.instance != null)    
             {
                 SaludPersonaje.instance.PerderVida();
             }
@@ -84,6 +85,8 @@ public class PreguntaManager : MonoBehaviour
                 Debug.LogError("No se encontró una instancia de SaludPersonaje.");
             }
         }
+
+
 
         panelPregunta.SetActive(false);
     }

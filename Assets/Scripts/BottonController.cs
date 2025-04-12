@@ -17,10 +17,25 @@ public class BottonController : MonoBehaviour
         botonPausa.SetActive(true); // Desactiva el botón de pausa
         menuPausa.SetActive(false); // Activa el menú de pausa
     }
-    public void Reiniciar(){
-        Time.timeScale = 1f; // Reanuda el juego
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia la escena actual
+    public void Reiniciar()
+{
+    Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
+
+    // ✅ Reiniciar vidas antes de recargar la escena
+    if (GameManager.Instance != null)
+    {
+        GameManager.Instance.ReiniciarVidas();
+        Debug.Log("🔁 Vidas reiniciadas.");
     }
+    else
+    {
+        Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
+    }
+
+    // 🔄 Recargar la escena actual
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+}
+
     public void Salir(){
         Debug.Log("Saliendo del juego..."); // Mensaje de depuración
         Application.Quit(); // Cierra la aplicación

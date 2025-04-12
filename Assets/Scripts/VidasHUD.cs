@@ -1,19 +1,18 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using TMPro; // o UnityEngine.UI si usas Text normal
 
 public class VidasHUD : MonoBehaviour
 {
     public static VidasHUD instance;
-    [SerializeField] Image vida_1;
-    [SerializeField] Image vida_2;
-    [SerializeField] Image vida_3;
+
+    [SerializeField] private TextMeshProUGUI vidasTexto; // asigna el campo en el inspector
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // No destruir el HUD al cambiar de escena
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -28,12 +27,31 @@ public class VidasHUD : MonoBehaviour
 
     public void ActualizarVidas()
     {
-        if (SaludPersonaje.instance == null) return;
+        if (SaludPersonaje.instance == null)
+        {
+            Debug.LogWarning("⚠️ No se puede actualizar HUD, SaludPersonaje no está listo.");
+            return;
+        }
 
         int vidas = SaludPersonaje.instance.vidas;
-        vida_1.gameObject.SetActive(vidas >=1);
-        vida_2.gameObject.SetActive(vidas >=2);
-        vida_3.gameObject.SetActive(vidas >=3);
-        Debug.Log("HUD actualizado, vidas actuales: " + vidas);
+
+        if (vidasTexto != null)
+        {
+            vidasTexto.text = $" {vidas}";
+            Debug.Log("✅ Texto de vidas actualizado: " + vidas);
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ El campo de texto no está asignado.");
+        }
+    }
+
+    public void ReiniciarVidas()
+    {
+        if (SaludPersonaje.instance != null)
+        {
+            SaludPersonaje.instance.vidas = SaludPersonaje.instance.vidasMaximas;
+            ActualizarVidas();
+        }
     }
 }
