@@ -1,23 +1,22 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 /* Autora: Daiana Andrea Armenta Maya
-    * Descripción: Clase que gestiona la lógica de las preguntas y respuestas en el juego.
-    * Permite mostrar preguntas, verificar respuestas y gestionar el puntaje del jugador.
-*/
+ * Descripción: Clase que gestiona la lógica de las preguntas y respuestas en el juego.
+ * Permite mostrar preguntas, verificar respuestas y gestionar el puntaje del jugador.
+ */
 public class PreguntaManager : MonoBehaviour
 {
-    public static PreguntaManager instance;  // Singleton para acceder al manager desde otros scripts
+    public static PreguntaManager instance;
 
-    [SerializeField] private TextMeshProUGUI textoPregunta;  // Texto de la pregunta
-    [SerializeField] private Button[] botonesRespuestas;     // Botones de las respuestas
-    [SerializeField] private GameObject panelPregunta;      // Panel de la pregunta
+    [SerializeField] private TextMeshProUGUI textoPregunta;
+    [SerializeField] private Button[] botonesRespuestas;
+    [SerializeField] private GameObject panelPregunta;
 
     private void Awake()
     {
-        // Configurar el Singleton
         if (instance == null)
         {
             instance = this;
@@ -26,58 +25,56 @@ public class PreguntaManager : MonoBehaviour
         else
         {
             Debug.LogWarning("Se intentó crear una segunda instancia de PreguntaManager. Destruyendo duplicado.");
-            Destroy(gameObject);  // Evitar duplicados
+            Destroy(gameObject);
         }
     }
 
-    // Método para mostrar la pregunta
     public void MostrarPregunta(Pregunta pregunta)
     {
         if (panelPregunta != null)
         {
-            panelPregunta.SetActive(true);  // Activar el panel
-            textoPregunta.text = pregunta.textoPregunta;  // Mostrar el texto de la pregunta
+            panelPregunta.SetActive(true);
+            textoPregunta.text = pregunta.textoPregunta;
 
-            // Asignar las respuestas a los botones
             for (int i = 0; i < botonesRespuestas.Length; i++)
             {
-                if (i < pregunta.respuestas.Length)  // Asegurarse de que no haya más botones que respuestas
+                if (i < pregunta.respuestas.Length)
                 {
-                    botonesRespuestas[i].gameObject.SetActive(true);  // Activar el botón
-                    Text textoBoton = botonesRespuestas[i].GetComponentInChildren<Text>();  // Obtener el texto del botón
+                    botonesRespuestas[i].gameObject.SetActive(true);
 
-                    // Limpiar listeners anteriores y asignar uno nuevo
+                    // ✅ Usando Text (Legacy)
+                    Text textoBoton = botonesRespuestas[i].GetComponentInChildren<Text>();
+                    if (textoBoton != null)
+                    {
+                        textoBoton.text = pregunta.respuestas[i];
+                    }
+
                     botonesRespuestas[i].onClick.RemoveAllListeners();
-                    int respuestaIndex = i;  // Capturar el índice para el listener
+                    int respuestaIndex = i;
                     botonesRespuestas[i].onClick.AddListener(() => ComprobarRespuesta(pregunta, respuestaIndex));
                 }
                 else
                 {
-                    botonesRespuestas[i].gameObject.SetActive(false);  // Desactivar botones no usados
+                    botonesRespuestas[i].gameObject.SetActive(false);
                 }
             }
         }
         else
         {
-            Debug.LogError("No se ha asignado el panel de la pregunta en el Inspector.");
+            Debug.LogError("❌ No se ha asignado el panel de la pregunta en el Inspector.");
         }
     }
 
-    // Método para comprobar la respuesta
     private void ComprobarRespuesta(Pregunta pregunta, int respuestaIndex)
     {
         if (respuestaIndex == pregunta.respuestaCorrecta)
         {
-            Debug.Log("¡Respuesta correcta!");
+            Debug.Log("✅ ¡Respuesta correcta!");
             GameManager.Instance.SumarPuntos(100);
-            //SceneManager.LoadScene("Correcto");  // Sumar puntos al GameManager
-
-            // Aquí puedes agregar lógica adicional, como dar puntos o recompensas.
         }
         else
         {
-            Debug.Log("Respuesta incorrecta.");
-            // Descontar una vida si la respuesta es incorrecta
+            Debug.Log("❌ Respuesta incorrecta.");
             if (SaludPersonaje.instance != null)
             {
                 SaludPersonaje.instance.PerderVida();
@@ -86,12 +83,8 @@ public class PreguntaManager : MonoBehaviour
             {
                 Debug.LogError("No se encontró una instancia de SaludPersonaje.");
             }
-
-            //SceneManager.LoadScene("Incorrecto");  // Cambiar a la escena de respuesta incorrecta
         }
 
-        // Desactivar el panel después de responder
         panelPregunta.SetActive(false);
     }
 }
-

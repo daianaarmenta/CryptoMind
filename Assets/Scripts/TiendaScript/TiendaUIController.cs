@@ -9,7 +9,7 @@ public class TiendaUIController : MonoBehaviour
     private Label monedasLabel;
     private Button botonVida;
     private Button botonMejora;
-    private Button botonCarta;
+    
 
     void Start()
     {
@@ -20,12 +20,12 @@ public class TiendaUIController : MonoBehaviour
             monedasLabel = root.Q<Label>("monedasLabel");
             botonVida = root.Q<Button>("botonVida");
             botonMejora = root.Q<Button>("botonMejora");
-            botonCarta = root.Q<Button>("botonCarta");
+            
 
             if (monedasLabel == null) Debug.LogError("❌ No se encontró 'monedasLabel'");
             if (botonVida == null) Debug.LogError("❌ No se encontró 'botonVida'");
             if (botonMejora == null) Debug.LogError("❌ No se encontró 'botonMejora'");
-            if (botonCarta == null) Debug.LogError("❌ No se encontró 'botonCarta'");
+            
 
             if (GameManager.Instance != null && monedasLabel != null)
             {
@@ -39,7 +39,7 @@ public class TiendaUIController : MonoBehaviour
 
             if (botonVida != null) botonVida.clicked += () => Comprar(100, "Vida");
             if (botonMejora != null) botonMejora.clicked += () => Comprar(150, "Mejora");
-            if (botonCarta != null) botonCarta.clicked += () => Comprar(200, "Carta");
+            
 
         }).ExecuteLater(1);
     }

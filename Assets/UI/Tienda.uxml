@@ -25,15 +25,6 @@
                     </engine:VisualElement>
                 </engine:Label>
             </engine:Button>
-            <engine:Button name="botonCarta" double-click-selects-word="false" class="botonT">
-                <engine:Label text="Carta" triple-click-selects-line="false" class="texto">
-                    <engine:VisualElement name="carta" style="flex-grow: 1; width: 100px; height: 95px; background-image: url(&quot;project://database/Assets/Warped%20City%20Assets/Artwork/ENVIRONMENT/tileset.png?fileID=-912588591&amp;guid=e08e6a2f34edd4a7db4285eeddef84a8&amp;type=3#tileset_70&quot;); margin-top: 0; margin-left: 70px;">
-                        <engine:Label text="200&#10;" class="precio" style="margin-top: 20px;">
-                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 150px;" />
-                        </engine:Label>
-                    </engine:VisualElement>
-                </engine:Label>
-            </engine:Button>
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

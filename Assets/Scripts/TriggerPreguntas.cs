@@ -18,8 +18,8 @@ public class TriggerPreguntas : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             // Mostrar el panel de preguntas
-            MostrarPanelPreguntas();
             Debug.Log("Tecla 'E' presionada, mostrando panel de preguntas.");
+            MostrarPanelPreguntas();
         }
     }
 
@@ -63,7 +63,7 @@ public class TriggerPreguntas : MonoBehaviour
 
         if (preguntasPanel != null && preguntaAsociada != null)
         {
-            preguntasPanel.SetActive(true);  // Activar el panel de preguntas
+            preguntasPanel.SetActive(false);  // Activar el panel de preguntas
             PreguntaManager.instance.MostrarPregunta(preguntaAsociada);  // Mostrar la pregunta
             Debug.Log("Panel de preguntas activado.");
         }
