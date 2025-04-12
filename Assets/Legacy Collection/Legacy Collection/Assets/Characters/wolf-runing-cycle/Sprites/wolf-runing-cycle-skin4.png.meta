@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wolf-runing-cycle-skin4_0: -6616207003289216523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

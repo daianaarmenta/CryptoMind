@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shriek_0: -8876894017762326643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

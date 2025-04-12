@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-hound-jump_0: -2958378004948360423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

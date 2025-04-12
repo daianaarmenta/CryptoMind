@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-hound-run_0: -1768709251918162563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
