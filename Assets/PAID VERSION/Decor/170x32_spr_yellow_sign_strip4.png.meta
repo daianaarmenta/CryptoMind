@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      170x32_spr_yellow_sign_strip4_0: -553793147666914574
+      170x32_spr_yellow_sign_strip4_1: -6405683981827654731
+      170x32_spr_yellow_sign_strip4_2: 1265064627393307098
+      170x32_spr_yellow_sign_strip4_3: -8268634617700814388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

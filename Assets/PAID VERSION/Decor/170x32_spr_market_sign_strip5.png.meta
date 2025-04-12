@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      170x32_spr_market_sign_strip5_0: -4188303584637322204
+      170x32_spr_market_sign_strip5_1: 3287555872141666969
+      170x32_spr_market_sign_strip5_2: 2921210094640028491
+      170x32_spr_market_sign_strip5_3: 3720033051362053618
+      170x32_spr_market_sign_strip5_4: -5042863496836912240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

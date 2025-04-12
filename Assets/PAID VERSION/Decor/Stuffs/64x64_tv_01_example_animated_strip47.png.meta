@@ -1297,7 +1297,54 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      64x64_tv_01_example_animated_strip47_0: -2194910799881700876
+      64x64_tv_01_example_animated_strip47_1: -1856167601237385407
+      64x64_tv_01_example_animated_strip47_10: -2701941788302124902
+      64x64_tv_01_example_animated_strip47_11: 8610270945693726051
+      64x64_tv_01_example_animated_strip47_12: 1755926275173177895
+      64x64_tv_01_example_animated_strip47_13: -8152282439554968130
+      64x64_tv_01_example_animated_strip47_14: -5763759648367521709
+      64x64_tv_01_example_animated_strip47_15: 3214664317842146402
+      64x64_tv_01_example_animated_strip47_16: -4633697920265812376
+      64x64_tv_01_example_animated_strip47_17: -6413113398975328609
+      64x64_tv_01_example_animated_strip47_18: 148168659838633319
+      64x64_tv_01_example_animated_strip47_19: 7350473193760174269
+      64x64_tv_01_example_animated_strip47_2: 7395686167368671142
+      64x64_tv_01_example_animated_strip47_20: -6678745635124139048
+      64x64_tv_01_example_animated_strip47_21: -29106373494637049
+      64x64_tv_01_example_animated_strip47_22: -3335371240855551329
+      64x64_tv_01_example_animated_strip47_23: -6370970438258115650
+      64x64_tv_01_example_animated_strip47_24: 5019730629391111071
+      64x64_tv_01_example_animated_strip47_25: 7414905102755488541
+      64x64_tv_01_example_animated_strip47_26: -3648975774252047248
+      64x64_tv_01_example_animated_strip47_27: 6978655605560682454
+      64x64_tv_01_example_animated_strip47_28: -6517035848041856162
+      64x64_tv_01_example_animated_strip47_29: -6846358939829185288
+      64x64_tv_01_example_animated_strip47_3: -1143225486728194800
+      64x64_tv_01_example_animated_strip47_30: 6174964054325084674
+      64x64_tv_01_example_animated_strip47_31: 6658961863331705596
+      64x64_tv_01_example_animated_strip47_32: 4933613212381571888
+      64x64_tv_01_example_animated_strip47_33: -5770487090843589974
+      64x64_tv_01_example_animated_strip47_34: -3520214209521381591
+      64x64_tv_01_example_animated_strip47_35: -3987328075730156679
+      64x64_tv_01_example_animated_strip47_36: 6970450314878914912
+      64x64_tv_01_example_animated_strip47_37: 6472235097561610753
+      64x64_tv_01_example_animated_strip47_38: 1154822543683249296
+      64x64_tv_01_example_animated_strip47_39: 6158111248828115455
+      64x64_tv_01_example_animated_strip47_4: 4772402023985539592
+      64x64_tv_01_example_animated_strip47_40: -422611000978457183
+      64x64_tv_01_example_animated_strip47_41: -7714366190372568004
+      64x64_tv_01_example_animated_strip47_42: -6543319902174384872
+      64x64_tv_01_example_animated_strip47_43: -1254192660183944823
+      64x64_tv_01_example_animated_strip47_44: 6641707108976384651
+      64x64_tv_01_example_animated_strip47_45: -400189221130324865
+      64x64_tv_01_example_animated_strip47_46: 5610773140078462780
+      64x64_tv_01_example_animated_strip47_5: 7371472872348392641
+      64x64_tv_01_example_animated_strip47_6: -6880415070297339049
+      64x64_tv_01_example_animated_strip47_7: 2432699346826033322
+      64x64_tv_01_example_animated_strip47_8: 1038201341610344149
+      64x64_tv_01_example_animated_strip47_9: 9206597000655403964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      16x16spr_fan_strip4_0: 7284503461048082678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

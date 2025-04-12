@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      17x13_spr_eye_strip8_0: 4552488690431219685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

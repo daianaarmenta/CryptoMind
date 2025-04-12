@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      184x16_spr_bus_stop_anim_strip77_0: 8938317625785403629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

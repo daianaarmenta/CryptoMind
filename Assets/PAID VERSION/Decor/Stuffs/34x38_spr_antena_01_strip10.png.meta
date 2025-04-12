@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      34x38_spr_antena_01_strip10_0: 5408052007787719655
+      34x38_spr_antena_01_strip10_1: -5196421150341631935
+      34x38_spr_antena_01_strip10_2: 2384892299412855522
+      34x38_spr_antena_01_strip10_3: 4104119435489945703
+      34x38_spr_antena_01_strip10_4: -3465096733118801072
+      34x38_spr_antena_01_strip10_5: 326407667575886750
+      34x38_spr_antena_01_strip10_6: 2090074557252005243
+      34x38_spr_antena_01_strip10_7: 618583666218369774
+      34x38_spr_antena_01_strip10_8: 9155446803147055745
+      34x38_spr_antena_01_strip10_9: -1080043473234910241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sign_02_animated_example_strip6_0: 8588811704506044459
+      sign_02_animated_example_strip6_1: 1023016923641104575
+      sign_02_animated_example_strip6_2: -6779411071051205341
+      sign_02_animated_example_strip6_3: -1070508617366646594
+      sign_02_animated_example_strip6_4: 7499031087824227665
+      sign_02_animated_example_strip6_5: -4566807677910418195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

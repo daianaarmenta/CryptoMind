@@ -722,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      32x32_spr_alien_05_strip24_0: 2920414283203179396
+      32x32_spr_alien_05_strip24_1: 692787955967138136
+      32x32_spr_alien_05_strip24_10: 2746097810983911425
+      32x32_spr_alien_05_strip24_11: 1646209133772169563
+      32x32_spr_alien_05_strip24_12: 4047638240503440879
+      32x32_spr_alien_05_strip24_13: 6541787665905631572
+      32x32_spr_alien_05_strip24_14: -5217879828298341553
+      32x32_spr_alien_05_strip24_15: -2901524827536072447
+      32x32_spr_alien_05_strip24_16: -911232377348983337
+      32x32_spr_alien_05_strip24_17: -4830470421844113497
+      32x32_spr_alien_05_strip24_18: -2254566763391636980
+      32x32_spr_alien_05_strip24_19: 5863220506661270063
+      32x32_spr_alien_05_strip24_2: -2622999991454081471
+      32x32_spr_alien_05_strip24_20: 8553612957853405501
+      32x32_spr_alien_05_strip24_21: -2246696387869689756
+      32x32_spr_alien_05_strip24_22: -8790755375889637159
+      32x32_spr_alien_05_strip24_23: -5103547652815611479
+      32x32_spr_alien_05_strip24_3: -7837787524917015694
+      32x32_spr_alien_05_strip24_4: 1315031149564044680
+      32x32_spr_alien_05_strip24_5: -4304870937292057601
+      32x32_spr_alien_05_strip24_6: -1085864859934918004
+      32x32_spr_alien_05_strip24_7: 5405777011535500079
+      32x32_spr_alien_05_strip24_8: 2533612967063514424
+      32x32_spr_alien_05_strip24_9: -5908509344080866925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

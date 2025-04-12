@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      32x32_spr_fire_barrel_strip6_0: -199997398457107851
+      32x32_spr_fire_barrel_strip6_1: -6677919580020424322
+      32x32_spr_fire_barrel_strip6_2: -2181076373917405196
+      32x32_spr_fire_barrel_strip6_3: 7411525220326031234
+      32x32_spr_fire_barrel_strip6_4: -8819572729492244578
+      32x32_spr_fire_barrel_strip6_5: -8716192024534972929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

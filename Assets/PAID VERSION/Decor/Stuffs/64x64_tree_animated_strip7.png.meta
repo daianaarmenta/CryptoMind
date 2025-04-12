@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      64x64_tree_animated_strip7_0: 7961449784346414765
+      64x64_tree_animated_strip7_1: 3852414383582910782
+      64x64_tree_animated_strip7_10: 3390330322452010259
+      64x64_tree_animated_strip7_11: 1108015381392700014
+      64x64_tree_animated_strip7_12: -7239718231391818929
+      64x64_tree_animated_strip7_13: -5111834196703933922
+      64x64_tree_animated_strip7_2: 1669214752655880571
+      64x64_tree_animated_strip7_3: -3296135964889327667
+      64x64_tree_animated_strip7_4: 7165232423015426745
+      64x64_tree_animated_strip7_5: -2672650310967314517
+      64x64_tree_animated_strip7_6: -2487413137427025589
+      64x64_tree_animated_strip7_7: -8993087219950574023
+      64x64_tree_animated_strip7_8: -3769433377388596849
+      64x64_tree_animated_strip7_9: -7136544158705166375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

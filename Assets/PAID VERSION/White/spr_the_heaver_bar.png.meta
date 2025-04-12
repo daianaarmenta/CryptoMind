@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_the_heaver_bar_0: -1149580432049564830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

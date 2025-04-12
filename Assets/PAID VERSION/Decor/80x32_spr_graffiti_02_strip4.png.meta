@@ -722,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      80x32_spr_graffiti_02_strip4_0: 7714164931740467513
+      80x32_spr_graffiti_02_strip4_1: 1227018717076659620
+      80x32_spr_graffiti_02_strip4_10: -3122536406227125996
+      80x32_spr_graffiti_02_strip4_11: 5124743643701999404
+      80x32_spr_graffiti_02_strip4_12: -3849112129249026307
+      80x32_spr_graffiti_02_strip4_13: 397026973124363917
+      80x32_spr_graffiti_02_strip4_14: -5374909489585382814
+      80x32_spr_graffiti_02_strip4_15: 4912452191396764334
+      80x32_spr_graffiti_02_strip4_16: -2664796489668585015
+      80x32_spr_graffiti_02_strip4_17: 6482213645947539944
+      80x32_spr_graffiti_02_strip4_18: -4239522611780085372
+      80x32_spr_graffiti_02_strip4_19: 18696037231594194
+      80x32_spr_graffiti_02_strip4_2: -5807493384461600253
+      80x32_spr_graffiti_02_strip4_20: 1545545023646804627
+      80x32_spr_graffiti_02_strip4_21: 5455038857021092686
+      80x32_spr_graffiti_02_strip4_22: -2009825609109428726
+      80x32_spr_graffiti_02_strip4_23: -6666177658196357106
+      80x32_spr_graffiti_02_strip4_3: 759742735774751192
+      80x32_spr_graffiti_02_strip4_4: -5255280846157631984
+      80x32_spr_graffiti_02_strip4_5: -7379198657353633674
+      80x32_spr_graffiti_02_strip4_6: 3137221332794153435
+      80x32_spr_graffiti_02_strip4_7: 7229819975386207347
+      80x32_spr_graffiti_02_strip4_8: 7688765987067016892
+      80x32_spr_graffiti_02_strip4_9: 7818297947398017335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

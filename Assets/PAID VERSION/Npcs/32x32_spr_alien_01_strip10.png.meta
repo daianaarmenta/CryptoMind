@@ -372,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      32x32_spr_alien_01_strip10_0: 6063482951563380666
+      32x32_spr_alien_01_strip10_1: -6576349293847352087
+      32x32_spr_alien_01_strip10_2: 1892988795326923616
+      32x32_spr_alien_01_strip10_3: 8814474282259458710
+      32x32_spr_alien_01_strip10_4: -1315549193325457867
+      32x32_spr_alien_01_strip10_5: 4331009302662792482
+      32x32_spr_alien_01_strip10_6: -8276103258912310175
+      32x32_spr_alien_01_strip10_7: 248259001309808250
+      32x32_spr_alien_01_strip10_8: -3831888033686236797
+      32x32_spr_alien_01_strip10_9: 8650732362896293748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

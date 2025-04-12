@@ -647,7 +647,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sign_builder_strip4_0: 7466865896660227232
+      sign_builder_strip4_1: 7269134911378928288
+      sign_builder_strip4_10: -5112162441238762567
+      sign_builder_strip4_11: 2107401058393576800
+      sign_builder_strip4_12: -4156903956011511739
+      sign_builder_strip4_13: 9217631926908680420
+      sign_builder_strip4_14: -6430685324512171649
+      sign_builder_strip4_15: 6716532402043474527
+      sign_builder_strip4_16: 4693978781376297220
+      sign_builder_strip4_17: -4531111555597967913
+      sign_builder_strip4_18: 9075414719385927372
+      sign_builder_strip4_19: -4983424864406201469
+      sign_builder_strip4_2: -3673350702593491279
+      sign_builder_strip4_20: 4433242904646094427
+      sign_builder_strip4_3: 254073445468701764
+      sign_builder_strip4_4: -4702048162256899908
+      sign_builder_strip4_5: -9083386023748858095
+      sign_builder_strip4_6: 8133017281640253908
+      sign_builder_strip4_7: 2408469805046741679
+      sign_builder_strip4_8: 6779212227748561122
+      sign_builder_strip4_9: 3463555422443606458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

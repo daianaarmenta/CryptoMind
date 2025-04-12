@@ -622,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      144x32_spr_heaven_sign_strip6_0: 4710609195009520626
+      144x32_spr_heaven_sign_strip6_1: 838407648684938534
+      144x32_spr_heaven_sign_strip6_10: -3487205496593873762
+      144x32_spr_heaven_sign_strip6_11: -3009458473654189968
+      144x32_spr_heaven_sign_strip6_12: 1753465594603553496
+      144x32_spr_heaven_sign_strip6_13: 7651314428102182769
+      144x32_spr_heaven_sign_strip6_14: 1993764853444773728
+      144x32_spr_heaven_sign_strip6_15: -1067733938060630442
+      144x32_spr_heaven_sign_strip6_16: 8513240339135851374
+      144x32_spr_heaven_sign_strip6_17: 7091940199570819476
+      144x32_spr_heaven_sign_strip6_18: 4888792171946412203
+      144x32_spr_heaven_sign_strip6_19: -1432168435912251190
+      144x32_spr_heaven_sign_strip6_2: -2415932566502957354
+      144x32_spr_heaven_sign_strip6_3: -3551388257187968337
+      144x32_spr_heaven_sign_strip6_4: 2929286073162117433
+      144x32_spr_heaven_sign_strip6_5: -7526955286512431156
+      144x32_spr_heaven_sign_strip6_6: 7592448195016966687
+      144x32_spr_heaven_sign_strip6_7: -2659037184369921791
+      144x32_spr_heaven_sign_strip6_8: -2656869394064140346
+      144x32_spr_heaven_sign_strip6_9: 4510790723641741479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

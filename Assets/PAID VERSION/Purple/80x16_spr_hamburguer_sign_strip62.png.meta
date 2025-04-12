@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      80x16_spr_hamburguer_sign_strip62_0: -8236699438401355507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      80x16_spr_green_clean_sign_strip4_0: 2233939282601939270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

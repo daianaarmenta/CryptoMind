@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class MovimientoEnemigo : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float velocidad = 2f;          // Qué tan rápido se mueve
+    public float distancia = 3f;          // Qué tan lejos se mueve desde su punto inicial
+
+    private Vector3 puntoInicial;
+
     void Start()
     {
-        
+        puntoInicial = transform.position; // Guarda su posición original
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float desplazamiento = Mathf.Sin(Time.time * velocidad) * distancia;
+        transform.position = puntoInicial + new Vector3(desplazamiento, 0f, 0f);
     }
 }
