@@ -67,7 +67,7 @@ public class BotonLogin : MonoBehaviour
         string datosJSON = JsonUtility.ToJson(datos);
         print(datosJSON);
 
-        UnityWebRequest request = UnityWebRequest.Post("http://3.235.251.180:8080/unity/register", datosJSON, "application/json");
+        UnityWebRequest request = UnityWebRequest.Post("http://44.210.242.220:8080/unity/login", datosJSON, "application/json");
         yield return request.SendWebRequest();
 
         if(request.result == UnityWebRequest.Result.Success){

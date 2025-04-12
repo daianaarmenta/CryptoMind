@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Data.Common;
 using System.Collections;
+using System;
 
 public class DialogueController : MonoBehaviour
 {
@@ -13,9 +14,26 @@ public class DialogueController : MonoBehaviour
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
-    
+    private float fadeDuration = 2f;
+    private SpriteRenderer mentorRenderer;
 
-     
+    void Start()
+    {
+       mentorRenderer = GetComponent<SpriteRenderer>();
+
+        if (mentorRenderer != null)
+        {
+            Color c = mentorRenderer.color;
+            c.a = 0f; 
+            mentorRenderer.color = c;
+            Debug.Log("Mentor alpha at start: " + mentorRenderer.color.a);
+        }
+        else
+        {
+            Debug.LogWarning("Mentor SpriteRenderer not found.");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -76,10 +94,15 @@ public class DialogueController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        isPlayerInRange = true;
+        dialogueMark.SetActive(true);
+
+        
+        if (mentorRenderer != null)
         {
-            isPlayerInRange = true;
-            dialogueMark.SetActive(true);
+            Debug.Log("IsPlayerInRange: " + isPlayerInRange);
+            Debug.Log("mentorRenderer found? " + (mentorRenderer != null));
+            StartCoroutine(FadeInMentor());
         }
         
     }
@@ -91,5 +114,21 @@ public class DialogueController : MonoBehaviour
             isPlayerInRange = false;
             dialogueMark.SetActive(false);
         }
+    }
+
+    private IEnumerator FadeInMentor()
+    {
+        Color c = mentorRenderer.color;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Clamp01(elapsed / fadeDuration);
+            mentorRenderer.color = c;
+            Debug.Log("Current alpha: " + c.a);
+            yield return null;
+        }
+        Debug.Log("Fade-in complete.");
     }
 }

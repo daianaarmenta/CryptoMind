@@ -4,7 +4,6 @@ using UnityEngine.UIElements;
 
 public class botonesTienda : MonoBehaviour
 {
-    // 👇 Static variable to remember the previous scene
     public static string previousScene = "";
 
     UIDocument boton;
