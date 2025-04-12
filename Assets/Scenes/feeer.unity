@@ -27452,7 +27452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: Menu_juego
+  botonPausa: {fileID: 0}
+  menuPausa: {fileID: 0}
 --- !u!1001 &1019492871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28859,7 +28860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: Menu_juego
+  botonPausa: {fileID: 0}
+  menuPausa: {fileID: 0}
 --- !u!114 &1598633616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35967,6 +35969,14 @@ PrefabInstance:
     - target: {fileID: 6146396913429105301, guid: 3076d107861106741a5e79807702a368, type: 3}
       propertyPath: m_text
       value: 00000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476643212520114506, guid: 3076d107861106741a5e79807702a368, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1019
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476643212520114506, guid: 3076d107861106741a5e79807702a368, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 505
       objectReference: {fileID: 0}
     - target: {fileID: 6765469843665507651, guid: 3076d107861106741a5e79807702a368, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
