@@ -40,7 +40,7 @@ public class SaludPersonaje : MonoBehaviour
 
             if (vidas <= 0)
             {
-                SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
+                //SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
             }
         }
     }
