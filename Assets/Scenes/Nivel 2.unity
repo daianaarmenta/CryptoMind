@@ -26953,6 +26953,11 @@ Transform:
   - {fileID: 1632715902}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &791299153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7517394495317313163, guid: 3076d107861106741a5e79807702a368, type: 3}
+  m_PrefabInstance: {fileID: 3989041749348571256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &791881555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27452,8 +27457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e2c067aa9c34f4babc7e059a3dc4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonPausa: {fileID: 0}
-  menuPausa: {fileID: 0}
+  botonPausa: {fileID: 791299153}
+  menuPausa: {fileID: 1598633613}
 --- !u!1001 &1019492871
 PrefabInstance:
   m_ObjectHideFlags: 0
