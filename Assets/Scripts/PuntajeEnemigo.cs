@@ -17,7 +17,7 @@ public class PuntajeEnemigo : MonoBehaviour
     }
     else
     {
-        Destroy(gameObject);
+       
         Debug.LogWarning("Ya existe una instancia de PuntajeEnemigo.");
     }
 }
