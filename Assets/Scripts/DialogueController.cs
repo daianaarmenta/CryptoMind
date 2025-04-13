@@ -14,10 +14,11 @@ public class DialogueController : MonoBehaviour
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
-    private float fadeDuration = 2f;
-    private SpriteRenderer mentorRenderer;
+    private bool isTyping;
+    //private float fadeDuration = 2f;
+    //private SpriteRenderer mentorRenderer;
 
-    void Start()
+    /*void Start()
     {
        mentorRenderer = GetComponent<SpriteRenderer>();
 
@@ -32,7 +33,7 @@ public class DialogueController : MonoBehaviour
         {
             Debug.LogWarning("Mentor SpriteRenderer not found.");
         }
-    }
+    } */ 
 
     // Update is called once per frame
     void Update()
@@ -42,10 +43,15 @@ public class DialogueController : MonoBehaviour
             if (!didDialogueStart)
             {
                 StartDialogue();
+                Debug.Log($"Texto mostrado: [{dialogueText.text}]");
+                Debug.Log($"Texto esperado: [{dialogueLines[lineIndex]}]");
+
             }
-            else if(dialogueText.text == dialogueLines[lineIndex])
+            else if(dialogueText.text.Contains(dialogueLines[lineIndex]))
             {
                 NextDialogueLine();
+                Debug.Log($"Avanzando a la línea: {lineIndex}");
+
             }
             else
             {
@@ -58,6 +64,7 @@ public class DialogueController : MonoBehaviour
 
     private void StartDialogue()
     {
+        
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
@@ -98,12 +105,12 @@ public class DialogueController : MonoBehaviour
         dialogueMark.SetActive(true);
 
         
-        if (mentorRenderer != null)
+        /*if (mentorRenderer != null)
         {
             Debug.Log("IsPlayerInRange: " + isPlayerInRange);
             Debug.Log("mentorRenderer found? " + (mentorRenderer != null));
-            StartCoroutine(FadeInMentor());
-        }
+            //StartCoroutine(FadeInMentor());
+        }*/
         
     }
 
@@ -116,7 +123,7 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeInMentor()
+    /*private IEnumerator FadeInMentor()
     {
         Color c = mentorRenderer.color;
         float elapsed = 0f;
@@ -129,6 +136,6 @@ public class DialogueController : MonoBehaviour
             Debug.Log("Current alpha: " + c.a);
             yield return null;
         }
-        Debug.Log("Fade-in complete.");
+        Debug.Log("Fade-in complete.");*/
     }
-}
+
