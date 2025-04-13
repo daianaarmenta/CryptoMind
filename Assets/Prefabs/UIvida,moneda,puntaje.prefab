@@ -2342,6 +2342,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: panelPregunta
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: textoPregunta
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: botonesRespuestas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
