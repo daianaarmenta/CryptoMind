@@ -2,25 +2,27 @@ using UnityEngine;
 
 public class BootstrapVidasHUD : MonoBehaviour
 {
-    void Awake()
+    [SerializeField] private GameObject vidasHUDPrefab;
+
+    private void Awake()
     {
-        if (VidasHUD.instance == null)
+        // Si ya hay una instancia activa, no creamos otra
+        if (VidasHUD.instance != null)
         {
-            GameObject prefab = Resources.Load<GameObject>("VidasHUD"); // Debe estar en /Resources
-            if (prefab != null)
-            {
-                Instantiate(prefab);
-                Debug.Log("🟢 VidasHUD instanciado desde Bootstrapper.");
-            }
-            else
-            {
-                Debug.LogError("❌ Prefab VidasHUD no encontrado en Resources.");
-            }
+            Debug.Log("🟢 VidasHUD ya existe en la escena.");
+            return;
+        }
+
+        // Instancia el prefab desde el campo asignado
+        if (vidasHUDPrefab != null)
+        {
+            GameObject hudInstanciado = Instantiate(vidasHUDPrefab);
+            DontDestroyOnLoad(hudInstanciado);
+            Debug.Log("✅ VidasHUD instanciado desde bootstrap.");
         }
         else
         {
-            Debug.Log("✅ VidasHUD ya presente en escena.");
+            Debug.LogError("❌ No se ha asignado el prefab de VidasHUD en el inspector.");
         }
     }
 }
-    
