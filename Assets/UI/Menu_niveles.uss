@@ -34,6 +34,7 @@
     border-bottom-color: rgba(0, 0, 0, 0);
     -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
     color: rgb(255, 251, 251);
+    background-image: none;
 }
 
 .Boton_nivel:hover {
@@ -42,7 +43,7 @@
 }
 
 .Boton_nivel {
-    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-panels.png?fileID=135398895&guid=84873522082196348b931e3f46de09e9&type=3#ui-panels_0");
+    background-image: url("project://database/Assets/PAID%20VERSION/Tile/spr_tile_floor_and_walls.png?fileID=1072514270&guid=737435f93092c1f4fb2dcbc8dce8d00b&type=3#spr_tile_floor_and_walls_197");
     flex-wrap: nowrap;
     flex-direction: column;
     width: 180px;
@@ -54,7 +55,7 @@
     background-color: rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-    -unity-background-image-tint-color: rgb(136, 136, 136);
+    -unity-background-image-tint-color: rgb(56, 56, 56);
 }
 
 .Boton_nivel:active {

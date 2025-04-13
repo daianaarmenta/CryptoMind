@@ -3,7 +3,7 @@
     <engine:VisualElement name="Menu" class="Menu" style="flex-grow: 1;">
         <engine:Label text="&#10;Select a level" name="Titulo" class="Titulo" style="font-size: 50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; -unity-background-image-tint-color: rgba(55, 55, 55, 0); translate: 0 100px;" />
         <engine:VisualElement name="Botonesf1" class="Botones" style="flex-grow: 1;">
-            <engine:Button text="0" name="n0" class="Boton_nivel" style="font-size: 50px; background-color: rgb(0, 0, 0); width: 200px; height: 150px;" />
+            <engine:Button text="0" name="n0" class="Boton_nivel" style="font-size: 50px; background-color: rgb(255, 45, 149); width: 200px; height: 150px; text-shadow: 0 0 0 rgb(255, 45, 149);" />
             <engine:Button text="1" name="n1" class="Boton_nivel" style="font-size: 50px; width: 200px; height: 150px;" />
             <engine:Button text="2" name="n2" class="Boton_nivel" style="font-size: 50px; border-left-color: rgba(51, 28, 28, 0); border-right-color: rgba(51, 28, 28, 0); border-top-color: rgba(51, 28, 28, 0); border-bottom-color: rgba(51, 28, 28, 0); -unity-background-image-tint-color: rgb(134, 134, 134); width: 200px; height: 150px;" />
             <engine:Button text="3" name="n3" class="Boton_nivel" style="font-size: 50px; width: 200px; height: 150px;" />
