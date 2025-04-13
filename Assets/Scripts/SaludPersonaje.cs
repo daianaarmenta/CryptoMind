@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 public class SaludPersonaje : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SaludPersonaje : MonoBehaviour
     private bool isInstanceAlive = false;
     public static SaludPersonaje instance;
     internal int numeroMonedas;
+    public event EventHandler MuerteJugador;
 
     private void Awake()
     {
@@ -40,6 +42,8 @@ public class SaludPersonaje : MonoBehaviour
 
             if (vidas <= 0)
             {
+                MuerteJugador?.Invoke(this, EventArgs.Empty); // Llama al evento de muerte
+                
                 //SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
             }
         }
