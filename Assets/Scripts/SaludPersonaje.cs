@@ -42,7 +42,7 @@ public class SaludPersonaje : MonoBehaviour
 
             if (vidas <= 0)
             {
-                MuerteJugador?.Invoke(this, EventArgs.Empty); // Llama al evento de muerte
+                MuerteJugador?.Invoke(this, EventArgs.Empty); // Llama al evento de muerte  
                 
                 //SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
             }
