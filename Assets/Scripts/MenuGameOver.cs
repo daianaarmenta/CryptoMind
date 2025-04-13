@@ -7,30 +7,41 @@ public class MenuGameOver : MonoBehaviour
     [SerializeField] private GameObject menuGameOver;
     private SaludPersonaje saludPersonaje;
 
-    [Obsolete]
     void Start()
     {
-        saludPersonaje = GameObject.FindGameObjectWithTag("Player").GetComponent<SaludPersonaje>();
-        saludPersonaje.MuerteJugador += ActiveMenu;
-    }
+        // Buscar al jugador y suscribirse al evento de muerte
+        saludPersonaje = GameObject.FindGameObjectWithTag("Player")?.GetComponent<SaludPersonaje>();
 
-    [Obsolete]
-    private void ActiveMenu(object sender, EventArgs e)
-    {
-        menuGameOver.SetActive(true);
-        Rigidbody2D rb = saludPersonaje.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if (saludPersonaje != null)
         {
-            rb.velocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Static; // Detiene todo movimiento y fuerzas
-            Debug.Log("⛔ Movimiento del jugador congelado.");
+            saludPersonaje.MuerteJugador += ActiveMenu;
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ No se encontró al jugador para activar el menú Game Over.");
         }
     }
 
-    public void Reiniciar(){
+    private void ActiveMenu(object sender, EventArgs e)
+    {
+        menuGameOver.SetActive(true);
+
+        // Congelar movimiento del jugador sin errores
+        Rigidbody2D rb = saludPersonaje.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.simulated = false; // Detiene la simulación física sin necesidad de cambiar a Static
+            
+        }
+    }
+
+    public void Reiniciar()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void MenuNiveles(string nombre){
+
+    public void MenuNiveles(string nombre)
+    {
         SceneManager.LoadScene(nombre);
     }
 }
