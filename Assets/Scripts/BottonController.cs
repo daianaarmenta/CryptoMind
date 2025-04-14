@@ -35,24 +35,15 @@ public class BottonController : MonoBehaviour
         // 🔄 Recargar la escena actual
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    public void Salir(){
-        SceneManager.LoadScene(1); // carga la primera escena en la lista    
+    public void Tienda()
+    {
+        botonesTienda.previousScene = SceneManager.GetActiveScene().name; // 🟢 Guardar escena actual
+        SceneManager.LoadScene("Tienda"); // 🔁 Cargar tienda
     }
 
-    /*
-    [SerializeField] private string siguienteEscena = "Menu_juego";
 
-    public void NextScene()
-    {
-        // Solo guardar la escena actual si vamos a la tienda
-        if (siguienteEscena == "Tienda")
-        {
-            botonesTienda.previousScene = SceneManager.GetActiveScene().name;
-            Debug.Log("Escena actual guardada como 'anterior': " + botonesTienda.previousScene);
-        }
-
-        SceneManager.LoadScene(siguienteEscena);
-    }*/
+    public void Salir(){
+        SceneManager.LoadScene(1);     
+    }
 }
 

@@ -40,9 +40,7 @@ public class Botones_niveles : MonoBehaviour
 
         public void Reiniciar()
     {
-        Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
-
-        // ✅ Reiniciar vidas antes de recargar la escena
+        Time.timeScale = 1f; 
         if (GameManager.Instance != null)
         {
             GameManager.Instance.ReiniciarVidas();
@@ -60,6 +58,14 @@ public class Botones_niveles : MonoBehaviour
     private void CambiarEscena(ClickEvent evt, string escena)
     {
         Reiniciar();
+
+        // Si va a la tienda, guardar la escena actual
+        if (escena == "Tienda")
+        {
+            botonesTienda.previousScene = SceneManager.GetActiveScene().name;
+            Debug.Log("📌 Escena anterior guardada: " + botonesTienda.previousScene);
+        }
+
         SceneManager.LoadScene(escena);
     }
 }

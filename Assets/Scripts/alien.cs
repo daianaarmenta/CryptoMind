@@ -6,21 +6,20 @@ public class alien : MonoBehaviour
 {
     [SerializeField] private int cantidadCheckpoint;
     [SerializeField] private int checkpointTerminado;
-    [SerializeField] private TextMeshProUGUI mensajeTexto; // ← Asigna desde el inspector
+
+    [Header("UI de mensaje")]
+    [SerializeField] private GameObject panelMensaje; // ← El GameObject que incluye fondo + texto
+    [SerializeField] private TextMeshProUGUI mensajeTexto; // ← El texto dentro del panel
 
     void Start()
     {
         cantidadCheckpoint = GameObject.FindGameObjectsWithTag("Checkpoint").Length;
         checkpointTerminado = 0;
 
-        if (mensajeTexto != null)
-        {
-            mensajeTexto.gameObject.SetActive(false); // Oculta el texto al inicio
-        }
+        if (panelMensaje != null)
+            panelMensaje.SetActive(false); // Oculta todo al inicio
         else
-        {
-            Debug.LogWarning("⚠️ No se asignó mensajeTexto en el Inspector.");
-        }
+            Debug.LogWarning("⚠️ No se asignó el panel del mensaje en el Inspector.");
     }
 
     public void AumentarCheckpoints()
@@ -48,20 +47,20 @@ public class alien : MonoBehaviour
 
     private void MostrarMensaje(string texto)
     {
-        if (mensajeTexto != null)
+        if (panelMensaje != null && mensajeTexto != null)
         {
-            mensajeTexto.gameObject.SetActive(true);
+            panelMensaje.SetActive(true);
             mensajeTexto.text = texto;
             CancelInvoke(nameof(EsconderMensaje));
-            Invoke(nameof(EsconderMensaje), 2f); // Oculta el mensaje en 2 segundos
+            Invoke(nameof(EsconderMensaje), 2f);
         }
     }
 
     private void EsconderMensaje()
     {
-        if (mensajeTexto != null)
+        if (panelMensaje != null)
         {
-            mensajeTexto.gameObject.SetActive(false);
+            panelMensaje.SetActive(false);
         }
     }
 }

@@ -4,38 +4,39 @@ using UnityEngine.UIElements;
 
 public class botonesTienda : MonoBehaviour
 {
-    public static string previousScene = "";
+    public static string previousScene = ""; // Almacena la escena anterior al entrar a la tienda
 
-    UIDocument boton;
-    Button botonRegresar;
+    private UIDocument uiDoc;
+    private Button botonRegresar;
 
     void OnEnable()
     {
-        boton = GetComponent<UIDocument>();
-        var root = boton.rootVisualElement;
+        uiDoc = GetComponent<UIDocument>();
+        var root = uiDoc.rootVisualElement;
 
         botonRegresar = root.Q<Button>("botonRegresar");
+
         if (botonRegresar != null)
         {
-            botonRegresar.RegisterCallback<ClickEvent>(Regresar);
+            botonRegresar.clicked += Regresar;
         }
         else
         {
-            Debug.LogWarning("No se encontró el botón 'botonRegresar' en la UI.");
+            Debug.LogWarning("⚠️ No se encontró el botón 'botonRegresar' en el UI.");
         }
     }
 
-    void Regresar(ClickEvent evt)
+    void Regresar()
     {
         if (!string.IsNullOrEmpty(previousScene))
         {
-            Debug.Log("Regresando a: " + previousScene);
+            Debug.Log("🔁 Regresando a la escena anterior: " + previousScene);
             SceneManager.LoadScene(previousScene);
         }
         else
         {
-            Debug.LogWarning("No se ha registrado una escena anterior. Cargando 'Menu_juego'.");
-            SceneManager.LoadScene("Menu_juego");
+            Debug.LogWarning("⚠️ No se ha registrado una escena anterior. Cargando 'Menu_juego'.");
+            SceneManager.LoadScene("Menu_juego"); // Cambia por el nombre exacto de tu menú si es diferente
         }
     }
 }
