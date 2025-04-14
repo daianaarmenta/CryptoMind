@@ -2292,6 +2292,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
   m_PrefabInstance: {fileID: 40473338}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1505295369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Name
+      value: checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: preguntaAsociada.textoPregunta
+      value: "What is \u201Cmining\u201D in cryptocurrency?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: preguntaAsociada.respuestas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[0]'
+      value: Creating new coins using computers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[1]'
+      value: ' Saving money in a bank'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[2]'
+      value: Digging for gold
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.689278
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.8299336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
 --- !u!1001 &1516651158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2609,6 +2686,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
   m_PrefabInstance: {fileID: 1612699892}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1636570146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Name
+      value: checkpoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: preguntaAsociada.textoPregunta
+      value: Which of these can be built using blockchain?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: preguntaAsociada.respuestaCorrecta
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: preguntaAsociada.respuestas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[0]'
+      value: Online games
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[1]'
+      value: Antivirus software
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: 'preguntaAsociada.respuestas.Array.data[2]'
+      value: Secure voting systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 74.47839
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
 --- !u!4 &1687673987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
@@ -8865,3 +9023,5 @@ SceneRoots:
   - {fileID: 1449286835}
   - {fileID: 153033465}
   - {fileID: 490078292}
+  - {fileID: 1505295369}
+  - {fileID: 1636570146}
