@@ -38,8 +38,28 @@ public class Botones_niveles : MonoBehaviour
         tienda.RegisterCallback<ClickEvent, string>(CambiarEscena, "Tienda");
     }
 
+        public void Reiniciar()
+    {
+        Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
+
+        // ✅ Reiniciar vidas antes de recargar la escena
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ReiniciarVidas();
+            Debug.Log("🔁 Vidas reiniciadas.");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
+        }
+
+        // 🔄 Recargar la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private void CambiarEscena(ClickEvent evt, string escena)
     {
+        Reiniciar();
         SceneManager.LoadScene(escena);
     }
 }
