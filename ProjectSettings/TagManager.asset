@@ -8,6 +8,7 @@ TagManager:
   - Escaleras
   - Enemigo
   - Checkpoint
+  - Alien
   layers:
   - Default
   - TransparentFX

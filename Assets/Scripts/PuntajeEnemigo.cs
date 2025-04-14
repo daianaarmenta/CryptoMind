@@ -19,6 +19,7 @@ public class PuntajeEnemigo : MonoBehaviour
     {
        
         Debug.LogWarning("Ya existe una instancia de PuntajeEnemigo.");
+        
     }
 }
 

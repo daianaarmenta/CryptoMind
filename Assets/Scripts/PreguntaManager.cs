@@ -88,5 +88,15 @@ public class PreguntaManager : MonoBehaviour
 
 
         panelPregunta.SetActive(false);
+        alien controlador = Object.FindFirstObjectByType<alien>();
+
+        if (controlador != null)
+        {
+            controlador.AumentarCheckpoints();
+        }
+        else
+        {
+            Debug.LogError("No se encontró una instancia de alien.");
+        }
     }
 }

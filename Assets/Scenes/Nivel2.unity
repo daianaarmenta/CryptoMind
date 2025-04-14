@@ -494,11 +494,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.87
+      value: 31.59
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.88
+      value: 1.94
       objectReference: {fileID: 0}
     - target: {fileID: 8487288094216404608, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_IsActive
@@ -26242,7 +26242,7 @@ Transform:
   m_GameObject: {fileID: 374594384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.10308, y: -0.54061997, z: -10}
+  m_LocalPosition: {x: -0.9947853, y: -2.1029, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27045,11 +27045,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.68
+      value: -8.109
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.428
+      value: -3.938
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27277,6 +27277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: checkpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: preguntaAsociada.textoPregunta
       value: ADIOS
@@ -27355,11 +27359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.93
+      value: 17.76
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.43
+      value: 6.86
       objectReference: {fileID: 0}
     - target: {fileID: 8487288094216404608, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_IsActive
@@ -34943,6 +34947,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1973045602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5916534596085224190, guid: b025fe8662d610f4aa512963afa6e405, type: 3}
+  m_PrefabInstance: {fileID: 1866109237629224419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1973045606
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973045602}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.006051086, y: -0.016136646}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.32}
+    newSize: {x: 0.16, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.11562516, y: 0.2877267}
+  m_EdgeRadius: 0
 --- !u!4 &2066283360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3684412453174197066, guid: abbb8db693656f842ad5ebc5734cd342, type: 3}
@@ -35264,6 +35319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2446103972973157447, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: preguntaAsociada.textoPregunta
       value: HOLA
@@ -35409,7 +35468,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5916534596085224190, guid: b025fe8662d610f4aa512963afa6e405, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1973045606}
   m_SourcePrefab: {fileID: 100100000, guid: b025fe8662d610f4aa512963afa6e405, type: 3}
 --- !u!1001 &3989041749348571256
 PrefabInstance:
@@ -35602,11 +35664,11 @@ PrefabInstance:
       objectReference: {fileID: 1156764888}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.39667
+      value: -8.39233
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.53633356
+      value: -4.0463333
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.z
