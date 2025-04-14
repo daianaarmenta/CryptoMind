@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7570082471733270599}
   m_Layer: 0
   m_Name: checkpoint
-  m_TagString: Checkpoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_Name
       value: antenna
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+      propertyPath: m_TagString
+      value: Checkpoint
       objectReference: {fileID: 0}
     - target: {fileID: 4445095730580800950, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_IsActive
