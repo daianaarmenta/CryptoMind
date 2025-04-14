@@ -7,19 +7,28 @@ using UnityEngine;
 public class Disparo : MonoBehaviour
 {
     public GameObject balaPrefab;  // Prefab de la bala
-    public Transform puntoDeDisparo; // Donde se disparará la bala (por ejemplo, desde la pistola del personaje)
+    public Transform puntoDeDisparoParado; // Donde se disparará la bala (por ejemplo, desde la pistola del personaje)
+    public Transform puntoDeDisparoAgachado; // Donde se disparará la bala si el personaje está agachado
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Disparar();
+            if (MueveChabelito.estaAgachado)
+            {
+                Disparar();
+            }
+            else 
+            {
+                Disparar();
+            }
         }
         
     }
 
     private void Disparar()
-    { 
+    {
+        Transform puntoDeDisparo = MueveChabelito.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
         Instantiate(balaPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation); // Instancia la bala en el punto de disparo
     }
 }

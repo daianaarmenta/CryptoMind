@@ -16,7 +16,7 @@ public class MoverFondoJugador : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        offset = (jugadorRB.linearVelocity.x * 0.1f) * velocidadMovimiento * Time.deltaTime;
+        offset = jugadorRB.linearVelocity.x * 0.1f * velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offset;
         
     }

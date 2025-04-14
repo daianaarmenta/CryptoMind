@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MueveChabelito : MonoBehaviour
@@ -5,6 +6,8 @@ public class MueveChabelito : MonoBehaviour
     [SerializeField] private float velocidadX;
     [SerializeField] private float fuerzaSalto;
     [SerializeField] private float velocidadEscalera;
+
+    public static bool estaAgachado { get; private set; }
 
     private Rigidbody2D rb;
     private bool mirandoDerecha = true; // Controla la dirección en la que está mirando el personaje
@@ -49,6 +52,16 @@ public class MueveChabelito : MonoBehaviour
         {
             Girar(); // Si el personaje se mueve a la izquierda y está mirando a la derecha, giramos
         }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            estaAgachado = true;
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            estaAgachado = false;
+        }
+
     }
 
     // Método para girar el personaje

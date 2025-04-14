@@ -42,7 +42,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.66
+      value: -15.64
       objectReference: {fileID: 0}
     - target: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_LocalPosition.y
@@ -82,15 +82,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1851029611084616804, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1851029611084616804, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729485466545121798, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_Name
@@ -112,7 +112,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7495482779133041027, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4445095730580800950, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
     - {fileID: 5169828838564158021, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e69511c740f90f48bf71fb03e8a24cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marker: {fileID: 5362364155274883097}
+  marker: {fileID: 8110706743166780159}
   preguntasPanel: {fileID: 4475000784593025912, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
   preguntaAsociada:
     textoPregunta: 
@@ -194,13 +195,13 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9789071, y: 3}
   m_EdgeRadius: 0
---- !u!1 &5362364155274883097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2729485466545121798, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
-  m_PrefabInstance: {fileID: 8037770142239758879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7795097540341565231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+  m_PrefabInstance: {fileID: 8037770142239758879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8110706743166780159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2235159344035616992, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
   m_PrefabInstance: {fileID: 8037770142239758879}
   m_PrefabAsset: {fileID: 0}
