@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 /* Autora: Daiana Andrea Armenta Maya
  * Descripción: Clase que gestiona la lógica de las preguntas y respuestas en el juego.
