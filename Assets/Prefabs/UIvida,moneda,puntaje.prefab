@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 1610717222946770836}
   - component: {fileID: 341069790621988812}
   - component: {fileID: 2624109213244832347}
-  - component: {fileID: 8854681534448382198}
+  - component: {fileID: 7253020959204233130}
   m_Layer: 5
   m_Name: puntajeMoneda
   m_TagString: Untagged
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8854681534448382198
+--- !u!114 &7253020959204233130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1410,10 +1410,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5814977112656028610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd59d0607211534abf51b056f118b17, type: 3}
+  m_Script: {fileID: 11500000, guid: ce0a7b6a42cd298489511bfe6b44893a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: {fileID: 2624109213244832347}
+  monedasTexto: {fileID: 2624109213244832347}
 --- !u!1 &6351410234874273304
 GameObject:
   m_ObjectHideFlags: 0

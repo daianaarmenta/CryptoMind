@@ -3,62 +3,27 @@ using TMPro;
 
 public class PuntajeEnemigo : MonoBehaviour
 {
-    public static PuntajeEnemigo instance;
-
-    private float puntos;
     [SerializeField] private TextMeshProUGUI textMesh;
-    private void Awake()
-{
-    Debug.Log("Awake de PuntajeEnemigo ejecutado en: " + gameObject.name);
-
-    if (instance == null)
-    {
-        instance = this;
-    }
-    else
-    {
-       
-        Debug.LogWarning("Ya existe una instancia de PuntajeEnemigo.");
-        
-    }
-}
-
 
     private void Start()
-{
-    //PlayerPrefs.SetFloat("PuntajeEnemigo", 0f); //  borra el valor anterior PARA REINICIAR EL PUNTAJE
-    puntos = PlayerPrefs.GetFloat("PuntajeEnemigo", 0f); // CARGA EL VALOR GUARDADO
-    textMesh.gameObject.SetActive(true);
-}
+    {
+        if (textMesh == null)
+        {
+            Debug.LogError("❌ No se asignó el TextMeshProUGUI.");
+            return;
+        }
+
+        ActualizarTexto(); // Mostrar desde el principio
+    }
 
     private void Update()
-{
-    if (puntos > 0)
     {
-        if (!textMesh.gameObject.activeSelf)
-            textMesh.gameObject.SetActive(true);
-
-        textMesh.text = puntos.ToString("0");
-    }
-}
-public void SumarPuntos(float puntosEntrada)
-{
-    puntos += puntosEntrada;
-
-    if (textMesh != null)
-    {
-        if (!textMesh.gameObject.activeSelf)
-            textMesh.gameObject.SetActive(true);
-
-        textMesh.text = puntos.ToString("0");
+        ActualizarTexto();
     }
 
-    PlayerPrefs.SetFloat("PuntajeEnemigo", puntos); // ✅ se guarda al momento
-
-    Debug.Log("🏆 Puntos actuales: " + puntos);
-}
-
-
-
-
+    private void ActualizarTexto()
+    {
+        int puntos = GameManager.Instance.Puntaje; // ✅ Línea corregida
+        textMesh.text = puntos.ToString("0");
+    }
 }

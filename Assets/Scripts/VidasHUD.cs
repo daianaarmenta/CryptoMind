@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
-using TMPro; // o UnityEngine.UI si usas Text normal
+using TMPro;
 
 public class VidasHUD : MonoBehaviour
 {
     public static VidasHUD instance;
 
-    [SerializeField] private TextMeshProUGUI vidasTexto; // asigna el campo en el inspector
+    [SerializeField] private TextMeshProUGUI vidasTexto;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
         else
         {

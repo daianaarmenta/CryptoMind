@@ -25,7 +25,7 @@ public class PuntosHUB : MonoBehaviour
     {
         if (gameManager != null && puntos != null)
         {
-            puntos.text = " " + gameManager.PuntosTotales.ToString();
+            puntos.text = " " + gameManager.Puntaje.ToString(); 
         }
     }
 }

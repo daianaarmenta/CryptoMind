@@ -50,7 +50,7 @@ public class PreguntaManager : MonoBehaviour
 
                     botonesRespuestas[i].onClick.RemoveAllListeners();
                     int respuestaIndex = i;
-                    
+
                     botonesRespuestas[i].onClick.AddListener(() => ComprobarRespuesta(pregunta, respuestaIndex));
                 }
                 else
@@ -70,12 +70,12 @@ public class PreguntaManager : MonoBehaviour
         if (respuestaIndex == pregunta.respuestaCorrecta)
         {
             Debug.Log("✅ ¡Respuesta correcta!");
-            GameManager.Instance.SumarPuntos(100);
+            GameManager.Instance.SumarPuntaje(100); // ✅ Puntaje, no monedas
         }
         else
         {
             Debug.Log("❌ Respuesta incorrecta.");
-            if (SaludPersonaje.instance != null)    
+            if (SaludPersonaje.instance != null)
             {
                 SaludPersonaje.instance.PerderVida();
             }
@@ -85,11 +85,10 @@ public class PreguntaManager : MonoBehaviour
             }
         }
 
-
-
         panelPregunta.SetActive(false);
-        alien controlador = Object.FindFirstObjectByType<alien>();
 
+        // ✅ Aumentar el conteo de checkpoints desde el alien
+        alien controlador = Object.FindFirstObjectByType<alien>();
         if (controlador != null)
         {
             controlador.AumentarCheckpoints();

@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-/*|
+
+/*
 Autor: Fernanda Pineda
-Este codigo es para superponer la tienda al juego y permitir la compra de mejoras
+Este código es para superponer la tienda al juego y permitir la compra de mejoras
 */
 public class TiendaUIController : MonoBehaviour
 {
     private Label monedasLabel;
     private Button botonVida;
     private Button botonMejora;
-    
 
     void Start()
     {
@@ -20,17 +20,15 @@ public class TiendaUIController : MonoBehaviour
             monedasLabel = root.Q<Label>("monedasLabel");
             botonVida = root.Q<Button>("botonVida");
             botonMejora = root.Q<Button>("botonMejora");
-            
 
             if (monedasLabel == null) Debug.LogError("❌ No se encontró 'monedasLabel'");
             if (botonVida == null) Debug.LogError("❌ No se encontró 'botonVida'");
             if (botonMejora == null) Debug.LogError("❌ No se encontró 'botonMejora'");
-            
 
             if (GameManager.Instance != null && monedasLabel != null)
             {
-                monedasLabel.text = GameManager.Instance.PuntosTotales.ToString();
-                Debug.Log("✅ Monedas actuales en tienda: " + GameManager.Instance.PuntosTotales);
+                monedasLabel.text = GameManager.Instance.Monedas.ToString(); // ✅ CAMBIO AQUÍ
+                Debug.Log("✅ Monedas actuales en tienda: " + GameManager.Instance.Monedas); // ✅ CAMBIO AQUÍ
             }
             else
             {
@@ -39,7 +37,6 @@ public class TiendaUIController : MonoBehaviour
 
             if (botonVida != null) botonVida.clicked += () => Comprar(100, "Vida");
             if (botonMejora != null) botonMejora.clicked += () => Comprar(150, "Mejora");
-            
 
         }).ExecuteLater(1);
     }
@@ -61,7 +58,7 @@ public class TiendaUIController : MonoBehaviour
     {
         if (monedasLabel != null)
         {
-            monedasLabel.text = GameManager.Instance.PuntosTotales.ToString();
+            monedasLabel.text = GameManager.Instance.Monedas.ToString();  
         }
     }
 }

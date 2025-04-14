@@ -19,14 +19,8 @@ public class Enemigo : MonoBehaviour
 
     private void Muerte()
     {
-        if (PuntajeEnemigo.instance != null)
-        {
-            PuntajeEnemigo.instance.SumarPuntos(cantidadPuntos);
-        }
-        else
-        {
-            Debug.LogWarning("❌ PuntajeEnemigo no encontrado. No se sumaron puntos.");
-        }
+        GameManager.Instance.SumarPuntaje((int)cantidadPuntos);
+
 
         if (efectoMuerte != null)
         {

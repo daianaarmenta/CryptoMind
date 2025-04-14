@@ -2,7 +2,7 @@ using UnityEngine;
 
 /*
 Autor: Fernanda Pineda 
-Este codigo es para gestionar la recolección de monedas en el juego
+Este código es para gestionar la recolección de monedas en el juego.
 */
 public class Coin : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class Coin : MonoBehaviour
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.SumarPuntos(valor);
+                GameManager.Instance.SumarMonedas(valor); 
             }
 
             GetComponent<SpriteRenderer>().enabled = false;
