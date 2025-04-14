@@ -37,9 +37,7 @@ public class BottonController : MonoBehaviour
 }
 
     public void Salir(){
-        Debug.Log("Saliendo del juego..."); // Mensaje de depuración
-        Application.Quit(); // Cierra la aplicación
-
+        SceneManager.LoadScene(1); // carga la primera escena en la lista    
     }
 
     /*
