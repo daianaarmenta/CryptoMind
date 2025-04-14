@@ -18,23 +18,23 @@ public class BottonController : MonoBehaviour
         menuPausa.SetActive(false); // Activa el menú de pausa
     }
     public void Reiniciar()
-{
-    Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
-
-    // ✅ Reiniciar vidas antes de recargar la escena
-    if (GameManager.Instance != null)
     {
-        GameManager.Instance.ReiniciarVidas();
-        Debug.Log("🔁 Vidas reiniciadas.");
-    }
-    else
-    {
-        Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
-    }
+        Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
 
-    // 🔄 Recargar la escena actual
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-}
+        // ✅ Reiniciar vidas antes de recargar la escena
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ReiniciarVidas();
+            Debug.Log("🔁 Vidas reiniciadas.");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
+        }
+
+        // 🔄 Recargar la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     public void Salir(){
         SceneManager.LoadScene(1); // carga la primera escena en la lista    
