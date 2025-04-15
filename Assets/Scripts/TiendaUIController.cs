@@ -47,15 +47,28 @@ public class TiendaUIController : MonoBehaviour
 
     void Comprar(int precio, string nombre)
     {
+        // ⚠️ Verificar si intenta comprar vida sin necesitarla
+        if (nombre == "Vida" && !GameManager.Instance.PuedeComprarVida())
+        {
+            Debug.Log("❌ Ya tienes el máximo de vidas. No puedes comprar más.");
+            return;
+        }
+
         if (GameManager.Instance != null && GameManager.Instance.GastarMonedas(precio))
         {
             Debug.Log($"✅ Compra realizada: {nombre} por {precio} monedas.");
+
+            if (nombre == "Vida")
+            {
+                GameManager.Instance.ComprarVida();
+                // (Opcional) Aquí podrías actualizar un HUD visual de vidas
+            }
+
             ActualizarMonedasUI();
         }
         else
         {
             Debug.Log($"❌ No tienes suficientes monedas para {nombre}.");
-            // Aquí podrías mostrar un mensaje visual con fondo si lo deseas
         }
     }
 
@@ -64,6 +77,12 @@ public class TiendaUIController : MonoBehaviour
         if (monedasLabel != null)
         {
             monedasLabel.text = GameManager.Instance.Monedas.ToString();
+
+            // (Opcional) Desactiva botón si ya tienes 5 vidas
+            if (botonVida != null)
+            {
+                botonVida.SetEnabled(GameManager.Instance.PuedeComprarVida());
+            }
         }
     }
 

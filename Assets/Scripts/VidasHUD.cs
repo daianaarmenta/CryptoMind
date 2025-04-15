@@ -12,7 +12,6 @@ public class VidasHUD : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
         }
         else
         {
@@ -52,6 +51,17 @@ public class VidasHUD : MonoBehaviour
         {
             SaludPersonaje.instance.vidas = SaludPersonaje.instance.vidasMaximas;
             ActualizarVidas();
+        }
+    }
+
+    // ✅ NUEVO: Método para actualizar desde GameManager (por ejemplo, desde la tienda)
+    public void SetVidasDesdeGameManager()
+    {
+        if (vidasTexto != null)
+        {
+            int vidas = GameManager.Instance.VidasGuardadas;
+            vidasTexto.text = $" {vidas}";
+            Debug.Log("✅ Texto de vidas actualizado desde GameManager: " + vidas);
         }
     }
 }

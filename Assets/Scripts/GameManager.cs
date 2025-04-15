@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -9,12 +10,16 @@ public class GameManager : MonoBehaviour
     public int Monedas => monedas;
     public int Puntaje => puntaje;
 
+    // 🔧 NUEVO: máximo de vidas permitido
+    public int MaxVidas => 5;
+
+    // ✅ Vidas guardadas persistentemente (inicia con 5 por defecto)
     public int VidasGuardadas
     {
-        get => PlayerPrefs.GetInt("Vidas", 3);
+        get => PlayerPrefs.GetInt("Vidas", MaxVidas); // 🟢 Siempre inicia con 5
         set
         {
-            PlayerPrefs.SetInt("Vidas", Mathf.Clamp(value, 0, 3));
+            PlayerPrefs.SetInt("Vidas", Mathf.Clamp(value, 0, MaxVidas)); // 🔐 Nunca más de 5
             PlayerPrefs.Save();
         }
     }
@@ -36,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // 🔁 Cargar monedas y puntaje guardado al iniciar
         monedas = PlayerPrefs.GetInt("NumeroMonedas", 0);
         puntaje = PlayerPrefs.GetInt("Puntaje", 0);
     }
@@ -86,15 +92,24 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public bool PuedeComprarVida() => VidasGuardadas < 3;
+    // ✅ VIDAS
+    public bool PuedeComprarVida() => VidasGuardadas < MaxVidas;
 
     public void ComprarVida()
     {
         if (PuedeComprarVida())
         {
             VidasGuardadas++;
+            Debug.Log("❤️ Vida comprada. Total ahora: " + VidasGuardadas);
+        }
+        else
+        {
+            Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
         }
     }
 
-    public void ReiniciarVidas() => VidasGuardadas = 3;
+    public void ReiniciarVidas()
+    {
+        VidasGuardadas = MaxVidas;
+    }
 }

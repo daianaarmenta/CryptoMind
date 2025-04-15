@@ -36,10 +36,31 @@ public class BottonController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Tienda()
+{
+    // 🧍 Buscar al jugador por su tag
+    GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+
+    if (jugador != null)
     {
-        botonesTienda.previousScene = SceneManager.GetActiveScene().name; // 🟢 Guardar escena actual
-        SceneManager.LoadScene("Tienda"); // 🔁 Cargar tienda
+        Vector3 pos = jugador.transform.position;
+
+        // 🧠 Guardar la posición del jugador en PlayerPrefs
+        PlayerPrefs.SetFloat("JugadorX", pos.x);
+        PlayerPrefs.SetFloat("JugadorY", pos.y);
+        PlayerPrefs.SetFloat("JugadorZ", pos.z);
+        PlayerPrefs.Save();
+
+        Debug.Log("💾 Posición guardada: " + pos);
     }
+    else
+    {
+        Debug.LogWarning("⚠️ No se encontró el jugador para guardar posición.");
+    }
+
+    botonesTienda.previousScene = SceneManager.GetActiveScene().name;
+    SceneManager.LoadScene("Tienda");
+}
+
 
 
     public void Salir(){

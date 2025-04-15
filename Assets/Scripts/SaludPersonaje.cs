@@ -7,7 +7,6 @@ public class SaludPersonaje : MonoBehaviour
 {
     public int vidas = 5;
     public int vidasMaximas = 5;
-    //public float tiempoRegeneracion = 5f; // Tiempo en segundos para regenerar una vida
 
     private bool isInstanceAlive = false;
     public static SaludPersonaje instance;
@@ -20,7 +19,12 @@ public class SaludPersonaje : MonoBehaviour
         {
             instance = this;
             isInstanceAlive = true;
-            //DontDestroyOnLoad(gameObject); // No destruir al cambiar de escena
+
+            // ✅ Sincroniza con el GameManager al iniciar
+            vidasMaximas = GameManager.Instance.MaxVidas;
+            vidas = GameManager.Instance.VidasGuardadas;
+
+            //DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -33,6 +37,10 @@ public class SaludPersonaje : MonoBehaviour
         if (vidas > 0)
         {
             vidas--;
+
+            // ✅ Sincroniza con GameManager
+            GameManager.Instance.VidasGuardadas = vidas;
+
             Debug.Log("Vida perdida. Vidas restantes: " + vidas);
 
             if (VidasHUD.instance != null)
@@ -42,13 +50,11 @@ public class SaludPersonaje : MonoBehaviour
 
             if (vidas <= 0)
             {
-                MuerteJugador?.Invoke(this, EventArgs.Empty); // Llama al evento de muerte  
-                
-                //SceneManager.LoadScene("Game Over"); // Cambia de escena cuando las vidas sean 0
+                MuerteJugador?.Invoke(this, EventArgs.Empty);
+                //SceneManager.LoadScene("Game Over");
             }
         }
     }
-    
 
     /*public void RegresarAEscenaPrincipal(string nombreEscena)
     {

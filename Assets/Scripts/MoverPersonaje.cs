@@ -13,9 +13,20 @@ public class MueveChabelito : MonoBehaviour
     private bool mirandoDerecha = true; // Controla la dirección en la que está mirando el personaje
 
     void Start()
+{
+    rb = GetComponent<Rigidbody2D>();
+
+    // ✅ Restaurar la posición guardada si existe
+    if (PlayerPrefs.HasKey("JugadorX"))
     {
-        rb = GetComponent<Rigidbody2D>();
+        float x = PlayerPrefs.GetFloat("JugadorX");
+        float y = PlayerPrefs.GetFloat("JugadorY");
+        float z = PlayerPrefs.GetFloat("JugadorZ");
+
+        transform.position = new Vector3(x, y, z);
+        Debug.Log("📍 Posición restaurada al regresar de la tienda: " + transform.position);
     }
+}
 
     void Update()
     {
