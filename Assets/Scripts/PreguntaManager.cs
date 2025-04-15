@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 /* Autora: Daiana Andrea Armenta Maya
  * Descripción: Clase que gestiona la lógica de las preguntas y respuestas en el juego.
@@ -13,6 +15,11 @@ public class PreguntaManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoPregunta;
     [SerializeField] private Button[] botonesRespuestas;
     [SerializeField] private GameObject panelPregunta;
+    [SerializeField] private GameObject mensajeRespuesta;
+    [SerializeField] private TextMeshProUGUI mensajeTexto;
+    [SerializeField] private float tiempoMensaje =2f;
+
+    private System.Action callbackFinPregunta;
 
     private void Awake()
     {
@@ -28,12 +35,14 @@ public class PreguntaManager : MonoBehaviour
         }
     }
 
-    public void MostrarPregunta(Pregunta pregunta)
+    public void MostrarPregunta(Pregunta pregunta, System.Action callbackFin)
     {
+        callbackFinPregunta = callbackFin;
         if (panelPregunta != null)
         {
             panelPregunta.SetActive(true);
             textoPregunta.text = pregunta.textoPregunta;
+            Time.timeScale = 0f; // Pausar el juego
 
             for (int i = 0; i < botonesRespuestas.Length; i++)
             {
@@ -67,14 +76,17 @@ public class PreguntaManager : MonoBehaviour
 
     private void ComprobarRespuesta(Pregunta pregunta, int respuestaIndex)
     {
+        string respuestaCorrecta = pregunta.respuestas[pregunta.respuestaCorrecta];
         if (respuestaIndex == pregunta.respuestaCorrecta)
         {
             Debug.Log("✅ ¡Respuesta correcta!");
-            GameManager.Instance.SumarPuntaje(100); // ✅ Puntaje, no monedas
+            GameManager.Instance.SumarMonedas(100); // ✅ Puntaje, no monedas
+            MostrarMensaje("Correct! +100 coins", Color.green);
         }
         else
         {
             Debug.Log("❌ Respuesta incorrecta.");
+            MostrarMensaje("Incorrect!\n-1 life\n\nCorrect answer:" + respuestaCorrecta , Color.red);
             if (SaludPersonaje.instance != null)
             {
                 SaludPersonaje.instance.PerderVida();
@@ -85,7 +97,27 @@ public class PreguntaManager : MonoBehaviour
             }
         }
 
+        StartCoroutine(OcultarMensaje());
+    }
+
+    private void MostrarMensaje(string mensaje, Color color)
+    {
+        mensajeRespuesta.SetActive(true);
+        Debug.Log("panel de respuesta activo");
+        mensajeTexto.text = mensaje;
+        mensajeTexto.color = color;
+        Debug.Log("🟢 Mostrando mensaje: " + mensaje);
+    }
+
+    private System.Collections.IEnumerator OcultarMensaje()
+    {
+        yield return new WaitForSecondsRealtime(tiempoMensaje);
+
+        mensajeRespuesta.SetActive(false);
         panelPregunta.SetActive(false);
+        Time.timeScale = 1f; // Reanudar el juego
+        callbackFinPregunta?.Invoke(); // Llamar al callback al finalizar la pregunta
+        callbackFinPregunta = null; // Limpiar el callback para evitar llamadas múltiples
 
         // ✅ Aumentar el conteo de checkpoints desde el alien
         alien controlador = Object.FindFirstObjectByType<alien>();
@@ -98,4 +130,5 @@ public class PreguntaManager : MonoBehaviour
             Debug.LogError("No se encontró una instancia de alien.");
         }
     }
+
 }

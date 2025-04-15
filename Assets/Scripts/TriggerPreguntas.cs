@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 /*Autora: Daiana Andrea Armenta Maya
     * Descripción: Clase que gestiona la activación de un panel de preguntas al entrar en un área específica.
@@ -11,11 +12,12 @@ public class TriggerPreguntas : MonoBehaviour
     [SerializeField] private Pregunta preguntaAsociada; // La pregunta asociada a este checkpoint
 
     private bool isPlayerInRange;  // Indica si el jugador está en el rango
+    private bool preguntaContestada = false;
 
     private void Update()
     {
         // Si el jugador está en el rango y presiona la tecla "E"
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)&& !preguntaContestada)
         {
             // Mostrar el panel de preguntas
             Debug.Log("Tecla 'E' presionada, mostrando panel de preguntas.");
@@ -29,8 +31,11 @@ public class TriggerPreguntas : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            marker.SetActive(true);  // Mostrar el marcador
-            Debug.Log("Marcador activado.");
+            if (!preguntaContestada)
+            {
+                marker.SetActive(true);  // Mostrar el marcador
+                Debug.Log("Marcador activado.");
+            }
         }
     }
 
@@ -63,8 +68,8 @@ public class TriggerPreguntas : MonoBehaviour
 
         if (preguntasPanel != null && preguntaAsociada != null)
         {
-            preguntasPanel.SetActive(false);  // Activar el panel de preguntas
-            PreguntaManager.instance.MostrarPregunta(preguntaAsociada);  // Mostrar la pregunta
+            preguntasPanel.SetActive(true);  // Activar el panel de preguntas
+            PreguntaManager.instance.MostrarPregunta(preguntaAsociada, MarcarComoContestada);  // Mostrar la pregunta
             Debug.Log("Panel de preguntas activado.");
         }
         else
@@ -72,6 +77,13 @@ public class TriggerPreguntas : MonoBehaviour
             Debug.LogError("No se ha asignado el panel de preguntas o la pregunta asociada en el Inspector.");
         }
 
+    }
+
+    public void MarcarComoContestada()
+    {
+        preguntaContestada = true;
+        marker.SetActive(false);  // Ocultar el marcador
+        Debug.Log("Ya se contestó la pregunta tonoto");
     }
 }
 

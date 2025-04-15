@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5293604462217478392, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6906292584345868475, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       propertyPath: m_SortingOrder
       value: 5
