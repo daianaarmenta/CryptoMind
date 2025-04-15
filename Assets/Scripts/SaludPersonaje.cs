@@ -14,23 +14,21 @@ public class SaludPersonaje : MonoBehaviour
     public event EventHandler MuerteJugador;
 
     private void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-            isInstanceAlive = true;
+        instance = this;
+        isInstanceAlive = true;
 
-            // ✅ Sincroniza con el GameManager al iniciar
-            vidasMaximas = GameManager.Instance.MaxVidas;
-            vidas = GameManager.Instance.VidasGuardadas;
-
-            //DontDestroyOnLoad(gameObject); 
-        }
-        else
-        {
-            Destroy(gameObject); 
-        }
+        vidasMaximas = GameManager.Instance.MaxVidas;
+        vidas = GameManager.Instance.VidasGuardadas; // ← 🔁 leer desde GameManager
     }
+    else
+    {
+        Destroy(gameObject); 
+    }
+}
+
 
     public void PerderVida()
     {
@@ -49,15 +47,20 @@ public class SaludPersonaje : MonoBehaviour
             }
 
             if (vidas <= 0)
-            {
-                MuerteJugador?.Invoke(this, EventArgs.Empty);
-                //SceneManager.LoadScene("Game Over");
-            }
+{
+    MuerteJugador?.Invoke(this, EventArgs.Empty);
+
+    // 🧹 Limpiar la posición guardada para no restaurarla al reiniciar
+    PlayerPrefs.DeleteKey("JugadorX");
+    PlayerPrefs.DeleteKey("JugadorY");
+    PlayerPrefs.DeleteKey("JugadorZ");
+    PlayerPrefs.Save();
+
+    
+}
+
         }
     }
+    
 
-    /*public void RegresarAEscenaPrincipal(string nombreEscena)
-    {
-        SceneManager.LoadScene(nombreEscena);
-    }*/
 }

@@ -5,25 +5,41 @@ public class PuntajeEnemigo : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textMesh;
 
+    private int puntajeAnterior = -1; // Para detectar cambios
+
     private void Start()
     {
         if (textMesh == null)
         {
-            Debug.LogError("❌ No se asignó el TextMeshProUGUI.");
+            Debug.LogError("❌ No se asignó el TextMeshProUGUI en el Inspector.");
             return;
         }
 
-        ActualizarTexto(); // Mostrar desde el principio
+        ActualizarTexto(); // Mostrar el puntaje desde el inicio
     }
 
     private void Update()
     {
-        ActualizarTexto();
+        if (textMesh == null || GameManager.Instance == null) return;
+
+        int puntajeActual = GameManager.Instance.Puntaje;
+
+        if (puntajeActual != puntajeAnterior)
+        {
+            ActualizarTexto();
+            puntajeAnterior = puntajeActual;
+        }
     }
 
     private void ActualizarTexto()
     {
-        int puntos = GameManager.Instance.Puntaje; // ✅ Línea corregida
+        if (textMesh == null)
+        {
+            Debug.LogWarning("⚠️ textMesh no asignado en PuntajeEnemigo.");
+            return;
+        }
+
+        int puntos = GameManager.Instance.Puntaje;
         textMesh.text = puntos.ToString("0");
     }
 }

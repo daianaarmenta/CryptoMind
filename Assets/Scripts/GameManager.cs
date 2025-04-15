@@ -1,8 +1,10 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public bool VolviendoDeTienda { get; set; } = false; // 🏪 Indica si se está volviendo de la tienda
 
     private int monedas = 0;
     private int puntaje = 0;
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
+
 
     private void Awake()
     {
@@ -75,6 +78,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("NumeroMonedas", 0);
         PlayerPrefs.Save();
     }
+    public static void LimpiarPosicionJugador()
+{
+    PlayerPrefs.DeleteKey("JugadorX");
+    PlayerPrefs.DeleteKey("JugadorY");
+    PlayerPrefs.DeleteKey("JugadorZ");
+    PlayerPrefs.Save();
+}
+
 
     // ✅ PUNTAJE
     public void SumarPuntaje(int cantidad)
@@ -107,9 +118,16 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
         }
     }
-
     public void ReiniciarVidas()
+{
+    VidasGuardadas = MaxVidas;
+
+    if (SaludPersonaje.instance != null)
     {
-        VidasGuardadas = MaxVidas;
+        SaludPersonaje.instance.vidas = MaxVidas; // 🔁 sincroniza variable local
     }
+
+    Debug.Log("🔁 Vidas reiniciadas a: " + MaxVidas);
+}
+
 }

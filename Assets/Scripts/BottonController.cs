@@ -18,23 +18,25 @@ public class BottonController : MonoBehaviour
         menuPausa.SetActive(false); // Activa el menú de pausa
     }
     public void Reiniciar()
+{
+    Time.timeScale = 1f;
+
+    if (GameManager.Instance != null)
     {
-        Time.timeScale = 1f; // Reanuda el tiempo si estaba pausado
-
-        // ✅ Reiniciar vidas antes de recargar la escena
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.ReiniciarVidas();
-            Debug.Log("🔁 Vidas reiniciadas.");
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
-        }
-
-        // 🔄 Recargar la escena actual
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.ReiniciarVidas();           // ✅ Reinicia vidas en PlayerPrefs
+        GameManager.Instance.VolviendoDeTienda = false;  // ⛔ no viene de tienda
     }
+
+    // 🧹 Limpia la posición guardada
+    PlayerPrefs.DeleteKey("JugadorX");
+    PlayerPrefs.DeleteKey("JugadorY");
+    PlayerPrefs.DeleteKey("JugadorZ");
+    PlayerPrefs.Save();
+
+    // ✅ Reiniciar la escena solo después de todo
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+}
+
     public void Tienda()
 {
     // 🧍 Buscar al jugador por su tag
@@ -50,7 +52,7 @@ public class BottonController : MonoBehaviour
         PlayerPrefs.SetFloat("JugadorZ", pos.z);
         PlayerPrefs.Save();
 
-        Debug.Log("💾 Posición guardada: " + pos);
+        GameManager.Instance.VolviendoDeTienda= true; // Indica que se está volviendo de la tienda
     }
     else
     {
@@ -66,5 +68,6 @@ public class BottonController : MonoBehaviour
     public void Salir(){
         SceneManager.LoadScene(1);     
     }
+    
 }
 

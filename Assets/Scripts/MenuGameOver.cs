@@ -34,11 +34,23 @@ public class MenuGameOver : MonoBehaviour
             
         }
     }
-
     public void Reiniciar()
+{
+    if (GameManager.Instance != null)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.Instance.ReiniciarVidas(); // 🔁 Restaurar las 5 vidas
+        GameManager.Instance.VolviendoDeTienda = false; // Por si venías de tienda
     }
+
+    // 🧹 (Opcional) Limpiar posición guardada por si venías de tienda
+    PlayerPrefs.DeleteKey("JugadorX");
+    PlayerPrefs.DeleteKey("JugadorY");
+    PlayerPrefs.DeleteKey("JugadorZ");
+    PlayerPrefs.Save();
+
+    // 🔄 Recargar la escena actual
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+}
 
     public void MenuNiveles(string nombre)
     {
