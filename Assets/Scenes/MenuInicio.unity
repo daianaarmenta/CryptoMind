@@ -269,8 +269,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1976276269}
-        m_TargetAssemblyTypeName: MenuControllerEmi, Assembly-CSharp
-        m_MethodName: OnRegisterPressed
+        m_TargetAssemblyTypeName: BotonesMenuInicio, Assembly-CSharp
+        m_MethodName: ShowRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1634,8 +1634,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1976276269}
-        m_TargetAssemblyTypeName: MenuControllerEmi, Assembly-CSharp
-        m_MethodName: OnLoginPressed
+        m_TargetAssemblyTypeName: BotonesMenuInicio, Assembly-CSharp
+        m_MethodName: ShowLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2070,12 +2070,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976276264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd00e88d8c90af8449c81e221f35187e, type: 3}
+  m_Script: {fileID: 11500000, guid: dd1cead89f6c0534ebec056763078d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMenu: {fileID: 1976276264}
-  uiLogin: {fileID: 73134029}
-  uiRegistro: {fileID: 539563821}
+  mainMenu: {fileID: 1976276264}
+  registerPanel: {fileID: 539563821}
+  loginPanel: {fileID: 73134029}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
