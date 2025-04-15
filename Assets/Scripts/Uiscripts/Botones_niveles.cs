@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 public class Botones_niveles : MonoBehaviour
 {
     private UIDocument menu; // Objeto de la UI en la escena
-    private Button botonRegreso; // Bot�n para regresar a "MenuInicio"
-    private Button nivel0;    // Bot�n para ir a "Nivel0"
+    private Button botonRegreso;
+    private Button nivel0;    
     private Button nivel1;    
     private Button nivel2;
     private Button nivel3;
