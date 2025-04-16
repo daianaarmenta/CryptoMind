@@ -1617,6 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 7517394495317313163}
   menuPausa: {fileID: 8098097193680740487}
+  canvasTienda: {fileID: 4695270910026462062, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
 --- !u!114 &8092798769375121103
 MonoBehaviour:
   m_ObjectHideFlags: 0
