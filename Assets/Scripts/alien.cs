@@ -48,8 +48,7 @@ public class alien : MonoBehaviour
             }
             else
             {
-                Debug.Log("🚫 Aún faltan checkpoints.");
-                MostrarMensaje($"Te faltan {cantidadCheckpoint - checkpointTerminado} checkpoints.");
+                MostrarMensaje($"You are missing {cantidadCheckpoint - checkpointTerminado} checkpoints.");
             }
         }
     }
