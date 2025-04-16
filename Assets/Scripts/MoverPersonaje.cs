@@ -32,11 +32,20 @@ public class MueveChabelito : MonoBehaviour
 
     void Update()
     {
+
         float movHorizontal = Input.GetAxis("Horizontal");
         float movVertical = Input.GetAxis("Vertical");
 
-        // Movimiento horizontal
-        rb.linearVelocity = new Vector2(movHorizontal * velocidadX, rb.linearVelocity.y);
+        if(!estaAgachado) 
+        {
+            // Movimiento horizontal
+            rb.linearVelocity = new Vector2(movHorizontal * velocidadX, rb.linearVelocity.y);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Detener el movimiento horizontal al agacharse
+        }
+
 
         // Movimiento en escaleras
         if (EstadoPersonaje.enEscalera)

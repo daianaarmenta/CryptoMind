@@ -16,6 +16,13 @@ public class DialogueController : MonoBehaviour
 
     private static bool isAnyDialogueActive = false;
 
+    private MentorFantasma mentorFantasma;
+
+    void Start()
+    {
+        mentorFantasma = GetComponent<MentorFantasma>();
+    }
+
     void Update()
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
@@ -50,6 +57,7 @@ public class DialogueController : MonoBehaviour
         dialogueMark.SetActive(false);
         lineIndex = 0;
         Time.timeScale = 0f;
+
         StartCoroutine(ShowLine());
     }
 
@@ -67,6 +75,7 @@ public class DialogueController : MonoBehaviour
             isAnyDialogueActive = false;
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
+
         }
     }
 
@@ -90,6 +99,10 @@ public class DialogueController : MonoBehaviour
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
+            if (mentorFantasma != null)
+            {
+                mentorFantasma.Aparecer();
+            }
         }
     }
 
@@ -99,6 +112,10 @@ public class DialogueController : MonoBehaviour
         {
             isPlayerInRange = false;
             dialogueMark.SetActive(false);
+            if (mentorFantasma != null)
+                {
+                    mentorFantasma.Desaparecer();
+                }
 
             if (didDialogueStart)
             {
