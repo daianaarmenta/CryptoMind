@@ -1505,9 +1505,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2009746471058666543, guid: 5391e187d3f609440a95a978f7216097, type: 3}
-        m_TargetAssemblyTypeName: BottonController, Assembly-CSharp
-        m_MethodName: Reanudar
+      - m_Target: {fileID: 5738724439813302064}
+        m_TargetAssemblyTypeName: TiendaCanvasController, Assembly-CSharp
+        m_MethodName: CerrarTienda
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

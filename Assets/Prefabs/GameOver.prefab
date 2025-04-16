@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: REGRESAR
+  m_text: MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
   m_sharedMaterial: {fileID: -4828078228106770127, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
