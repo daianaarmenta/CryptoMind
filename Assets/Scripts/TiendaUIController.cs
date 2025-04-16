@@ -12,6 +12,13 @@ public class TiendaCanvasController : MonoBehaviour
     public Button botonVida;
     public Button botonMejora;
 
+    [Header("Canvases")]
+    [SerializeField] private GameObject canvasHUD;
+    [SerializeField] private GameObject canvasTienda;
+
+    // Referencia al Rigidbody del jugador
+    private Rigidbody2D rbJugador;
+
     void Start()
     {
         if (botonVida != null)
@@ -58,7 +65,7 @@ public class TiendaCanvasController : MonoBehaviour
             if (GameManager.Instance.GastarMonedas(precioActual))
             {
                 GameManager.Instance.MejorarBala();
-                MostrarMensaje($" New damage: {GameManager.Instance.DañoBala}");
+                MostrarMensaje($"New damage: {GameManager.Instance.DañoBala}");
                 ActualizarUI();
             }
             else
@@ -100,67 +107,68 @@ public class TiendaCanvasController : MonoBehaviour
     {
         mensajeTexto.text = "";
     }
-    [Header("Canvases")]
-[SerializeField] private GameObject canvasHUD;
-[SerializeField] private GameObject canvasTienda;
 
-public void AbrirTienda()
-{
-    Debug.Log("🛒 Tienda activada");
-
-    if (GameManager.Instance != null)
+    public void AbrirTienda()
     {
-        GameManager.Instance.VolviendoDeTienda = true;
+        Debug.Log("🛒 Tienda activada");
 
-        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
-        if (jugador != null)
+        if (GameManager.Instance != null)
         {
-            Vector3 pos = jugador.transform.position;
-            PlayerPrefs.SetFloat("JugadorX", pos.x);
-            PlayerPrefs.SetFloat("JugadorY", pos.y);
-            PlayerPrefs.SetFloat("JugadorZ", pos.z);
-            PlayerPrefs.Save();
+            GameManager.Instance.VolviendoDeTienda = true;
 
-            Debug.Log($"📍 Posición guardada: {pos}");
-        }
-    }
+            GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+            if (jugador != null)
+            {
+                // Guardar posición
+                Vector3 pos = jugador.transform.position;
+                PlayerPrefs.SetFloat("JugadorX", pos.x);
+                PlayerPrefs.SetFloat("JugadorY", pos.y);
+                PlayerPrefs.SetFloat("JugadorZ", pos.z);
+                PlayerPrefs.Save();
+                Debug.Log($"📍 Posición guardada: {pos}");
 
-    canvasTienda.SetActive(true);
-    canvasHUD.SetActive(false);
-    Time.timeScale = 0f; // Pausar el juego si lo deseas
-}
-
-public void CerrarTienda()
-{
-    Debug.Log("🔙 Cerrando tienda");
-
-    // Reactivar HUD
-    if (canvasHUD != null)
-        canvasHUD.SetActive(true);
-
-    // Ocultar la tienda
-    if (canvasTienda != null)
-        canvasTienda.SetActive(false);
-
-    // Restaurar posición del jugador solo si venías de tienda
-    if (GameManager.Instance.VolviendoDeTienda)
-    {
-        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
-        if (jugador != null)
-        {
-            float x = PlayerPrefs.GetFloat("JugadorX", jugador.transform.position.x);
-            float y = PlayerPrefs.GetFloat("JugadorY", jugador.transform.position.y);
-            float z = PlayerPrefs.GetFloat("JugadorZ", jugador.transform.position.z);
-            jugador.transform.position = new Vector3(x, y, z);
-            Debug.Log($"📍 Posición restaurada: ({x}, {y}, {z})");
+                // Congelar movimiento del jugador
+                rbJugador = jugador.GetComponent<Rigidbody2D>();
+                if (rbJugador != null)
+                    rbJugador.simulated = false;
+            }
         }
 
-        GameManager.Instance.VolviendoDeTienda = false;
+        canvasTienda.SetActive(true);
+        canvasHUD.SetActive(false);
+        Time.timeScale = 0f; // Opcional: Pausa el juego
     }
 
-    Time.timeScale = 1f;
-}
+    public void CerrarTienda()
+    {
+        Debug.Log("🔙 Cerrando tienda");
 
+        if (canvasHUD != null)
+            canvasHUD.SetActive(true);
 
+        if (canvasTienda != null)
+            canvasTienda.SetActive(false);
 
+        if (GameManager.Instance.VolviendoDeTienda)
+        {
+            GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+            if (jugador != null)
+            {
+                float x = PlayerPrefs.GetFloat("JugadorX", jugador.transform.position.x);
+                float y = PlayerPrefs.GetFloat("JugadorY", jugador.transform.position.y);
+                float z = PlayerPrefs.GetFloat("JugadorZ", jugador.transform.position.z);
+                jugador.transform.position = new Vector3(x, y, z);
+                Debug.Log($"📍 Posición restaurada: ({x}, {y}, {z})");
+
+                // Reactivar movimiento del jugador
+                if (rbJugador == null) rbJugador = jugador.GetComponent<Rigidbody2D>();
+                if (rbJugador != null)
+                    rbJugador.simulated = true;
+            }
+
+            GameManager.Instance.VolviendoDeTienda = false;
+        }
+
+        Time.timeScale = 1f;
+    }
 }
