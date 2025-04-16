@@ -100,4 +100,67 @@ public class TiendaCanvasController : MonoBehaviour
     {
         mensajeTexto.text = "";
     }
+    [Header("Canvases")]
+[SerializeField] private GameObject canvasHUD;
+[SerializeField] private GameObject canvasTienda;
+
+public void AbrirTienda()
+{
+    Debug.Log("🛒 Tienda activada");
+
+    if (GameManager.Instance != null)
+    {
+        GameManager.Instance.VolviendoDeTienda = true;
+
+        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+        if (jugador != null)
+        {
+            Vector3 pos = jugador.transform.position;
+            PlayerPrefs.SetFloat("JugadorX", pos.x);
+            PlayerPrefs.SetFloat("JugadorY", pos.y);
+            PlayerPrefs.SetFloat("JugadorZ", pos.z);
+            PlayerPrefs.Save();
+
+            Debug.Log($"📍 Posición guardada: {pos}");
+        }
+    }
+
+    canvasTienda.SetActive(true);
+    canvasHUD.SetActive(false);
+    Time.timeScale = 0f; // Pausar el juego si lo deseas
+}
+
+public void CerrarTienda()
+{
+    Debug.Log("🔙 Cerrando tienda");
+
+    // Reactivar HUD
+    if (canvasHUD != null)
+        canvasHUD.SetActive(true);
+
+    // Ocultar la tienda
+    if (canvasTienda != null)
+        canvasTienda.SetActive(false);
+
+    // Restaurar posición del jugador solo si venías de tienda
+    if (GameManager.Instance.VolviendoDeTienda)
+    {
+        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+        if (jugador != null)
+        {
+            float x = PlayerPrefs.GetFloat("JugadorX", jugador.transform.position.x);
+            float y = PlayerPrefs.GetFloat("JugadorY", jugador.transform.position.y);
+            float z = PlayerPrefs.GetFloat("JugadorZ", jugador.transform.position.z);
+            jugador.transform.position = new Vector3(x, y, z);
+            Debug.Log($"📍 Posición restaurada: ({x}, {y}, {z})");
+        }
+
+        GameManager.Instance.VolviendoDeTienda = false;
+    }
+
+    Time.timeScale = 1f;
+}
+
+
+
 }
