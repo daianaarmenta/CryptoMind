@@ -84,12 +84,12 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
     public static void LimpiarPosicionJugador()
-{
-    PlayerPrefs.DeleteKey("JugadorX");
-    PlayerPrefs.DeleteKey("JugadorY");
-    PlayerPrefs.DeleteKey("JugadorZ");
-    PlayerPrefs.Save();
-}
+    {
+        PlayerPrefs.DeleteKey("JugadorX");
+        PlayerPrefs.DeleteKey("JugadorY");
+        PlayerPrefs.DeleteKey("JugadorZ");
+        PlayerPrefs.Save();
+    }
 
 
     // ✅ PUNTAJE
@@ -123,28 +123,30 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
         }
     }
+
     public void ReiniciarVidas()
-{
-    VidasGuardadas = MaxVidas;
-
-    if (SaludPersonaje.instance != null)
     {
-        SaludPersonaje.instance.vidas = MaxVidas; // 🔁 sincroniza variable local
+        VidasGuardadas = MaxVidas;
+
+        if (SaludPersonaje.instance != null)
+        {
+            SaludPersonaje.instance.vidas = MaxVidas; // 🔁 sincroniza variable local
+        }
+
+        Debug.Log("🔁 Vidas reiniciadas a: " + MaxVidas);
     }
 
-    Debug.Log("🔁 Vidas reiniciadas a: " + MaxVidas);
-}
-public void MejorarBala(){
-    if( DañoBala <50 ){
-        DañoBala = Mathf.Min(DañoBala + 5f, 50f);
-        CostoMejoraBala += 50;  
-        PlayerPrefs.SetFloat("DañoBala", DañoBala);
-        PlayerPrefs.SetInt("CostoMejora", CostoMejoraBala);
-        PlayerPrefs.Save();
-        Debug.Log($"💥 Daño mejorado a: {DañoBala} | Costo siguiente: {CostoMejoraBala}");
-    }else{
-        Debug.Log("⚠️ Ya tienes el daño máximo.");
+    public void MejorarBala(){
+        if( DañoBala <50 ){
+            DañoBala = Mathf.Min(DañoBala + 5f, 50f);
+            CostoMejoraBala += 50;  
+            PlayerPrefs.SetFloat("DañoBala", DañoBala);
+            PlayerPrefs.SetInt("CostoMejora", CostoMejoraBala);
+            PlayerPrefs.Save();
+            Debug.Log($"💥 Daño mejorado a: {DañoBala} | Costo siguiente: {CostoMejoraBala}");
+        }else{
+            Debug.Log("⚠️ Ya tienes el daño máximo.");
+        }
     }
-}
 
 }
