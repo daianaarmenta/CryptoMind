@@ -1134,7 +1134,6 @@ GameObject:
   - component: {fileID: 5037861612822059021}
   - component: {fileID: 3560617452863280587}
   - component: {fileID: 5738724439813302064}
-  - component: {fileID: 7867625455986523465}
   m_Layer: 5
   m_Name: Tienda
   m_TagString: Untagged
@@ -1248,19 +1247,6 @@ MonoBehaviour:
   botonMejora: {fileID: 2346644720048165570}
   canvasHUD: {fileID: 7421133330781356818, guid: 5391e187d3f609440a95a978f7216097, type: 3}
   canvasTienda: {fileID: 4695270910026462062}
---- !u!114 &7867625455986523465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4695270910026462062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 467825c65789d67429d9eccb26484829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  botonRegresar: {fileID: 2053279986383274236}
 --- !u!1 &4735769372888865903
 GameObject:
   m_ObjectHideFlags: 0
