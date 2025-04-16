@@ -77,12 +77,6 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void ReiniciarMonedas()
-    {
-        monedas = 0;
-        PlayerPrefs.SetInt("NumeroMonedas", 0);
-        PlayerPrefs.Save();
-    }
     public static void LimpiarPosicionJugador()
     {
         PlayerPrefs.DeleteKey("JugadorX");
