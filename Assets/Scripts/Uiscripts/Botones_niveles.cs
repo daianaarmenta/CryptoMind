@@ -38,7 +38,7 @@ public class Botones_niveles : MonoBehaviour
         tienda.RegisterCallback<ClickEvent, string>(CambiarEscena, "Tienda");
     }
 
-        public void Reiniciar()
+    public void Reiniciar()
     {
         Time.timeScale = 1f; 
         if (GameManager.Instance != null)
