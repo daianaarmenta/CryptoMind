@@ -13,6 +13,7 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
 }
 
 .botonT:hover {

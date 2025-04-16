@@ -1,94 +1,103 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using TMPro;
+using UnityEngine.UI;
 
-/*
-Autor: Fernanda Pineda
-Este código es para superponer la tienda al juego y permitir la compra de mejoras
-*/
-public class TiendaUIController : MonoBehaviour
+public class TiendaCanvasController : MonoBehaviour
 {
-    private Label monedasLabel;
-    private Button botonVida;
-    private Button botonMejora;
+    [Header("Referencias UI")]
+    public TextMeshProUGUI monedasTexto;
+    public TextMeshProUGUI precioMejoraTexto;
+    public TextMeshProUGUI mensajeTexto;
+
+    public Button botonVida;
+    public Button botonMejora;
 
     void Start()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
+        if (botonVida != null)
+            botonVida.onClick.AddListener(() => Comprar(100, "Vida"));
 
-        // Espera un frame para asegurarse de que el UI esté listo
-        root.schedule.Execute(() =>
-        {
-            monedasLabel = root.Q<Label>("monedasLabel");
-            botonVida = root.Q<Button>("botonVida");
-            botonMejora = root.Q<Button>("botonMejora");
+        if (botonMejora != null)
+            botonMejora.onClick.AddListener(() => Comprar(GameManager.Instance.CostoMejoraBala, "Mejora"));
 
-            if (monedasLabel == null) Debug.LogError("❌ No se encontró 'monedasLabel'");
-            if (botonVida == null) Debug.LogError("❌ No se encontró 'botonVida'");
-            if (botonMejora == null) Debug.LogError("❌ No se encontró 'botonMejora'");
-
-            if (GameManager.Instance != null && monedasLabel != null)
-            {
-                ActualizarMonedasUI(); // ✅ Mostramos monedas al abrir tienda
-                Debug.Log("✅ Monedas actuales en tienda: " + GameManager.Instance.Monedas);
-            }
-            else
-            {
-                Debug.LogError("❌ GameManager.Instance es NULL en la tienda.");
-            }
-
-            if (botonVida != null)
-                botonVida.clicked += () => Comprar(100, "Vida");
-
-            if (botonMejora != null)
-                botonMejora.clicked += () => Comprar(150, "Mejora");
-
-        }).ExecuteLater(1); // Se ejecuta tras 1 frame
+        ActualizarUI();
     }
 
     void Comprar(int precio, string nombre)
     {
-        // ⚠️ Verificar si intenta comprar vida sin necesitarla
-        if (nombre == "Vida" && !GameManager.Instance.PuedeComprarVida())
+        if (nombre == "Vida")
         {
-            Debug.Log("❌ Ya tienes el máximo de vidas. No puedes comprar más.");
-            return;
-        }
-
-        if (GameManager.Instance != null && GameManager.Instance.GastarMonedas(precio))
-        {
-            Debug.Log($"✅ Compra realizada: {nombre} por {precio} monedas.");
-
-            if (nombre == "Vida")
+            if (!GameManager.Instance.PuedeComprarVida())
             {
-                GameManager.Instance.ComprarVida();
-                // (Opcional) Aquí podrías actualizar un HUD visual de vidas
+                MostrarMensaje("⚠️ Ya tienes el máximo de vidas.");
+                return;
             }
 
-            ActualizarMonedasUI();
+            if (GameManager.Instance.GastarMonedas(precio))
+            {
+                GameManager.Instance.ComprarVida();
+                MostrarMensaje("Vida comprada.");
+                ActualizarUI();
+            }
+            else
+            {
+                MostrarMensaje("Monedas insuficientes.");
+            }
+        }
+
+        if (nombre == "Mejora")
+        {
+            if (GameManager.Instance.DañoBala >= 50f)
+            {
+                MostrarMensaje("Ya tienes el daño máximo.");
+                return;
+            }
+
+            int precioActual = GameManager.Instance.CostoMejoraBala;
+
+            if (GameManager.Instance.GastarMonedas(precioActual))
+            {
+                GameManager.Instance.MejorarBala();
+                MostrarMensaje($" Daño mejorado a {GameManager.Instance.DañoBala}");
+                ActualizarUI();
+            }
+            else
+            {
+                MostrarMensaje(" Monedas insuficientes.");
+            }
+        }
+    }
+
+    void ActualizarUI()
+    {
+        monedasTexto.text = GameManager.Instance.Monedas.ToString();
+
+        if (GameManager.Instance.DañoBala >= 50f)
+        {
+            precioMejoraTexto.text = "MAX";
+            botonMejora.interactable = false;
         }
         else
         {
-            Debug.Log($"❌ No tienes suficientes monedas para {nombre}.");
+            precioMejoraTexto.text = GameManager.Instance.CostoMejoraBala.ToString();
+            botonMejora.interactable = true;
         }
+
+        botonVida.interactable = GameManager.Instance.PuedeComprarVida();
     }
 
-    void ActualizarMonedasUI()
+    void MostrarMensaje(string mensaje)
     {
-        if (monedasLabel != null)
+        if (mensajeTexto != null)
         {
-            monedasLabel.text = GameManager.Instance.Monedas.ToString();
-
-            // (Opcional) Desactiva botón si ya tienes 5 vidas
-            if (botonVida != null)
-            {
-                botonVida.SetEnabled(GameManager.Instance.PuedeComprarVida());
-            }
+            mensajeTexto.text = mensaje;
+            CancelInvoke(nameof(LimpiarMensaje));
+            Invoke(nameof(LimpiarMensaje), 3f); // Borra mensaje a los 3 segundos
         }
     }
 
-    // ✅ Opcional: si quieres que siempre esté actualizado en tiempo real
-    void Update()
+    void LimpiarMensaje()
     {
-        ActualizarMonedasUI();
+        mensajeTexto.text = "";
     }
 }

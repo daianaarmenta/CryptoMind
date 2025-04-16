@@ -36,30 +36,33 @@ public class BottonController : MonoBehaviour
     // ✅ Reiniciar la escena solo después de todo
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 }
-
-    public void Tienda()
+public void Tienda()
 {
-    // 🧍 Buscar al jugador por su tag
-    GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+    string escenaActual = SceneManager.GetActiveScene().name;
 
-    if (jugador != null)
+    // Guarda el nombre de la escena actual SIEMPRE
+    PlayerPrefs.SetString("EscenaAnterior", escenaActual);
+    PlayerPrefs.Save();
+
+    // Guarda posición solo si NO vienes del menú
+    if (escenaActual != "Menu_juego")
     {
-        Vector3 pos = jugador.transform.position;
+        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
 
-        // 🧠 Guardar la posición del jugador en PlayerPrefs
-        PlayerPrefs.SetFloat("JugadorX", pos.x);
-        PlayerPrefs.SetFloat("JugadorY", pos.y);
-        PlayerPrefs.SetFloat("JugadorZ", pos.z);
-        PlayerPrefs.Save();
-
-        GameManager.Instance.VolviendoDeTienda= true; // Indica que se está volviendo de la tienda
+        if (jugador != null)
+        {
+            Vector3 pos = jugador.transform.position;
+            PlayerPrefs.SetFloat("JugadorX", pos.x);
+            PlayerPrefs.SetFloat("JugadorY", pos.y);
+            PlayerPrefs.SetFloat("JugadorZ", pos.z);
+            GameManager.Instance.VolviendoDeTienda = true;
+        }
     }
     else
     {
-        Debug.LogWarning("⚠️ No se encontró el jugador para guardar posición.");
+        GameManager.Instance.VolviendoDeTienda = false;
     }
 
-    botonesTienda.previousScene = SceneManager.GetActiveScene().name;
     SceneManager.LoadScene("Tienda");
 }
 

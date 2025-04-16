@@ -7,7 +7,18 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     [SerializeField] private float velocidadBala;
-    [SerializeField] private float daño;
+    private float daño;
+
+    private void Start()
+{
+    daño = GameManager.Instance.DañoBala;
+}
+
+    public void SetDaño(float nuevoDaño)
+    {
+        daño = nuevoDaño;
+    }
+
 
     private void Update()
     {

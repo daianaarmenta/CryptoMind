@@ -30,6 +30,16 @@ public class Disparo : MonoBehaviour
     {
         Transform puntoDeDisparo = MueveChabelito.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
         Instantiate(balaPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation); // Instancia la bala en el punto de disparo
+
+        Bala balaScript = balaPrefab.GetComponent<Bala>();
+        if (balaScript != null)
+        {
+            balaScript.SetDaño(GameManager.Instance.DañoBala); // Asigna el daño a la bala
+        }
+        else
+        {
+            Debug.LogError("❌ No se encontró el script Bala en el prefab de la bala.");
+        }
     }
 }
 

@@ -1,26 +1,27 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/boton.uss?fileID=7433441132597879392&amp;guid=3888ba5e82796764281ece8755169ef4&amp;type=3#boton" />
     <engine:VisualElement name="Contenedor" style="flex-grow: 1; width: 100%; height: 100%; margin-top: 0;">
-        <engine:VisualElement name="contenedorMonedas" style="flex-direction: row; position: absolute; top: 10px; right: 10px; align-items: center; margin-top: 60px; margin-right: 150px;">
-            <engine:Label name="monedasLabel" text="0" parse-escape-sequences="true" style="font-size: 50px; color: rgb(242, 245, 243); margin-top: 5px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;); -unity-text-align: upper-center;" />
-            <engine:VisualElement name="coin" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); width: 55px; height: 55px; margin-left: 50px;" />
+        <engine:VisualElement name="contenedorMonedas" style="flex-direction: row; position: absolute; top: 10px; right: 10px; align-items: center; margin-top: 60px; margin-right: 500px;">
+            <engine:Label name="monedasLabel" text="0" parse-escape-sequences="true" style="font-size: 50px; color: rgb(242, 245, 243); margin-top: 5px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&amp;guid=09ca120925d67c649ab2368f35368536&amp;type=3#AtariFontFullVersion-ZJ23&quot;); -unity-text-align: lower-right; margin-left: 800px; margin-right: -50px;" />
+            <engine:VisualElement name="coin" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); width: -50px; height: 55px; margin-left: 80px; align-self: center; flex-direction: column-reverse; justify-content: center; margin-right: -350px;" />
+            <engine:Label name="mensajeLabel" class="texto" style="margin-left: -800px; text-overflow: ellipsis; background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&amp;guid=09ca120925d67c649ab2368f35368536&amp;type=3#AtariFontFullVersion-ZJ23&quot;); -unity-text-align: middle-left; margin-right: 150px; margin-top: 50px;" />
         </engine:VisualElement>
         <engine:Button name="botonRegresar" class="boton" style="background-color: rgba(0, 0, 0, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
         <engine:VisualElement name="contendorbotones" style="flex-grow: 1; width: 100%; height: 110%; margin-top: -50px; margin-right: 0; background-color: rgba(0, 0, 0, 0);">
             <engine:Button name="botonVida" class="botonT">
-                <engine:Label text="Vida" class="texto">
-                    <engine:VisualElement name="corazon" class="image" style="flex-grow: 1; height: 80px; width: 100px; background-image: url(&quot;project://database/Assets/Scripts/HealthHeartSystem/Graphics/mini-heart.png?fileID=21300000&amp;guid=fed24bd82cefc0c4a8ef64dab6231b53&amp;type=3#mini-heart_0&quot;); margin-left: 70px; margin-top: 10px;">
-                        <engine:Label text="100" class="precio" style="margin-top: 20px;">
+                <engine:Label text="Life" class="texto" style="margin-left: 20px;">
+                    <engine:VisualElement name="corazon" class="image" style="flex-grow: 1; height: 80px; width: 100px; background-image: url(&quot;project://database/Assets/Scripts/HealthHeartSystem/Graphics/mini-heart.png?fileID=21300000&amp;guid=fed24bd82cefc0c4a8ef64dab6231b53&amp;type=3#mini-heart_0&quot;); margin-left: 50px; margin-top: 10px;">
+                        <engine:Label text="100" name="Label" class="precio" style="margin-top: 10px; margin-left: 600px;">
                             <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 150px;" />
                         </engine:Label>
                     </engine:VisualElement>
                 </engine:Label>
             </engine:Button>
             <engine:Button name="botonMejora" class="botonT">
-                <engine:Label text="Mejora" class="texto">
-                    <engine:VisualElement name="arma" class="image" style="flex-grow: 1; width: 150px; height: 100px; background-image: url(&quot;project://database/Assets/Warped%20City%20Assets/Artwork/SPRITES/misc/shot/shot-2.png?fileID=21300000&amp;guid=459f16e72cf7847d0b60fed8fd249a54&amp;type=3#shot-2&quot;); margin-left: 35px;">
-                        <engine:Label text="150" class="precio" style="-unity-text-align: middle-center; margin-top: 20px;">
-                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 200px;" />
+                <engine:Label text="Upgrade" class="texto" style="margin-left: 70px;">
+                    <engine:VisualElement name="arma" class="image" style="flex-grow: 1; width: 150px; height: 100px; background-image: url(&quot;project://database/Assets/Warped%20City%20Assets/Artwork/SPRITES/misc/shot/shot-2.png?fileID=21300000&amp;guid=459f16e72cf7847d0b60fed8fd249a54&amp;type=3#shot-2&quot;); margin-left: -50px;">
+                        <engine:Label text="0" name="mejoraPrecioLabel" enable-rich-text="false" class="precio" style="-unity-text-align: middle-center; margin-top: 20px; margin-left: 600px;">
+                            <engine:VisualElement style="flex-grow: 1; width: 100px; height: 150px; background-image: url(&quot;project://database/Assets/2DRPK/Sprites/coin-animation.png?fileID=8980438598086963491&amp;guid=ede4b03d4049f481a80ce6756418b385&amp;type=3#coin-animation_0&quot;); margin-top: -10px; margin-left: 150px;" />
                         </engine:Label>
                     </engine:VisualElement>
                 </engine:Label>

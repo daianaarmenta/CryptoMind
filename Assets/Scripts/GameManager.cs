@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public bool VolviendoDeTienda { get; set; } = false; // 🏪 Indica si se está volviendo de la tienda
+    public float DañoBala{ get; private set;}= 20f;
+    public int CostoMejoraBala{ get; private set;}= 50;
 
     private int monedas = 0;
     private int puntaje = 0;
@@ -47,6 +49,9 @@ public class GameManager : MonoBehaviour
         // 🔁 Cargar monedas y puntaje guardado al iniciar
         monedas = PlayerPrefs.GetInt("NumeroMonedas", 0);
         puntaje = PlayerPrefs.GetInt("Puntaje", 0);
+
+        DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f); // Empieza en 20 por defecto
+        CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 50); // Empieza en 50 por defecto
     }
 
     // ✅ MONEDAS
@@ -128,6 +133,18 @@ public class GameManager : MonoBehaviour
     }
 
     Debug.Log("🔁 Vidas reiniciadas a: " + MaxVidas);
+}
+public void MejorarBala(){
+    if( DañoBala <50 ){
+        DañoBala = Mathf.Min(DañoBala + 5f, 50f);
+        CostoMejoraBala += 50;  
+        PlayerPrefs.SetFloat("DañoBala", DañoBala);
+        PlayerPrefs.SetInt("CostoMejora", CostoMejoraBala);
+        PlayerPrefs.Save();
+        Debug.Log($"💥 Daño mejorado a: {DañoBala} | Costo siguiente: {CostoMejoraBala}");
+    }else{
+        Debug.Log("⚠️ Ya tienes el daño máximo.");
+    }
 }
 
 }

@@ -25,6 +25,8 @@ public class MueveChabelito : MonoBehaviour
 
         transform.position = new Vector3(x, y, z);
         Debug.Log("📍 Posición restaurada al regresar de la tienda: " + transform.position);
+
+        GameManager.Instance.VolviendoDeTienda = false;
     }
 }
 
