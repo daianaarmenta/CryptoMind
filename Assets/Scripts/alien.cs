@@ -34,13 +34,22 @@ public class alien : MonoBehaviour
         {
             if (checkpointTerminado == cantidadCheckpoint)
             {
-                Debug.Log("✅ Todos los checkpoints completados. Avanzando de escena...");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                // ✅ Con transición
+                TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
+                if (transicion != null)
+                {
+                    transicion.IrASiguienteEscena();
+                }
+                else
+                {
+                    // Fallback sin transición
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
             else
             {
-                Debug.Log("🚫 Aún faltan checkpoints por completar.");
-                MostrarMensaje($"You are missing {cantidadCheckpoint - checkpointTerminado} checkpoints!");
+                Debug.Log("🚫 Aún faltan checkpoints.");
+                MostrarMensaje($"Te faltan {cantidadCheckpoint - checkpointTerminado} checkpoints.");
             }
         }
     }
