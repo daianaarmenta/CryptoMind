@@ -29,19 +29,19 @@ public class TiendaCanvasController : MonoBehaviour
         {
             if (!GameManager.Instance.PuedeComprarVida())
             {
-                MostrarMensaje("⚠️ Ya tienes el máximo de vidas.");
+                MostrarMensaje("Max lives reached");
                 return;
             }
 
             if (GameManager.Instance.GastarMonedas(precio))
             {
                 GameManager.Instance.ComprarVida();
-                MostrarMensaje("Vida comprada.");
+                MostrarMensaje("Extra life acquired!");
                 ActualizarUI();
             }
             else
             {
-                MostrarMensaje("Monedas insuficientes.");
+                MostrarMensaje("Need more coins!");
             }
         }
 
@@ -49,7 +49,7 @@ public class TiendaCanvasController : MonoBehaviour
         {
             if (GameManager.Instance.DañoBala >= 50f)
             {
-                MostrarMensaje("Ya tienes el daño máximo.");
+                MostrarMensaje("Damage is at max.");
                 return;
             }
 
@@ -58,12 +58,12 @@ public class TiendaCanvasController : MonoBehaviour
             if (GameManager.Instance.GastarMonedas(precioActual))
             {
                 GameManager.Instance.MejorarBala();
-                MostrarMensaje($" Daño mejorado a {GameManager.Instance.DañoBala}");
+                MostrarMensaje($" New damage: {GameManager.Instance.DañoBala}");
                 ActualizarUI();
             }
             else
             {
-                MostrarMensaje(" Monedas insuficientes.");
+                MostrarMensaje("Need more coins!");
             }
         }
     }

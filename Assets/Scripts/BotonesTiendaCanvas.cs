@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class BotonesTiendaCanvas: MonoBehaviour
 {
-    public static string previousScene = "";
+    //public static string previousScene = "";
 
     [SerializeField] private Button botonRegresar;
 
