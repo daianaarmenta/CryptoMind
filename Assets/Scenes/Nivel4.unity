@@ -856,6 +856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIvida,moneda,puntaje
       objectReference: {fileID: 0}
+    - target: {fileID: 7421133330781356818, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

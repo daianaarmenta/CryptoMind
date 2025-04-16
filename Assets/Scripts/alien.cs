@@ -17,7 +17,7 @@ public class alien : MonoBehaviour
         checkpointTerminado = 0;
 
         if (panelMensaje != null)
-            panelMensaje.SetActive(false); // Oculta todo al inicio
+            panelMensaje.SetActive(false); // Oculta el mensaje al inicio
         else
             Debug.LogWarning("⚠️ No se asignó el panel del mensaje en el Inspector.");
     }
@@ -25,7 +25,7 @@ public class alien : MonoBehaviour
     public void AumentarCheckpoints()
     {
         checkpointTerminado++;
-        Debug.Log($"Checkpoints completados: {checkpointTerminado}/{cantidadCheckpoint}");
+        Debug.Log($"✅ Checkpoints completados: {checkpointTerminado}/{cantidadCheckpoint}");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,7 +34,14 @@ public class alien : MonoBehaviour
         {
             if (checkpointTerminado == cantidadCheckpoint)
             {
-                // ✅ Con transición
+                // ✅ Reiniciar vidas para el siguiente nivel
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.ReiniciarVidas();
+                    Debug.Log("🔄 Vidas reiniciadas para el siguiente nivel.");
+                }
+
+                // ✅ Cambiar de escena con o sin transición
                 TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
                 if (transicion != null)
                 {
@@ -42,13 +49,13 @@ public class alien : MonoBehaviour
                 }
                 else
                 {
-                    // Fallback sin transición
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
             else
             {
-                MostrarMensaje($"You are missing {cantidadCheckpoint - checkpointTerminado} checkpoints.");
+                int restantes = cantidadCheckpoint - checkpointTerminado;
+                MostrarMensaje($"You are missing {restantes} checkpoint{(restantes > 1 ? "s" : "")}.");
             }
         }
     }

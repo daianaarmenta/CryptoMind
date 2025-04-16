@@ -3,74 +3,68 @@ using UnityEngine.SceneManagement;
 
 public class BottonController : MonoBehaviour
 {
-    [SerializeField] private GameObject botonPausa; // Referencia al menú de pausa
-    [SerializeField] private GameObject menuPausa;// Referencia al botón de continuar
-    
+    [Header("Referencias UI")]
+    [SerializeField] private GameObject botonPausa;     // Botón que abre el menú de pausa
+    [SerializeField] private GameObject menuPausa;      // Menú de pausa completo
+    [SerializeField] private GameObject canvasTienda;   // Canvas de la tienda
+
+    // 🔘 PAUSAR el juego
     public void Pausa()
     {
-        Time.timeScale = 0f; // Pausa el juego
-        botonPausa.SetActive(false); // Desactiva el botón de pausa
-        menuPausa.SetActive(true); // Activa el menú de pausa
+        Time.timeScale = 0f;                // Pausa el tiempo del juego
+        botonPausa.SetActive(false);        // Oculta el botón de pausa
+        menuPausa.SetActive(true);          // Muestra el menú de pausa
     }
-    public void Reanudar(){
-        Time.timeScale = 1f; // Reanuda el juego
-        botonPausa.SetActive(true); // Desactiva el botón de pausa
-        menuPausa.SetActive(false); // Activa el menú de pausa
+
+    // ▶️ REANUDAR el juego
+    public void Reanudar()
+    {
+        Time.timeScale = 1f;                // Reanuda el tiempo del juego
+        botonPausa.SetActive(true);         // Muestra el botón de pausa
+        menuPausa.SetActive(false);         // Oculta el menú de pausa
     }
+
+    // 🔄 REINICIAR el nivel completo
     public void Reiniciar()
-{
-    Time.timeScale = 1f;
-
-    if (GameManager.Instance != null)
     {
-        GameManager.Instance.ReiniciarVidas();           // ✅ Reinicia vidas en PlayerPrefs
-        GameManager.Instance.VolviendoDeTienda = false;  // ⛔ no viene de tienda
-    }
+        Time.timeScale = 1f;
 
-    // 🧹 Limpia la posición guardada
-    PlayerPrefs.DeleteKey("JugadorX");
-    PlayerPrefs.DeleteKey("JugadorY");
-    PlayerPrefs.DeleteKey("JugadorZ");
-    PlayerPrefs.Save();
-
-    // ✅ Reiniciar la escena solo después de todo
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-}
-public void Tienda()
-{
-    string escenaActual = SceneManager.GetActiveScene().name;
-
-    // Guarda el nombre de la escena actual SIEMPRE
-    PlayerPrefs.SetString("EscenaAnterior", escenaActual);
-    PlayerPrefs.Save();
-
-    // Guarda posición solo si NO vienes del menú
-    if (escenaActual != "Menu_juego")
-    {
-        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
-
-        if (jugador != null)
+        if (GameManager.Instance != null)
         {
-            Vector3 pos = jugador.transform.position;
-            PlayerPrefs.SetFloat("JugadorX", pos.x);
-            PlayerPrefs.SetFloat("JugadorY", pos.y);
-            PlayerPrefs.SetFloat("JugadorZ", pos.z);
-            GameManager.Instance.VolviendoDeTienda = true;
+            GameManager.Instance.ReiniciarVidas();          // Reinicia las vidas
+            GameManager.Instance.VolviendoDeTienda = false; // No viene de tienda
         }
+
+        // Limpia posición guardada
+        PlayerPrefs.DeleteKey("JugadorX");
+        PlayerPrefs.DeleteKey("JugadorY");
+        PlayerPrefs.DeleteKey("JugadorZ");
+        PlayerPrefs.Save();
+
+        // Recarga la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    else
+
+    // 🛒 ABRIR tienda (como menú de pausa)
+    public void Tienda()
     {
-        GameManager.Instance.VolviendoDeTienda = false;
+        Time.timeScale = 0f;                // Pausar el juego
+        botonPausa.SetActive(false);        // Ocultar botón de pausa
+        canvasTienda.SetActive(true);       // Mostrar canvas de tienda
     }
 
-    SceneManager.LoadScene("Tienda");
-}
-
-
-
-    public void Salir(){
-        SceneManager.LoadScene(1);     
+    // ❌ CERRAR tienda
+    public void CerrarTienda()
+    {
+        Time.timeScale = 1f;                // Reanudar el juego
+        botonPausa.SetActive(true);         // Mostrar botón de pausa
+        canvasTienda.SetActive(false);      // Ocultar tienda
     }
-    
-}
 
+    // 🚪 SALIR al menú principal
+    public void Salir()
+    {
+        Time.timeScale = 1f;                // Asegura que el tiempo esté normal
+        SceneManager.LoadScene(1);          // Cambia a la escena del menú principal (index 1)
+    }
+}
