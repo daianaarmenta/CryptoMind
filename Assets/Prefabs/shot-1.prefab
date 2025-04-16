@@ -168,7 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadBala: 20
-  "da\xF1o": 20
 --- !u!114 &2338090130097406760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5649d1962f5ba143bed5e18252adb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoVida: 3
+  tiempoVida: 0.5
 --- !u!95 &5045456555043919933
 Animator:
   serializedVersion: 7
