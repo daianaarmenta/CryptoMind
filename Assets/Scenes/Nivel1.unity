@@ -32208,6 +32208,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 108927963}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Excellent, let''s continue our journey. '
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 100.59
@@ -32278,13 +32282,28 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 108927963}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: "Zarek: Even though Blockchain is very secure, it could be damaged if
+        someone controlled more than half of the network. That\u2019s called a 51%
+        attack."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: "Zarek: But it\u2019s super hard and expensive to do, especially in
+        big blockchains with many users.\r\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.6
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.18
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33771,7 +33790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -35074,6 +35093,36 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 108927963}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Did you think my story was over?
+
+        The body may fall,
+        but the knowledge... remains.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek: You have reached a key point, where you will not only learn
+        how blockchain works, but why it has withstood time and attacks. Many have
+        tried to destroy it, no one has succeeded.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'Zarek: Here you will discover the weaknesses they have tried to exploit,
+        why they have failed to do so, and why every move on the network comes at
+        a price.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[3]'
+      value: 'Zarek: Listen carefully... this knowledge could be the only thing that
+        saves you from digital collapse.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5073409
@@ -35231,9 +35280,23 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 108927963}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: "Zarek: Every time you send something in the blockchain, like coins
+        or data, there\u2019s a small transaction fee."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: "Zarek: This fee goes to the people who check and confirm the transactions\u2014it\u2019s
+        their reward for helping the system work."
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.69
+      value: 56.75
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.y
