@@ -4,16 +4,13 @@
         <engine:Label text="Register" name="tituloGeneral" class="tituloGeneral" style="width: auto; height: auto;" />
         <engine:VisualElement name="ContenedorRegistro" class="ContenedorRegistro" style="flex-grow: 1;">
             <engine:TextField label="Name:" placeholder-text="Name..." name="name" class="campos" />
-            <engine:Label name="nameError" class="error-label errorTexto" />
             <engine:TextField label="Email" placeholder-text="Email..." name="email" class="campos" />
-            <engine:Label name="emailError" class="error-label errorTexto" />
             <engine:TextField label="Password: " placeholder-text="Password.." name="password" class="campos" />
-            <engine:Label name="passwordError" class="error-label errorTexto" />
             <engine:TextField label="Birthdate: " placeholder-text="dd/MM/yyyy" name="birthday" class="campos" />
-            <engine:Label name="birthdayError" class="error-label errorTexto" />
             <engine:DropdownField label="Country" name="pais" class="campos" />
             <engine:DropdownField name="gender" label="Gender&#10;" class="campos" />
             <engine:Button text="Register" name="Register" class="button buttonR buttonRegister" />
+            <engine:Label name="errorMessage" class="error-label" style="font-size: 30px; -unity-text-align: upper-center;" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
             <engine:Button name="botonReturn" class="buttonReturn" />

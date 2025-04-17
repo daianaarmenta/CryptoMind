@@ -17,6 +17,7 @@ public class BotonLogin : MonoBehaviour
     private TextField email;
     private TextField password;
     private Button regresarEscene;
+    private Label errorMessage;
 
     [Serializable]
     public class DatosLogin
@@ -37,10 +38,15 @@ public class BotonLogin : MonoBehaviour
         email = root.Q<TextField>("email");
         password = root.Q<TextField>("password");
 
+        errorMessage = root.Q<Label>("errorMessage");
+        errorMessage.text = "";
+
         password.isPasswordField = true;
         email.Q("unity-text-input").style.color = new Color(0, 0, 0);
         password.Q("unity-text-input").style.color = new Color(0, 0, 0);
 
+        email.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(email, "Email"));
+        password.RegisterCallback<FocusOutEvent>(evt =>UnFocusedText(password, "Password"));
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
         botonLogin.clicked += EnviarDatos;
     }
@@ -49,6 +55,7 @@ public class BotonLogin : MonoBehaviour
     {
         if (!AllFieldsValidLogin())
         {
+            MostrarMensaje("Some fields are empty", Color.red);
             Debug.LogWarning("Some fields are empty");
             return;
         }
@@ -73,10 +80,14 @@ public class BotonLogin : MonoBehaviour
         if(request.result == UnityWebRequest.Result.Success){
             Debug.Log("Login correcto");
             Debug.Log("Respuesta: " + request.downloadHandler.text);
+
+            yield return new WaitForSeconds(1f);
+            MostrarMensaje("Login successful. Loading main menu...", Color.green);
             SceneManager.LoadScene("Menu_juego");
         }
         else
         {
+            MostrarMensaje("Failed to log in" + request.downloadHandler.text, Color.red);
             Debug.LogError("Login fallido: " + request.responseCode + " " + request.error);
         }
 
@@ -92,6 +103,21 @@ public class BotonLogin : MonoBehaviour
     {
         return !string.IsNullOrWhiteSpace(email.value)
             && !string.IsNullOrWhiteSpace(password.value);
+    }
+
+    private void UnFocusedText(TextField field, string fieldName)
+    {
+        if (string.IsNullOrWhiteSpace(field.value))
+        {
+            MostrarMensaje($"{fieldName} cannot be empty.", Color.red);
+        }
+    }
+
+    private void MostrarMensaje(string text, Color color)
+    {
+        errorMessage.style.color = new StyleColor(color);
+        errorMessage.text = text;
+        errorMessage.style.fontSize = 35;
     }
 }
     

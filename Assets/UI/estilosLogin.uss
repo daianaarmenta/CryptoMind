@@ -25,6 +25,7 @@
     font-size: 35px;
     -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
     color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 .botones {
