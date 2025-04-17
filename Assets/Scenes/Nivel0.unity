@@ -29128,7 +29128,7 @@ PrefabInstance:
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: typingSound
       value: 
-      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+      objectReference: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: dialogueText
       value: 
@@ -29222,13 +29222,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_Volume
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+      objectReference: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
     - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+      objectReference: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
     - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: rolloffMode
       value: 0

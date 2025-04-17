@@ -8,6 +8,8 @@ public class Coin : MonoBehaviour
 {
     [Header("Valor de la moneda")]
     public int valor = 10;
+    [Header("Sonido de recolección")]
+    public AudioClip sonidoMoneda; // Sonido de la moneda
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +19,8 @@ public class Coin : MonoBehaviour
             {
                 GameManager.Instance.SumarMonedas(valor); 
             }
+
+            AudioSource.PlayClipAtPoint(sonidoMoneda, transform.position); // Reproducir sonido de la moneda
 
             GetComponent<SpriteRenderer>().enabled = false;
             Destroy(gameObject, 0.9f);

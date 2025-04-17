@@ -10,6 +10,13 @@ public class Disparo : MonoBehaviour
     public Transform puntoDeDisparoParado; // Donde se disparará la bala (por ejemplo, desde la pistola del personaje)
     public Transform puntoDeDisparoAgachado; // Donde se disparará la bala si el personaje está agachado
 
+    public AudioClip sonidoDisparo;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -30,6 +37,7 @@ public class Disparo : MonoBehaviour
     {
         Transform puntoDeDisparo = MueveChabelito.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
         Instantiate(balaPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation); // Instancia la bala en el punto de disparo
+        audioSource.PlayOneShot(sonidoDisparo,1f);
 
         Bala balaScript = balaPrefab.GetComponent<Bala>();
         if (balaScript != null)
@@ -41,6 +49,7 @@ public class Disparo : MonoBehaviour
             Debug.LogError("❌ No se encontró el script Bala en el prefab de la bala.");
         }
     }
+
 }
 
 

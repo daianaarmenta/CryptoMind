@@ -59,10 +59,11 @@ public class MueveChabelito : MonoBehaviour
         }
 
         // Salto solo si está en el suelo
-        if (Input.GetKeyDown(KeyCode.UpArrow) && EstadoPersonaje.enPiso)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Resetear salto acumulado
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            GetComponent<SonidosMovimiento>()?.ReproducirSalto();
         }
 
         // Cambio de dirección (giro del personaje)

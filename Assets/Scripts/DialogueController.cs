@@ -21,6 +21,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private AudioSource typingAudioSource;
     [SerializeField] private AudioClip typingSound;
     private bool isSoundPlaying = false;
+    [SerializeField] private AudioClip notificationSound;
 
     void Start()
     {
@@ -71,6 +72,7 @@ public class DialogueController : MonoBehaviour
         dialogueMark.SetActive(false);
         lineIndex = 0;
         Time.timeScale = 0f;
+
 
         StartCoroutine(ShowLine());
     }
@@ -126,6 +128,7 @@ public class DialogueController : MonoBehaviour
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
+            AudioSource.PlayClipAtPoint(notificationSound, transform.position); // Reproducir sonido de notificación
             if (mentorFantasma != null)
             {
                 mentorFantasma.Aparecer();

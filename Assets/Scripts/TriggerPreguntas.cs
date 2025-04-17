@@ -10,10 +10,16 @@ public class TriggerPreguntas : MonoBehaviour
     [SerializeField] private GameObject marker;  // El marcador que aparece cuando el jugador está cerca
     [SerializeField] private GameObject preguntasPanel; // El panel de preguntas que aparecerá al presionar "E"
     [SerializeField] private Pregunta preguntaAsociada; // La pregunta asociada a este checkpoint
+    [SerializeField] private AudioClip sonidoCheckpoint;
 
+    private AudioSource audioSource;
     private bool isPlayerInRange;  // Indica si el jugador está en el rango
     private bool preguntaContestada = false;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         // Si el jugador está en el rango y presiona la tecla "E"
@@ -35,6 +41,7 @@ public class TriggerPreguntas : MonoBehaviour
             {
                 marker.SetActive(true);  // Mostrar el marcador
                 Debug.Log("Marcador activado.");
+                audioSource.PlayOneShot(sonidoCheckpoint); // Reproducir el sonido del checkpoint
             }
         }
     }

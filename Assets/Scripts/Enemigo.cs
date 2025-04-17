@@ -5,6 +5,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float vida;
     [SerializeField] private GameObject efectoMuerte;
     [SerializeField] private float cantidadPuntos;
+    [SerializeField] private AudioClip sonidoMuerte;
 
     public void TomarDaño(float daño)
     {
@@ -20,6 +21,11 @@ public class Enemigo : MonoBehaviour
     private void Muerte()
     {
         GameManager.Instance.SumarPuntaje((int)cantidadPuntos);
+
+        if(sonidoMuerte != null)
+        {
+            AudioSource.PlayClipAtPoint(sonidoMuerte, transform.position);
+        }
 
 
         if (efectoMuerte != null)
