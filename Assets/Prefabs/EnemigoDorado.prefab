@@ -10,11 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 939058778794860203, guid: abbb8db693656f842ad5ebc5734cd342, type: 3}
       propertyPath: m_Name
-      value: dorado  Variant
+      value: EnemigoDorado
       objectReference: {fileID: 0}
     - target: {fileID: 939058778794860203, guid: abbb8db693656f842ad5ebc5734cd342, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326513514486717216, guid: abbb8db693656f842ad5ebc5734cd342, type: 3}
+      propertyPath: distancia
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1326513514486717216, guid: abbb8db693656f842ad5ebc5734cd342, type: 3}
       propertyPath: velocidad

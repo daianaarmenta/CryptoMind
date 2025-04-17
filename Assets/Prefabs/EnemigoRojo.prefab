@@ -17,12 +17,16 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5597142890332515922, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
+      propertyPath: distancia
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597142890332515922, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
       propertyPath: velocidad
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5966572644712360921, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
       propertyPath: m_Name
-      value: EnemigoRojo Variant
+      value: EnemigoRojo
       objectReference: {fileID: 0}
     - target: {fileID: 7376848072092037342, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
       propertyPath: m_Color.b
@@ -35,6 +39,10 @@ PrefabInstance:
     - target: {fileID: 7376848072092037342, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
       propertyPath: m_Color.r
       value: 0.95686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376848072092037342, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7846426499830386232, guid: 877a2cfd147e2ad439da181e5f5fb10e, type: 3}
       propertyPath: m_LocalPosition.x
