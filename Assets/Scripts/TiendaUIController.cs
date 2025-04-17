@@ -98,7 +98,7 @@ public class TiendaCanvasController : MonoBehaviour
 
         if (nombre == "Mejora")
         {
-            if (GameManager.Instance.DañoBala >= 50f)
+            if (GameManager.Instance.DañoBala >= 100f)
             {
                 MostrarMensaje("Damage is at max.");
                 return;
@@ -123,7 +123,7 @@ public class TiendaCanvasController : MonoBehaviour
     {
         monedasTexto.text = GameManager.Instance.Monedas.ToString();
 
-        if (GameManager.Instance.DañoBala >= 50f)
+        if (GameManager.Instance.DañoBala >= 100f)
         {
             precioMejoraTexto.text = "MAX";
             botonMejora.interactable = false;
