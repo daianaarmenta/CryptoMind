@@ -56,4 +56,21 @@ public class MenuGameOver : MonoBehaviour
     {
         SceneManager.LoadScene(nombre);
     }
+    public void MostrarGameOver()
+{
+    menuGameOver.SetActive(true);
+
+    if (saludPersonaje == null)
+        saludPersonaje = GameObject.FindGameObjectWithTag("Player")?.GetComponent<SaludPersonaje>();
+
+    if (saludPersonaje != null)
+    {
+        Rigidbody2D rb = saludPersonaje.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.simulated = false;
+        }
+    }
+}
+
 }
