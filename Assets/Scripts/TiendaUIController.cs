@@ -5,6 +5,8 @@ using System.Collections;
 
 public class TiendaCanvasController : MonoBehaviour
 {
+    public static TiendaCanvasController instance;
+
     [Header("Referencias UI")]
     public TextMeshProUGUI monedasTexto;
     public TextMeshProUGUI precioMejoraTexto;
@@ -17,15 +19,41 @@ public class TiendaCanvasController : MonoBehaviour
     [SerializeField] private GameObject canvasHUD;
     [SerializeField] private GameObject canvasTienda;
 
+    private void Awake()
+    {
+        // Singleton para evitar duplicados
+        if (instance != null && instance != this)
+        {
+            Debug.LogWarning("🟠 Se detectó un TiendaCanvasController duplicado. Eliminando...");
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        
+    }
+
     void Start()
     {
         if (botonVida != null)
+        {
+            botonVida.onClick.RemoveAllListeners(); // Limpia duplicados
             botonVida.onClick.AddListener(() => Comprar(100, "Vida"));
+        }
 
         if (botonMejora != null)
+        {
+            botonMejora.onClick.RemoveAllListeners();
             botonMejora.onClick.AddListener(() => Comprar(GameManager.Instance.CostoMejoraBala, "Mejora"));
+        }
 
         ActualizarUI();
+
+        Debug.Log($"🟢 TiendaCanvasController activo. ID: {GetInstanceID()}");
+
+        var todos = FindObjectsByType<TiendaCanvasController>(FindObjectsSortMode.None);
+
+        Debug.Log($"🧪 Total de TiendaCanvasControllers en escena: {todos.Length}");
     }
 
     void Comprar(int precio, string nombre)
@@ -119,13 +147,16 @@ public class TiendaCanvasController : MonoBehaviour
 
     public void AbrirTienda()
     {
+        Debug.Log("🛒 Abriendo tienda");
         canvasTienda.SetActive(true);
         canvasHUD.SetActive(false);
         Time.timeScale = 0f;
+        ActualizarUI(); // Actualiza los botones al abrir
     }
 
     public void CerrarTienda()
     {
+        Debug.Log("🔙 Cerrando tienda");
         canvasTienda.SetActive(false);
         canvasHUD.SetActive(true);
         Time.timeScale = 1f;
