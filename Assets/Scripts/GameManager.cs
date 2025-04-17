@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
+
         //Para reiniciar daño   
         //PlayerPrefs.DeleteKey("DañoBala");
         //PlayerPrefs.DeleteKey("CostoMejora");
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour
 
         DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f); // Empieza en 20 por defecto
         CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25); // Empieza en 50 por defecto
-        
+        ReiniciarVidas();
     }
 
     // ✅ MONEDAS

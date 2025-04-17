@@ -25,6 +25,7 @@ public class Enemigo : MonoBehaviour
         if (efectoMuerte != null)
         {
             Instantiate(efectoMuerte, transform.position, Quaternion.identity);
+        
         }
 
         Destroy(gameObject);
