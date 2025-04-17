@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class TiendaCanvasController : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class TiendaCanvasController : MonoBehaviour
     {
         if (nombre == "Vida")
         {
+            Debug.Log($"💡 Intentando comprar vida");
+            Debug.Log($"👀 SaludPersonaje.vidas = {SaludPersonaje.instance?.vidas}");
+            Debug.Log($"📦 GameManager.VidasGuardadas = {GameManager.Instance.VidasGuardadas}");
+
             if (!GameManager.Instance.PuedeComprarVida())
             {
                 MostrarMensaje("Max lives reached");
@@ -40,6 +45,13 @@ public class TiendaCanvasController : MonoBehaviour
             if (GameManager.Instance.GastarMonedas(precio))
             {
                 GameManager.Instance.ComprarVida();
+
+                if (SaludPersonaje.instance != null)
+                {
+                    SaludPersonaje.instance.vidas = GameManager.Instance.VidasGuardadas;
+                    VidasHUD.instance?.ActualizarVidas();
+                }
+
                 MostrarMensaje("Extra life acquired!");
                 ActualizarUI();
             }
@@ -96,7 +108,7 @@ public class TiendaCanvasController : MonoBehaviour
         {
             mensajeTexto.text = mensaje;
             CancelInvoke(nameof(LimpiarMensaje));
-            Invoke(nameof(LimpiarMensaje), 3f); // Borra mensaje a los 3 segundos
+            Invoke(nameof(LimpiarMensaje), 3f);
         }
     }
 
@@ -105,23 +117,17 @@ public class TiendaCanvasController : MonoBehaviour
         mensajeTexto.text = "";
     }
 
-    // 🛒 ABRIR tienda como menú
     public void AbrirTienda()
     {
-        Debug.Log("🛒 Tienda activada");
-
-        canvasTienda.SetActive(true);     // Mostrar la tienda
-        canvasHUD.SetActive(false);       // Ocultar el HUD del juego
-        Time.timeScale = 0f;              // Pausar el juego
+        canvasTienda.SetActive(true);
+        canvasHUD.SetActive(false);
+        Time.timeScale = 0f;
     }
 
-    // ❌ CERRAR tienda y reanudar el juego
     public void CerrarTienda()
     {
-        Debug.Log("🔙 Cerrando tienda");
-
-        canvasTienda.SetActive(false);    // Ocultar tienda
-        canvasHUD.SetActive(true);        // Mostrar HUD
-        Time.timeScale = 1f;              // Reanudar juego
+        canvasTienda.SetActive(false);
+        canvasHUD.SetActive(true);
+        Time.timeScale = 1f;
     }
 }
