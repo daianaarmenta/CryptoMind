@@ -1959,9 +1959,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      - m_Target: {fileID: 7421133330781356818}
         m_TargetAssemblyTypeName: TiendaCanvasController, Assembly-CSharp
-        m_MethodName: AbrirTienda
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
