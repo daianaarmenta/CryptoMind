@@ -42,26 +42,8 @@ public class Botones_niveles : MonoBehaviour
         Debug.Log("Aplicacion cerrada =)");
     }
 
-    public void Reiniciar()
-    {
-        Time.timeScale = 1f; 
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.ReiniciarVidas();
-            Debug.Log("🔁 Vidas reiniciadas.");
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ GameManager no encontrado al reiniciar.");
-        }
-
-        // 🔄 Recargar la escena actual
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     private void CambiarEscena(ClickEvent evt, string escena)
     {
-        Reiniciar();
 
         SceneManager.LoadScene(escena);
     }
