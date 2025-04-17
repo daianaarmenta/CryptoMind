@@ -29126,6 +29126,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1448519416}
     m_Modifications:
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: typingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 2019764160}
@@ -29139,10 +29143,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: "Zarek: Hi! I'm Zarek, thank you for meeting me here. I want to talk
-        to you about something...\nI used to work for Central Core unitil I found
-        out what they do with our information.\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t(Press
-        E to continue)\n"
+      value: 'Zarek: Hi! I''m Zarek, thank you for meeting me here. I want to talk
+        to you about something...
+
+        I used to work for Central Core until
+        I found out what they do with our information.
+
+
+        (Press E to continue)
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
@@ -29153,8 +29163,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[2]'
-      value: 'Zarek: And that''s exactly why the centralization of information is
-        so dangerous for us, but... there is a solution... Blockchain.'
+      value: "Zarek: And that's exactly why the centralization of information is
+        so dangerous for us, but... \nthere is a solution... Blockchain."
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[3]'
@@ -29206,6 +29216,26 @@ PrefabInstance:
     - target: {fileID: 4347272378683883799, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 939dd796c844efd42bc4a6fb0579bc84, type: 3}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class DialogueController : MonoBehaviour
 {
@@ -17,10 +18,17 @@ public class DialogueController : MonoBehaviour
     private static bool isAnyDialogueActive = false;
 
     private MentorFantasma mentorFantasma;
+    [SerializeField] private AudioSource typingAudioSource;
+    [SerializeField] private AudioClip typingSound;
+    private bool isSoundPlaying = false;
 
     void Start()
     {
         mentorFantasma = GetComponent<MentorFantasma>();
+        if (typingAudioSource != null)
+        {
+            typingAudioSource.Stop(); // Detener el sonido si está sonando al inicio
+        }
     }
 
     void Update()
@@ -38,6 +46,12 @@ public class DialogueController : MonoBehaviour
                 StopAllCoroutines();
                 dialogueText.text = dialogueLines[lineIndex];
                 isTyping = false;
+                            // 🔇 Detener el sonido también
+                if (typingAudioSource != null && typingAudioSource.isPlaying)
+                {
+                    typingAudioSource.Stop();
+                    typingAudioSource.loop = false;
+                }
             }
             else
             {
@@ -84,10 +98,23 @@ public class DialogueController : MonoBehaviour
         isTyping = true;
         dialogueText.text = string.Empty;
 
+        if(typingAudioSource != null && !isSoundPlaying)
+        {
+            typingAudioSource.clip = typingSound;
+            typingAudioSource.loop = true;
+            typingAudioSource.Play();
+        }
+
         foreach (char letter in dialogueLines[lineIndex].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSecondsRealtime(typingTime);
+        }
+
+        if (typingAudioSource != null)
+        {
+            typingAudioSource.Stop();
+            typingAudioSource.loop = false;
         }
 
         isTyping = false;
