@@ -6,6 +6,8 @@ public class alien : MonoBehaviour
 {
     [SerializeField] private int cantidadCheckpoint;
     [SerializeField] private int checkpointTerminado;
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip errorClip;
 
     [Header("UI de mensaje")]
     [SerializeField] private GameObject panelMensaje; // ← El GameObject que incluye fondo + texto
@@ -66,6 +68,7 @@ public class alien : MonoBehaviour
         {
             panelMensaje.SetActive(true);
             mensajeTexto.text = texto;
+            audiosource.PlayOneShot(errorClip);
             CancelInvoke(nameof(EsconderMensaje));
             Invoke(nameof(EsconderMensaje), 2f);
         }

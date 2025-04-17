@@ -161,7 +161,7 @@ MonoBehaviour:
   - "Mentor: No olvides recoger las monedas para acumular puntos. \xA1Mucha Suerte!"
   typingAudioSource: {fileID: 8841209194268207319}
   typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
-  notificationSound: {fileID: 8300000, guid: ade0bc32023d5974baf94d42adc3b946, type: 3}
+  notificationSound: {fileID: 8300000, guid: eb988c366354c1a438efb0845e12a80e, type: 3}
 --- !u!82 &8841209194268207319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
   m_Resource: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.071
+  m_Volume: 0.514
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -269,10 +269,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ade0bc32023d5974baf94d42adc3b946, type: 3}
-  m_Resource: {fileID: 8300000, guid: ade0bc32023d5974baf94d42adc3b946, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eb988c366354c1a438efb0845e12a80e, type: 3}
+  m_Resource: {fileID: 8300000, guid: eb988c366354c1a438efb0845e12a80e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.701
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
