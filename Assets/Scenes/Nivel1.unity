@@ -27481,6 +27481,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+--- !u!1 &663352184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242499756127180678, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &675437321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32554,6 +32559,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: botonPausa
+      value: 
+      objectReference: {fileID: 1884514699}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoVidas
+      value: 
+      objectReference: {fileID: 1767487617}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: botonTienda
+      value: 
+      objectReference: {fileID: 663352184}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoMonedas
+      value: 
+      objectReference: {fileID: 1608961066}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoPuntaje
+      value: 
+      objectReference: {fileID: 1162801069}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34150,6 +34175,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1162801069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3420518108704442436, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187950411
 GameObject:
   m_ObjectHideFlags: 0
@@ -35548,6 +35578,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1187950412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608961066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5814977112656028610, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1634031957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36122,6 +36157,11 @@ Transform:
   - {fileID: 1835339838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767487617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 76273153504037836, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805406496
 GameObject:
   m_ObjectHideFlags: 0
@@ -36544,6 +36584,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &1884514699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7517394495317313163, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1889478759
 PrefabInstance:
   m_ObjectHideFlags: 0

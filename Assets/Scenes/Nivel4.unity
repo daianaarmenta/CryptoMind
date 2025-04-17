@@ -371,6 +371,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
+--- !u!1 &96297024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7517394495317313163, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &133959871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1395,6 +1400,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
   m_PrefabInstance: {fileID: 641225721}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &667851629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 76273153504037836, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &722355237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1526,6 +1536,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
   m_PrefabInstance: {fileID: 780175468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &820921990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5814977112656028610, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &868145811 stripped
 Transform:
@@ -13630,6 +13645,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: botonPausa
+      value: 
+      objectReference: {fileID: 96297024}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoVidas
+      value: 
+      objectReference: {fileID: 667851629}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: botonTienda
+      value: 
+      objectReference: {fileID: 1983673391}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoMonedas
+      value: 
+      objectReference: {fileID: 820921990}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: textoPuntaje
+      value: 
+      objectReference: {fileID: 1986805587}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13832,6 +13867,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
   m_PrefabInstance: {fileID: 1925818501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1983673391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8242499756127180678, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1986805587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3420518108704442436, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2003703760
 PrefabInstance:

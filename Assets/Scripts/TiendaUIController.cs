@@ -18,6 +18,13 @@ public class TiendaCanvasController : MonoBehaviour
     [Header("Canvases")]
     [SerializeField] private GameObject canvasHUD;
     [SerializeField] private GameObject canvasTienda;
+    [Header("Elementos del HUD que se deben ocultar")]
+    [SerializeField] private GameObject botonTienda;
+    [SerializeField] private GameObject textoPuntaje;
+    [SerializeField] private GameObject textoVidas;
+    [SerializeField] private GameObject textoMonedas;
+    [SerializeField] private GameObject botonPausa;
+
 
     private void Awake()
     {
@@ -149,7 +156,12 @@ public class TiendaCanvasController : MonoBehaviour
     {
         Debug.Log("🛒 Abriendo tienda");
         canvasTienda.SetActive(true);
-        canvasHUD.SetActive(false);
+        // Ocultar HUD uno por uno
+        if (botonTienda != null) botonTienda.SetActive(false);
+        if (textoPuntaje != null) textoPuntaje.SetActive(false);
+        if (textoVidas != null) textoVidas.SetActive(false);
+        if (textoMonedas != null) textoMonedas.SetActive(false);
+        if (botonPausa != null) botonPausa.SetActive(false);
         Time.timeScale = 0f;
         ActualizarUI(); // Actualiza los botones al abrir
     }
@@ -158,7 +170,11 @@ public class TiendaCanvasController : MonoBehaviour
     {
         Debug.Log("🔙 Cerrando tienda");
         canvasTienda.SetActive(false);
-        canvasHUD.SetActive(true);
+        if (botonTienda != null) botonTienda.SetActive(true);
+        if (textoPuntaje != null) textoPuntaje.SetActive(true);
+        if (textoVidas != null) textoVidas.SetActive(true);
+        if (textoMonedas != null) textoMonedas.SetActive(true);
+        if (botonPausa != null) botonPausa.SetActive(true);
         Time.timeScale = 1f;
     }
 }
