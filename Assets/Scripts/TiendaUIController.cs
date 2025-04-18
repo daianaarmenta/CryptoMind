@@ -34,6 +34,7 @@ public class TiendaCanvasController : MonoBehaviour
 
     private void Awake()
     {
+
         // Singleton para evitar duplicados
         if (instance != null && instance != this)
         {
@@ -43,12 +44,12 @@ public class TiendaCanvasController : MonoBehaviour
         }
 
         instance = this;
+        audioSource = GetComponent<AudioSource>();
         
     }
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         if (botonVida != null)
         {
             botonVida.onClick.RemoveAllListeners(); // Limpia duplicados

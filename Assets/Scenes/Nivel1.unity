@@ -35207,7 +35207,7 @@ PrefabInstance:
       objectReference: {fileID: 108927963}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
@@ -35234,6 +35234,15 @@ PrefabInstance:
       propertyPath: 'dialogueLines.Array.data[3]'
       value: 'Zarek: Listen carefully... this knowledge could be the only thing that
         saves you from digital collapse.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[4]'
+      value: 'Zarek: One more thing... beware of golden drones, they are faster and
+        can cause more damage. Remember you can upgrade your gun in the store. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[5]'
+      value: 'Zarek: Good luck!'
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
