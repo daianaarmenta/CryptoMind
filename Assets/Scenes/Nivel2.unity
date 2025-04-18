@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.07228708
       objectReference: {fileID: 0}
+    - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: idPregunta
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -27643,6 +27647,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.5333358
       objectReference: {fileID: 0}
+    - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: idPregunta
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -28508,6 +28516,10 @@ PrefabInstance:
     - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_Offset.x
       value: -0.5333358
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: idPregunta
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38104,6 +38116,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: mensajeTexto
+      value: 
+      objectReference: {fileID: 1883228443}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: panelPregunta
+      value: 
+      objectReference: {fileID: 1680883853}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: preguntaTextoUI
+      value: 
+      objectReference: {fileID: 824417621}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: mensajeRespuesta
+      value: 
+      objectReference: {fileID: 1986984571}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: botonesRespuestas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1729333728}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[1]'
+      value: 
+      objectReference: {fileID: 409581049}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1803562631}
     - target: {fileID: 2009746471058666543, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: musicaFondo
       value: 

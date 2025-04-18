@@ -1619,6 +1619,7 @@ MonoBehaviour:
   botonPausa: {fileID: 7517394495317313163}
   menuPausa: {fileID: 8098097193680740487}
   canvasTienda: {fileID: 4695270910026462062, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+  musicaFondo: {fileID: 0}
 --- !u!114 &8092798769375121103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2351,11 +2352,76 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+--- !u!114 &687416675773017810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2464712034794668543, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1559440483056522325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4475000784593025912, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2499834661406481822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 652856174490153651, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2566847229271930652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 585783163012421681, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3258924385296171013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 469602706070155048, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3507338552430717446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1950844303112275243, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3909768272983525776 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2160622665503008445, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
   m_PrefabInstance: {fileID: 3152057233184943917}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6651259075406444249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8642512936537020916, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
+  m_PrefabInstance: {fileID: 3152057233184943917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3617412923910374097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2597,13 +2663,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: mensajeTexto
+      value: 
+      objectReference: {fileID: 2499834661406481822}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: panelPregunta
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1559440483056522325}
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: textoPregunta
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2566847229271930652}
+    - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
+      propertyPath: mensajeRespuesta
+      value: 
+      objectReference: {fileID: 3258924385296171013}
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: botonesRespuestas.Array.size
       value: 3
@@ -2611,15 +2685,15 @@ PrefabInstance:
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: 'botonesRespuestas.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 687416675773017810}
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: 'botonesRespuestas.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3507338552430717446}
     - target: {fileID: 7333487379513569724, guid: 166574654c15b724491b3776183bbe4f, type: 3}
       propertyPath: 'botonesRespuestas.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6651259075406444249}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

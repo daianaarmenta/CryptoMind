@@ -125,38 +125,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2446103972973157447}
-    - targetCorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2712505882636957799}
     - targetCorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6024245387735392817}
+    - targetCorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6593823826492238540}
   m_SourcePrefab: {fileID: 100100000, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
 --- !u!1 &5006344703120802054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
   m_PrefabInstance: {fileID: 8037770142239758879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2446103972973157447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5006344703120802054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e69511c740f90f48bf71fb03e8a24cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  marker: {fileID: 8110706743166780159}
-  preguntasPanel: {fileID: 4475000784593025912, guid: be0a0209a14f8f640b52eb1832410056, type: 3}
-  preguntaAsociada:
-    textoPregunta: 
-    respuestas: []
-    respuestaCorrecta: 0
-  sonidoCheckpoint: {fileID: 8300000, guid: d456e8e16c70ce742995a1c96d7ff2cd, type: 3}
 --- !u!61 &2712505882636957799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,6 +281,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6593823826492238540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5006344703120802054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6d4a99a216d9c44bd4ceea696d4484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 8110706743166780159}
+  idPregunta: 0
+  sonidoCheckpoint: {fileID: 8300000, guid: d456e8e16c70ce742995a1c96d7ff2cd, type: 3}
 --- !u!4 &7795097540341565231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
