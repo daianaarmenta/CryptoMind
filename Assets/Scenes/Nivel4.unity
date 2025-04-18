@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.82
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -650,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137585849245314284, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8204656778296529400, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_Name
@@ -1033,6 +1037,28 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1271545279}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Anyone can participate in a Blockchain network!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek: If you have a computer and internet access, you can be part
+        of the network.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'Zarek: You can be a node, a miner or just a user.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[3]'
+      value: 'Zarek: The important thing is that everyone collaborates to keep the
+        system running.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.46
@@ -1225,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.42
+      value: 13.79
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2244,7 +2270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 125.33046
+      value: 122.41
       objectReference: {fileID: 0}
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2593,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.38
+      value: 13.79
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2650,7 +2676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.68652
+      value: 55.33
       objectReference: {fileID: 0}
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2774,7 +2800,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 105.46782
+      value: 108.05
       objectReference: {fileID: 0}
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2977,7 +3003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.82
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3010,6 +3036,10 @@ PrefabInstance:
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137585849245314284, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8204656778296529400, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_Name
@@ -3980,6 +4010,19 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1271545279}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Blockchain is not just for money.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek:  It can be used to create games, smart contracts, digital identities,
+        voting systems and even more transparent supply chains.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.19
@@ -4176,7 +4219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.36
+      value: 13.77
       objectReference: {fileID: 0}
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4562,11 +4605,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.74384
+      value: 144.57
       objectReference: {fileID: 0}
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.600193
+      value: 19.16
       objectReference: {fileID: 0}
     - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4722,6 +4765,10 @@ PrefabInstance:
     - target: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137585849245314284, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8204656778296529400, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
       propertyPath: m_Name
@@ -24607,8 +24654,8 @@ Tilemap:
   - first: {x: 122, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -25124,21 +25171,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 121, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 122, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -25147,8 +25184,8 @@ Tilemap:
   - first: {x: 123, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27266,17 +27303,21 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 2226
+  - m_RefCount: 2222
     m_Data: {fileID: 11400000, guid: e34609b95110cb9439786ab2eea9bbc1, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: c39f74a81484fa94daf860cdaac3f7a4, type: 2}
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: 4bb372734914b134e99ed1dbcda4fb58, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 2226
+  - m_RefCount: 2222
     m_Data: {fileID: 1398750243, guid: 9d6e3b798a0832441934e93214bcd7f5, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 1055783418, guid: 9d6e3b798a0832441934e93214bcd7f5, type: 3}
+  - m_RefCount: 3
+    m_Data: {fileID: 432239123493950727, guid: 9d6e3b798a0832441934e93214bcd7f5, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2235
+  - m_RefCount: 2234
     m_Data:
       e00: 1
       e01: 0
@@ -27295,7 +27336,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2235
+  - m_RefCount: 2234
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -27352,6 +27393,11 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1271545279}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Excellent! Your journey is almost finishing... we are getting
+        closer to defeat Central Core.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 129.04
@@ -40620,68 +40666,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1001 &1784558472
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2142974644}
-    m_Modifications:
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 110.01239
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.689072
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.034518
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519057263864092410, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-      propertyPath: m_Name
-      value: EnemigoRojo (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
---- !u!4 &1784558473 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1080774364206347035, guid: 9a69b88c185c1f5499f46d4371f01fe1, type: 3}
-  m_PrefabInstance: {fileID: 1784558472}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1808564129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41162,6 +41146,25 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1271545279}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: You thought cryptocurrencies were only for sending money...
+        but you''re just scratching the surface. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek: Blockchain technology can do so much more. From gaming to contracts
+        to voting systems. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'Zarek: In this level you''ll learn what mining is and what amazing
+        things are already being built with this technology.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.93
@@ -41426,6 +41429,22 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1271545279}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: Mining is the process in which the most powerful nodes solve
+        complex mathematical problems to validate new transactions'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek: As a reward, they receive cryptocurrencies. It is like a digital
+        math competition.
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.67
@@ -41545,7 +41564,6 @@ Transform:
   - {fileID: 188860450}
   - {fileID: 820394898}
   - {fileID: 933379989}
-  - {fileID: 1784558473}
   - {fileID: 756208086}
   - {fileID: 1439318321}
   - {fileID: 1298270312}
