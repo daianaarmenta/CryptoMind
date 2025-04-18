@@ -440,7 +440,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5006344703120802054, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 579321928}
   m_SourcePrefab: {fileID: 100100000, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
 --- !u!1 &70715895
 GameObject:
@@ -22622,6 +22625,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3912927374533858386, guid: daf3d3211c18de7498ee3934654dda98, type: 3}
   m_PrefabInstance: {fileID: 579148779}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579321926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5006344703120802054, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+  m_PrefabInstance: {fileID: 55963793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &579321928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579321926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6d4a99a216d9c44bd4ceea696d4484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marker: {fileID: 1600821029}
+  idPregunta: 1
+  sonidoCheckpoint: {fileID: 8300000, guid: d456e8e16c70ce742995a1c96d7ff2cd, type: 3}
 --- !u!1 &589485213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5814977112656028610, guid: 5391e187d3f609440a95a978f7216097, type: 3}
@@ -26178,6 +26201,40 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b025fe8662d610f4aa512963afa6e405, type: 3}
+--- !u!1 &963729807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834486782798189940, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &963729809 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7143107413386248943, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &963729811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963729807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e0d910f6495c84b9c07360d2b4dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preguntaTextoUI: {fileID: 1835547032}
+  botonesRespuestas:
+  - {fileID: 2089844320}
+  - {fileID: 489150789}
+  - {fileID: 1129782293}
+  panelPregunta: {fileID: 1311119545}
+  mensajeRespuesta: {fileID: 714982674}
+  mensajeTexto: {fileID: 2067570638}
+  tiempoMensaje: 2
+  audioSource: {fileID: 963729809}
+  audioClipCorrecto: {fileID: 8300000, guid: f88f48a4d299bad4a8a354ae9ebea4c6, type: 3}
+  audioClipIncorrecto: {fileID: 8300000, guid: 01a0e823404e3c2479473f80c20c54a0, type: 3}
 --- !u!1 &1004641987
 GameObject:
   m_ObjectHideFlags: 0
@@ -28136,11 +28193,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.33
+      value: 27.04
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28721,6 +28778,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
   m_PrefabInstance: {fileID: 815439174}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1600821029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8110706743166780159, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+  m_PrefabInstance: {fileID: 55963793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1634031957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28986,6 +29048,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4343882668676857159, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343882668676857159, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: mensajeTexto
       value: 
       objectReference: {fileID: 2067570638}
@@ -29132,7 +29198,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1834486782798189940, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963729811}
   m_SourcePrefab: {fileID: 100100000, guid: 5391e187d3f609440a95a978f7216097, type: 3}
 --- !u!1001 &1703363127
 PrefabInstance:
@@ -29792,7 +29861,7 @@ Transform:
   m_GameObject: {fileID: 1850854501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4894867, y: 2.5216699, z: -10}
+  m_LocalPosition: {x: 26.756674, y: -1.9283336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30305,11 +30374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.61333
+      value: 26.756672
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5216665
+      value: -1.9283336
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.z

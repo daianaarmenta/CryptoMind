@@ -5,10 +5,18 @@ public class TriggerPreguntasBase : MonoBehaviour
 {
     [SerializeField] private GameObject marker;
     [SerializeField] private int idPregunta = 1; 
+    [SerializeField] private AudioClip sonidoCheckpoint;
 
+    private AudioSource audioSource;
     private bool isPlayerInRange = false; 
     private bool preguntaContestada = false;
 
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
     private void Update()
     {
         if(isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !preguntaContestada)
@@ -27,6 +35,7 @@ public class TriggerPreguntasBase : MonoBehaviour
             {
                 marker.SetActive(true);
                 Debug.Log("Jugador entró al checkpoint. Marcador activado.");
+                audioSource.PlayOneShot(sonidoCheckpoint);
             }
         }       
     }

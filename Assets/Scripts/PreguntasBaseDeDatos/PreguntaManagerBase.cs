@@ -19,6 +19,11 @@ public class PreguntaManagerBase : MonoBehaviour
     [Header("Timing")]
     public float tiempoMensaje = 2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource; 
+    [SerializeField] private AudioClip audioClipCorrecto; 
+    [SerializeField] private AudioClip audioClipIncorrecto; 
+
     private void Awake()
     {
         if (instance == null)
@@ -103,12 +108,17 @@ public class PreguntaManagerBase : MonoBehaviour
             Debug.Log("✅ Correcta");
             GameManager.Instance?.SumarMonedas(100);
             MostrarMensaje("Correct! +100 coins", Color.green);
+            if (audioSource != null && audioClipCorrecto != null)
+                audioSource.PlayOneShot(audioClipCorrecto);
         }
         else
         {
             Debug.Log("❌ Incorrecta");
             MostrarMensaje("Incorrect!\n-1 life\nCorrect answer:\n" + respuestaCorrecta, Color.red);
             SaludPersonaje.instance?.PerderVida();
+            if (audioSource != null && audioClipIncorrecto != null)
+                audioSource.PlayOneShot(audioClipIncorrecto);
+
         }
 
         StartCoroutine(OcultarMensaje());
