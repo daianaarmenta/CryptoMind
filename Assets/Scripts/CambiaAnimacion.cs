@@ -8,6 +8,8 @@ public class CambiaAnimacion : MonoBehaviour
     private Rigidbody2D rb;
     //private SpriteRenderer spRenderer;
     private Animator animator;
+    [SerializeField] private AudioClip sonidoDaño;
+    private AudioSource audioSource;
 
 
     void Start()
@@ -15,6 +17,7 @@ public class CambiaAnimacion : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //spRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,6 +40,7 @@ public class CambiaAnimacion : MonoBehaviour
         if (other.gameObject.CompareTag("Enemigo"))
         {
             animator.SetTrigger("recibeDaño"); // El personaje ha tocado el suelo
+            audioSource.PlayOneShot(sonidoDaño, 1f);
             Debug.Log("Recibe daño");
         }
     }

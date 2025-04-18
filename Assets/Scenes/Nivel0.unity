@@ -22861,6 +22861,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1865372969}
     - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
+      propertyPath: musicaFondo
+      value: 
+      objectReference: {fileID: 1034436613}
+    - target: {fileID: 5738724439813302064, guid: 3ad8750b998fe094c9d4415bba9cab3f, type: 3}
       propertyPath: textoMonedas
       value: 
       objectReference: {fileID: 589485213}
@@ -26768,7 +26772,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 92dd80154e9567c409fc32be1f819eb4, type: 3}
   m_Resource: {fileID: 8300000, guid: 92dd80154e9567c409fc32be1f819eb4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.177
+  m_Volume: 0.202
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28176,11 +28180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6674247893573677784, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Volume
-      value: 0.064
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7913556808512541316, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Volume
-      value: 0.498
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8563537403233066922, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Name
@@ -28969,6 +28973,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009746471058666543, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: musicaFondo
+      value: 
+      objectReference: {fileID: 1034436613}
     - target: {fileID: 3042345695914485810, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 5.8325195
@@ -29105,6 +29113,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 8092798769375121103, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: musicaFondo
+      value: 
+      objectReference: {fileID: 1034436613}
+    - target: {fileID: 8092798769375121103, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: sonidoGameOver
+      value: 
+      objectReference: {fileID: 8300000, guid: 55561f4f1db90634985336d9a77ea090, type: 3}
     - target: {fileID: 8470499305628755714, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

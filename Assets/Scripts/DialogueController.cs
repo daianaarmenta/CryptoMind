@@ -128,7 +128,7 @@ public class DialogueController : MonoBehaviour
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
-            AudioSource.PlayClipAtPoint(notificationSound, transform.position); // Reproducir sonido de notificación
+            AudioSource.PlayClipAtPoint(notificationSound, transform.position,1f); // Reproducir sonido de notificación
             if (mentorFantasma != null)
             {
                 mentorFantasma.Aparecer();

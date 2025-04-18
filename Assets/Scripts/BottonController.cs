@@ -6,14 +6,23 @@ public class BottonController : MonoBehaviour
     [Header("Referencias UI")]
     [SerializeField] private GameObject botonPausa;     // Botón que abre el menú de pausa
     [SerializeField] private GameObject menuPausa;      // Menú de pausa completo
-    [SerializeField] private GameObject canvasTienda;   // Canvas de la tienda
+    [SerializeField] private GameObject canvasTienda;
+    [SerializeField] private AudioSource musicaFondo;  // Canvas de la tienda
+    private AudioSource audioSource; // Fuente de audio para reproducir música
 
     // 🔘 PAUSAR el juego
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); 
+        
+    }
     public void Pausa()
     {
         Time.timeScale = 0f;                // Pausa el tiempo del juego
         botonPausa.SetActive(false);        // Oculta el botón de pausa
-        menuPausa.SetActive(true);          // Muestra el menú de pausa
+        menuPausa.SetActive(true);
+        musicaFondo.Pause();          // Muestra el menú de pausa
     }
 
     // ▶️ REANUDAR el juego
@@ -21,7 +30,8 @@ public class BottonController : MonoBehaviour
     {
         Time.timeScale = 1f;                // Reanuda el tiempo del juego
         botonPausa.SetActive(true);         // Muestra el botón de pausa
-        menuPausa.SetActive(false);         // Oculta el menú de pausa
+        menuPausa.SetActive(false);
+        musicaFondo.UnPause();         // Oculta el menú de pausa
     }
 
     // 🔄 REINICIAR el nivel completo

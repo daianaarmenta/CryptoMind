@@ -24,7 +24,7 @@ public class Enemigo : MonoBehaviour
 
         if(sonidoMuerte != null)
         {
-            AudioSource.PlayClipAtPoint(sonidoMuerte, transform.position);
+            AudioSource.PlayClipAtPoint(sonidoMuerte, transform.position,3f);
         }
 
 

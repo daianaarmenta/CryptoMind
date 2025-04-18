@@ -2,10 +2,16 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class TiendaCanvasController : MonoBehaviour
 {
     public static TiendaCanvasController instance;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip sonidoCompra;
+    [SerializeField] private AudioClip sonidoError;
+    [SerializeField] private AudioSource musicaFondo;
+    [SerializeField] private AudioClip musicaTienda;
 
     [Header("Referencias UI")]
     public TextMeshProUGUI monedasTexto;
@@ -42,6 +48,7 @@ public class TiendaCanvasController : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (botonVida != null)
         {
             botonVida.onClick.RemoveAllListeners(); // Limpia duplicados
@@ -88,6 +95,7 @@ public class TiendaCanvasController : MonoBehaviour
                     SaludPersonaje.instance.vidas = GameManager.Instance.VidasGuardadas;
                     VidasHUD.instance?.ActualizarVidas();
                 }
+                audioSource.PlayOneShot(sonidoCompra, 1f);
 
                 MostrarMensaje("Extra life acquired!");
                 Invoke(nameof(LimpiarMensaje), 3f);
@@ -96,6 +104,7 @@ public class TiendaCanvasController : MonoBehaviour
             }
             else
             {
+                audioSource.PlayOneShot(sonidoError, 1f);
                 MostrarMensaje("Need more coins!");
                 Invoke(nameof(LimpiarMensaje), 3f);
 
@@ -117,6 +126,7 @@ public class TiendaCanvasController : MonoBehaviour
             if (GameManager.Instance.GastarMonedas(precioActual))
             {
                 GameManager.Instance.MejorarBala();
+                audioSource.PlayOneShot(sonidoCompra, 1f);
                 MostrarMensaje($"New damage: {GameManager.Instance.DañoBala}");
                 Invoke(nameof(LimpiarMensaje), 3f);
 
@@ -124,6 +134,7 @@ public class TiendaCanvasController : MonoBehaviour
             }
             else
             {
+                audioSource.PlayOneShot(sonidoError, 1f);
                 MostrarMensaje("Need more coins!");
                 Invoke(nameof(LimpiarMensaje), 3f);
 
@@ -168,6 +179,8 @@ public class TiendaCanvasController : MonoBehaviour
     {
         Debug.Log("🛒 Abriendo tienda");
         canvasTienda.SetActive(true);
+        musicaFondo.Pause();
+        audioSource.PlayOneShot(musicaTienda, 1f); // Reproducir música de tienda
         // Ocultar HUD uno por uno
         if (botonTienda != null) botonTienda.SetActive(false);
         if (textoPuntaje != null) textoPuntaje.SetActive(false);
@@ -182,6 +195,8 @@ public class TiendaCanvasController : MonoBehaviour
     {
         Debug.Log("🔙 Cerrando tienda");
         canvasTienda.SetActive(false);
+        audioSource.Stop();
+        musicaFondo.UnPause(); // Reanudar música de fondo
         if (botonTienda != null) botonTienda.SetActive(true);
         if (textoPuntaje != null) textoPuntaje.SetActive(true);
         if (textoVidas != null) textoVidas.SetActive(true);

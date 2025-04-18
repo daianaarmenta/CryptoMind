@@ -37,7 +37,7 @@ public class Disparo : MonoBehaviour
     {
         Transform puntoDeDisparo = MueveChabelito.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
         Instantiate(balaPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation); // Instancia la bala en el punto de disparo
-        audioSource.PlayOneShot(sonidoDisparo,1f);
+        audioSource.PlayOneShot(sonidoDisparo,0.2f);
 
         Bala balaScript = balaPrefab.GetComponent<Bala>();
         if (balaScript != null)

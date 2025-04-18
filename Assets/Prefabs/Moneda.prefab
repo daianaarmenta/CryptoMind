@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 10
-  sonidoMoneda: {fileID: 8300000, guid: 8366a9f3bac35b94693cc6e3452241b4, type: 3}
+  sonidoMoneda: {fileID: 8300000, guid: 8ab409bd58fd2894fb566cf291407381, type: 3}
 --- !u!82 &6768315597635158952
 AudioSource:
   m_ObjectHideFlags: 0
@@ -183,8 +183,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8366a9f3bac35b94693cc6e3452241b4, type: 3}
-  m_Resource: {fileID: 8300000, guid: 8366a9f3bac35b94693cc6e3452241b4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8ab409bd58fd2894fb566cf291407381, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8ab409bd58fd2894fb566cf291407381, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

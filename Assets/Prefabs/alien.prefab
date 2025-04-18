@@ -285,6 +285,7 @@ MonoBehaviour:
   checkpointTerminado: 0
   audiosource: {fileID: 3525847520346957297}
   errorClip: {fileID: 8300000, guid: c67b8d0c026e93d409f363a20a53e500, type: 3}
+  siguienteNivel: {fileID: 8300000, guid: cda9944f5035454498a06e4f9d3a16e5, type: 3}
   panelMensaje: {fileID: 5907216346801909342}
   mensajeTexto: {fileID: 3592783127789446886}
 --- !u!61 &9020811310276932206

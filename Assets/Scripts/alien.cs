@@ -8,6 +8,7 @@ public class alien : MonoBehaviour
     [SerializeField] private int checkpointTerminado;
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip errorClip;
+    [SerializeField] private AudioClip siguienteNivel;
 
     [Header("UI de mensaje")]
     [SerializeField] private GameObject panelMensaje; // ← El GameObject que incluye fondo + texto
@@ -36,6 +37,7 @@ public class alien : MonoBehaviour
         {
             if (checkpointTerminado == cantidadCheckpoint)
             {
+                audiosource.PlayOneShot(siguienteNivel);
                 // ✅ Reiniciar vidas para el siguiente nivel
                 if (GameManager.Instance != null)
                 {
@@ -47,6 +49,7 @@ public class alien : MonoBehaviour
                 TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
                 if (transicion != null)
                 {
+
                     transicion.IrASiguienteEscena();
                 }
                 else

@@ -21,6 +21,10 @@ public class PreguntaManager : MonoBehaviour
 
     private System.Action callbackFinPregunta;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClipCorrecto;
+    [SerializeField] private AudioClip audioClipIncorrecto;
+
     private void Awake()
     {
         if (instance == null)
@@ -82,11 +86,13 @@ public class PreguntaManager : MonoBehaviour
             Debug.Log("✅ ¡Respuesta correcta!");
             GameManager.Instance.SumarMonedas(100); // ✅ Puntaje, no monedas
             MostrarMensaje("Correct! +100 coins", Color.green);
+            audioSource.PlayOneShot(audioClipCorrecto);
         }
         else
         {
             Debug.Log("❌ Respuesta incorrecta.");
             MostrarMensaje("Incorrect!\n-1 life\n\nCorrect answer:" + respuestaCorrecta , Color.red);
+            audioSource.PlayOneShot(audioClipIncorrecto);
             if (SaludPersonaje.instance != null)
             {
                 SaludPersonaje.instance.PerderVida();
