@@ -28,7 +28,7 @@ public class Botones_niveles : MonoBehaviour
         cerrar = root.Q<Button>("botonCerrar");
 
         // Registrar eventos de clic
-        nivel0.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel0");
+        nivel0.RegisterCallback<ClickEvent, string>(CambiarEscena, "Cutscene 0");
         nivel1.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel1");
         nivel2.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel2");
         nivel3.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel3");
