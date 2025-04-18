@@ -338,7 +338,7 @@
     },
     {
       "pregunta": {
-        "id_pregunta": 15,
+        "id_pregunta": 13,
         "id_nivel": 4,
         "texto_pregunta": "What is mining in blockchain?",
         "dificultad": 1
@@ -366,7 +366,7 @@
     },
     {
       "pregunta": {
-        "id_pregunta": 16,
+        "id_pregunta": 14,
         "id_nivel": 4,
         "texto_pregunta": "What can be built using blockchain technology?",
         "dificultad": 1
@@ -394,7 +394,7 @@
     },
     {
       "pregunta": {
-        "id_pregunta": 17,
+        "id_pregunta": 15,
         "id_nivel": 4,
         "texto_pregunta": "Who can be part of a blockchain network?",
         "dificultad": 1
