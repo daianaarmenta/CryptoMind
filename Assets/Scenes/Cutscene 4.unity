@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6607b76a4495bb84ea0ead3dc1593c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeline: {fileID: 916274504}
+  timeline: {fileID: 1613970579}
 --- !u!4 &777855254
 Transform:
   m_ObjectHideFlags: 0
@@ -2247,61 +2247,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4625251, y: -2.0827947, z: -9.9395275}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &916274503
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 916274505}
-  - component: {fileID: 916274504}
-  m_Layer: 0
-  m_Name: Timeline3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!320 &916274504
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916274503}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 8badfc602f19f0f47b787feb073c7005, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -5057435813427854504, guid: 8badfc602f19f0f47b787feb073c7005, type: 2}
-    value: {fileID: 1185874990}
-  - key: {fileID: -2186963164969738166, guid: 8badfc602f19f0f47b787feb073c7005, type: 2}
-    value: {fileID: 1185874990}
-  - key: {fileID: -5568719761222759704, guid: 8badfc602f19f0f47b787feb073c7005, type: 2}
-    value: {fileID: 1036593276}
-  m_ExposedReferences:
-    m_References: []
---- !u!4 &916274505
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916274503}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5106028, y: -0.09184322, z: -9.931918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2462,10 +2407,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 395295086}
   dialogueText: {fileID: 1657110083}
   dialogueLines:
-  - 'Eve: I''ve learned a lot, not just about Blockchain but Security and Cryptocurrency
-    too'
-  - 'Eve: With this knowledge I''m getting stronger'
-  - 'Eve: I will save our world!'
+  - 'Eve: So that''s how Cryptocurrency works! . . . Wow'
+  - 'Eve: This drones are getting annoying but they give great information'
+  - "Eve: It seems like the one behind all this trouble is \xA9\xA7\u20B0\u2022"
 --- !u!4 &1036593285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
@@ -2558,11 +2502,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1185874990 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5960963942276906114, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
-  m_PrefabInstance: {fileID: 1297656305403931159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1256726332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,6 +4730,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1613970578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613970580}
+  - component: {fileID: 1613970579}
+  m_Layer: 0
+  m_Name: Timeline4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1613970579
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613970578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -8598191652660609001, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2915831548956969280, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1366947926175353834, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1613970580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613970578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9344823, y: -3.1514409, z: -9.922783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657110081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5151,50 +5145,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1805622427
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1805622429}
-  - component: {fileID: 1805622428}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1805622428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805622427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d130b384f9e57754dbfd3ea6896e3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1805622429
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805622427}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2579403, y: -0.23363328, z: 0.015600587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020149417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5553,7 +5503,6 @@ SceneRoots:
   - {fileID: 551655550}
   - {fileID: 1593454617}
   - {fileID: 1756984547}
-  - {fileID: 1805622429}
   - {fileID: 1297656305403931159}
   - {fileID: 8113904576885349749}
   - {fileID: 443600904}
@@ -5561,4 +5510,4 @@ SceneRoots:
   - {fileID: 1408839069}
   - {fileID: 777855254}
   - {fileID: 148340790}
-  - {fileID: 916274505}
+  - {fileID: 1613970580}
