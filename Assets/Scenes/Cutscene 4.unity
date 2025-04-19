@@ -2416,11 +2416,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
   m_PrefabInstance: {fileID: 8113904576885349749}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1082612249 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5960963942276906114, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
-  m_PrefabInstance: {fileID: 1297656305403931159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1151526142
 GameObject:
   m_ObjectHideFlags: 0
@@ -4943,11 +4938,11 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -8598191652660609001, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
-    value: {fileID: 1082612249}
+    value: {fileID: 0}
   - key: {fileID: -2915831548956969280, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
-    value: {fileID: 1082612249}
+    value: {fileID: 0}
   - key: {fileID: -1366947926175353834, guid: 7b2988a4fc08ffc44bcc1b681c2c758f, type: 2}
-    value: {fileID: 1036593276}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1613970580
