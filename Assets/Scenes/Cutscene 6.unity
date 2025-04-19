@@ -14860,10 +14860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777855254}
   - component: {fileID: 777855253}
-<<<<<<< Updated upstream
   - component: {fileID: 777855255}
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -14878,11 +14875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777855251}
-<<<<<<< Updated upstream
   m_Enabled: 0
-=======
-  m_Enabled: 1
->>>>>>> Stashed changes
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6607b76a4495bb84ea0ead3dc1593c3f, type: 3}
   m_Name: 
@@ -14903,7 +14896,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &777855255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14917,8 +14909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeline: {fileID: 1467130038}
-=======
->>>>>>> Stashed changes
 --- !u!1 &956411824
 GameObject:
   m_ObjectHideFlags: 0

@@ -1175,13 +1175,8 @@ Transform:
 --- !u!114 &934071472 stripped
 MonoBehaviour:
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 8027437697008008311, guid: afe1c031908ee2c44868555658e5d87b, type: 3}
   m_PrefabInstance: {fileID: 4104846747674852766}
-=======
-  m_CorrespondingSourceObject: {fileID: 2199667462908098670, guid: afe1c031908ee2c44868555658e5d87b, type: 3}
-  m_PrefabInstance: {fileID: 6115350356338939387}
->>>>>>> Stashed changes
 =======
   m_CorrespondingSourceObject: {fileID: 2199667462908098670, guid: afe1c031908ee2c44868555658e5d87b, type: 3}
   m_PrefabInstance: {fileID: 6115350356338939387}
@@ -16677,11 +16672,7 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1001 &4104846747674852766
-=======
---- !u!1001 &6115350356338939387
->>>>>>> Stashed changes
 =======
 --- !u!1001 &6115350356338939387
 >>>>>>> Stashed changes
@@ -16692,7 +16683,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 1282592441990553581, guid: afe1c031908ee2c44868555658e5d87b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16743,8 +16733,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1480776804}
 =======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 2199667462908098670, guid: afe1c031908ee2c44868555658e5d87b, type: 3}
       propertyPath: jugador
       value: 
@@ -16801,9 +16789,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16825,11 +16810,7 @@ SceneRoots:
   - {fileID: 92579984}
   - {fileID: 1418970202}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - {fileID: 4104846747674852766}
-=======
-  - {fileID: 6115350356338939387}
->>>>>>> Stashed changes
 =======
   - {fileID: 6115350356338939387}
 >>>>>>> Stashed changes
