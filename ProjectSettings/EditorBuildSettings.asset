@@ -42,8 +42,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel4.unity
     guid: 144d7d52375bd8f4f91245290cf8bdb7
   - enabled: 1
+    path: Assets/Scenes/Cutscene 5.unity
+    guid: 8dd092b3d293538409e47c39be97b857
+  - enabled: 1
     path: Assets/Scenes/Nivel5.unity
     guid: 57670e7aefc732a4abc6897af7136ff7
+  - enabled: 1
+    path: Assets/Scenes/Cutscene 6.unity
+    guid: ebfb08987a5e69f4a8daa40c75764d62
   - enabled: 0
     path: Assets/Scenes/MenuPausa.unity
     guid: 6f34666ba62ce9345b793558eb5ac700
