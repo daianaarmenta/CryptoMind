@@ -1810,8 +1810,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 92dd80154e9567c409fc32be1f819eb4, type: 3}
-  m_Resource: {fileID: 8300000, guid: 92dd80154e9567c409fc32be1f819eb4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d0096e01165313b40983c916db8062a8, type: 3}
+  m_Resource: {fileID: 8300000, guid: d0096e01165313b40983c916db8062a8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.198
   m_Pitch: 1
@@ -2464,8 +2464,9 @@ MonoBehaviour:
   dialogueLines:
   - 'Eve: I understand now. Central Core ain''t saving data, they''re saving identities'
   - 'Eve: Everything we are is on the network'
-  - 'Eve: Central Core i''ll get to your tower.'
-  - 'Eve: The tower where you save every fail, every fear . . . Everything'
+  - 'Eve: Central Core I''ll get to your headquarters.'
+  - 'Eve: The headquarters where you save every fail, every fear . . . Everything...'
+  typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
 --- !u!4 &1036593285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
