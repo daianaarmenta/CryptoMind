@@ -20,4 +20,4 @@ public class CambioCutscene : MonoBehaviour
     {
         SceneManager.LoadScene(escenaSiguiente); // Cambia de escena
     }
-}
+}   
