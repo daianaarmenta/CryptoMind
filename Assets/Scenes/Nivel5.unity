@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: fuerzaSalto
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4479868785782828940, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7944379606104780872, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Size.y
       value: 0.20434666
@@ -213,7 +217,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 842153729564781151, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -488,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 19792729}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: tiempoMaximoRespuesta
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: botonesRespuestas.Array.size
