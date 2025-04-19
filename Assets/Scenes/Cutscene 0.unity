@@ -2333,6 +2333,7 @@ MonoBehaviour:
   - 'Zarek: There''s something you should know. Something that could change everything.
 
 '
+  typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
 --- !u!4 &1036593285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
@@ -2556,7 +2557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x

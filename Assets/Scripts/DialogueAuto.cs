@@ -8,6 +8,9 @@ public class DialogueAuto : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private AudioClip typingSound;
+    private AudioSource typingAudioSource;
+    private bool isSoundPlaying = false;
 
     private float typingTime = 0.05f;
     private float readingTime = 2.0f;
@@ -19,6 +22,10 @@ public class DialogueAuto : MonoBehaviour
     private GameObject playerObject;
     private MueveChabelito playerMovement;
 
+    void Start()
+    {
+        typingAudioSource = GetComponent<AudioSource>();   
+    }
     void Update()
     {
         if (isPlayerInRange && !hasDialoguePlayed)
@@ -63,10 +70,24 @@ public class DialogueAuto : MonoBehaviour
     {
         dialogueText.text = string.Empty;
 
+        if (typingAudioSource != null && typingSound != null)
+        {
+            typingAudioSource.clip = typingSound;
+            typingAudioSource.loop = true;
+            typingAudioSource.Play();
+            isSoundPlaying = true;
+        }
+
         foreach (char letter in dialogueLines[lineIndex].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSecondsRealtime(typingTime);
+        }
+
+        if (typingAudioSource != null && isSoundPlaying)
+        {
+            typingAudioSource.Stop();
+            isSoundPlaying = false;
         }
 
         yield return new WaitForSecondsRealtime(readingTime);
@@ -81,6 +102,12 @@ public class DialogueAuto : MonoBehaviour
         didDialogueStart = false;
         hasDialoguePlayed = true;
         dialogueMark.SetActive(false);
+
+        if(typingAudioSource != null && !isSoundPlaying)
+        {
+            typingAudioSource.Stop();
+            isSoundPlaying = false;
+        }
 
         // Reactivar movimiento del jugador si estaba desactivado
         if (playerMovement != null)
