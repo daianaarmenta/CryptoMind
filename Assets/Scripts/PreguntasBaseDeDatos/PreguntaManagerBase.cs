@@ -340,6 +340,7 @@ private void ComprobarRespuestaNivel5(PreguntaData actual, int seleccion)
 
     if (esCorrecta)
     {
+        GameManager.Instance?.SumarMonedas(100);
         enemigo?.ResetearVelocidad();
         MostrarMensaje("Correct! +100 coins", Color.green);
     }
