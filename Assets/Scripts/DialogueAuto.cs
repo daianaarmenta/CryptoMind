@@ -13,7 +13,7 @@ public class DialogueAuto : MonoBehaviour
     private bool isSoundPlaying = false;
 
     private float typingTime = 0.05f;
-    private float readingTime = 2.0f;
+    private float readingTime = 1.0f;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
