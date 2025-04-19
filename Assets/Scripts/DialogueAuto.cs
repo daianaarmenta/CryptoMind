@@ -17,7 +17,7 @@ public class DialogueAuto : MonoBehaviour
     private bool hasDialoguePlayed = false;
 
     private GameObject playerObject;
-    private MueveChabelito playerMovement; // Asumimos que así se llama tu script de movimiento
+    private MueveChabelito playerMovement;
 
     void Update()
     {
@@ -37,7 +37,7 @@ public class DialogueAuto : MonoBehaviour
         dialogueMark.SetActive(false);
         lineIndex = 0;
 
-        // Desactivar movimiento del jugador si está disponible
+        // Desactivar movimiento del jugador si estï¿½ disponible
         if (playerMovement != null)
         {
             playerMovement.enabled = false;
