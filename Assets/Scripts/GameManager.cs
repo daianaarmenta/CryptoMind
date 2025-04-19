@@ -43,8 +43,27 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
+private void Start()
+{
+    PlayerPrefs.Save();
+    monedas = PlayerPrefs.GetInt("NumeroMonedas", 0);
+    puntaje = PlayerPrefs.GetInt("Puntaje", 0);
+    DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f);
+    CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25);
 
-    private void Start()
+    string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+    if (escena != "Nivel5" && !escena.Contains("5"))
+    {
+        ReiniciarVidas(); // ✅ Solo reiniciar si NO es nivel 5
+    }
+    else
+    {
+        Debug.Log("🧪 Nivel 5 detectado. No se reinician vidas.");
+    }
+}
+
+    /*private void Start()
     {
         
 
@@ -59,7 +78,7 @@ public class GameManager : MonoBehaviour
         DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f); // Empieza en 20 por defecto
         CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25); // Empieza en 50 por defecto
         ReiniciarVidas();
-    }
+    }*/
 
     // ✅ MONEDAS
     public void SumarMonedas(int cantidad)

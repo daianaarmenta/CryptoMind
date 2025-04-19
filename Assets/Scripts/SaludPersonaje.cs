@@ -13,21 +13,31 @@ public class SaludPersonaje : MonoBehaviour
     internal int numeroMonedas;
     public event EventHandler MuerteJugador;
 
-    private void Awake()
+void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-            isInstanceAlive = true;
+        instance = this;
 
-            vidasMaximas = GameManager.Instance.MaxVidas;
-            vidas = GameManager.Instance.VidasGuardadas; // Solo una vez
+        string escena = SceneManager.GetActiveScene().name;
+
+        if (escena == "Nivel5" || escena.Contains("5"))
+        {
+            Debug.Log("🧪 Nivel 5: Desactivando sistema de vidas.");
+            vidas = 0; // o cualquier valor, ya no importa
         }
         else
         {
-            Destroy(gameObject);
+            vidasMaximas = GameManager.Instance.MaxVidas;
+            vidas = GameManager.Instance.VidasGuardadas;
         }
     }
+    else
+    {
+        Destroy(gameObject);
+    }
+}
+
 
     private void Start()
     {
@@ -36,6 +46,18 @@ public class SaludPersonaje : MonoBehaviour
 
     public void PerderVida()
     {
+        string escena = SceneManager.GetActiveScene().name;
+
+    if (escena == "Nivel5" || escena.Contains("5"))
+    {
+        // 💀 Game Over directo sin usar vidas
+        MenuGameOver gameOver = FindFirstObjectByType<MenuGameOver>();
+        if (gameOver != null)
+        {
+            gameOver.MostrarGameOver();
+        }
+        return;
+    }
         if (vidas > 0)
         {
             vidas--;
