@@ -1,6 +1,7 @@
 using UnityEngine.Playables;
 using UnityEngine;
 using System.Collections;
+using Unity.Cinemachine;
 
 
 public class EnemigoSeguidorNivel5 : MonoBehaviour
@@ -11,6 +12,10 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
     [SerializeField] private float incrementoVelocidad = 1f; 
     [SerializeField] private float velocidadMaxima = 10f;    
     [SerializeField] private GameObject efectoMuerte;
+    [SerializeField] private AudioClip efectoSonidoMuerte;
+    private AudioSource audioSource;
+    [SerializeField] private CinemachineBrain cinemachineBrain;
+    private CinemachineCamera cinemachineCamera;
 
 
 
@@ -31,13 +36,17 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         animator = GetComponent<Animator>();
         if (animator != null)
             animator.SetBool("caminar", true);
+
+        audioSource = GetComponent<AudioSource>();
+        cinemachineCamera = FindFirstObjectByType<CinemachineCamera>();
+        
     }
 
     private void Update()
     {
         if (!activo || jugador == null) return;
 
-        Vector3 direccion = (jugador.position - transform.position).normalized;
+        Vector3 direccion = new Vector3(jugador.position.x - transform.position.x, 0f, 0f).normalized;
         transform.position += direccion * velocidadActual * Time.deltaTime;
     }
 
@@ -83,31 +92,54 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
 
     public void Morir()
     {
+        activo = false;
+        cinemachineCamera.Follow = transform;
+        cinemachineCamera.LookAt = transform;
         StartCoroutine(MorirDespuesDeTresSegundos());
     }
 
     private IEnumerator MorirDespuesDeTresSegundos()
     {
-        yield return new WaitForSecondsRealtime(3f); // ⏳ Espera 3 segundos
+        yield return new WaitForSecondsRealtime(1f);
 
-        activo = false;
+        // Reproducir sonido en objeto aparte
+        if (efectoSonidoMuerte != null)
+        {
+            GameObject audioGO = new GameObject("SonidoMuerte");
+            AudioSource tempAudio = audioGO.AddComponent<AudioSource>();
+            tempAudio.clip = efectoSonidoMuerte;
+            tempAudio.Play();
+            Destroy(audioGO, efectoSonidoMuerte.length);
+        }
 
-        // Mover al centro de la pantalla
-        Vector3 centroPantalla = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        centroPantalla.z = transform.position.z;
-        transform.position = centroPantalla;
-
-        // Instanciar efecto de muerte
+        // Instanciar efecto visual de muerte
         if (efectoMuerte != null)
         {
             Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         }
 
-        Destroy(gameObject); // 💀 Destruir enemigo
+        // Desactivar el enemigo visualmente no lógicamente
+        GetComponent<SpriteRenderer>().enabled = false;
+
+        foreach (Collider2D col in GetComponents<Collider2D>())
+        {
+            col.enabled = false;
+        }
+
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+
+        // Regresar cámara al jugador
+        yield return new WaitForSecondsRealtime(0.5f);
+        cinemachineCamera.Follow = jugador;
+        cinemachineCamera.LookAt = jugador;
+
+        // Finalmente destruir enemigo
+        yield return new WaitForSecondsRealtime(0.2f);
+        Destroy(gameObject);
     }
-
-
-
 
     private void OnDestroy()
     {
@@ -116,6 +148,5 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
             graph.Destroy();
         }
     }
-
 
 }

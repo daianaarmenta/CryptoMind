@@ -1,19 +1,26 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering;
 
 public class TriggerPreguntasBase : MonoBehaviour
 {
     [SerializeField] private GameObject marker;
     [SerializeField] private int idPregunta = 1; 
+    [SerializeField] private AudioClip sonidoCheckpoint;
 
     private bool isPlayerInRange = false; 
     private bool preguntaContestada = false;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+      audioSource = GetComponent<AudioSource>();  
+    }
     private void Update()
     {
         if(isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !preguntaContestada)
         {
-            Debug.Log("Tecla 'E' presionada: cargando pregunta del servidor...");
+            //Debug.Log("Tecla 'E' presionada: cargando pregunta del servidor...");
             MostrarPreguntaDesdeServidor();
         }
     }
@@ -26,7 +33,8 @@ public class TriggerPreguntasBase : MonoBehaviour
             if(marker != null)
             {
                 marker.SetActive(true);
-                Debug.Log("Jugador entró al checkpoint. Marcador activado.");
+                //Debug.Log("Jugador entró al checkpoint. Marcador activado.");
+                audioSource.PlayOneShot(sonidoCheckpoint);
             }
         }       
     }
@@ -39,7 +47,7 @@ public class TriggerPreguntasBase : MonoBehaviour
             if(marker != null)
             {
                 marker.SetActive(false);
-                Debug.Log("Jugador salió del checkpoint. Marcador desactivado.");
+                //Debug.Log("Jugador salió del checkpoint. Marcador desactivado.");
             }
         }
     }
@@ -48,10 +56,10 @@ public class TriggerPreguntasBase : MonoBehaviour
     {
         if(PreguntaManagerBase.instance == null)
         {
-            Debug.LogError("No se encontró el singleton de PreguntaManagerBase.");
+            //Debug.LogError("No se encontró el singleton de PreguntaManagerBase.");
             return;
         }
-        Debug.Log("Solicitando pregunta con ID: " + idPregunta);
+        //Debug.Log("Solicitando pregunta con ID: " + idPregunta);
         StartCoroutine(CargarYMarcarPregunta(idPregunta));
     }
 
@@ -69,6 +77,6 @@ public class TriggerPreguntasBase : MonoBehaviour
             marker.SetActive(false);
         }
 
-        Debug.Log("Pregunta marcada como contestada y marcador ocultado.");
+        //Debug.Log("Pregunta marcada como contestada y marcador ocultado.");
     }
 }

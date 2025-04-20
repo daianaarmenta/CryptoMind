@@ -25,6 +25,11 @@ public class PreguntaManagerBase : MonoBehaviour
 
     [Header("Timing")]
     public float tiempoMensaje = 2f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClipCorrecto;
+    [SerializeField] private AudioClip audioClipIncorrecto;
     private void Awake()
     {
         if (instance == null)
@@ -144,14 +149,16 @@ public class PreguntaManagerBase : MonoBehaviour
 
         if (esCorrecta)
         {
-            Debug.Log("✅ Correcta");
+            //Debug.Log("✅ Correcta");
             GameManager.Instance?.SumarMonedas(100);
             MostrarMensaje("Correct! +100 coins", Color.green);
+            audioSource.PlayOneShot(audioClipCorrecto);
         }
         else
         {
-            Debug.Log("❌ Incorrecta");
+            //Debug.Log("❌ Incorrecta");
             MostrarMensaje("Incorrect!\n-1 life\nCorrect answer:\n" + respuestaCorrecta, Color.red);
+            audioSource.PlayOneShot(audioClipIncorrecto);
             SaludPersonaje.instance?.PerderVida();
         }
 
@@ -190,7 +197,7 @@ public class PreguntaManagerBase : MonoBehaviour
             int faltan = totalCheckpoints - checkpointsPasados;
             Debug.Log($"📍 Checkpoints: {checkpointsPasados}/{totalCheckpoints} — Te faltan {faltan} para eliminar al enemigo.");
 
-            if (checkpointsPasados >= totalCheckpoints)
+            if (checkpointsPasados >= totalCheckpoints) //totalcheckpoints 
             {
                 if (enemigo != null)
                 {
@@ -287,11 +294,13 @@ public class PreguntaManagerBase : MonoBehaviour
             GameManager.Instance?.SumarMonedas(100);
             enemigo?.ResetearVelocidad();
             MostrarMensaje("Correct! +100 coins", Color.green);
+            audioSource.PlayOneShot(audioClipCorrecto);
         }
         else
         {
             enemigo?.Acelerar();
             MostrarMensaje("Incorrect!\nCorrect answer:\n" + respuestaCorrecta, Color.red);
+            audioSource.PlayOneShot(audioClipIncorrecto);
         }
 
         enemigo?.Reanudar(); 
