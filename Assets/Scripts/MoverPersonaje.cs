@@ -1,7 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class MueveChabelito : MonoBehaviour
+public class MoverPersonaje : MonoBehaviour
 {
     [SerializeField] private float velocidadX;
     [SerializeField] private float fuerzaSalto;
@@ -13,30 +12,27 @@ public class MueveChabelito : MonoBehaviour
     private bool mirandoDerecha = true; // Controla la dirección en la que está mirando el personaje
 
     void Start()
-{
-    rb = GetComponent<Rigidbody2D>();
-
-    // ✅ Restaurar la posición guardada si existe
-    if (PlayerPrefs.HasKey("JugadorX"))
     {
-        float x = PlayerPrefs.GetFloat("JugadorX");
-        float y = PlayerPrefs.GetFloat("JugadorY");
-        float z = PlayerPrefs.GetFloat("JugadorZ");
+        rb = GetComponent<Rigidbody2D>();
 
-        transform.position = new Vector3(x, y, z);
-        Debug.Log("📍 Posición restaurada al regresar de la tienda: " + transform.position);
+        if (PlayerPrefs.HasKey("JugadorX"))
+        {
+            float x = PlayerPrefs.GetFloat("JugadorX");
+            float y = PlayerPrefs.GetFloat("JugadorY");
+            float z = PlayerPrefs.GetFloat("JugadorZ");
 
-        GameManager.Instance.VolviendoDeTienda = false;
+            transform.position = new Vector3(x, y, z); // Posición restaurada al regresar de la tienda
+
+            GameManager.Instance.VolviendoDeTienda = false;
+        }
     }
-}
 
     void Update()
     {
-
         float movHorizontal = Input.GetAxis("Horizontal");
         float movVertical = Input.GetAxis("Vertical");
 
-        if(!estaAgachado) 
+        if (!estaAgachado)
         {
             // Movimiento horizontal
             rb.linearVelocity = new Vector2(movHorizontal * velocidadX, rb.linearVelocity.y);
@@ -45,7 +41,6 @@ public class MueveChabelito : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Detener el movimiento horizontal al agacharse
         }
-
 
         // Movimiento en escaleras
         if (EstadoPersonaje.enEscalera)
@@ -84,7 +79,6 @@ public class MueveChabelito : MonoBehaviour
         {
             estaAgachado = false;
         }
-
     }
 
     // Método para girar el personaje
@@ -94,4 +88,3 @@ public class MueveChabelito : MonoBehaviour
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 }
-

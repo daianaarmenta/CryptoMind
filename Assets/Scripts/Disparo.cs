@@ -21,7 +21,7 @@ public class Disparo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (MueveChabelito.estaAgachado)
+            if (MoverPersonaje.estaAgachado)
             {
                 Disparar();
             }
@@ -35,7 +35,7 @@ public class Disparo : MonoBehaviour
 
     private void Disparar()
     {
-        Transform puntoDeDisparo = MueveChabelito.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
+        Transform puntoDeDisparo = MoverPersonaje.estaAgachado ? puntoDeDisparoAgachado : puntoDeDisparoParado;
         Instantiate(balaPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation); // Instancia la bala en el punto de disparo
         audioSource.PlayOneShot(sonidoDisparo,0.2f);
 

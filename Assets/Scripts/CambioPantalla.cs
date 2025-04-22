@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,3 +23,4 @@ public class CambioPantalla : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 }
+*/  

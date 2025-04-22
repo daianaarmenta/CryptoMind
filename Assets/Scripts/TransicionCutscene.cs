@@ -9,38 +9,24 @@ public class CutsceneEndManager : MonoBehaviour
 
     void Start()
     {
-        // Buscar el objeto "personaje" por nombre
         GameObject personaje = GameObject.Find("personaje");
         if (personaje != null)
         {
             personajeAnimator = personaje.GetComponent<Animator>();
             if (personajeAnimator != null)
             {
-                personajeAnimator.enabled = true; // Desactiva animaciones durante la cutscene
+                personajeAnimator.enabled = true;
             }
-            else
-            {
-                Debug.LogWarning("El objeto 'personaje' no tiene componente Animator.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró el objeto llamado 'personaje'.");
         }
 
         if (timeline != null)
         {
             timeline.stopped += OnTimelineFinished;
         }
-        else
-        {
-            Debug.LogWarning("No se asignó el PlayableDirector (Timeline) en el Inspector.");
-        }
     }
 
     private void OnTimelineFinished(PlayableDirector director)
     {
-        // Reactivar el Animator al terminar la cutscene
         if (personajeAnimator != null)
         {
             personajeAnimator.enabled = false;

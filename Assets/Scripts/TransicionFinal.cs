@@ -12,10 +12,6 @@ public class TransicionFinal : MonoBehaviour
         {
             timeline.stopped += OnTimelineFinished;
         }
-        else
-        {
-            Debug.LogWarning("No se asignó el PlayableDirector (Timeline) en el Inspector.");
-        }
     }
 
     private void OnTimelineFinished(PlayableDirector director)

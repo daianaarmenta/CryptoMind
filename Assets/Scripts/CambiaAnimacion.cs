@@ -27,7 +27,7 @@ public class CambiaAnimacion : MonoBehaviour
         //spRenderer.flipX = rb.linearVelocity.x < 0;
         animator.SetBool("enPiso", EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera);
         animator.SetBool("isClimbing", EstadoPersonaje.enEscalera);
-        animator.SetBool("estaAgachado", MueveChabelito.estaAgachado);
+        animator.SetBool("estaAgachado", MoverPersonaje.estaAgachado);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

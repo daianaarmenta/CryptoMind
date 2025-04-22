@@ -20,7 +20,7 @@ public class DialogueAuto : MonoBehaviour
     private bool hasDialoguePlayed = false;
 
     private GameObject playerObject;
-    private MueveChabelito playerMovement;
+    private MoverPersonaje playerMovement;
 
     void Start()
     {
@@ -124,7 +124,7 @@ public class DialogueAuto : MonoBehaviour
             dialogueMark.SetActive(true);
 
             playerObject = collision.gameObject;
-            playerMovement = playerObject.GetComponent<MueveChabelito>();
+            playerMovement = playerObject.GetComponent<MoverPersonaje>();
         }
     }
 
