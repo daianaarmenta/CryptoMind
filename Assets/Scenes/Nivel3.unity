@@ -15124,8 +15124,8 @@ Tilemap:
   - first: {x: 102, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 10
-      m_TileSpriteIndex: 0
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26215,7 +26215,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 1c94bbcc8229baf4fb6cf440fa923f2b, type: 2}
   - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: e46b97505a708a145930da05ae077b91, type: 2}
-  - m_RefCount: 118
+  - m_RefCount: 119
     m_Data: {fileID: 11400000, guid: 2237cdc343c3a334baf4c63144782903, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 5e8b2bb2e6c9ce14e82fe2bed38e6987, type: 2}
@@ -26223,7 +26223,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: de814bf34c929fe4b86740584f7532ca, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 2d230040fb977cd45b73280f4fe14f80, type: 2}
-  - m_RefCount: 206
+  - m_RefCount: 205
     m_Data: {fileID: 11400000, guid: b51e9f18cbac853469d9d910ac6d212e, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 2a88188dcafdd7b44ac12c9c2911f5a1, type: 2}
@@ -26414,7 +26414,7 @@ Tilemap:
   - m_RefCount: 136
     m_Data: {fileID: 11400000, guid: 419d4a7cdff136e4fa01232c2025a8c9, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 206
+  - m_RefCount: 205
     m_Data: {fileID: -1725626906, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
   - m_RefCount: 79
     m_Data: {fileID: 1667935448, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
@@ -26426,7 +26426,7 @@ Tilemap:
     m_Data: {fileID: -2140023782, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: -781642246, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
-  - m_RefCount: 118
+  - m_RefCount: 119
     m_Data: {fileID: -1536989367, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: 78133340, guid: e08e6a2f34edd4a7db4285eeddef84a8, type: 3}
@@ -30346,7 +30346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -30450,8 +30450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b7321df18c0824180d3c4fa7094570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Cutscene 1
-  fadeAnimator: {fileID: 875492019}
 --- !u!1 &1126194630
 GameObject:
   m_ObjectHideFlags: 0
