@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.98
+      value: 25.9
       objectReference: {fileID: 0}
     - target: {fileID: 7795097540341565231, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26994,6 +26994,97 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &438289644
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 844009007}
+    m_Modifications:
+    - target: {fileID: 2586819351857641659, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_Name
+      value: MentorFantasma (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2019764160}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 108927963}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'Zarek: In the blockchain world, there are people (or computers) who
+        check that everything is okay before anything new is written.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'Zarek: These people work hard and expend energy, so they are given
+        a reward (a small amount of money or cryptocurrency).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'Zarek: That''s what you pay with the transaction fee, to thank them
+        for their help.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015241655
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+--- !u!4 &438289645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+  m_PrefabInstance: {fileID: 438289644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &449672376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32084,6 +32175,7 @@ Transform:
   - {fileID: 1376639034}
   - {fileID: 903643210}
   - {fileID: 1401723352}
+  - {fileID: 438289645}
   - {fileID: 890939194}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32330,7 +32422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.6
+      value: 15.63
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35411,21 +35503,26 @@ PrefabInstance:
       objectReference: {fileID: 108927963}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: "Zarek: Every time you send something in the blockchain, like coins
-        or data, there\u2019s a small transaction fee."
+      value: 'Zarek: Each block in the blockchain is like a safe that has a unique
+        lock that depends on the previous safe.'
       objectReference: {fileID: 0}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
-      value: "Zarek: This fee goes to the people who check and confirm the transactions\u2014it\u2019s
-        their reward for helping the system work."
+      value: 'Zarek: So if someone wants to change a block, he would have to open
+        all the boxes from the beginning, one by one, which is almost impossible.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'Zarek: That is why the blockchain is so secure and has never been hacked
+        like other systems.'
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.75
+      value: 34.73
       objectReference: {fileID: 0}
     - target: {fileID: 3356626566648466433, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: m_LocalPosition.y
