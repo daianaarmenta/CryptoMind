@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/estilosInfo.uss?fileID=7433441132597879392&amp;guid=7e9dd199f0e62934d88a7edadfc8ab6b&amp;type=3#estilosInfo" />
+    <engine:VisualElement name="general" class="general" style="flex-grow: 1;">
+        <engine:Label text="About CryptoChicks" name="Titulo" class="titulo" />
+        <engine:VisualElement name="Info" class="info" style="flex-grow: 1; background-color: rgba(229, 105, 255, 0.39);">
+            <engine:Label text="CryptoChicks started from &#10;two software engineers &#10;and friends Elena and Natalia &#10;walking through the mazes &#10;of blockchain technology &#10;and deciding to help other&#10;women to navigate them.  &#10;Now it is an international &#10;non-profit with members, &#10;events and chapters in 56 &#10;countries, helping thousands &#10;of women around the globe &#10;to learn and invest &#10;in blockchain, build &#10;new careers and businesses." name="Texto" class="texto" />
+        </engine:VisualElement>
+        <engine:Button name="Return" class="return" style="border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); background-color: rgba(188, 188, 188, 0); background-image: url(&quot;project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-small-buttons.png?fileID=1580229689&amp;guid=a11ea103d81f8dd4b896a5dcd08d3fcc&amp;type=3#ui-small-buttons_21&quot;);" />
+    </engine:VisualElement>
+</engine:UXML>

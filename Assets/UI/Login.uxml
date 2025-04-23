@@ -3,10 +3,10 @@
     <engine:VisualElement name="contenedorGeneral" class="contenedorGeneral" style="flex-grow: 1;">
         <engine:Label text="Login" name="titulo" class="titulo" />
         <engine:VisualElement name="contenedorLogin" class="contenedorLogin" style="flex-grow: 1; height: 568px;">
-            <engine:TextField label="Email: " placeholder-text="Email.." name="email" class="campos unity-text-input" />
+            <engine:TextField label="Email: " placeholder-text="Email..." name="email" class="campos unity-text-input" />
             <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos unity-text-input" style="background-color: rgba(0, 0, 0, 0);" />
             <engine:Button text="Login" name="botonLogin" class="botones" />
-            <engine:Label name="errorMessage" style="-unity-text-align: upper-center; font-size: 25px; margin-top: 4px;" />
+            <engine:Label name="errorMessage" style="-unity-text-align: upper-center; font-size: 25px; margin-top: 4px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;);" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
             <engine:Button name="botonRegresar" class="botonRegresar" />

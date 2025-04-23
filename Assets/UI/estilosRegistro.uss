@@ -18,17 +18,11 @@
 .ContenedorRegistro {
     width: 50%;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: space-between;
     align-self: center;
     margin-top: 50px;
     height: 50%;
-}
-
-.campos {
-    -unity-text-align: upper-center;
-    font-size: 20px;
-    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
-    color: rgb(255, 255, 255);
+    align-content: center;
 }
 
 .pie {
@@ -71,6 +65,13 @@
     scale: 1.15 1.15;
 }
 
+.campos {
+    -unity-text-align: upper-center;
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
+    color: rgb(255, 255, 255);
+}
+
 .buttonReturn:active {
     -unity-background-image-tint-color: rgb(115, 115, 115);
 }
@@ -81,3 +82,14 @@
     font-size: 25px;
     -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
 }
+
+.CampoBirthdate {
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+}
+
+

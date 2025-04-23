@@ -1,0 +1,59 @@
+.titulo {
+    font-size: 70px;
+    -unity-text-align: upper-center;
+    border-top-width: 50px;
+    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
+    color: rgb(255, 255, 255);
+}
+
+.general {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    width: 50%;
+    margin-top: 50px;
+    background-color: rgba(255, 105, 180, 0.39);
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    height: 100%;
+}
+
+.texto {
+    width: 100%;
+    -unity-text-align: middle-center;
+    height: 50%;
+    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
+    align-self: center;
+    font-size: 30px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.return {
+    flex-direction: row-reverse;
+    width: 100px;
+    height: 100px;
+    background-image: url("project://database/Assets/OArielG/2DSimpleUIPack/Examples/Graphics/ui-small-buttons.png?fileID=-6614212386984948016&guid=236587ec711348a4792e0060efb1bf73&type=3#ui-small-buttons_25");
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.return:hover {
+    scale: 1.15 1.15;
+}
+
+.return:active {
+    -unity-background-image-tint-color: rgb(64, 63, 63);
+}

@@ -2,15 +2,19 @@
     <Style src="project://database/Assets/UI/estilosRegistro.uss?fileID=7433441132597879392&amp;guid=14c3355417c1d6a42861133abe1ccb99&amp;type=3#estilosRegistro" />
     <engine:VisualElement name="ContenedorGeneral" class="ContenedorGeneral" style="flex-grow: 1;">
         <engine:Label text="Register" name="tituloGeneral" class="tituloGeneral" style="width: auto; height: auto;" />
-        <engine:VisualElement name="ContenedorRegistro" class="ContenedorRegistro" style="flex-grow: 1;">
-            <engine:TextField label="Name:" placeholder-text="Name..." name="name" class="campos" />
+        <engine:VisualElement name="ContenedorRegistro" focusable="false" class="ContenedorRegistro" style="flex-grow: 1; -unity-text-align: upper-left; white-space: normal;">
+            <engine:TextField label="Name:" placeholder-text="Name..." name="name" class="campos" style="align-self: stretch; justify-content: space-between; align-items: flex-start; flex-direction: row;" />
             <engine:TextField label="Email" placeholder-text="Email..." name="email" class="campos" />
-            <engine:TextField label="Password: " placeholder-text="Password.." name="password" class="campos" />
-            <engine:TextField label="Birthdate: " placeholder-text="dd/MM/yyyy" name="birthday" class="campos" />
+            <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos" />
+            <engine:VisualElement name="CampoBirthdate" class="CampoBirthdate">
+                <engine:DropdownField label="Date:" choices="," name="Date" class="campos" />
+                <engine:DropdownField label="Month: " name="Month" class="campos" />
+                <engine:DropdownField label="Year:" name="Year" class="campos" />
+            </engine:VisualElement>
             <engine:DropdownField label="Country" name="pais" class="campos" />
             <engine:DropdownField name="gender" label="Gender&#10;" class="campos" />
             <engine:Button text="Register" name="Register" class="button buttonR buttonRegister" />
-            <engine:Label name="errorMessage" class="error-label" style="font-size: 30px; -unity-text-align: upper-center;" />
+            <engine:Label name="errorMessage" class="error-label" style="font-size: 30px; -unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;);" />
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">
             <engine:Button name="botonReturn" class="buttonReturn" />
