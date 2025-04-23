@@ -14,17 +14,6 @@ public class MoverPersonaje : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        if (PlayerPrefs.HasKey("JugadorX"))
-        {
-            float x = PlayerPrefs.GetFloat("JugadorX");
-            float y = PlayerPrefs.GetFloat("JugadorY");
-            float z = PlayerPrefs.GetFloat("JugadorZ");
-
-            transform.position = new Vector3(x, y, z); // Posición restaurada al regresar de la tienda
-
-            GameManager.Instance.VolviendoDeTienda = false;
-        }
     }
 
     void Update()
