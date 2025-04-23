@@ -19,11 +19,11 @@ public class TransicionFinal : MonoBehaviour
         TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
         if (transicion != null)
         {
-            transicion.IrAEscena("MenuInicio");
+            transicion.IrAEscena("Creditos");
         }
         else
         {
-            SceneManager.LoadScene("MenuInicio");
+            SceneManager.LoadScene("Creditos");
         }
     }
 }
