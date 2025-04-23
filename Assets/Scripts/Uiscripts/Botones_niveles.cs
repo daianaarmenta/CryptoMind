@@ -59,10 +59,10 @@ public class Botones_niveles : MonoBehaviour
     private void GuardarProgresoYSalir()
     {
         Debug.Log("Guardado progreso en el servido");
-        StartCoroutine(EnviarYSalir());
+        //StartCoroutine(EnviarYSalir());
     }
 
-    private IEnumerator EnviarYSalir()
+    /*private IEnumerator EnviarYSalir()  NO DESCOMENTAR HASTA QUE QUEDE LO DE LA BD
     {
         string url = "http://44.210.242.220:8080/unity/sesion/end";
         string json = JsonUtility.ToJson(new 
@@ -92,7 +92,7 @@ public class Botones_niveles : MonoBehaviour
         request.Dispose();
         Application.Quit();
         Debug.Log("Applicacion cerrada");
-    }
+    }*/
 
     private void CambiarEscena(ClickEvent evt, string escena)
     {
