@@ -7,8 +7,6 @@ public class SaludPersonaje : MonoBehaviour
 {
     public int vidas = 5;
     public int vidasMaximas = 5;
-
-    private bool isInstanceAlive = false;
     public static SaludPersonaje instance;
     internal int numeroMonedas;
     public event EventHandler MuerteJugador;
