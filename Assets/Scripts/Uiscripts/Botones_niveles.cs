@@ -1,10 +1,14 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Botones_niveles : MonoBehaviour
 {
+    [SerializeField] GameObject seleccionNivel;
+    [SerializeField] GameObject infoUI;
     private UIDocument menu; // Objeto de la UI en la escena
     private Button nivel0;    
     private Button nivel1;    
@@ -12,7 +16,13 @@ public class Botones_niveles : MonoBehaviour
     private Button nivel3;
     private Button nivel4;
     private Button nivel5;
-    private Button cerrar;
+    private Button cerrar, info;
+
+    void Start()
+    {
+        seleccionNivel.SetActive(true);
+        infoUI.SetActive(false);
+    }
 
     void OnEnable()
     {
@@ -27,6 +37,7 @@ public class Botones_niveles : MonoBehaviour
         nivel4 = root.Q<Button>("n4");
         nivel5 = root.Q<Button>("n5");
         cerrar = root.Q<Button>("botonCerrar");
+        info = root.Q<Button>("botonInfo");
 
         // Registrar eventos de clic
         nivel0.RegisterCallback<ClickEvent, string>(CambiarEscena, "Cutscene 0");
@@ -35,13 +46,52 @@ public class Botones_niveles : MonoBehaviour
         nivel3.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel3");
         nivel4.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel4");
         nivel5.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel5");
-        cerrar.RegisterCallback<ClickEvent>(CerrarApp);
+        info.clicked += CambiarUIInfo; 
+        cerrar.clicked += GuardarProgresoYSalir;
     }
 
-    private void CerrarApp(ClickEvent evt)
+    private void CambiarUIInfo()
     {
+        seleccionNivel.SetActive(false);
+        infoUI.SetActive(true);
+    }
+
+    private void GuardarProgresoYSalir()
+    {
+        Debug.Log("Guardado progreso en el servido");
+        StartCoroutine(EnviarYSalir());
+    }
+
+    private IEnumerator EnviarYSalir()
+    {
+        string url = "http://44.210.242.220:8080/unity/sesion/end";
+        string json = JsonUtility.ToJson(new 
+        {
+            nombre = GameManagerBase.Instance.NombreUsuario,
+            tokens = GameManagerBase.Instance.Monedas,
+            puntaje = GameManagerBase.Instance.Puntaje
+        });
+
+        UnityWebRequest request = new UnityWebRequest(url, "Post");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if(request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Progreso guardado correctamente.");
+        }
+        else
+        {
+            Debug.Log("Error al guardar progreso: " + request.error);
+        }
+
+        request.Dispose();
         Application.Quit();
-        Debug.Log("Aplicacion cerrada =)");
+        Debug.Log("Applicacion cerrada");
     }
 
     private void CambiarEscena(ClickEvent evt, string escena)

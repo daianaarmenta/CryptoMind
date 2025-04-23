@@ -8,6 +8,11 @@ public class InfoBoton : MonoBehaviour
     [SerializeField] GameObject infoUI;
     private UIDocument menu;
     private Button regresar;
+    void Start()
+    {
+        seleccionNivel.SetActive(true);
+        infoUI.SetActive(false);
+    }
     void OnEnable()
     {
         menu = GetComponent<UIDocument>();
