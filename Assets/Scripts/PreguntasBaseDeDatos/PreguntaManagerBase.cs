@@ -23,6 +23,7 @@ public class PreguntaManagerBase : MonoBehaviour
     public GameObject mensajeRespuesta;
     public TextMeshProUGUI mensajeTexto;
     [SerializeField] private TMP_Text textoContador;
+    [SerializeField] private Button botonSkip;
 
     [Header("Timing")]
     public float tiempoMensaje = 2f;
@@ -32,6 +33,8 @@ public class PreguntaManagerBase : MonoBehaviour
     [SerializeField] private AudioClip audioClipCorrecto;
     [SerializeField] private AudioClip audioClipIncorrecto;
     [SerializeField] private AudioClip audioReloj;
+
+    private Coroutine esperaOcultarMensaje;
 
     private void Awake()
     {
@@ -86,6 +89,8 @@ public class PreguntaManagerBase : MonoBehaviour
     private void Start()
     {
         checkpointsPasados = 0;
+        botonSkip.gameObject.SetActive(false);
+        botonSkip.onClick.AddListener(SkipMensaje);
     }
 
     public IEnumerator CargarPreguntaPorId(int id)
@@ -165,7 +170,7 @@ public class PreguntaManagerBase : MonoBehaviour
             SaludPersonaje.instance?.PerderVida();
         }
 
-        StartCoroutine(OcultarMensaje());
+        esperaOcultarMensaje = StartCoroutine(OcultarMensaje());
     }
 
     private string ObtenerRespuestaCorrectaTexto(PreguntaData pregunta)
@@ -183,44 +188,38 @@ public class PreguntaManagerBase : MonoBehaviour
         mensajeRespuesta.SetActive(true);
         mensajeTexto.text = mensaje;
         mensajeTexto.color = color;
+        botonSkip.gameObject.SetActive(true);
     }
-    private IEnumerator OcultarMensaje()
+
+    private void SkipMensaje()
     {
-        yield return new WaitForSecondsRealtime(tiempoMensaje);
+        if (esperaOcultarMensaje != null)
+            StopCoroutine(esperaOcultarMensaje);
 
         mensajeRespuesta.SetActive(false);
+        botonSkip.gameObject.SetActive(false);
         panelPregunta.SetActive(false);
         Time.timeScale = 1f;
 
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
         if (escena == "Nivel5" || escena.Contains("5"))
         {
             checkpointsPasados++;
-
-            int faltan = totalCheckpoints - checkpointsPasados;
-            Debug.Log($"📍 Checkpoints: {checkpointsPasados}/{totalCheckpoints} — Te faltan {faltan} para eliminar al enemigo.");
-
-            if (checkpointsPasados >= totalCheckpoints) //totalcheckpoints 
-            {
-                if (enemigo != null)
-                {
-                    enemigo.Morir();
-                }
-            }
+            if (checkpointsPasados >= totalCheckpoints)
+                enemigo?.Morir();
         }
-
-        if (escena != "Nivel5" && !escena.Contains("5"))
+        else
         {
             alien controlador = UnityEngine.Object.FindAnyObjectByType<alien>();
-            if (controlador != null)
-            {
-                controlador.AumentarCheckpoints();
-            }
-            else
-            {
-                Debug.LogWarning("No se encontró una instancia de alien.");
-            }
+            controlador?.AumentarCheckpoints();
         }
+    }
+    private IEnumerator OcultarMensaje()
+    {
+        yield return new WaitForSecondsRealtime(tiempoMensaje);
+        SkipMensaje();
+
     }
 
     private void MostrarPreguntaNivel5(PreguntaData actual)
@@ -308,6 +307,8 @@ public class PreguntaManagerBase : MonoBehaviour
     {
         if (cuentaRegresivaPregunta != null)
             StopCoroutine(cuentaRegresivaPregunta);
+        audioSource.Stop();
+        audioSource.loop = false;
 
         bool esCorrecta = actual.opciones[seleccion].es_correcta;
         string respuestaCorrecta = ObtenerRespuestaCorrectaTexto(actual);
@@ -327,7 +328,7 @@ public class PreguntaManagerBase : MonoBehaviour
         }
 
         enemigo?.Reanudar(); 
-        StartCoroutine(OcultarMensaje());
+        esperaOcultarMensaje = StartCoroutine(OcultarMensaje());
     }
 
 

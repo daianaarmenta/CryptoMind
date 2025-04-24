@@ -22579,6 +22579,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5814977112656028610, guid: 5391e187d3f609440a95a978f7216097, type: 3}
   m_PrefabInstance: {fileID: 1696525478}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &593810542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628710578833239267, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 1696525478}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &648288087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28198,11 +28209,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.07
+      value: 28.02
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28604,7 +28615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -29036,6 +29047,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: botonSkip
+      value: 
+      objectReference: {fileID: 593810542}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: mensajeTexto
       value: 
       objectReference: {fileID: 2067570638}
@@ -29043,6 +29058,10 @@ PrefabInstance:
       propertyPath: panelPregunta
       value: 
       objectReference: {fileID: 1311119545}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: tiempoMensaje
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: preguntaTextoUI
       value: 
@@ -29904,7 +29923,7 @@ Transform:
   m_GameObject: {fileID: 1850854501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4894867, y: 2.5216699, z: -10}
+  m_LocalPosition: {x: 27.736673, y: -2.0583336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30421,11 +30440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.35333
+      value: 27.736671
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5216665
+      value: -2.0583336
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.z

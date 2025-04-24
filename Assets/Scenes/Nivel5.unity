@@ -490,6 +490,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 934071472}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: audioReloj
+      value: 
+      objectReference: {fileID: 8300000, guid: dc1586643a2a35548938bb78c25177af, type: 3}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: mensajeTexto
       value: 
       objectReference: {fileID: 1418240900}
@@ -509,6 +513,10 @@ PrefabInstance:
       propertyPath: mensajeRespuesta
       value: 
       objectReference: {fileID: 19792729}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: tiempoAgotadoAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b58c7d652c52c2499c42f150b2ff3a7, type: 3}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: tiempoMaximoRespuesta
       value: 10
@@ -1494,10 +1502,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0bdf033595281d40a2c65ceb62f0c5a, type: 3}
-  m_Resource: {fileID: 8300000, guid: a0bdf033595281d40a2c65ceb62f0c5a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dbb37ff31b9ccda4cb7c385c9245656e, type: 3}
+  m_Resource: {fileID: 8300000, guid: dbb37ff31b9ccda4cb7c385c9245656e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
