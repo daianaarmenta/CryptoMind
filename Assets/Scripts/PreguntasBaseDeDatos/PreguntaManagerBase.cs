@@ -22,6 +22,7 @@ public class PreguntaManagerBase : MonoBehaviour
     public GameObject panelPregunta;
     public GameObject mensajeRespuesta;
     public TextMeshProUGUI mensajeTexto;
+    [SerializeField] private TMP_Text textoContador;
 
     [Header("Timing")]
     public float tiempoMensaje = 2f;
@@ -30,6 +31,8 @@ public class PreguntaManagerBase : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip audioClipCorrecto;
     [SerializeField] private AudioClip audioClipIncorrecto;
+    [SerializeField] private AudioClip audioReloj;
+
     private void Awake()
     {
         if (instance == null)
@@ -258,19 +261,39 @@ public class PreguntaManagerBase : MonoBehaviour
     {
         float tiempoRestante = tiempoMaximoRespuesta;
         tiempoAgotado = false;
+        audioSource.clip = audioReloj;
+        audioSource.loop = true;
+        audioSource.Play();
 
         while (tiempoRestante > 0)
         {
+            int segundos = Mathf.CeilToInt(tiempoRestante);
+            textoContador.text = $"00:{segundos:00}";
+
+            if(segundos <= 5)
+            {
+                textoContador.color = Color.red; // Cambia el color a rojo cuando quedan 5 segundos o menos
+            }
+            else
+            {
+                textoContador.color = Color.white; // Cambia el color a blanco en otros casos
+            }
+
             yield return new WaitForSecondsRealtime(1f);
             tiempoRestante--;
         }
+
+        textoContador.text = "00:00";
+        audioSource.Stop();
+        audioSource.loop = false;
 
         if (!tiempoAgotado)
         {
             tiempoAgotado = true;
 
             enemigo?.Acelerar();
-            MostrarMensaje("⏱️ Time's up!", Color.red);
+            MostrarMensaje("Time's up!", Color.red);
+            audioSource.PlayOneShot(audioClipIncorrecto);
 
             yield return new WaitForSecondsRealtime(tiempoMensaje);
 
