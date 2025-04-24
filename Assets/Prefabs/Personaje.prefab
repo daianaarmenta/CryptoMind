@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadX: 3
   fuerzaSalto: 7
-  velocidadEscalera: 4
+  velocidadEscalera: 2
 --- !u!114 &8506191897626936729
 MonoBehaviour:
   m_ObjectHideFlags: 0

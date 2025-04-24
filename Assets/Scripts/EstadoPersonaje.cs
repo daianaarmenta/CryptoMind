@@ -6,24 +6,21 @@ using UnityEngine;
  */
 public class EstadoPersonaje : MonoBehaviour
 {
-    private static int contadorSuelo = 0;
-    private static int contadorEscalera = 0;
+    public static bool enPiso { get; private set; }
+    public static bool enEscalera { get; set; }
 
-    public static bool enPiso => contadorSuelo > 0;
-    public static bool enEscalera => contadorEscalera > 0;
-
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Suelo"))
         {
-            contadorSuelo++;
-            //Debug.Log("Entró al suelo. contadorSuelo = " + contadorSuelo);
+            enPiso = true;
+            //Debug.Log("Entró al suelo");
         }
 
         if (collision.CompareTag("Escaleras"))
         {
-            contadorEscalera++;
-            //Debug.Log("Entró a escalera. contadorEscalera = " + contadorEscalera);
+            enEscalera = true;
+            //Debug.Log("Entró a escalera");
         }
     }
 
@@ -31,16 +28,17 @@ public class EstadoPersonaje : MonoBehaviour
     {
         if (collision.CompareTag("Suelo"))
         {
-            contadorSuelo = Mathf.Max(0, contadorSuelo - 1);
-            //Debug.Log("Salió del suelo. contadorSuelo = " + contadorSuelo);
+            enPiso = false;
+            //Debug.Log("Salió del suelo");
         }
 
         if (collision.CompareTag("Escaleras"))
         {
-            contadorEscalera = Mathf.Max(0, contadorEscalera - 1);
-            // Debug.Log("Salió de escalera. contadorEscalera = " + contadorEscalera);
+            enEscalera = false;
+            Debug.Log("Salió de escalera");
         }
     }
 }
+
 
 

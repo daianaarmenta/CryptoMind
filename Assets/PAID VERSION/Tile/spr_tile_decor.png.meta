@@ -699,14 +699,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 8, y: 8}
-        - {x: -8, y: 8}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-      - - {x: -6, y: -4}
-        - {x: -6, y: 5}
-        - {x: 6, y: 5}
-        - {x: 6, y: -4}
+      - - {x: 3, y: 3}
+        - {x: -3, y: 3}
+        - {x: -3, y: -8}
+        - {x: 3, y: -8}
+      - - {x: -3, y: -8}
+        - {x: -3, y: 3}
+        - {x: 3, y: 3}
+        - {x: 3, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: abade10ca852eced0800000000000000

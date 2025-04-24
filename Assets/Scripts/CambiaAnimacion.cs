@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 /* Autora: Daiana Andrea Armenta Maya A01751408
  * Descripción: Clase que gestiona la animación del personaje en función de su estado y movimiento.
@@ -23,7 +24,16 @@ public class CambiaAnimacion : MonoBehaviour
     void Update()
     {
 
-        animator.SetFloat("velocidad", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("velocidadHorizontal", Mathf.Abs(rb.linearVelocity.x));
+        if (Math.Abs(rb.linearVelocity.y) > Mathf.Epsilon)
+        {
+            animator.SetFloat("velocidadVertical", Mathf.Abs(rb.linearVelocity.y));
+        }
+        else
+        {
+            animator.SetFloat("velocidadVertical", 0);
+        }
+
         //spRenderer.flipX = rb.linearVelocity.x < 0;
         animator.SetBool("enPiso", EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera);
         animator.SetBool("isClimbing", EstadoPersonaje.enEscalera);
@@ -43,7 +53,9 @@ public class CambiaAnimacion : MonoBehaviour
             audioSource.PlayOneShot(sonidoDaño, 1f);
             Debug.Log("Recibe daño");
         }
+
     }
+
 
 }
 

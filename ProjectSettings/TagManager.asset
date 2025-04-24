@@ -9,6 +9,7 @@ TagManager:
   - Enemigo
   - Checkpoint
   - Alien
+  - TopEscalera
   layers:
   - Default
   - TransparentFX
