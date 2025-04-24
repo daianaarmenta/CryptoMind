@@ -46,16 +46,16 @@ void Awake()
     {
         string escena = SceneManager.GetActiveScene().name;
 
-    if (escena == "Nivel5" || escena.Contains("5"))
-    {
-        // 💀 Game Over directo sin usar vidas
-        MenuGameOver gameOver = FindFirstObjectByType<MenuGameOver>();
-        if (gameOver != null)
+        if (escena == "Nivel5" || escena.Contains("5"))
         {
-            gameOver.MostrarGameOver();
+            // 💀 Game Over directo sin usar vidas
+            MenuGameOver gameOver = FindFirstObjectByType<MenuGameOver>();
+            if (gameOver != null)
+            {
+                gameOver.MostrarGameOver();
+            }
+            return;
         }
-        return;
-    }
         if (vidas > 0)
         {
             vidas--;

@@ -96,6 +96,12 @@ public class Botones_niveles : MonoBehaviour
 
     private void CambiarEscena(ClickEvent evt, string escena)
     {
+        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ReiniciarVidas();
+            Debug.Log("🔄 Vidas reiniciadas para el siguiente nivel.");
+        }
 
         SceneManager.LoadScene(escena);
     }

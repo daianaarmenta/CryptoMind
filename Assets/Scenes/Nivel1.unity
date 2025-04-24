@@ -35450,7 +35450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1809549801082264852, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: velocidadX
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4479868785782828940, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_SortingOrder
