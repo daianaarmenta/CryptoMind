@@ -15383,11 +15383,11 @@ MonoBehaviour:
   dialoguePanel: {fileID: 395295086}
   dialogueText: {fileID: 1657110083}
   dialogueLines:
-  - 'Eve: We finally did it NeonCity is free'
-  - 'Eve: CentralCore can not longer take control '
-  - 'Zarek: Good job, we can finally live descentralized, let''s show everyone how
-    to use the blockchain'
-  typingSound: {fileID: 0}
+  - 'Eve: We finally did it NeonCity is free!'
+  - 'Eve: CentralCore cannot longer take control.'
+  - 'Zarek: Good job, we can finally live decentralized, let''s show everyone how
+    to use the blockchain! Let''s free NeonCity!'
+  typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
 --- !u!4 &1036593285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
@@ -16427,6 +16427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 842153729564781151, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 1765204887932801010, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -5313,6 +5313,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586202740890476569, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1146064806053926183, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.25
@@ -5353,6 +5357,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1765204887932801010, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809549801082264852, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7944379606104780872, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Size.x
       value: 0.077861786
@@ -5377,6 +5389,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8506191897626936729, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8563537403233066922, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Name
       value: personaje
@@ -5387,6 +5403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 842153729564781151, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 1765204887932801010, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 8329171155177332503, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 586202740890476569, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 8506191897626936729, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
+    - {fileID: 1809549801082264852, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
