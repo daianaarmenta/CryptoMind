@@ -205,6 +205,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: botonSkip
+      value: 
+      objectReference: {fileID: 107488256}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: mensajeTexto
       value: 
       objectReference: {fileID: 734717735}
@@ -373,6 +377,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+--- !u!114 &107488256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628710578833239267, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 107488255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &163774114
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -142,12 +142,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e0d910f6495c84b9c07360d2b4dc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
+  tiempoMaximoRespuesta: 15
   preguntaTextoUI: {fileID: 0}
   botonesRespuestas: []
   panelPregunta: {fileID: 0}
   mensajeRespuesta: {fileID: 0}
   mensajeTexto: {fileID: 0}
-  tiempoMensaje: 2
+  textoContador: {fileID: 0}
+  botonSkip: {fileID: 0}
+  tiempoMensaje: 8
   audioSource: {fileID: 4227824483632287252}
   audioClipCorrecto: {fileID: 8300000, guid: f88f48a4d299bad4a8a354ae9ebea4c6, type: 3}
   audioClipIncorrecto: {fileID: 8300000, guid: 01a0e823404e3c2479473f80c20c54a0, type: 3}
+  audioReloj: {fileID: 0}

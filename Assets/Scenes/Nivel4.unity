@@ -1482,6 +1482,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: botonSkip
+      value: 
+      objectReference: {fileID: 326379516}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: mensajeTexto
       value: 
       objectReference: {fileID: 994721051}
@@ -1658,6 +1662,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+--- !u!114 &326379516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628710578833239267, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &385380217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,11 +1897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2838149
+      value: -5.7749996
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22832909
+      value: -0.22833264
       objectReference: {fileID: 0}
     - target: {fileID: 5539248037692919503, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: Target.TrackingTarget

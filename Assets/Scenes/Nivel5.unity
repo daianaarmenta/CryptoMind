@@ -490,6 +490,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 934071472}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: botonSkip
+      value: 
+      objectReference: {fileID: 1605870316}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: audioReloj
       value: 
       objectReference: {fileID: 8300000, guid: dc1586643a2a35548938bb78c25177af, type: 3}
@@ -505,6 +509,10 @@ PrefabInstance:
       propertyPath: textoContador
       value: 
       objectReference: {fileID: 1643316774}
+    - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: tiempoMensaje
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1731607767868992178, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: preguntaTextoUI
       value: 
@@ -2064,6 +2072,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7570082471733270599, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
   m_PrefabInstance: {fileID: 2009563230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605870316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628710578833239267, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+  m_PrefabInstance: {fileID: 326379515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1643316772
 GameObject:
   m_ObjectHideFlags: 0
