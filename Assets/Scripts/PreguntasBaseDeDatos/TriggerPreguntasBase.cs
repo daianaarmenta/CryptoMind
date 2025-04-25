@@ -10,6 +10,9 @@ public class TriggerPreguntasBase : MonoBehaviour
 
     private bool isPlayerInRange = false; 
     private bool preguntaContestada = false;
+    private float cooldown = 1f;
+    private float tiempoUltimaInteraccion = -10f;
+
     private AudioSource audioSource;
 
     private void Start()
@@ -20,8 +23,11 @@ public class TriggerPreguntasBase : MonoBehaviour
     {
         if(isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !preguntaContestada)
         {
-            //Debug.Log("Tecla 'E' presionada: cargando pregunta del servidor...");
-            MostrarPreguntaDesdeServidor();
+            if (Time.time - tiempoUltimaInteraccion >= cooldown)
+            {
+                MostrarPreguntaDesdeServidor();
+                tiempoUltimaInteraccion = Time.time;
+            }
         }
     }
 
