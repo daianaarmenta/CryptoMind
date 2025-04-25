@@ -18,8 +18,8 @@ public class MoverPersonaje : MonoBehaviour
 
     void Update()
     {
-        float movHorizontal = Input.GetAxis("Horizontal");
-        float movVertical = Input.GetAxis("Vertical");
+        float movHorizontal = Input.GetAxisRaw("Horizontal");
+        float movVertical = Input.GetAxisRaw("Vertical");
 
         if (!estaAgachado)
         {
