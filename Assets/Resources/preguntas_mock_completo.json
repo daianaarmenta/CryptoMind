@@ -8,24 +8,9 @@
         "dificultad": 1
       },
       "opciones": [
-        {
-          "id_opcion": 1,
-          "id_pregunta": 1,
-          "texto_opcion": "A database managed by a central authority",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 2,
-          "id_pregunta": 1,
-          "texto_opcion": "A type of distributed digital ledger",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 3,
-          "id_pregunta": 1,
-          "texto_opcion": "A decentralized system where data is stored across many computers",
-          "es_correcta": true
-        }
+        { "id_opcion": 1, "id_pregunta": 1, "texto_opcion": "A central database controlled by a single entity", "es_correcta": false },
+        { "id_opcion": 2, "id_pregunta": 1, "texto_opcion": "A decentralized database", "es_correcta": true },
+        { "id_opcion": 3, "id_pregunta": 1, "texto_opcion": "A server that restarts every time someone makes a transaction", "es_correcta": false }
       ]
     },
     {
@@ -36,24 +21,9 @@
         "dificultad": 1
       },
       "opciones": [
-        {
-          "id_opcion": 4,
-          "id_pregunta": 2,
-          "texto_opcion": "Only one party checks the data before it's added",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 5,
-          "id_pregunta": 2,
-          "texto_opcion": "Several independent participants verify the data",
-          "es_correcta": true
-        },
-        {
-          "id_opcion": 6,
-          "id_pregunta": 2,
-          "texto_opcion": "No verification is needed; all data is accepted directly",
-          "es_correcta": false
-        }
+        { "id_opcion": 4, "id_pregunta": 2, "texto_opcion": "The data is automatically trusted without checking, ensuring quick transactions.", "es_correcta": false },
+        { "id_opcion": 5, "id_pregunta": 2, "texto_opcion": "Only one person verifies the data before it’s added to the blockchain.", "es_correcta": false },
+        { "id_opcion": 6, "id_pregunta": 2, "texto_opcion": "Data is checked by multiple people, or nodes, to confirm its validity.", "es_correcta": true }
       ]
     },
     {
@@ -64,24 +34,9 @@
         "dificultad": 1
       },
       "opciones": [
-        {
-          "id_opcion": 7,
-          "id_pregunta": 3,
-          "texto_opcion": "Each block is linked to the previous one, making data very hard to change",
-          "es_correcta": true
-        },
-        {
-          "id_opcion": 8,
-          "id_pregunta": 3,
-          "texto_opcion": "Blocks are stored on random computers worldwide",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 9,
-          "id_pregunta": 3,
-          "texto_opcion": "Information is hidden from the public for safety",
-          "es_correcta": false
-        }
+        { "id_opcion": 7, "id_pregunta": 3, "texto_opcion": "Blocks link together to prevent changes.", "es_correcta": true },
+        { "id_opcion": 8, "id_pregunta": 3, "texto_opcion": "Each block is checked by several computers before joining.", "es_correcta": false },
+        { "id_opcion": 9, "id_pregunta": 3, "texto_opcion": "After checking, information cannot be changed easily.", "es_correcta": false }
       ]
     },
     {
@@ -92,24 +47,9 @@
         "dificultad": 1
       },
       "opciones": [
-        {
-          "id_opcion": 10,
-          "id_pregunta": 4,
-          "texto_opcion": "By entering a strong password",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 11,
-          "id_pregunta": 4,
-          "texto_opcion": "By deleting all entries on the chain",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 12,
-          "id_pregunta": 4,
-          "texto_opcion": "By taking control of more than half of the network",
-          "es_correcta": true
-        }
+        { "id_opcion": 10, "id_pregunta": 4, "texto_opcion": "Control 51% of the network.", "es_correcta": true },
+        { "id_opcion": 11, "id_pregunta": 4, "texto_opcion": "Use a strong password.", "es_correcta": false },
+        { "id_opcion": 12, "id_pregunta": 4, "texto_opcion": "Delete all transactions.", "es_correcta": false }
       ]
     },
     {
@@ -120,24 +60,139 @@
         "dificultad": 1
       },
       "opciones": [
-        {
-          "id_opcion": 13,
-          "id_pregunta": 5,
-          "texto_opcion": "Because each block is linked with a unique code to the previous",
-          "es_correcta": true
-        },
-        {
-          "id_opcion": 14,
-          "id_pregunta": 5,
-          "texto_opcion": "Because it's invisible to internet users",
-          "es_correcta": false
-        },
-        {
-          "id_opcion": 15,
-          "id_pregunta": 5,
-          "texto_opcion": "Because only large companies use it",
-          "es_correcta": false
-        }
+        { "id_opcion": 13, "id_pregunta": 5, "texto_opcion": "Because each block is locked with a unique code that links to the previous one.", "es_correcta": true },
+        { "id_opcion": 14, "id_pregunta": 5, "texto_opcion": "Because it is hidden on the internet.", "es_correcta": false },
+        { "id_opcion": 15, "id_pregunta": 5, "texto_opcion": "Because it uses big computers only.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 6,
+        "id_nivel": 1,
+        "texto_pregunta": "Why do you pay a transaction fee in the blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 16, "id_pregunta": 6, "texto_opcion": "To reward those who confirm transactions.", "es_correcta": true },
+        { "id_opcion": 17, "id_pregunta": 6, "texto_opcion": "To unlock special powers in the blockchain.", "es_correcta": false },
+        { "id_opcion": 18, "id_pregunta": 6, "texto_opcion": "To pay for internet usage.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 7,
+        "id_nivel": 2,
+        "texto_pregunta": "What is a cryptocurrency?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 19, "id_pregunta": 7, "texto_opcion": "Currency you keep on your mobile apps or phone.", "es_correcta": false },
+        { "id_opcion": 20, "id_pregunta": 7, "texto_opcion": "Money issued and managed by banks.", "es_correcta": false },
+        { "id_opcion": 21, "id_pregunta": 7, "texto_opcion": "Digital cash stored securely using blockchain.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 8,
+        "id_nivel": 2,
+        "texto_pregunta": "How is cryptocurrency different from regular digital money?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 22, "id_pregunta": 8, "texto_opcion": "Run by a network, not banks.", "es_correcta": true },
+        { "id_opcion": 23, "id_pregunta": 8, "texto_opcion": "Cryptocurrency is mainly used for buying things online, not offline.", "es_correcta": false },
+        { "id_opcion": 24, "id_pregunta": 8, "texto_opcion": "Digital money often works more slowly than crypto systems", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 9,
+        "id_nivel": 2,
+        "texto_pregunta": "Which of these is a type of cryptocurrency?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 25, "id_pregunta": 9, "texto_opcion": "PayPal", "es_correcta": false },
+        { "id_opcion": 26, "id_pregunta": 9, "texto_opcion": "Ethereum", "es_correcta": true },
+        { "id_opcion": 27, "id_pregunta": 9, "texto_opcion": "Visa", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 10,
+        "id_nivel": 3,
+        "texto_pregunta": "What is a cryptocurrency wallet?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 28, "id_pregunta": 10, "texto_opcion": "A special place to store coins and bills", "es_correcta": false },
+        { "id_opcion": 29, "id_pregunta": 10, "texto_opcion": "A digital tool that stores private keys to access your crypto", "es_correcta": true },
+        { "id_opcion": 30, "id_pregunta": 10, "texto_opcion": "A bank account with internet access", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 11,
+        "id_nivel": 3,
+        "texto_pregunta": "How can you avoid losing your cryptocurrency?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 31, "id_pregunta": 11, "texto_opcion": "Leave your wallet tab open so it’s easier to access later.", "es_correcta": false  },
+        { "id_opcion": 32, "id_pregunta": 11, "texto_opcion": "Let a friend keep your private key for backup purposes.", "es_correcta": false },
+        { "id_opcion": 33, "id_pregunta": 11, "texto_opcion": "Protect your recovery phrase and never reveal your private key to anyone.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 12,
+        "id_nivel": 3,
+        "texto_pregunta": "Where can you buy cryptocurrency?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 34, "id_pregunta": 12, "texto_opcion": "Visit a real-world store that offers crypto services.", "es_correcta": false  },
+        { "id_opcion": 35, "id_pregunta": 12, "texto_opcion": "You can get it directly from the government.", "es_correcta": false },
+        { "id_opcion": 36, "id_pregunta": 12, "texto_opcion": "Buy it through online platforms called exchanges.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 13,
+        "id_nivel": 4,
+        "texto_pregunta": "What is mining in blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 37, "id_pregunta": 13, "texto_opcion": "Searching underground for coins.", "es_correcta": false },
+        { "id_opcion": 38, "id_pregunta": 13, "texto_opcion": "Solving tasks to earn crypto.", "es_correcta": true },
+        { "id_opcion": 39, "id_pregunta": 13, "texto_opcion": "Hacking blockchains to steal information.", "es_correcta": false }        
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 14,
+        "id_nivel": 4,
+        "texto_pregunta": "What can be built using blockchain technology?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 40, "id_pregunta": 14, "texto_opcion": "Only cryptocurrencies", "es_correcta": false },
+        { "id_opcion": 41, "id_pregunta": 14, "texto_opcion": "Only games", "es_correcta": false },
+        { "id_opcion": 42, "id_pregunta": 14, "texto_opcion": "Games, voting systems, and smart contracts", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 15,
+        "id_nivel": 4,
+        "texto_pregunta": "Who can be part of a blockchain network?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 43, "id_pregunta": 15, "texto_opcion": "Only users approved by a government.", "es_correcta": false },
+        { "id_opcion": 44, "id_pregunta": 15, "texto_opcion": "Anyone with internet and a computer.", "es_correcta": true },
+        { "id_opcion": 45, "id_pregunta": 15, "texto_opcion": "Participation is limited to banks only.", "es_correcta": false }        
       ]
     }
   ]
