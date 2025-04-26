@@ -19,7 +19,7 @@ public class Disparo : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !EstadoPersonaje.enEscalera)
+        if (Input.GetKeyDown(KeyCode.Space) && !EstadoPersonaje.enEscalera && !DialogueController.isDialogueOpen)
         {
             if (MoverPersonaje.estaAgachado)
             {

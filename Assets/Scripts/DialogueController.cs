@@ -15,6 +15,8 @@ public class DialogueController : MonoBehaviour
     private int lineIndex;
     private bool isTyping;
 
+    public static bool isDialogueOpen = false;
+
     private static bool isAnyDialogueActive = false;
 
     private MentorFantasma mentorFantasma;
@@ -67,6 +69,7 @@ public class DialogueController : MonoBehaviour
         if (isAnyDialogueActive) return;
 
         isAnyDialogueActive = true;
+        isDialogueOpen = true;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
@@ -89,6 +92,7 @@ public class DialogueController : MonoBehaviour
             dialoguePanel.SetActive(false);
             didDialogueStart = false;
             isAnyDialogueActive = false;
+            isDialogueOpen = false;
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
 
@@ -153,6 +157,7 @@ public class DialogueController : MonoBehaviour
                 dialoguePanel.SetActive(false);
                 dialogueText.text = "";
                 didDialogueStart = false;
+                isDialogueOpen = false;
                 isTyping = false;
                 isAnyDialogueActive = false;
                 Time.timeScale = 1f;

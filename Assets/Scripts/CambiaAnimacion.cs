@@ -39,7 +39,7 @@ public class CambiaAnimacion : MonoBehaviour
         animator.SetBool("isClimbing", EstadoPersonaje.enEscalera);
         animator.SetBool("estaAgachado", MoverPersonaje.estaAgachado);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !DialogueController.isDialogueOpen)
         {
             animator.SetTrigger("tienePistola");
         }
