@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class BottonController : MonoBehaviour
 {
     [Header("Referencias UI")]
@@ -8,6 +10,7 @@ public class BottonController : MonoBehaviour
     [SerializeField] private GameObject menuPausa;      // Menú de pausa completo
     [SerializeField] private GameObject canvasTienda;
     [SerializeField] private AudioSource musicaFondo;  // Canvas de la tienda
+    [SerializeField] private GameObject panelOpciones;
     private AudioSource audioSource; // Fuente de audio para reproducir música
 
     // 🔘 PAUSAR el juego
@@ -77,4 +80,15 @@ public class BottonController : MonoBehaviour
         Time.timeScale = 1f;                // Asegura que el tiempo esté normal
         SceneManager.LoadScene(1);          // Cambia a la escena del menú principal (index 1)
     }
+    public void AbrirOpciones()
+    {
+        menuPausa.SetActive(false); // Oculta el menú de pausa
+        panelOpciones.SetActive(true); // Muestra el panel de opciones
+    }
+    public void CerrarOpciones()
+    {
+        menuPausa.SetActive(true); // Muestra el menú de pausa
+        panelOpciones.SetActive(false); // Oculta el panel de opciones
+    }
+
 }

@@ -28611,7 +28611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -29234,6 +29234,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 7628059332498751575, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628059332498751575, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628059332498751575, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727769668140106944, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727769668140106944, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8092798769375121103, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: musicaFondo
       value: 
@@ -29242,6 +29262,14 @@ PrefabInstance:
       propertyPath: sonidoGameOver
       value: 
       objectReference: {fileID: 8300000, guid: 55561f4f1db90634985336d9a77ea090, type: 3}
+    - target: {fileID: 8446078150419679073, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446078150419679073, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8470499305628755714, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -29249,6 +29277,18 @@ PrefabInstance:
     - target: {fileID: 8470499305628755714, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AbrirTienda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670074889852020366, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670074889852020366, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670074889852020366, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4343882668676857159, guid: 5391e187d3f609440a95a978f7216097, type: 3}
