@@ -28,7 +28,7 @@ public class alien : MonoBehaviour
     public void AumentarCheckpoints()
     {
         checkpointTerminado++;
-        Debug.Log($"✅ Checkpoints completados: {checkpointTerminado}/{cantidadCheckpoint}");
+        Debug.Log($"Desde alien: ✅ Checkpoints completados: {checkpointTerminado}/{cantidadCheckpoint}");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -15,6 +15,8 @@ public class PreguntaManagerBase : MonoBehaviour
     private Coroutine cuentaRegresivaPregunta;
     private int checkpointsPasados = 0;
     private int totalCheckpoints = 15;
+    private int respuestasCorrectas = 0;
+    private MenuGameOver  menuGameOver;
 
     [Header("UI")]
     public TextMeshProUGUI preguntaTextoUI;
@@ -89,8 +91,10 @@ public class PreguntaManagerBase : MonoBehaviour
     private void Start()
     {
         checkpointsPasados = 0;
+        respuestasCorrectas = 0;
         botonSkip.gameObject.SetActive(false);
         botonSkip.onClick.AddListener(SkipMensaje);
+        menuGameOver = FindFirstObjectByType<MenuGameOver>();
     }
 
     public IEnumerator CargarPreguntaPorId(int id)
@@ -202,17 +206,27 @@ public class PreguntaManagerBase : MonoBehaviour
         Time.timeScale = 1f;
 
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        alien controlador = UnityEngine.Object.FindAnyObjectByType<alien>();
 
         if (escena == "Nivel5" || escena.Contains("5"))
         {
-            checkpointsPasados++;
-            Debug.Log($"✅ Checkpoints completados: {checkpointsPasados}/{totalCheckpoints}");
+            checkpointsPasados++; //contador interno para el nivel 5
+            //Debug.Log($"✅ Checkpoints completados: {checkpointsPasados}/{totalCheckpoints}");
+    
+            controlador?.AumentarCheckpoints(); //los manda al alien 
+
             if (checkpointsPasados >= totalCheckpoints)
-                enemigo?.Morir();
+                if (respuestasCorrectas >= 10)
+                {
+                    enemigo?.Morir();
+                }
+                else
+                {
+                    menuGameOver.MostrarGameOver();
+                }
         }
         else
         {
-            alien controlador = UnityEngine.Object.FindAnyObjectByType<alien>();
             controlador?.AumentarCheckpoints();
         }
     }
@@ -306,13 +320,17 @@ public class PreguntaManagerBase : MonoBehaviour
 
     private void ComprobarRespuestaNivel5(PreguntaData actual, int seleccion)
     {
-        if (cuentaRegresivaPregunta != null)
+        if (cuentaRegresivaPregunta != null) 
+        {
+
             StopCoroutine(cuentaRegresivaPregunta);
-        audioSource.Stop();
-        audioSource.loop = false;
+            audioSource.Stop();
+            audioSource.loop = false;
+        }
 
         bool esCorrecta = actual.opciones[seleccion].es_correcta;
         string respuestaCorrecta = ObtenerRespuestaCorrectaTexto(actual);
+        //checkpointsPasados++;
 
         if (esCorrecta)
         {
@@ -320,6 +338,8 @@ public class PreguntaManagerBase : MonoBehaviour
             enemigo?.ResetearVelocidad();
             MostrarMensaje("Correct! +100 coins", Color.green);
             audioSource.PlayOneShot(audioClipCorrecto);
+            respuestasCorrectas++;
+
         }
         else
         {
