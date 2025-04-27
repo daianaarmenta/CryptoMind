@@ -92,4 +92,22 @@
     justify-content: space-between;
 }
 
+#ContenedorGeneral > #ContenedorRegistro > #gender > .unity-popup-field__input > .unity-base-popup-field__text {
+    color: rgb(0, 0, 0);
+}
 
+#ContenedorGeneral > #ContenedorRegistro > #pais > .unity-popup-field__input > .unity-base-popup-field__text {
+    color: rgb(0, 0, 0);
+}
+
+#ContenedorGeneral > #ContenedorRegistro > #CampoBirthdate > #Date > .unity-popup-field__input > .unity-base-popup-field__text {
+    color: rgb(0, 0, 0);
+}
+
+#ContenedorGeneral > #ContenedorRegistro > #CampoBirthdate > #Month > .unity-popup-field__input > .unity-base-popup-field__text {
+    color: rgb(0, 0, 0);
+}
+
+#ContenedorGeneral > #ContenedorRegistro > #CampoBirthdate > #Year > .unity-popup-field__input > .unity-base-popup-field__text {
+    color: rgb(0, 0, 0);
+}

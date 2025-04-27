@@ -18,14 +18,17 @@
     width: 50%;
     justify-content: space-around;
     margin-top: 50px;
+    flex-grow: 1;
+    height: 500px;
+    flex-direction: column;
 }
 
 .campos {
     align-self: center;
-    font-size: 35px;
-    -unity-font-definition: url("project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&guid=eae689eb73f441a47a1f78ca74fe6a68&type=3#PressStart2P-vaV7");
-    color: rgb(255, 255, 255);
     width: 100%;
+    font-size: 35px;
+    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
+    color: rgb(0, 0, 0);
 }
 
 .botones {
@@ -93,4 +96,12 @@
 
 .botones:hover {
     scale: 1.15 1.15;
+}
+
+.contenedorErrores {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    align-self: center;
+    align-items: center;
 }

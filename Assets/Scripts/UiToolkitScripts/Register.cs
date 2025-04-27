@@ -13,15 +13,12 @@ public class Register : MonoBehaviour
     [SerializeField] private GameObject loginMenu; 
 
     private UIDocument registerMenu;
-    private Button botonRegister;
-    private Button regresarEscene;
-    private TextField nameUser;
-    private TextField email;
-    private TextField password;
-    private DropdownField date, month, year;
-    private DropdownField countrys; 
-    private DropdownField gender;
-    private Label errorMessage;
+    private Button botonRegister, regresarEscene;
+
+    private TextField nameUser, email, password;
+
+    private DropdownField date, month, year, gender, countrys;
+    private Label errorMessage, titulo;
 
     [Serializable]
     public class datosUsuario 
@@ -34,6 +31,14 @@ public class Register : MonoBehaviour
         public string gender;
     }
 
+    void Start()
+    {
+        var _ = LanguageManager.instance;
+        TranslateUI();
+        registerMenuGame.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
     private void OnEnable()
     {
         registerMenu = GetComponent<UIDocument>();
@@ -42,6 +47,7 @@ public class Register : MonoBehaviour
         botonRegister = root.Q<Button>("Register");
         regresarEscene = root.Q<Button>("botonReturn");
 
+        titulo = root.Q<Label>("tituloGeneral");
         nameUser = root.Q<TextField>("name");
         email = root.Q<TextField>("email");
         password = root.Q<TextField>("password");
@@ -80,21 +86,23 @@ public class Register : MonoBehaviour
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
         botonRegister.clicked += EnviarDatos;
 
-        nameUser.RegisterCallback<FocusOutEvent>(evt => UnFocusedText(nameUser, "Name"));
-        email.RegisterCallback<FocusOutEvent>(evt => UnFocusedText(email, "Email"));
-        password.RegisterCallback<FocusOutEvent>(evt => UnFocusedText(password, "Password"));
     }
 
     private void EnviarDatos()
     {
         if (!AllFieldsValid())
         {
-            MostrarMensaje("Some fields are empty", Color.red);
+            MostrarMensaje("Some fields are empty", Color.red, "error_empty_fields");
             return;
         }
         else if (!EsEmailValido(email.value))
         {
-            MostrarMensaje("Invalid email format.", Color.red);
+            MostrarMensaje("Invalid email format.", Color.red, "error_invalid_email");
+            return;
+        }
+        else if(!IsDateValid(date.value, month.value, year.value))
+        {
+            MostrarMensaje("Invalid birthdate. Please enter a valid date.", Color.red, "error_invalid_date");
             return;
         }
 
@@ -121,25 +129,23 @@ public class Register : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.Success)
         {
-            MostrarMensaje("Successful registration, changing to login", Color.green);
+            MostrarMensaje("Successful registration, changing to login", Color.green,"register_success");
             yield return new WaitForSeconds(2f);
             registerMenuGame.SetActive(false);
             loginMenu.SetActive(true);
         }
         else
         {
-            string errorMsg;
 
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
-                errorMsg = "Server is unreachable or check your internet connection";
+                MostrarMensaje("Server is unreachable or check your internet connection", Color.red, "error_server_unreachable");
             }
             else
             {
-                errorMsg = "Error registering: " + request.downloadHandler.text;
+                MostrarMensaje("Error registering: " + request.downloadHandler.text, Color.red, "error_register_failed");
             }
 
-            MostrarMensaje(errorMsg, Color.red);
             Debug.LogError("⚠️ Register failed: " + request.error + " | Code: " + request.responseCode);
         }
 
@@ -152,13 +158,6 @@ public class Register : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    private void UnFocusedText(TextField field, string fieldName)
-    {
-        if (string.IsNullOrWhiteSpace(field.value))
-        {
-            MostrarMensaje($"{fieldName} cannot be empty.", Color.red);
-        }
-    }
 
     [Serializable]
     public class Country
@@ -218,10 +217,62 @@ public class Register : MonoBehaviour
         }
     }
 
-    private void MostrarMensaje(string text, Color color)
+    private void MostrarMensaje(string text, Color color, string label)
     {
         errorMessage.style.color = new StyleColor(color);
-        errorMessage.text = text;
+        errorMessage.text = LanguageManager.instance.GetText(label);
         errorMessage.style.fontSize = 30;
     }
+
+    private bool IsDateValid(string day, string month, string year)
+    {
+        if (int.TryParse(day, out int d) &&
+            int.TryParse(month, out int m) &&
+            int.TryParse(year, out int y))
+        {
+            try
+            {
+                DateTime dt = new DateTime(y, m, d);
+                return true; // Valid
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return false; // Invalid
+            }
+        }
+        return false;
+    }
+
+
+    private void TranslateUI()
+    {
+
+        // Titles and labels
+        titulo.text = LanguageManager.instance.GetText("register_title");
+        nameUser.label = LanguageManager.instance.GetText("name_label");
+        email.label = LanguageManager.instance.GetText("email_label");
+        password.label = LanguageManager.instance.GetText("password_label");
+        date.label = LanguageManager.instance.GetText("date_label");
+        month.label = LanguageManager.instance.GetText("month_label");
+        year.label = LanguageManager.instance.GetText("year_label");
+        countrys.label = LanguageManager.instance.GetText("country_label");
+        gender.label = LanguageManager.instance.GetText("gender_label");
+        
+        // Button text
+        botonRegister.text = LanguageManager.instance.GetText("register_button");
+
+        nameUser.textEdition.placeholder = LanguageManager.instance.GetText("name_placeholder");
+        email.textEdition.placeholder = LanguageManager.instance.GetText("email_placeholder");
+        password.textEdition.placeholder = LanguageManager.instance.GetText("password_placeholder");
+
+        // Translate Gender dropdown choices
+        gender.choices = new List<string> {
+            LanguageManager.instance.GetText("gender_female"),
+            LanguageManager.instance.GetText("gender_male"),
+            LanguageManager.instance.GetText("gender_non_binary"),
+            LanguageManager.instance.GetText("gender_prefer_not_say")
+        };
+        gender.value = gender.choices[0];
+    }
+
 }
