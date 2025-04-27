@@ -86,11 +86,10 @@ private void Start()
         monedas += cantidad;
         PlayerPrefs.SetInt("NumeroMonedas", monedas);
         PlayerPrefs.Save();
-        Debug.Log("🪙 Monedas: " + monedas);
+        //Debug.Log("🪙 Monedas: " + monedas);
     }
 
     public bool TieneMonedasSuficientes(int cantidad) => monedas >= cantidad;
-
     public bool GastarMonedas(int cantidad)
     {
         if (TieneMonedasSuficientes(cantidad))
