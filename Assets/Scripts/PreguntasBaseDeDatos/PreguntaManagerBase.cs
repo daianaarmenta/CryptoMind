@@ -190,6 +190,7 @@ public class PreguntaManagerBase : MonoBehaviour
                 MostrarMensaje("Correct! +100 coins", Color.green);
                 audioSource.PlayOneShot(audioClipCorrecto);
                 respuestasCorrectas++;
+                Debug.Log("Respuestas correctas: " + respuestasCorrectas);
             }
             else
             {
