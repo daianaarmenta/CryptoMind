@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class alien : MonoBehaviour
+public class Alien : MonoBehaviour
 {
-    [SerializeField] private int cantidadCheckpoint;
-    [SerializeField] private int checkpointTerminado;
+    [SerializeField] public int cantidadCheckpoint {get; private set;}
+    [SerializeField] public int checkpointTerminado {get; private set;} // Propiedad para acceder al número de checkpoints terminados desde fuera de la clase;
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip errorClip;
     [SerializeField] private AudioClip siguienteNivel;
