@@ -205,7 +205,6 @@ public class PreguntaManagerBase : MonoBehaviour
 
         if (escena == "Nivel5" || escena.Contains("5"))
         {
-            checkpointsPasados++;
             if (checkpointsPasados >= totalCheckpoints)
                 enemigo?.Morir();
         }
@@ -326,7 +325,8 @@ public class PreguntaManagerBase : MonoBehaviour
             MostrarMensaje("Incorrect!\nCorrect answer:\n" + respuestaCorrecta, Color.red);
             audioSource.PlayOneShot(audioClipIncorrecto);
         }
-
+        checkpointsPasados++;
+        Debug.Log($"✅ Checkpoints completados: {checkpointsPasados}/{totalCheckpoints}");
         enemigo?.Reanudar(); 
         esperaOcultarMensaje = StartCoroutine(OcultarMensaje());
     }
