@@ -31,6 +31,12 @@
     {"key": "login_failed","value": "Failed to log in."},
     {"key": "field_password","value": "Password"},
     {"key": "field_email","value": "Email"},
-    {"key": "field_name","value": "Name"}
+    {"key": "field_name","value": "Name"},
+    { "key": "select_level", "value": "Select a level" },
+    { "key": "about_cryptochicks_title", "value": "About CryptoChicks" },
+    { "key": "about_cryptochicks_description", "value": "CryptoChicks started from two software engineers and friends Elena and Natalia walking through the mazes of blockchain technology and deciding to help other women to navigate them. Now it is an international non-profit with members, events and chapters in 56 countries, helping thousands of women around the globe to learn and invest in blockchain, build new careers and businesses." },
+    { "key": "welcome_to", "value": "WELCOME TO" }
+
+
   ]
 }

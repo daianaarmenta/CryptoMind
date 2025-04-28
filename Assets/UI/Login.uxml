@@ -1,14 +1,14 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/estilosLogin.uss?fileID=7433441132597879392&amp;guid=767aa80c9a2a42c47a529d76f70f92fb&amp;type=3#estilosLogin" />
     <engine:VisualElement name="contenedorGeneral" class="contenedorGeneral" style="flex-grow: 1;">
-        <engine:Label text="Login" name="tituloLogin" class="titulo" />
+        <engine:Label text="Login" name="tituloLogin" class="titulo" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;);" />
         <engine:VisualElement name="contenedorLogin" class="contenedorLogin">
-            <engine:TextField label="Email: " placeholder-text="Email..." name="email" class="campos unity-text-input" />
-            <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos unity-text-input" />
-            <engine:Button text="Login" name="botonLogin" class="botones" />
+            <engine:TextField label="Email: " placeholder-text="Email..." name="email" class="campos unity-text-input" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;);" />
+            <engine:TextField label="Password: " placeholder-text="Password..." name="password" class="campos unity-text-input" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;);" />
+            <engine:Button text="Login" name="botonLogin" class="botones" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;);" />
             <engine:VisualElement name="contenedorErrores" class="contenedorErrores" style="flex-grow: 0; flex-shrink: 1;">
-                <engine:Label name="errorMessage" style="-unity-text-align: upper-center; font-size: 25px; margin-top: 4px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/PressStart2P-vaV7.ttf?fileID=12800000&amp;guid=eae689eb73f441a47a1f78ca74fe6a68&amp;type=3#PressStart2P-vaV7&quot;); width: 100%;" />
-                <engine:Label name="serverMessage" style="width: 100%;" />
+                <engine:Label name="errorMessage" style="-unity-text-align: upper-center; font-size: 25px; margin-top: 4px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;); width: 100%;" />
+                <engine:Label name="serverMessage" style="width: 100%; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&amp;guid=48ccc4768ed047e4eaf0199d737894e9&amp;type=3#Creditos&quot;);" />
             </engine:VisualElement>
         </engine:VisualElement>
         <engine:VisualElement name="pie" class="pie" style="flex-grow: 1;">

@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class BootStrapLanguageManager : MonoBehaviour
+public class BootstrapLanguageManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject LanguageManager;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (GameManager.Instance == null)
+        {
+            Debug.Log("🔄 Instanciando GameManager desde Bootstrapper.");
+            Instantiate(LanguageManager);
+        }
+        else
+        {
+            Debug.Log("✅ GameManager ya está presente.");
+        }
     }
 }

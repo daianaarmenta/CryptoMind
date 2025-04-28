@@ -39,8 +39,6 @@ public class BotonLoginBase : MonoBehaviour
 
     void Start()
     {
-        var _ = LanguageManager.instance;
-        TranslateUI();
         loginMenuGame.SetActive(false);
         mainMenu.SetActive(true);
         
@@ -70,7 +68,7 @@ public class BotonLoginBase : MonoBehaviour
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
         botonLogin.clicked += EnviarDatos;
 
-        
+        TranslateUI();
     }
 
     private void EnviarDatos()
@@ -156,8 +154,6 @@ public class BotonLoginBase : MonoBehaviour
         titulo.text = LanguageManager.instance.GetText("login_title");
         email.label = LanguageManager.instance.GetText("email_label");
         password.label = LanguageManager.instance.GetText("password_label");
-
-
 
         // Button text
         botonLogin.text = LanguageManager.instance.GetText("login_button");

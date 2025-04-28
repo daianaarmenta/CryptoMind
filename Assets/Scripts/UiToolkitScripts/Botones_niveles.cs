@@ -17,9 +17,10 @@ public class Botones_niveles : MonoBehaviour
     private Button nivel4;
     private Button nivel5;
     private Button cerrar, info;
+    private Label titulo;
 
     void Start()
-    {
+    { 
         seleccionNivel.SetActive(true);
         infoUI.SetActive(false);
     }
@@ -36,6 +37,7 @@ public class Botones_niveles : MonoBehaviour
         nivel3 = root.Q<Button>("n3");
         nivel4 = root.Q<Button>("n4");
         nivel5 = root.Q<Button>("n5");
+        titulo = root.Q<Label>("Titulo");
         cerrar = root.Q<Button>("botonCerrar");
         info = root.Q<Button>("botonInfo");
 
@@ -48,6 +50,8 @@ public class Botones_niveles : MonoBehaviour
         nivel5.RegisterCallback<ClickEvent, string>(CambiarEscena, "Nivel5");
         info.clicked += CambiarUIInfo; 
         cerrar.clicked += GuardarProgresoYSalir;
+
+        TranslateUI();
     }
 
     private void CambiarUIInfo()
@@ -104,5 +108,11 @@ public class Botones_niveles : MonoBehaviour
         }
 
         SceneManager.LoadScene(escena);
+    }
+
+    private void TranslateUI()
+    {
+        // Titles and labels
+        titulo.text = LanguageManager.instance.GetText("select_level");
     }
 }

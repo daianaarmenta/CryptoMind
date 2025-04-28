@@ -33,8 +33,6 @@ public class Register : MonoBehaviour
 
     void Start()
     {
-        var _ = LanguageManager.instance;
-        TranslateUI();
         registerMenuGame.SetActive(false);
         mainMenu.SetActive(true);
     }
@@ -86,6 +84,7 @@ public class Register : MonoBehaviour
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
         botonRegister.clicked += EnviarDatos;
 
+        TranslateUI();
     }
 
     private void EnviarDatos()

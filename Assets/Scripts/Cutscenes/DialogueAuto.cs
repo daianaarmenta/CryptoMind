@@ -26,6 +26,7 @@ public class DialogueAuto : MonoBehaviour
     {
         typingAudioSource = GetComponent<AudioSource>();   
     }
+    
     void Update()
     {
         if (isPlayerInRange && !hasDialoguePlayed)

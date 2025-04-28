@@ -2,7 +2,7 @@
     font-size: 70px;
     -unity-text-align: upper-center;
     border-top-width: 50px;
-    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
+    -unity-font-definition: url("project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&guid=48ccc4768ed047e4eaf0199d737894e9&type=3#Creditos");
     color: rgb(255, 255, 255);
 }
 
@@ -29,7 +29,7 @@
     width: 100%;
     -unity-text-align: middle-center;
     height: 50%;
-    -unity-font-definition: url("project://database/Assets/Fonts/AtariFontFullVersion-ZJ23.ttf?fileID=12800000&guid=09ca120925d67c649ab2368f35368536&type=3#AtariFontFullVersion-ZJ23");
+    -unity-font-definition: url("project://database/Assets/Fonts/Creditos.ttf?fileID=12800000&guid=48ccc4768ed047e4eaf0199d737894e9&type=3#Creditos");
     align-self: center;
     font-size: 30px;
     padding-top: 0;

@@ -1,8 +1,8 @@
 {
   "items": [
     { "key": "sign_up", "value": "Registrarse" },
-    { "key": "log_in", "value": "Iniciar sesion" },
-    { "key": "login_title", "value": "Iniciar sesion" },
+    { "key": "log_in", "value": "Iniciar sesión" },
+    { "key": "login_title", "value": "Iniciar sesión" },
     { "key": "email_label", "value": "Correo:" },
     { "key": "password_label", "value": "Contraseña:" },
     { "key": "email_placeholder", "value": "Correo..." },
@@ -10,7 +10,6 @@
     { "key": "login_button", "value": "Entrar" },
     { "key": "register_title", "value": "Registro" },
     { "key": "name_label", "value": "Nombre:" },
-    { "key": "password_label", "value": "Contraseña:" },
     { "key": "date_label", "value": "Día:" },
     { "key": "month_label", "value": "Mes:" },
     { "key": "year_label", "value": "Año:" },
@@ -18,7 +17,6 @@
     { "key": "gender_label", "value": "Género:" },
     { "key": "register_button", "value": "Registrar" },
     { "key": "name_placeholder", "value": "Nombre..." },
-    { "key": "email_placeholder", "value": "Correo..." },
     { "key": "password_placeholder", "value": "Contraseña..." },
     { "key": "gender_female", "value": "Femenino" },
     { "key": "gender_male", "value": "Masculino" },
@@ -32,17 +30,14 @@
     { "key": "error_register_failed", "value": "Error al registrar:" },
     {"key": "login_success","value": "Inicio de sesión exitoso. Cargando el menú principal..."},
     {"key": "login_failed","value": "Error al iniciar sesión."},
-    {
-      "key": "field_password",
-      "value": "Contraseña"
-    },
-    {
-      "key": "field_email",
-      "value": "Correo electrónico"
-    },
-    {
-      "key": "field_name",
-      "value": "Nombre"
-    }    
+    {"key": "field_password","value": "Contraseña"},
+    {"key": "field_email","value": "Correo electrónico"},
+    {"key": "field_name","value": "Nombre"},
+    { "key": "select_level", "value": "Selecciona un nivel" },
+    { "key": "about_cryptochicks_title", "value": "Sobre CryptoChicks" },
+    { "key": "about_cryptochicks_description", "value": "CryptoChicks comenzó con \n dos ingenieras de software \n y amigas, Elena y Natalia,\n caminando por los laberintos \n de la tecnología blockchain \n y decidiendo ayudar a otras \n mujeres a navegar por ellos.\n Ahora es una organización \n internacional sin fines de \n lucro con miembros,eventos \n y capítulos en 56 países, \n ayudando a miles \n de mujeres en todo el mundo \n a aprender e invertir \n en blockchain, construir \n nuevas carreras y negocios." },
+    { "key": "welcome_to", "value": "BIENVENIDO A" }
+
+
   ]
 }
