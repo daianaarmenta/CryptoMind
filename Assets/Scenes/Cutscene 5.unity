@@ -15244,11 +15244,11 @@ MonoBehaviour:
   dialogueMark: {fileID: 2147225958}
   dialoguePanel: {fileID: 395295086}
   dialogueText: {fileID: 1657110083}
-  dialogueLines:
-  - 'Eve: Finally here, let''s finish this and save NeonCity'
-  - 'Eve: Show yourself OneCore'
-  - 'OneCore: MUAHAHAHA THIS IS THE END PREPARE TO LOSE'
-  typingSound: {fileID: 0}
+  dialogueKeys:
+  - cutscene5_line1
+  - cutscene5_line2
+  - cutscene5_line3
+  typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
 --- !u!4 &1036593285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9078714673679247706, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
@@ -15943,7 +15943,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2317826d35775f4b9f81fa31267d2d2, type: 2}
   m_sharedMaterial: {fileID: -4828078228106770127, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -16009,7 +16009,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 3.9071045, w: 2.4591675}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1657110084

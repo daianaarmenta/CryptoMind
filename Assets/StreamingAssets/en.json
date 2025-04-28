@@ -35,7 +35,37 @@
     { "key": "select_level", "value": "Select a level" },
     { "key": "about_cryptochicks_title", "value": "About CryptoChicks" },
     { "key": "about_cryptochicks_description", "value": "CryptoChicks started from two software engineers and friends Elena and Natalia walking through the mazes of blockchain technology and deciding to help other women to navigate them. Now it is an international non-profit with members, events and chapters in 56 countries, helping thousands of women around the globe to learn and invest in blockchain, build new careers and businesses." },
-    { "key": "welcome_to", "value": "WELCOME TO" }
+    { "key": "welcome_to", "value": "WELCOME TO" },
+    { "key": "cutscene0_line1", "value": "Eve: Order #77-89 for Zarek." },
+    { "key": "cutscene0_line2", "value": "Zarek: Always on time, Eve. Central Core has you well trained." },
+    { "key": "cutscene0_line3", "value": "Eve: It's part of the protocol. Deliver, scan, follow." },
+    { "key": "cutscene0_line4", "value": "Zarek: And you never get tired of it?" },
+    { "key": "cutscene0_line5", "value": "Eve: Tired? They only pay me not to think." },
+    { "key": "cutscene0_line6", "value": "Zarek: Well, maybe it's time to think about it. If you ever get sick of being just another cog in Central Core... meet me in Sector 3, abandoned warehouse 17. Tonight." },
+    { "key": "cutscene0_line7", "value": "Zarek: There's something you should know. Something that could change everything." },
+    { "key": "cutscene1_line1", "value": "Zarek: You got to the end! Nice job." },
+    { "key": "cutscene1_line2", "value": "Eve: Zarek! What have I done?" },
+    { "key": "cutscene1_line3", "value": "Eve: Central Core must have known what we are up to and manipulated the system to get rid of you Zarek... They erased you." },
+    { "key": "cutscene1_line4", "value": "Zarek: I will help you as a ghost... Save me... Save the system." },
+    { "key": "cutscene1_line5", "value": "Eve: They tricked me... I helped erase you without knowing." },
+    { "key": "cutscene2_line1", "value": "Eve: I understand now. Central Core ain't saving data, they're saving identities." },
+    { "key": "cutscene2_line2", "value": "Eve: Everything we are is on the network." },
+    { "key": "cutscene2_line3", "value": "Eve: Central Core, I'll get to your headquarters." },
+    { "key": "cutscene2_line4", "value": "Eve: The headquarters where you save every failure, every fear... Everything..." },
+    { "key": "cutscene3_line1", "value": "Eve: I've learned a lot, not just about Blockchain but Security too." },
+    { "key": "cutscene3_line2", "value": "Eve: With this knowledge I'm getting stronger." },
+    { "key": "cutscene3_line3", "value": "Eve: I will save our world!" },
+    { "key": "cutscene4_line1", "value": "Eve: So that's how Cryptocurrency works! . . . Wow." },
+    { "key": "cutscene4_line2", "value": "Eve: These drones are getting annoying but at least I’m learning new stuff." },
+    { "key": "cutscene4_line3", "value": "Eve: It seems like the one behind all this trouble is a robot called OneCore." },
+    { "key": "cutscene5_line1", "value": "Eve: Finally here, let's finish this and save NeonCity." },
+    { "key": "cutscene5_line2", "value": "Eve: Show yourself OneCore!" },
+    { "key": "cutscene5_line3", "value": "OneCore: MUAHAHAHA THIS IS THE END. PREPARE TO LOSE." },
+    { "key": "cutscene6_line1", "value": "Eve: We finally did it. NeonCity is free!" },
+    { "key": "cutscene6_line2", "value": "Eve: Central Core can no longer take control." },
+    { "key": "cutscene6_line3", "value": "Zarek: Good job, we can finally live decentralized. Let's show everyone how to use the blockchain! Let's free NeonCity!" }
+
+
 
 
   ]

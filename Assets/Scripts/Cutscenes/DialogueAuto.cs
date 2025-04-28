@@ -7,7 +7,8 @@ public class DialogueAuto : MonoBehaviour
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private string[] dialogueKeys; // Localization keys
+    private string[] dialogueLines; // Final translated lines
     [SerializeField] private AudioClip typingSound;
     private AudioSource typingAudioSource;
     private bool isSoundPlaying = false;
@@ -24,9 +25,16 @@ public class DialogueAuto : MonoBehaviour
 
     void Start()
     {
-        typingAudioSource = GetComponent<AudioSource>();   
+        typingAudioSource = GetComponent<AudioSource>(); 
+
+        dialogueLines = new string[dialogueKeys.Length];
+        for (int i = 0; i < dialogueKeys.Length; i++)
+        {
+            dialogueLines[i] = LanguageManager.instance.GetText(dialogueKeys[i]);
+        }
     }
-    
+
+
     void Update()
     {
         if (isPlayerInRange && !hasDialoguePlayed)
@@ -79,11 +87,13 @@ public class DialogueAuto : MonoBehaviour
             isSoundPlaying = true;
         }
 
-        foreach (char letter in dialogueLines[lineIndex].ToCharArray())
+        string localizedLine = LanguageManager.instance.GetText(dialogueLines[lineIndex]);
+        foreach (char letter in localizedLine.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSecondsRealtime(typingTime);
         }
+
 
         if (typingAudioSource != null && isSoundPlaying)
         {

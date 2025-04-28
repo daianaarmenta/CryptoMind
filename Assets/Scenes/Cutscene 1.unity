@@ -2333,15 +2333,12 @@ MonoBehaviour:
   dialogueMark: {fileID: 2147225958}
   dialoguePanel: {fileID: 395295086}
   dialogueText: {fileID: 1657110083}
-  dialogueLines:
-  - 'Zarek: You got to the end! Nice job.
-
-
-    Press "E" to continue'
-  - 'Eve: Zarek! What have I done?'
-  - 'Eve: Central Core must have known what we are up to and manipulated the system
-    to get rid of you Zarek...They erased you.'
-  - 'Zarek: I will help you as a ghost . . . Save me . . . Save the system.'
+  dialogueKeys:
+  - cutscene1_line1
+  - cutscene1_line2
+  - cutscene1_line3
+  - cutscene1_line4
+  - cutscene1_line5
   typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
 --- !u!4 &1036593285 stripped
 Transform:
@@ -4782,7 +4779,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2317826d35775f4b9f81fa31267d2d2, type: 2}
   m_sharedMaterial: {fileID: -4828078228106770127, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4848,7 +4845,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 3.9071045, w: 2.4591675}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1657110084
