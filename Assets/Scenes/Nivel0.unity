@@ -22080,7 +22080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Name
-      value: mentor (4)
+      value: mentor2
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive
@@ -25935,7 +25935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Name
-      value: mentor (5)
+      value: mentor5
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive
@@ -26158,7 +26158,7 @@ PrefabInstance:
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
       value: 'Zarek: Now that you know what Blockchain is, you need to understand
-        how descentralized verification works. '
+        how decentralized verification works. '
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[2]'
@@ -26174,7 +26174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Name
-      value: mentor (1)
+      value: mentor3
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive
@@ -28611,7 +28611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -29337,7 +29337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Name
-      value: mentor (3)
+      value: mentor4
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive
@@ -29487,7 +29487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Name
-      value: mentor
+      value: mentor1
       objectReference: {fileID: 0}
     - target: {fileID: 776669151150089148, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_IsActive

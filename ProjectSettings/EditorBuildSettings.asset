@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel5.unity
     guid: 57670e7aefc732a4abc6897af7136ff7
   - enabled: 1
+    path: Assets/Scenes/Cutscene 6.unity
+    guid: 088222a8c9604a64c9b3d13f7d7a809c
+  - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 77f69d5c1442bca40920903d717e9096
   - enabled: 0
