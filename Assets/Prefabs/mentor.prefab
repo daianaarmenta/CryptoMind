@@ -153,12 +153,7 @@ MonoBehaviour:
   dialogueMark: {fileID: 2946095913651624079}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  dialogueLines:
-  - "Mentor: \xA1Bienvenido a CryptoMind!\nEste es un tutorial para ense\xF1arte
-    a jugar el juego. \n(Para continuar presiona la tecla E.)"
-  - "Mentor: Cuando llegues al checkpoint, contesta correctamente la pregunta para
-    ganar monedas extras, de lo contario perder\xE1s una vida :("
-  - "Mentor: No olvides recoger las monedas para acumular puntos. \xA1Mucha Suerte!"
+  dialoguekeys: []
   typingAudioSource: {fileID: 8841209194268207319}
   typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
   notificationSound: {fileID: 8300000, guid: eb988c366354c1a438efb0845e12a80e, type: 3}
@@ -545,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localizationKey: press_e
+  localizationKey: press_E
 --- !u!1 &2946095913651624079
 GameObject:
   m_ObjectHideFlags: 0

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localizationKey: press_e
+  localizationKey: press_E
 --- !u!4 &7795097540341565231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
