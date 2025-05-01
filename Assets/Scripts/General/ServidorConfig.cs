@@ -1,7 +1,7 @@
 public static class ServidorConfig
 {
     // Base URL (puedes cambiar esta línea y todo se actualiza)
-    public const string BaseUrl = "http://44.192.253.223:8080";
+    public const string BaseUrl = "http://18.232.125.185:8080";
 
     // Endpoints específicos
     public static string Login => $"{BaseUrl}/unity/login";

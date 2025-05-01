@@ -37,12 +37,6 @@ public class BotonLoginBase : MonoBehaviour
         public int costo_mejora;
     }
 
-    void Start()
-    {
-        loginMenuGame.SetActive(false);
-        mainMenu.SetActive(true);
-        
-    }
 
     private void OnEnable()
     {

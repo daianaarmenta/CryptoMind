@@ -111,3 +111,11 @@
 #ContenedorGeneral > #ContenedorRegistro > #CampoBirthdate > #Year > .unity-popup-field__input > .unity-base-popup-field__text {
     color: rgb(0, 0, 0);
 }
+
+.buttonRegister:hover {
+    scale: 1.15 1.15;
+}
+
+.buttonRegister:active {
+    -unity-background-image-tint-color: rgb(55, 55, 55);
+}

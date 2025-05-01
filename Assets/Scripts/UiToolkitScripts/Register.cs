@@ -31,14 +31,10 @@ public class Register : MonoBehaviour
         public string gender;
     }
 
-    void Start()
-    {
-        registerMenuGame.SetActive(false);
-        mainMenu.SetActive(true);
-    }
 
     private void OnEnable()
     {
+
         registerMenu = GetComponent<UIDocument>();
         var root = registerMenu.rootVisualElement;
 
@@ -82,6 +78,7 @@ public class Register : MonoBehaviour
         year.value = year.choices[0];
 
         regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
+        botonRegister.clicked -= EnviarDatos;
         botonRegister.clicked += EnviarDatos;
 
         TranslateUI();
@@ -123,7 +120,7 @@ public class Register : MonoBehaviour
 
         string datosJSON = JsonUtility.ToJson(datos);
 
-        UnityWebRequest request = UnityWebRequest.Post("http://3.237.29.188:8080/unity/register", datosJSON, "application/json");
+        UnityWebRequest request = UnityWebRequest.Post(ServidorConfig.Register, datosJSON, "application/json");
         yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
@@ -139,13 +136,16 @@ public class Register : MonoBehaviour
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
                 MostrarMensaje("Server is unreachable or check your internet connection", Color.red, "error_server_unreachable");
+                registerMenuGame.SetActive(true);
+                mainMenu.SetActive(false);
+                loginMenu.SetActive(false);
             }
             else
             {
                 MostrarMensaje("Error registering: " + request.downloadHandler.text, Color.red, "error_register_failed");
             }
 
-            Debug.LogError("⚠️ Register failed: " + request.error + " | Code: " + request.responseCode);
+            //Debug.LogError("⚠️ Register failed: " + request.error + " | Code: " + request.responseCode);
         }
 
         request.Dispose();

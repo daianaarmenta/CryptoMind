@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -1929,7 +1929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22832994
+      value: -0.22832909
       objectReference: {fileID: 0}
     - target: {fileID: 5539248037692919503, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: Target.TrackingTarget
