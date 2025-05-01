@@ -16,7 +16,8 @@ public class PreguntaManagerBase : MonoBehaviour
     private int respuestasCorrectas = 0;
     private MenuGameOver  menuGameOver;
     private bool tiempoAgotado = false;
-
+    public GameObject panelMensajeFinal;
+    public TextMeshProUGUI textoResultadoFinal;
     [Header("UI")]
     public TextMeshProUGUI preguntaTextoUI;
     public Button[] botonesRespuestas;
@@ -261,14 +262,7 @@ public class PreguntaManagerBase : MonoBehaviour
 
             if (controlador.checkpointTerminado >= controlador.cantidadCheckpoint)
             {
-                if (respuestasCorrectas >= 10)
-                {
-                    enemigo?.Morir();
-                }
-                else
-                {
-                    menuGameOver.MostrarGameOver();
-                }
+                StartCoroutine(MostrarFinalyDecidir());
             }
         } 
         else
@@ -276,11 +270,29 @@ public class PreguntaManagerBase : MonoBehaviour
             controlador?.AumentarCheckpoints();
         }
     }
+
+    private IEnumerator MostrarFinalyDecidir()
+    {
+        panelMensajeFinal.SetActive(true);
+        textoResultadoFinal.text = $"You {(respuestasCorrectas >= 10 ? "did it" : "failed")}!\nYou had {respuestasCorrectas}/15 correct answers!";
+
+        yield return new WaitForSecondsRealtime(4f); // Espera 3 segundos
+
+        panelMensajeFinal.SetActive(false);
+
+        if (respuestasCorrectas >= 10)
+        {
+            enemigo?.Morir();
+        }
+        else
+        {
+            menuGameOver.MostrarGameOver();
+        }
+    }
     private IEnumerator OcultarMensaje()
     {
         yield return new WaitForSecondsRealtime(tiempoMensaje);
         SkipMensaje();
-
     }
 
     private IEnumerator TemporizadorNivel5(PreguntaData actual)
