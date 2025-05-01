@@ -44,7 +44,8 @@
     { "key": "missing_checkpoints", "value": "You are missing {0} checkpoint(s)." },
 
     { "key": "about_cryptochicks_title", "value": "About CryptoChicks" },
-    { "key": "about_cryptochicks_description", "value": "CryptoChicks started from two software engineers and friends Elena and Natalia walking through the mazes of blockchain technology and deciding to help other women to navigate them. Now it is an international non-profit with members, events and chapters in 56 countries, helping thousands of women around the globe to learn and invest in blockchain, build new careers and businesses." },
+    { "key": "about_cryptochicks_description", "value": "CryptoChicks started from \n two software engineers \n and friends, Elena and Natalia,\n walking through the mazes \n of blockchain technology \n and deciding to help other \n women to navigate them.\n Now it is an international \n non-profit with members, events \n and chapters in 56 countries, \n helping thousands \n of women around the globe \n to learn and invest \n in blockchain, build \n new careers and businesses."},
+
     { "key": "welcome_to", "value": "WELCOME TO" },
     { "key": "cutscene0_line1", "value": "Eve: Order #77-89 for Zarek." },
     { "key": "cutscene0_line2", "value": "Zarek: Always on time, Eve. Central Core has you well trained." },
