@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890577800406622144, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3967050518349507121, guid: 5a18577f33760094ba15cee41fbdbc5e, type: 3}
       propertyPath: m_Pivot.x
@@ -680,6 +680,14 @@ PrefabInstance:
     - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_Name
       value: checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Size.y
+      value: 3.6490018
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.32450092
       objectReference: {fileID: 0}
     - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: idPregunta
@@ -1917,11 +1925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7749996
+      value: 0.2838149
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22833264
+      value: -0.22832994
       objectReference: {fileID: 0}
     - target: {fileID: 5539248037692919503, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: Target.TrackingTarget
@@ -3179,6 +3187,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: checkpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Size.y
+      value: 3.614838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.30741894
+      objectReference: {fileID: 0}
     - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: idPregunta
       value: 14
@@ -3297,6 +3313,14 @@ PrefabInstance:
     - target: {fileID: 1118053204304105185, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: m_Name
       value: checkpoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Size.y
+      value: 3.6334553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712505882636957799, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.31672764
       objectReference: {fileID: 0}
     - target: {fileID: 6593823826492238540, guid: 077920135a50828439b8d9203cfd7d56, type: 3}
       propertyPath: idPregunta
