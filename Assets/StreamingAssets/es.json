@@ -67,7 +67,16 @@
     { "key": "credits_intro", "value": "Esta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks\n\n\n\n\n" },
     { "key": "credits_title", "value": "\n\n\n\nDesarrolladores" },
     { "key": "credits_footer", "value": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks" },
-    { "key": "press_e", "value": "Presiona E" }
+    { "key": "press_e", "value": "Presiona E" },
+    
+    { "key": "mentor1_line1", "value": "¡Hola! Soy Zarek, gracias por encontrarme aquí. Quiero hablar contigo sobre algo... Solía trabajar para Central Core hasta que descubrí lo que hacen con nuestra información. \n\n (Presiona E para continuar)" },
+    { "key": "mentor1_line2", "value": "Zarek: Central Core controla todos los datos en NeonCity. Lo que ves, compras y sabes... Todo está en sus servidores. Si algo no les conviene, lo modifican. Si alguien los desafía, borran su identidad. En otras palabras, modifican y borran la información a su favor." },
+    { "key": "mentor1_line3", "value": "Zarek: Y esa es exactamente la razón por la que la centralización de la información es tan peligrosa para nosotros, pero... hay una solución... Blockchain." },
+    { "key": "mentor1_line4", "value": "Blockchain es un sistema donde la información no se guarda en un solo lugar. En cambio, se copia en miles de computadoras al mismo tiempo. Si alguien cambia algo, tendría que modificar TODAS las copias al mismo tiempo, lo cual es imposible." },
+    { "key": "mentor1_line5", "value": "Zarek: Así que ahora ves, Eve… el problema no es solo el sistema. Es quién lo controla, pero las cosas están cambiando. Afuera, en las sombras de NeonCity, está surgiendo un nuevo movimiento. Personas que creen en la transparencia, en una verdad que no se puede reescribir." },
+    { "key": "mentor1_line6", "value": "Zarek: Estamos construyendo algo mejor... algo libre. Y quiero que seas parte de ello. Pero antes de unirte, necesitas demostrar que entiendes por qué luchamos." },
+    { "key": "mentor1_line7", "value": "Zarek: Esto no es solo tecnología, es una revolución. Y solo aquellos que comprendan su núcleo podrán manejarla." }
+
 
 
 

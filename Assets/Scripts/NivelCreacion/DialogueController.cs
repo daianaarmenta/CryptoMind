@@ -8,7 +8,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private string[] dialoguekeys;
+
+    private string[] dialogueLines;
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
     private bool didDialogueStart;
@@ -28,9 +30,16 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         mentorFantasma = GetComponent<MentorFantasma>();
+
+
         if (typingAudioSource != null)
         {
             typingAudioSource.Stop(); // Detener el sonido si está sonando al inicio
+        }
+
+        dialogueLines = new string[dialoguekeys.Length];
+        for( int i = 0; i<dialoguekeys.Length; i++){
+            dialogueLines[i] = LanguageManager.instance.GetText(dialoguekeys[i]);
         }
     }
 

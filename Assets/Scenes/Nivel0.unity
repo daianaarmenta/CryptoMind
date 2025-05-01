@@ -27874,7 +27874,7 @@ GameObject:
   - component: {fileID: 1161464777}
   - component: {fileID: 1161464776}
   m_Layer: 0
-  m_Name: BootStrapLanguageManager
+  m_Name: BootstrapLanguageManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28262,7 +28262,7 @@ GameObject:
   - component: {fileID: 1255371984}
   - component: {fileID: 1255371983}
   m_Layer: 0
-  m_Name: Bootstrapper
+  m_Name: BootstrapperGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29681,6 +29681,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3947269334454844419, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d2317826d35775f4b9f81fa31267d2d2, type: 2}
+    - target: {fileID: 3947269334454844419, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4343882668676857159, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -30009,8 +30017,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 108927963}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: dialoguekeys.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[0]'
+      value: mentor1_line1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[1]'
+      value: mentor1_line2
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[2]'
+      value: mentor1_press_e
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[3]'
+      value: mentor1_line3
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[4]'
+      value: mentor1_line4
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[5]'
+      value: mentor1_line5
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[6]'
+      value: mentor1_line6
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[7]'
+      value: mentor1_line7
+      objectReference: {fileID: 0}
+    - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[8]'
+      value: mentor1_line8
       objectReference: {fileID: 0}
     - target: {fileID: 517190819415544912, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
