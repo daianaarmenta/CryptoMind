@@ -30742,7 +30742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4479868785782828940, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8563537403233066922, guid: 085be2d7142c0f3468146e56172473e4, type: 3}
       propertyPath: m_Name
@@ -38506,6 +38506,14 @@ PrefabInstance:
       propertyPath: canvasTienda
       value: 
       objectReference: {fileID: 1200208377}
+    - target: {fileID: 2499834661406481822, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2566847229271930652, guid: 5391e187d3f609440a95a978f7216097, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3042345695914485810, guid: 5391e187d3f609440a95a978f7216097, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -7.051758
