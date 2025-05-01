@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1976276264}
   loginMenuGame: {fileID: 73134029}
+  gameManagerPrefab: {fileID: 0}
 --- !u!1 &102733362
 GameObject:
   m_ObjectHideFlags: 0
