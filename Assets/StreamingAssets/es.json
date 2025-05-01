@@ -119,14 +119,67 @@
     { "key": "level1_mentor3_line3", "value": "Zarek: Por eso la blockchain es tan segura y nunca ha sido hackeada como otros sistemas." },
     { "key": "level1_mentor4_line1", "value": "Zarek: En el mundo de la blockchain, hay personas (o computadoras) que revisan que todo esté bien antes de que se escriba algo nuevo." },
     { "key": "level1_mentor4_line2", "value": "Zarek: Estas personas trabajan duro y gastan energía, por eso se les da una recompensa (una pequeña cantidad de dinero o criptomoneda)." },
-    { "key": "level1_mentor4_line3", "value": "Zarek: Eso es lo que pagas con la comisión de transacción, para agradecerles su ayuda." }
+    { "key": "level1_mentor4_line3", "value": "Zarek: Eso es lo que pagas con la comisión de transacción, para agradecerles su ayuda." },
+    { "key": "level1_mentor5_line1", "value": "Zarek: Excelente, continuemos con nuestro viaje." },
+
+    { "key": "level2_mentor1_line1", "value": "Zarek: Ahora deberías entender cómo la blockchain dio origen a una nueva forma de dinero: las criptomonedas." },
+    { "key": "level2_mentor1_line2", "value": "Zarek: No son solo billetes digitales... son monedas basadas en confianza descentralizada y seguridad criptográfica." },
+    { "key": "level2_mentor1_line3", "value": "Zarek: Prepárate, esto te acercará a dominar el código de este nuevo mundo." },
+    { "key": "level2_mentor1_line4", "value": "Zarek: Recuerda responder las tres preguntas y llegar al alien para pasar al siguiente nivel." },
+    { "key": "level2_mentor1_line5", "value": "Zarek: Cuidado con los drones rojos, son más rápidos y hacen más daño." },
+    { "key": "level2_mentor1_line6", "value": "Zarek: ¡Buena suerte!" },
     
+    { "key": "level2_mentor2_line1", "value": "Zarek: Una criptomoneda es dinero digital que no depende de bancos ni gobiernos." },
+    { "key": "level2_mentor2_line2", "value": "Zarek: Se basa en la tecnología blockchain, lo que la hace segura y descentralizada." },
+    { "key": "level2_mentor2_line3", "value": "Zarek: Es como tener tu propio banco, pero en tu teléfono." },
     
+    { "key": "level2_mentor3_line1", "value": "Zarek: Aunque puedes pagar con tarjeta o desde una app, ese 'dinero digital' aún lo controlan los bancos. Las criptomonedas no." },
+    { "key": "level2_mentor3_line2", "value": "Zarek: Están gestionadas por miles de computadoras alrededor del mundo. Nadie puede congelarlas ni manipularlas." },
+    
+    { "key": "level2_mentor4_line1", "value": "Zarek: Las más conocidas son Bitcoin, Ethereum y Ripple. Cada una tiene funciones distintas." },
+    { "key": "level2_mentor4_line2", "value": "Zarek: Cada una tiene funciones distintas." },
+    { "key": "level2_mentor4_line3", "value": "Zarek: Ethereum permite crear aplicaciones en su red. Y Ripple busca facilitar pagos internacionales." },
+    
+    { "key": "level2_mentor5_line1", "value": "Zarek: ¡Excelente! Estás a punto de terminar este nivel." },
 
+    { "key": "level3_mentor1_line1", "value": "Zarek: Estás a punto de tomar el control de tu propio dinero digital. Pero con gran poder, viene una gran responsabilidad." },
+    { "key": "level3_mentor1_line2", "value": "Zarek: Aquí aprenderás cómo guardar tus criptomonedas, cómo no perderlas... y cómo comprarlas de forma segura." },
+    { "key": "level3_mentor1_line3", "value": "Zarek: Recuerda: en este mundo, olvidar tu contraseña es como perder una fortuna." },
+    
+    { "key": "level3_mentor2_line1", "value": "Zarek: Una wallet de criptomonedas es como una caja fuerte digital." },
+    { "key": "level3_mentor2_line2", "value": "Zarek: Guarda tus llaves privadas, que te dan acceso a tus monedas." },
+    { "key": "level3_mentor2_line3", "value": "Zarek: Puede ser una app, un dispositivo físico o incluso papel." },
+    
+    { "key": "level3_mentor3_line1", "value": "Zarek: ¡Nunca compartas tu clave privada!" },
+    { "key": "level3_mentor3_line2", "value": "Zarek: Haz una copia de seguridad de tus frases de recuperación y guárdalas en un lugar seguro." },
+    { "key": "level3_mentor3_line3", "value": "Zarek: Si pierdes tus contraseñas, pierdes acceso a tus fondos. Aquí no hay 'olvidé mi contraseña'." },
+    
+    { "key": "level3_mentor4_line1", "value": "Zarek: Puedes comprar criptomonedas en exchanges (plataformas digitales) como Binance o Coinbase." },
+    { "key": "level3_mentor4_line2", "value": "Zarek: Ahí intercambias dinero tradicional por criptomonedas." },
+    { "key": "level3_mentor4_line3", "value": "Zarek: Necesitas una cuenta, una wallet y a veces verificación de identidad." },
 
+    { "key": "level4_mentor1_line1", "value": "Zarek: Pensabas que las criptomonedas eran solo para enviar dinero... pero eso es solo la superficie." },
+    { "key": "level4_mentor1_line2", "value": "Zarek: La tecnología blockchain puede hacer mucho más. Desde juegos hasta contratos y sistemas de votación." },
+    { "key": "level4_mentor1_line3", "value": "Zarek: En este nivel aprenderás qué es la minería y qué cosas increíbles ya se están construyendo con esta tecnología." },
 
+    { "key": "level4_mentor2_line1", "value": "Zarek: La minería es el proceso en el que los nodos más poderosos resuelven problemas matemáticos complejos para validar nuevas transacciones." },
+    { "key": "level4_mentor2_line2", "value": "Zarek: Como recompensa, reciben criptomonedas. Es como una competencia matemática digital." },
 
+    { "key": "level4_mentor3_line1", "value": "Zarek: La blockchain no es solo para el dinero." },
+    { "key": "level4_mentor3_line2", "value": "Zarek: Puede usarse para crear juegos, contratos inteligentes, identidades digitales, votaciones y cadenas de suministro más transparentes." },
 
-  
+    { "key": "level4_mentor4_line1", "value": "Zarek: ¡Cualquiera puede participar en una red Blockchain!" },
+    { "key": "level4_mentor4_line2", "value": "Zarek: Si tienes una computadora e internet, puedes formar parte de la red." },
+    { "key": "level4_mentor4_line3", "value": "Zarek: Puedes ser un nodo, un minero o solo un usuario." },
+    { "key": "level4_mentor4_line4", "value": "Zarek: Lo importante es que todos colaboran para mantener el sistema funcionando." },
+
+    { "key": "level4_mentor5_line1", "value": "Zarek: ¡Excelente! Tu viaje está por terminar... estamos cada vez más cerca de derrotar a Central Core." },
+
+    { "key": "level5_mentor1_line1", "value": "Zarek: Responde todas las preguntas y no dejes que OneCore te atrape." },
+    { "key": "level5_mentor1_line2", "value": "Zarek: Solo tienes 10 segundos para responder cada pregunta." },
+    { "key": "level5_mentor1_line3", "value": "Zarek: Por cada respuesta incorrecta, OneCore aumentará su velocidad." },
+    { "key": "level5_mentor1_line4", "value": "Zarek: No tendrás acceso a la tienda." },
+    { "key": "level5_mentor1_line5", "value": "Zarek: ¡Buena suerte!" }
+
   ]
 }
