@@ -68,13 +68,35 @@
     { "key": "credits_title", "value": "\n\n\n\nDevelopers" },
     { "key": "credits_footer", "value": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis app was developed by Tec de Monterrey students for CryptoChicks" },
     {"key": "press_E", "value": "Press E"},
-    { "key": "mentor1_line1", "value": "Hi! I'm Zarek, thank you for meeting me here. I want to talk to you about something... I used to work for Central Core until I found out what they do with our information. \n\n (Press E to continue)" },
-    { "key": "mentor1_line2", "value": "Zarek: Central Core controls all the data in NeonCity. What you see, buy and know... Everything is on their servers. If something isn't convenient for them, they modify it. If someone challenges them, they erase their identity. In other words, they modify and erase information in their favor." },
-    { "key": "mentor1_line3", "value": "Zarek: And that's exactly why the centralization of information is so dangerous for us, but... there is a solution... Blockchain." },
-    { "key": "mentor1_line4", "value": "Zarek: Blockchain is a system where the information is not saved in only one place. Instead, it is copied in thousands of computers at the same time. If someone changes something, they would have to modify ALL the copies at the same time, which is impossible." },
-    { "key": "mentor1_line5", "value": "Zarek: So now you see, Eve… the problem isn’t just the system. It’s who controls it, but things are changing. Out there, in the shadows of NeonCity, there's a new movement rising. People who believe in transparency, in truth that cannot be rewritten." },
-    { "key": "mentor1_line6", "value": "Zarek: We're building something better… something free. And I want you to be part of it. But before you join us, you need to prove that you understand what we’re fighting for." },
-    { "key": "mentor1_line7", "value": "Zarek: This isn’t just tech—it’s a revolution. And only those who grasp its core can wield it." }
+
+
+    { "key": "level0_mentor1_line1", "value": "Zarek: Hi! I'm Zarek, thank you for meeting me here. I want to talk to you about something... I used to work for Central Core until I found out what they do with our information. \n\n (Press E to continue)" },
+    { "key": "level0_mentor1_line2", "value": "Zarek: Central Core controls all the data in NeonCity. What you see, buy and know... Everything is on their servers. If something isn't convenient for them, they modify it. If someone challenges them, they erase their identity. In other words, they modify and erase information in their favor." },
+    { "key": "level0_mentor1_line3", "value": "Zarek: And that's exactly why the centralization of information is so dangerous for us, but... there is a solution... Blockchain." },
+    { "key": "level0_mentor1_line4", "value": "Blockchain is a system where the information is not saved in only one place. Instead, it is copied in thousands of computers at the same time. If someone changes something, they would have to modify ALL the copies at the same time, which is impossible." },
+    { "key": "level0_mentor1_line5", "value": "Zarek: So now you see, Eve… the problem isn’t just the system. It’s who controls it, but things are changing. Out there, in the shadows of NeonCity, there's a new movement rising. People who believe in transparency, in truth that cannot be rewritten." },
+    { "key": "level0_mentor1_line6", "value": "Zarek: We're building something better… something free. And I want you to be part of it. But before you join us, you need to prove that you understand what we’re fighting for." },
+    { "key": "level0_mentor1_line7", "value": "Zarek: This isn’t just tech—it’s a revolution. And only those who grasp its core can wield it." },
+    { "key": "level0_mentor2_line1", "value": "Zarek: Beware of the drones! They belong to Central Core and if they touch you they will rest you one life." },
+    { "key": "level0_mentor2_line2", "value": "Zarek: You can shoot them by pressing the spacebar and you will get 100 points." },
+    { "key": "level0_mentor2_line3", "value": "Zarek: Collect all the coins you can, you can use them to buy lives." },
+    { "key": "level0_mentor2_line4", "value": "Zarek: One more thing... all the antennas represent questions about blockchain. You have to answer them all to prove your knowledge and to complete the level. Otherwise, you will not be able to change level." },
+    { "key": "level0_mentor2_line5", "value": "Zarek: If you answer well, you will be rewarded with 100 coins, otherwise you will lose a life." },
+    { "key": "level0_mentor2_line6", "value": "Zarek: But don't worry! I will explain you the concepts before answering the questions." },
+    { "key": "level0_mentor2_line7", "value": "Zarek: When you reach the alien you will be able to continue to the next level." },
+    { "key": "level0_mentor2_line8", "value": "Zarek: Good Luck!" },
+    { "key": "level0_mentor3_line1", "value": "Zarek: Amazing! You are getting all the content right away!" },
+    { "key": "level0_mentor3_line2", "value": "Zarek: Now that you know what Blockchain is, you need to understand how decentralized verification works." },
+    { "key": "level0_mentor3_line3", "value": "Zarek: When someone sends data in the blockchain—like a message or a transaction—it doesn't just go through. First, it's checked by multiple people in the network." },
+    { "key": "level0_mentor3_line4", "value": "Zarek: These people, or rather, nodes, all have a copy of the blockchain. They compare the new data with what they already have to confirm it's valid. That way, no one can sneak in false information." },
+    { "key": "level0_mentor4_line1", "value": "Zarek: You are doing great! So... now let's continue. Let's talk about how we can use blocks as containers of information." },
+    { "key": "level0_mentor4_line2", "value": "Zarek: Once the information is verified, it doesn’t just float around. It's grouped into a structure we call a block." },
+    { "key": "level0_mentor4_line3", "value": "Zarek: Each block contains several verified transactions and a unique code that links it to the previous block. That connection forms a chain that cannot be broken or altered. It’s like a digital timeline that no one can rewrite." },
+    { "key": "level0_mentor5_line1", "value": "Zarek: Follow me, you still have a lot to learn about Blockchain!" }
+
+    
+
+
 
 
   ]
