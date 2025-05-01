@@ -104,7 +104,26 @@
     { "key": "level0_mentor4_line1", "value": "Zarek: ¡Lo estás haciendo excelente! Así que... ahora continuemos. Hablemos de cómo podemos usar los bloques como contenedores de información." },
     { "key": "level0_mentor4_line2", "value": "Zarek: Una vez que la información es verificada, no queda flotando. Se agrupa en una estructura que llamamos bloque." },
     { "key": "level0_mentor4_line3", "value": "Zarek: Cada bloque contiene varias transacciones verificadas y un código único que lo enlaza con el bloque anterior. Esa conexión forma una cadena que no puede romperse ni alterarse. Es como una línea de tiempo digital que nadie puede reescribir." },
-    { "key": "level0_mentor5_line1", "value": "Zarek: ¡Sígueme, aún tienes mucho que aprender sobre Blockchain!" }
+    { "key": "level0_mentor5_line1", "value": "Zarek: ¡Sígueme, aún tienes mucho que aprender sobre Blockchain!" },
+
+    { "key": "level1_mentor1_line1", "value": "Zarek: ¿Pensaste que mi historia había terminado? El cuerpo puede caer, pero el conocimiento... permanece." },
+    { "key": "level1_mentor1_line2", "value": "Zarek: Has llegado a un punto clave, donde no solo aprenderás cómo funciona blockchain, sino por qué ha resistido el tiempo y los ataques. Muchos han intentado destruirlo, nadie lo ha logrado." },
+    { "key": "level1_mentor1_line3", "value": "Zarek: Aquí descubrirás las debilidades que han intentado explotar, por qué han fracasado al hacerlo, y por qué cada movimiento en la red tiene un precio." },
+    { "key": "level1_mentor1_line4", "value": "Zarek: Escucha con atención... Este conocimiento podría ser lo único que te salve del colapso digital." },
+    { "key": "level1_mentor1_line5", "value": "Zarek: Una cosa más... cuidado con los drones dorados, son más rápidos y pueden causar más daño. Recuerda que puedes mejorar tu arma en la tienda." },
+    { "key": "level1_mentor1_line6", "value": "Zarek: ¡Buena suerte!" },
+    { "key": "level1_mentor2_line1", "value": "Zarek: Aunque Blockchain es muy segura, podría ser dañada si alguien llegara a controlar más de la mitad de la red. A eso se le llama un ataque del 51%." },
+    { "key": "level1_mentor2_line2", "value": "Zarek: Pero es algo extremadamente difícil y costoso de lograr, especialmente en blockchains grandes con muchos usuarios." },
+    { "key": "level1_mentor3_line1", "value": "Zarek: Cada bloque en la blockchain es como una caja fuerte que tiene un candado único que depende de la caja anterior." },
+    { "key": "level1_mentor3_line2", "value": "Zarek: Así que si alguien quisiera modificar un bloque, tendría que abrir todas las cajas desde el inicio, una por una, lo cual es casi imposible." },
+    { "key": "level1_mentor3_line3", "value": "Zarek: Por eso la blockchain es tan segura y nunca ha sido hackeada como otros sistemas." },
+    { "key": "level1_mentor4_line1", "value": "Zarek: En el mundo de la blockchain, hay personas (o computadoras) que revisan que todo esté bien antes de que se escriba algo nuevo." },
+    { "key": "level1_mentor4_line2", "value": "Zarek: Estas personas trabajan duro y gastan energía, por eso se les da una recompensa (una pequeña cantidad de dinero o criptomoneda)." },
+    { "key": "level1_mentor4_line3", "value": "Zarek: Eso es lo que pagas con la comisión de transacción, para agradecerles su ayuda." }
+    
+    
+
+
 
 
 
