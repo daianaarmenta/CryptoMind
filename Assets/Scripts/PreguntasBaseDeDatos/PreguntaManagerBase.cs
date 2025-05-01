@@ -3,7 +3,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class PreguntaManagerBase : MonoBehaviour
 {
@@ -103,6 +105,8 @@ public class PreguntaManagerBase : MonoBehaviour
         string lang = LanguageManager.instance.GetSystemLanguage();
         string fileName = lang == "es" ? "preguntas_es": "preguntas_mock_completo";
 
+        string escena = SceneManager.GetActiveScene().name;
+
         TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
         if (jsonFile == null)
         {
@@ -110,15 +114,17 @@ public class PreguntaManagerBase : MonoBehaviour
         }
 
         PreguntaListWrapper wrapper = JsonUtility.FromJson<PreguntaListWrapper>(jsonFile.text);
-        PreguntaData pregunta = wrapper.items.Find(p => p.pregunta.id_pregunta == id);
 
-        if (pregunta != null)
+        if(escena == "Nivel5" || escena.Contains("5"))
         {
-            MostrarPregunta(pregunta);
+            int idRandom = UnityEngine.Random.Range(0, wrapper.items.Count);
+            PreguntaData preguntaAleatoria = wrapper.items[idRandom];
+            MostrarPregunta(preguntaAleatoria);
         }
         else
         {
-            Debug.LogWarning("Pregunta con ID " + id + " no encontrada en el JSON.");
+            PreguntaData pregunta = wrapper.items.Find(p => p.pregunta.id_pregunta == id);
+            MostrarPregunta(pregunta);
         }
     }
 
