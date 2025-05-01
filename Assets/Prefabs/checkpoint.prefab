@@ -132,6 +132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3094534383585827609, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6593823826492238540}
+    - targetCorrespondingSourceObject: {fileID: 4521704691314023444, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7123875961498689004}
   m_SourcePrefab: {fileID: 100100000, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
 --- !u!1 &5006344703120802054 stripped
 GameObject:
@@ -296,6 +299,24 @@ MonoBehaviour:
   marker: {fileID: 8110706743166780159}
   idPregunta: 0
   sonidoCheckpoint: {fileID: 8300000, guid: d456e8e16c70ce742995a1c96d7ff2cd, type: 3}
+--- !u!1 &5857977150443636235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521704691314023444, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
+  m_PrefabInstance: {fileID: 8037770142239758879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7123875961498689004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857977150443636235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizationKey: press_e
 --- !u!4 &7795097540341565231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 262997350608641328, guid: b9ab80d29122e594dbc3674825ca5018, type: 3}
