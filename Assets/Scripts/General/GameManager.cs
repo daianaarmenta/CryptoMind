@@ -42,42 +42,27 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
-private void Start()
-{
-    PlayerPrefs.Save();
-    monedas = PlayerPrefs.GetInt("NumeroMonedas", 0);
-    puntaje = PlayerPrefs.GetInt("Puntaje", 0);
-    DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f);
-    CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25);
-
-    string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-
-    if (escena != "Nivel5" && !escena.Contains("5"))
+    private void Start()
     {
-        ReiniciarVidas(); // ✅ Solo reiniciar si NO es nivel 5
-    }
-    else
-    {
-        Debug.Log("🧪 Nivel 5 detectado. No se reinician vidas.");
-    }
-}
 
-    /*private void Start()
-    {
-        
-
-        //Para reiniciar daño   
-        //PlayerPrefs.DeleteKey("DañoBala");
-        //PlayerPrefs.DeleteKey("CostoMejora");
         PlayerPrefs.Save();
-        // 🔁 Cargar monedas y puntaje guardado al iniciar
         monedas = PlayerPrefs.GetInt("NumeroMonedas", 0);
         puntaje = PlayerPrefs.GetInt("Puntaje", 0);
+        DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f);
+        CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25);
 
-        DañoBala = PlayerPrefs.GetFloat("DañoBala", 20f); // Empieza en 20 por defecto
-        CostoMejoraBala = PlayerPrefs.GetInt("CostoMejora", 25); // Empieza en 50 por defecto
-        ReiniciarVidas();
-    }*/
+        string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        if (escena != "Nivel5" && !escena.Contains("5"))
+        {
+            ReiniciarVidas(); // ✅ Solo reiniciar si NO es nivel 5
+        }
+        else
+        {
+            Debug.Log("🧪 Nivel 5 detectado. No se reinician vidas.");
+        }
+    }
+
 
     // ✅ MONEDAS
     public void SumarMonedas(int cantidad)
