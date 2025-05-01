@@ -30031,6 +30031,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5593744913979386795, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d2317826d35775f4b9f81fa31267d2d2, type: 2}
+    - target: {fileID: 5593744913979386795, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8841209194268207319, guid: 3dac2e8ffb67811438a5c0010992b256, type: 3}
       propertyPath: m_Pitch
       value: 1
