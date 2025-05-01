@@ -277,7 +277,14 @@ public class PreguntaManagerBase : MonoBehaviour
     private IEnumerator MostrarFinalyDecidir()
     {
         panelMensajeFinal.SetActive(true);
-        textoResultadoFinal.text = $"You {(respuestasCorrectas >= 10 ? "did it" : "failed")}!\nYou had {respuestasCorrectas}/15 correct answers!";
+        string resultado = respuestasCorrectas >= 10 ? LanguageManager.instance.GetText("did_it") : LanguageManager.instance.GetText("failed");
+
+        textoResultadoFinal.text = LanguageManager.instance.GetFormattedText(
+            "quiz_result",
+            resultado,
+            respuestasCorrectas
+        );
+
 
         yield return new WaitForSecondsRealtime(4f); // Espera 3 segundos
 
@@ -333,7 +340,7 @@ public class PreguntaManagerBase : MonoBehaviour
             tiempoAgotado = true;
 
             enemigo?.Acelerar();
-            MostrarMensaje("Time's up!", Color.red);
+            MostrarMensaje(LanguageManager.instance.GetText("times_up"), Color.red);//"Time's up!"
             audioSource.PlayOneShot(audioClipIncorrecto);
 
             yield return new WaitForSecondsRealtime(tiempoMensaje);

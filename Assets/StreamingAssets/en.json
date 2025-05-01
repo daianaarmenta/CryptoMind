@@ -191,7 +191,11 @@
     { "key": "damage_max", "value": "Damage is at max." },
     { "key": "upgrade_requires_more_coins", "value": "Need more coins!" },
     { "key": "max_lives_reached", "value": "Max lives reached" },
-    { "key": "new_damage", "value": "New damage: {0}" }
+    { "key": "new_damage", "value": "New damage: {0}" },
+    { "key": "quiz_result", "value": "You {0}!\nYou had {1}/15 correct answers!" },
+    { "key": "times_up", "value": "Time's up!" },
+    { "key": "did_it", "value": "did it" },
+    { "key": "failed", "value": "failed" }
 
   ]
 }

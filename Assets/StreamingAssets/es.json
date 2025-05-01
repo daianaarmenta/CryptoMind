@@ -187,7 +187,13 @@
     { "key": "damage_max", "value": "El daño ya está al máximo." },
     { "key": "upgrade_requires_more_coins", "value": "¡Necesitas más monedas para mejorar!" },
     { "key": "max_lives_reached", "value": "Ya tienes el máximo de vidas" },
-    { "key": "new_damage", "value": "Nuevo daño: {0}" }
+    { "key": "new_damage", "value": "Nuevo daño: {0}" },
+    { "key": "quiz_result", "value": "¡{0}!\nTuviste {1}/15 respuestas correctas." },
+    { "key": "times_up", "value": "¡Se acabó el tiempo!" },
+    { "key": "did_it", "value": "Lo lograste" },
+    { "key": "failed", "value": "Fallaste" }
+
+
 
   ]
 }
