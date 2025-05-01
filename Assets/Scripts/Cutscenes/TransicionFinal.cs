@@ -5,18 +5,24 @@ using UnityEngine.SceneManagement;
 public class TransicionFinal : MonoBehaviour
 {
     [SerializeField] private PlayableDirector timeline;
+
+    private GameObject personaje;
     private Animator personajeAnimator;
+    private Rigidbody2D rb;
+    private Collider2D col;
 
     void Start()
     {
-        GameObject personaje = GameObject.Find("personaje");
+        personaje = GameObject.Find("personaje");
         if (personaje != null)
         {
             personajeAnimator = personaje.GetComponent<Animator>();
+            rb = personaje.GetComponent<Rigidbody2D>();
+            col = personaje.GetComponent<Collider2D>();
+
+            personaje.SetActive(true);
             if (personajeAnimator != null)
-            {
                 personajeAnimator.enabled = true;
-            }
         }
 
         if (timeline != null)
@@ -27,19 +33,41 @@ public class TransicionFinal : MonoBehaviour
 
     private void OnTimelineFinished(PlayableDirector director)
     {
-        if (personajeAnimator != null)
+
+        if (personaje != null)
         {
-            personajeAnimator.enabled = false;
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.bodyType = RigidbodyType2D.Static;
+            }
+
+            MonoBehaviour[] scripts = personaje.GetComponents<MonoBehaviour>();
+            foreach (var script in scripts)
+            {
+                if (script != this && script.enabled)
+                {
+                    script.enabled = false;
+                }
+            }
+
+            if (personajeAnimator != null)
+            {
+                personajeAnimator.enabled = false;
+            }
         }
 
         TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
         if (transicion != null)
-        {
             transicion.IrAEscena("Creditos");
-        }
         else
-        {
             SceneManager.LoadScene("Creditos");
-        }
+    }
+
+    private void OnDestroy()
+    {
+        if (timeline != null)
+            timeline.stopped -= OnTimelineFinished;
     }
 }
