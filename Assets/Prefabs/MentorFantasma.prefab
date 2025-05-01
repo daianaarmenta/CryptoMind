@@ -241,8 +241,7 @@ MonoBehaviour:
   dialogueMark: {fileID: 987984748606371593}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  dialogueLines:
-  - 'Zarek: Prueba mentor fantasma'
+  dialoguekeys: []
   typingAudioSource: {fileID: 6904960935621823259}
   typingSound: {fileID: 8300000, guid: 334852349d56c12418ee6e70355db7bc, type: 3}
   notificationSound: {fileID: 8300000, guid: eb988c366354c1a438efb0845e12a80e, type: 3}
@@ -367,6 +366,7 @@ GameObject:
   - component: {fileID: 240626112574648638}
   - component: {fileID: 5207905411768228899}
   - component: {fileID: 2892516055785698364}
+  - component: {fileID: 3911152453436905020}
   m_Layer: 0
   m_Name: PressE
   m_TagString: Untagged
@@ -460,7 +460,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2317826d35775f4b9f81fa31267d2d2, type: 2}
   m_sharedMaterial: {fileID: -4828078228106770127, guid: 60b7feb202697c64c9af03d3b7f9af2c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -529,6 +529,19 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 5207905411768228899}
   m_maskType: 0
+--- !u!114 &3911152453436905020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577254831784993320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizationKey: press_E
