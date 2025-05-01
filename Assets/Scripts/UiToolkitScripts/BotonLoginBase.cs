@@ -13,7 +13,7 @@ public class BotonLoginBase : MonoBehaviour
     [SerializeField]
     private GameObject loginMenuGame; 
 
-    //[SerializeField] private GameObject gameManagerPrefab;
+    [SerializeField] private GameObject gameManagerPrefab;
     private UIDocument loginMenu;
     private Button botonLogin, regresarEscene;
     private TextField email, password;

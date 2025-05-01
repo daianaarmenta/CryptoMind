@@ -184,7 +184,13 @@
     { "key": "level5_mentor1_line2", "value": "Zarek: You only have 10 seconds to answer each question." },
     { "key": "level5_mentor1_line3", "value": "Zarek: For each wrong answer you have, OneCore will increase its speed." },
     { "key": "level5_mentor1_line4", "value": "Zarek: You won't have access to the store." },
-    { "key": "level5_mentor1_line5", "value": "Zarek: Good luck!" }
+    { "key": "level5_mentor1_line5", "value": "Zarek: Good luck!" },
+    { "key": "extra_life_acquired", "value": "Extra life acquired!" },
+    { "key": "need_more_coins", "value": "Need more coins!" },
+    { "key": "damage_max", "value": "Damage is at max." },
+    { "key": "upgrade_requires_more_coins", "value": "Need more coins!" },
+    { "key": "max_lives_reached", "value": "Max lives reached" },
+    { "key": "new_damage", "value": "New damage: {0}" }
 
   ]
 }

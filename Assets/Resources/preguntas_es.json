@@ -8,10 +8,193 @@
         "dificultad": 1
       },
       "opciones": [
-        { "id_opcion": 1, "id_pregunta": 1, "texto_opcion": "Una base de datos centralizada controlada por una sola entidad", "es_correcta": false },
+        { "id_opcion": 1, "id_pregunta": 1, "texto_opcion": "Una base de datos central controlada por una sola entidad", "es_correcta": false },
         { "id_opcion": 2, "id_pregunta": 1, "texto_opcion": "Una base de datos descentralizada", "es_correcta": true },
-        { "id_opcion": 3, "id_pregunta": 1, "texto_opcion": "Un servidor que se reinicia cada vez que alguien hace una transacción", "es_correcta": false }
+        { "id_opcion": 3, "id_pregunta": 1, "texto_opcion": "Un servidor que se reinicia cada vez que alguien realiza una transacción", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 2,
+        "id_nivel": 0,
+        "texto_pregunta": "¿Cómo funciona la verificación descentralizada en Blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 4, "id_pregunta": 2, "texto_opcion": "Los datos se confían automáticamente sin verificar, lo que garantiza transacciones rápidas.", "es_correcta": false },
+        { "id_opcion": 5, "id_pregunta": 2, "texto_opcion": "Solo una persona verifica los datos antes de que se agreguen a la blockchain.", "es_correcta": false },
+        { "id_opcion": 6, "id_pregunta": 2, "texto_opcion": "Los datos son verificados por múltiples personas, o nodos, para confirmar su validez.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 3,
+        "id_nivel": 0,
+        "texto_pregunta": "¿Por qué se considera segura la Blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 7, "id_pregunta": 3, "texto_opcion": "Los bloques se enlazan para evitar cambios.", "es_correcta": true },
+        { "id_opcion": 8, "id_pregunta": 3, "texto_opcion": "Cada bloque es verificado por varias computadoras antes de unirse.", "es_correcta": false },
+        { "id_opcion": 9, "id_pregunta": 3, "texto_opcion": "Después de la verificación, la información no puede cambiarse fácilmente.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 4,
+        "id_nivel": 1,
+        "texto_pregunta": "¿Cómo podría alguien intentar destruir una blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 10, "id_pregunta": 4, "texto_opcion": "Controlar el 51% de la red.", "es_correcta": true },
+        { "id_opcion": 11, "id_pregunta": 4, "texto_opcion": "Usar una contraseña segura.", "es_correcta": false },
+        { "id_opcion": 12, "id_pregunta": 4, "texto_opcion": "Eliminar todas las transacciones.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 5,
+        "id_nivel": 1,
+        "texto_pregunta": "¿Por qué la tecnología blockchain nunca ha sido hackeada?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 13, "id_pregunta": 5, "texto_opcion": "Porque cada bloque está bloqueado con un código único que se enlaza al anterior.", "es_correcta": true },
+        { "id_opcion": 14, "id_pregunta": 5, "texto_opcion": "Porque está escondida en internet.", "es_correcta": false },
+        { "id_opcion": 15, "id_pregunta": 5, "texto_opcion": "Porque solo utiliza computadoras grandes.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 6,
+        "id_nivel": 1,
+        "texto_pregunta": "¿Por qué se paga una comisión por transacción en blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 16, "id_pregunta": 6, "texto_opcion": "Para recompensar a quienes confirman las transacciones.", "es_correcta": true },
+        { "id_opcion": 17, "id_pregunta": 6, "texto_opcion": "Para desbloquear poderes especiales en la blockchain.", "es_correcta": false },
+        { "id_opcion": 18, "id_pregunta": 6, "texto_opcion": "Para pagar por el uso de internet.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 7,
+        "id_nivel": 2,
+        "texto_pregunta": "¿Qué es una criptomoneda?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 19, "id_pregunta": 7, "texto_opcion": "Moneda que guardas en tus aplicaciones móviles o teléfono.", "es_correcta": false },
+        { "id_opcion": 20, "id_pregunta": 7, "texto_opcion": "Dinero emitido y gestionado por bancos.", "es_correcta": false },
+        { "id_opcion": 21, "id_pregunta": 7, "texto_opcion": "Dinero digital almacenado de forma segura usando blockchain.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 8,
+        "id_nivel": 2,
+        "texto_pregunta": "¿En qué se diferencia la criptomoneda del dinero digital regular?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 22, "id_pregunta": 8, "texto_opcion": "Funcionan por una red, no por bancos.", "es_correcta": true },
+        { "id_opcion": 23, "id_pregunta": 8, "texto_opcion": "La criptomoneda se usa principalmente para comprar en línea, no fuera de línea.", "es_correcta": false },
+        { "id_opcion": 24, "id_pregunta": 8, "texto_opcion": "El dinero digital a menudo funciona más lentamente que los sistemas cripto.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 9,
+        "id_nivel": 2,
+        "texto_pregunta": "¿Cuál de estos es un tipo de criptomoneda?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 25, "id_pregunta": 9, "texto_opcion": "PayPal", "es_correcta": false },
+        { "id_opcion": 26, "id_pregunta": 9, "texto_opcion": "Ethereum", "es_correcta": true },
+        { "id_opcion": 27, "id_pregunta": 9, "texto_opcion": "Visa", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 10,
+        "id_nivel": 3,
+        "texto_pregunta": "¿Qué es una billetera de criptomonedas?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 28, "id_pregunta": 10, "texto_opcion": "Un lugar especial para guardar monedas y billetes", "es_correcta": false },
+        { "id_opcion": 29, "id_pregunta": 10, "texto_opcion": "Una herramienta digital que almacena claves privadas para acceder a tu cripto", "es_correcta": true },
+        { "id_opcion": 30, "id_pregunta": 10, "texto_opcion": "Una cuenta bancaria con acceso a internet", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 11,
+        "id_nivel": 3,
+        "texto_pregunta": "¿Cómo puedes evitar perder tu criptomoneda?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 31, "id_pregunta": 11, "texto_opcion": "Deja tu pestaña de billetera abierta para que sea más fácil acceder después.", "es_correcta": false },
+        { "id_opcion": 32, "id_pregunta": 11, "texto_opcion": "Deja que un amigo guarde tu clave privada como respaldo.", "es_correcta": false },
+        { "id_opcion": 33, "id_pregunta": 11, "texto_opcion": "Protege tu frase de recuperación y nunca reveles tu clave privada a nadie.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 12,
+        "id_nivel": 3,
+        "texto_pregunta": "¿Dónde puedes comprar criptomonedas?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 34, "id_pregunta": 12, "texto_opcion": "Visita una tienda del mundo real que ofrezca servicios cripto.", "es_correcta": false },
+        { "id_opcion": 35, "id_pregunta": 12, "texto_opcion": "Puedes obtenerla directamente del gobierno.", "es_correcta": false },
+        { "id_opcion": 36, "id_pregunta": 12, "texto_opcion": "Cómprala a través de plataformas en línea llamadas exchanges.", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 13,
+        "id_nivel": 4,
+        "texto_pregunta": "¿Qué es la minería en blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 37, "id_pregunta": 13, "texto_opcion": "Buscar monedas bajo tierra.", "es_correcta": false },
+        { "id_opcion": 38, "id_pregunta": 13, "texto_opcion": "Resolver tareas para ganar cripto.", "es_correcta": true },
+        { "id_opcion": 39, "id_pregunta": 13, "texto_opcion": "Hackear blockchains para robar información.", "es_correcta": false }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 14,
+        "id_nivel": 4,
+        "texto_pregunta": "¿Qué se puede construir usando tecnología blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 40, "id_pregunta": 14, "texto_opcion": "Solo criptomonedas", "es_correcta": false },
+        { "id_opcion": 41, "id_pregunta": 14, "texto_opcion": "Solo juegos", "es_correcta": false },
+        { "id_opcion": 42, "id_pregunta": 14, "texto_opcion": "Juegos, sistemas de votación y contratos inteligentes", "es_correcta": true }
+      ]
+    },
+    {
+      "pregunta": {
+        "id_pregunta": 15,
+        "id_nivel": 4,
+        "texto_pregunta": "¿Quién puede formar parte de una red blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 43, "id_pregunta": 15, "texto_opcion": "Solo usuarios aprobados por un gobierno.", "es_correcta": false },
+        { "id_opcion": 44, "id_pregunta": 15, "texto_opcion": "Cualquiera con internet y una computadora.", "es_correcta": true },
+        { "id_opcion": 45, "id_pregunta": 15, "texto_opcion": "La participación está limitada solo a los bancos.", "es_correcta": false }
       ]
     }
   ]
 }
+

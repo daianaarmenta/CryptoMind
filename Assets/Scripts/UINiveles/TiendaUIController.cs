@@ -87,7 +87,7 @@ public class TiendaCanvasController : MonoBehaviour
 
             if (!GameManager.Instance.PuedeComprarVida())
             {
-                MostrarMensaje("Max lives reached");
+                MostrarMensaje(LanguageManager.instance.GetText("max_lives_reached"));//Max lives
                 Invoke(nameof(LimpiarMensaje), 3f);
 
                 return;
@@ -104,7 +104,7 @@ public class TiendaCanvasController : MonoBehaviour
                 }
                 audioSource.PlayOneShot(sonidoCompra, 1f);
 
-                MostrarMensaje("Extra life acquired!");
+                MostrarMensaje(LanguageManager.instance.GetText("extra_life_acquired"));//Extra life acquire!
                 Invoke(nameof(LimpiarMensaje), 3f);
 
                 ActualizarUI();
@@ -112,7 +112,7 @@ public class TiendaCanvasController : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(sonidoError, 1f);
-                MostrarMensaje("Need more coins!");
+                MostrarMensaje(LanguageManager.instance.GetText("need_more_coins"));//"Need more coins!"
                 Invoke(nameof(LimpiarMensaje), 3f);
 
             }
@@ -122,7 +122,7 @@ public class TiendaCanvasController : MonoBehaviour
         {
             if (GameManager.Instance.DañoBala >= 100f)
             {
-                MostrarMensaje("Damage is at max.");
+                MostrarMensaje(LanguageManager.instance.GetText("damage_max"));//"Damage is at max."
                 Invoke(nameof(LimpiarMensaje), 3f);
 
                 return;
@@ -134,7 +134,7 @@ public class TiendaCanvasController : MonoBehaviour
             {
                 GameManager.Instance.MejorarBala();
                 audioSource.PlayOneShot(sonidoCompra, 1f);
-                MostrarMensaje($"New damage: {GameManager.Instance.DañoBala}");
+                MostrarMensaje(LanguageManager.instance.GetFormattedText("new_damage", GameManager.Instance.DañoBala));//$"New damage: {GameManager.Instance.DañoBala}"
                 Invoke(nameof(LimpiarMensaje), 3f);
 
                 ActualizarUI();
@@ -142,7 +142,7 @@ public class TiendaCanvasController : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(sonidoError, 1f);
-                MostrarMensaje("Need more coins!");
+                MostrarMensaje(LanguageManager.instance.GetText("need_more_coins"));//"Need more coins!"
                 Invoke(nameof(LimpiarMensaje), 3f);
 
             }

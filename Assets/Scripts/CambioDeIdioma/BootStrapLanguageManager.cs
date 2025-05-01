@@ -6,14 +6,14 @@ public class BootstrapLanguageManager : MonoBehaviour
 
     private void Awake()
     {
-        if (GameManager.Instance == null)
+        if (FindFirstObjectByType<LanguageManager>() == null)
         {
-            Debug.Log("🔄 Instanciando GameManager desde Bootstrapper.");
+            Debug.Log("🔄 Instanciando LanguageManager desde Bootstrapper.");
             Instantiate(LanguageManager);
         }
         else
         {
-            Debug.Log("✅ GameManager ya está presente.");
+            Debug.Log("✅ LanguageManager ya está presente.");
         }
     }
 }

@@ -39,8 +39,8 @@
     { "key": "ui_play_again", "value": "¿JUGAR DE NUEVO?" },
     { "key": "ui_sound", "value": "Sonido" },
     { "key": "ui_brightness", "value": "Brillo" },
-    { "key": "ui_life", "value": "        Vida" },
-    { "key": "ui_upgrade", "value": "       Mejora" },
+    { "key": "ui_life", "value": "      Vida" },
+    { "key": "ui_upgrade", "value": "     Mejora" },
     { "key": "missing_checkpoints", "value": "Te faltan {0} checkpoint(s)." },
 
     { "key": "about_cryptochicks_title", "value": "Sobre CryptoChicks" },
@@ -179,7 +179,14 @@
     { "key": "level5_mentor1_line2", "value": "Zarek: Solo tienes 10 segundos para responder cada pregunta." },
     { "key": "level5_mentor1_line3", "value": "Zarek: Por cada respuesta incorrecta, OneCore aumentará su velocidad." },
     { "key": "level5_mentor1_line4", "value": "Zarek: No tendrás acceso a la tienda." },
-    { "key": "level5_mentor1_line5", "value": "Zarek: ¡Buena suerte!" }
+    { "key": "level5_mentor1_line5", "value": "Zarek: ¡Buena suerte!" },
+
+    { "key": "extra_life_acquired", "value": "¡Vida extra adquirida!" },
+    { "key": "need_more_coins", "value": "¡Necesitas más monedas!" },
+    { "key": "damage_max", "value": "El daño ya está al máximo." },
+    { "key": "upgrade_requires_more_coins", "value": "¡Necesitas más monedas para mejorar!" },
+    { "key": "max_lives_reached", "value": "Ya tienes el máximo de vidas" },
+    { "key": "new_damage", "value": "Nuevo daño: {0}" }
 
   ]
 }
