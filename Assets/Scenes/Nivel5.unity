@@ -2226,8 +2226,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1806237866}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: dialoguekeys.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[0]'
+      value: level5_mentor1_line1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[1]'
+      value: level5_mentor1_line2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[2]'
+      value: level5_mentor1_line3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[3]'
+      value: level5_mentor1_line4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
+      propertyPath: 'dialoguekeys.Array.data[4]'
+      value: level5_mentor1_line5
       objectReference: {fileID: 0}
     - target: {fileID: 3183876300431735839, guid: b8e4041e99e6b884fbc9fb5eb536b0bd, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
