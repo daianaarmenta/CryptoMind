@@ -119,6 +119,12 @@ public class LanguageManager : MonoBehaviour
         return key;
     }
 
+    public string GetFormattedText(string key, params object[] args)
+    {
+        string raw = GetText(key);
+        return string.Format(raw, args);
+    }
+
     public void SetLanguage(string languageCode)
     {
         currentLanguage = languageCode;

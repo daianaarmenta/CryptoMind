@@ -60,7 +60,8 @@ public class Alien : MonoBehaviour
             else
             {
                 int restantes = cantidadCheckpoint - checkpointTerminado;
-                MostrarMensaje($"You are missing {restantes} checkpoint{(restantes > 1 ? "s" : "")}.");
+                string mensaje = LanguageManager.instance.GetFormattedText("missing_checkpoints", restantes);
+                MostrarMensaje(mensaje);
             }
         }
     }

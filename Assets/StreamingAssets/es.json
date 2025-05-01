@@ -41,6 +41,7 @@
     { "key": "ui_brightness", "value": "Brillo" },
     { "key": "ui_life", "value": "        Vida" },
     { "key": "ui_upgrade", "value": "       Mejora" },
+    { "key": "missing_checkpoints", "value": "Te faltan {0} checkpoint(s)." },
 
     { "key": "about_cryptochicks_title", "value": "Sobre CryptoChicks" },
     { "key": "about_cryptochicks_description", "value": "CryptoChicks comenzó con \n dos ingenieras de software \n y amigas, Elena y Natalia,\n caminando por los laberintos \n de la tecnología blockchain \n y decidiendo ayudar a otras \n mujeres a navegar por ellos.\n Ahora es una organización \n internacional sin fines de \n lucro con miembros,eventos \n y capítulos en 56 países, \n ayudando a miles \n de mujeres en todo el mundo \n a aprender e invertir \n en blockchain, construir \n nuevas carreras y negocios." },
