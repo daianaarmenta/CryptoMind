@@ -16,7 +16,8 @@ public class LogicaBrillo : MonoBehaviour
     {
         sliderValue = valor; // Actualiza el valor del brillo
         PlayerPrefs.SetFloat("brillo", sliderValue); // Guarda el brillo en PlayerPrefs
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g,panelBrillo.color.b,sliderBrillo.value); // Establece el brillo del panel de opciones
+        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, 1 - sliderBrillo.value);
+
     }
 
     // Update is called once per frame
