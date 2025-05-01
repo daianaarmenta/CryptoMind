@@ -1,6 +1,11 @@
 using UnityEngine;
 using TMPro;
 
+/*
+Autor: María Fernanda Pineda Pat
+Este script muestra el puntaje actual del jugador en la interfaz de usuario,
+actualizándolo únicamente cuando cambia el valor para optimizar el rendimiento.
+*/
 public class PuntajeEnemigo : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textMesh;
@@ -11,7 +16,7 @@ public class PuntajeEnemigo : MonoBehaviour
     {
         if (textMesh == null)
         {
-            Debug.LogError("❌ No se asignó el TextMeshProUGUI en el Inspector.");
+            //Debug.LogError("No se asignó el TextMeshProUGUI en el Inspector.");
             return;
         }
 
@@ -35,7 +40,7 @@ public class PuntajeEnemigo : MonoBehaviour
     {
         if (textMesh == null)
         {
-            Debug.LogWarning("⚠️ textMesh no asignado en PuntajeEnemigo.");
+            //Debug.LogWarning(" textMesh no asignado en PuntajeEnemigo.");
             return;
         }
 

@@ -1,6 +1,11 @@
 using TMPro;
 using UnityEngine;
 
+/*
+Autor: María Fernanda Pineda Pat
+Este script muestra el puntaje del jugador en la interfaz de usuario, 
+actualizandolo constantemente a partir del GameManager.
+*/
 public class PuntosHUB : MonoBehaviour
 {
     private GameManager gameManager;
@@ -12,12 +17,12 @@ public class PuntosHUB : MonoBehaviour
 
         if (gameManager == null)
         {
-            Debug.LogError("GameManager no encontrado en la escena.");
+            //Debug.LogError("GameManager no encontrado en la escena.");
         }
 
         if (puntos == null)
         {
-            Debug.LogError("TextMeshProUGUI (puntos) no está asignado en el Inspector.");
+            //Debug.LogError("TextMeshProUGUI (puntos) no está asignado en el Inspector.");
         }
     }
 

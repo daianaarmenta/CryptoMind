@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
+/*
+Autor: María Fernanda Pineda Pat
+Controla los botones principales del HUD del juego, incluyendo pausa, tienda, reinicio y opciones y salida. 
+*/
 public class BottonController : MonoBehaviour
 {
     [Header("Referencias UI")]
@@ -13,13 +15,14 @@ public class BottonController : MonoBehaviour
     [SerializeField] private GameObject panelOpciones;
     private AudioSource audioSource; // Fuente de audio para reproducir música
 
-    // 🔘 PAUSAR el juego
-
+    // Inicializa referencias. Se ejecuta una vez al iniciar la escena. 
     void Start()
     {
         audioSource = GetComponent<AudioSource>(); 
         
     }
+
+    // Pausa el juego, muestra el menú de pausa y detiene la música. 
     public void Pausa()
     {
         Time.timeScale = 0f;                // Pausa el tiempo del juego
@@ -28,7 +31,7 @@ public class BottonController : MonoBehaviour
         musicaFondo.Pause();          // Muestra el menú de pausa
     }
 
-    // ▶️ REANUDAR el juego
+    // Reanuda el juego, oculta el menú de pausa y reactiva la música. 
     public void Reanudar()
     {
         Time.timeScale = 1f;                // Reanuda el tiempo del juego
@@ -37,7 +40,7 @@ public class BottonController : MonoBehaviour
         musicaFondo.UnPause();         // Oculta el menú de pausa
     }
 
-    // 🔄 REINICIAR el nivel completo
+    // Reinicia completamente la escena actual y limpia la información persistente. 
     public void Reiniciar()
     {
         Time.timeScale = 1f;
@@ -58,7 +61,7 @@ public class BottonController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // 🛒 ABRIR tienda (como menú de pausa)
+    // Pausa el juego y muestra el menú de tienda.
     public void Tienda()
     {
         Time.timeScale = 0f;                // Pausar el juego
@@ -66,7 +69,7 @@ public class BottonController : MonoBehaviour
         canvasTienda.SetActive(true);       // Mostrar canvas de tienda
     }
 
-    // ❌ CERRAR tienda
+    // Oculta el canvas de la tienda y reanuda el juego.
     public void CerrarTienda()
     {
         Time.timeScale = 1f;                // Reanudar el juego
@@ -74,17 +77,21 @@ public class BottonController : MonoBehaviour
         canvasTienda.SetActive(false);      // Ocultar tienda
     }
 
-    // 🚪 SALIR al menú principal
+    // Sale del nivel actual y carga la escena del menú principal. 
     public void Salir()
     {
         Time.timeScale = 1f;                // Asegura que el tiempo esté normal
         SceneManager.LoadScene(1);          // Cambia a la escena del menú principal (index 1)
     }
+
+    // Muestra el panel de opciones y oculta el menú de pausa. 
     public void AbrirOpciones()
     {
         menuPausa.SetActive(false); // Oculta el menú de pausa
         panelOpciones.SetActive(true); // Muestra el panel de opciones
     }
+
+    // Oculta el panel de opciones y vueleve al menú de pausa.
     public void CerrarOpciones()
     {
         menuPausa.SetActive(true); // Muestra el menú de pausa

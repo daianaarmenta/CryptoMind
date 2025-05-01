@@ -4,6 +4,11 @@ using UnityEngine.UI;
 using System.Collections;
 using Unity.VisualScripting;
 
+/*
+Autor: María Fernanda Pineda Pat
+Controla la tienda dentro del juego , permitiendo comprar vidas y mejoras.
+Tambien maneja la UI de la tienda, sonidos y la logica de apertura/cierre del canvas. 
+*/
 public class TiendaCanvasController : MonoBehaviour
 {
     public static TiendaCanvasController instance;
@@ -32,20 +37,20 @@ public class TiendaCanvasController : MonoBehaviour
     [SerializeField] private GameObject botonPausa;
 
 
+    // Establece el Singleton y obtiene la fuente de audio del objeto
     private void Awake()
     {
 
         // Singleton para evitar duplicados
         if (instance != null && instance != this)
         {
-            Debug.LogWarning("🟠 Se detectó un TiendaCanvasController duplicado. Eliminando...");
+            //Debug.LogWarning("Se detectó un TiendaCanvasController duplicado. Eliminando...");
             Destroy(gameObject);
             return;
         }
 
         instance = this;
         audioSource = GetComponent<AudioSource>();
-        
     }
 
     void Start()
@@ -64,20 +69,21 @@ public class TiendaCanvasController : MonoBehaviour
 
         ActualizarUI();
 
-        Debug.Log($"🟢 TiendaCanvasController activo. ID: {GetInstanceID()}");
+        //Debug.Log($" TiendaCanvasController activo. ID: {GetInstanceID()}");
 
         var todos = FindObjectsByType<TiendaCanvasController>(FindObjectsSortMode.None);
 
-        Debug.Log($"🧪 Total de TiendaCanvasControllers en escena: {todos.Length}");
+        //Debug.Log($" Total de TiendaCanvasControllers en escena: {todos.Length}");
     }
 
+    // Lógica para comprar una vida o una mejora, segun el nombre y el precio indicado
     void Comprar(int precio, string nombre)
     {
         if (nombre == "Vida")
         {
-            Debug.Log($"💡 Intentando comprar vida");
-            Debug.Log($"👀 SaludPersonaje.vidas = {SaludPersonaje.instance?.vidas}");
-            Debug.Log($"📦 GameManager.VidasGuardadas = {GameManager.Instance.VidasGuardadas}");
+            //Debug.Log($" Intentando comprar vida");
+            //Debug.Log($" SaludPersonaje.vidas = {SaludPersonaje.instance?.vidas}");
+            //Debug.Log($" GameManager.VidasGuardadas = {GameManager.Instance.VidasGuardadas}");
 
             if (!GameManager.Instance.PuedeComprarVida())
             {
@@ -143,6 +149,7 @@ public class TiendaCanvasController : MonoBehaviour
         }
     }
 
+    // Actualiza los textos y botones de la tienda según el estado actual del jugador.
     void ActualizarUI()
     {
         monedasTexto.text = GameManager.Instance.Monedas.ToString();
@@ -161,6 +168,7 @@ public class TiendaCanvasController : MonoBehaviour
         botonVida.interactable = GameManager.Instance.PuedeComprarVida();
     }
 
+    // Muestra un mensaje temporal enla tienda.
     void MostrarMensaje(string mensaje)
     {
         if (mensajeTexto != null)
@@ -171,14 +179,16 @@ public class TiendaCanvasController : MonoBehaviour
         }
     }
 
+    // Limpia el mensaje mostrado en la tienda.
     void LimpiarMensaje()
     {
         mensajeTexto.text = "";
     }
 
+    // Activa la tienda, pausa el juego y oculta el HUD.
     public void AbrirTienda()
     {
-        Debug.Log("🛒 Abriendo tienda");
+        //Debug.Log(" Abriendo tienda");
         canvasTienda.SetActive(true);
         musicaFondo.Pause();
         audioSource.PlayOneShot(musicaTienda, 1f); // Reproducir música de tienda
@@ -192,9 +202,10 @@ public class TiendaCanvasController : MonoBehaviour
         ActualizarUI(); // Actualiza los botones al abrir
     }
 
+    // Cierra la tienda, reanuda el juego y muestra el HUD.
     public void CerrarTienda()
     {
-        Debug.Log("🔙 Cerrando tienda");
+        //Debug.Log(" Cerrando tienda");
         canvasTienda.SetActive(false);
         audioSource.Stop();
         musicaFondo.UnPause(); // Reanudar música de fondo

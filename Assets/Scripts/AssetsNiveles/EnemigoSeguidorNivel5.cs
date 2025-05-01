@@ -3,7 +3,11 @@ using UnityEngine;
 using System.Collections;
 using Unity.Cinemachine;
 
-
+/*
+Autor: María Fernanda Pineda Pat
+Comportamiento de un enemigo que sigue al jugador en el Nivel 5.
+Puede acelerar, detenerse, morir con efectos visuales y controlar la cámara temporalmente.
+*/
 public class EnemigoSeguidorNivel5 : MonoBehaviour
 {
     private PlayableGraph graph;
@@ -16,13 +20,11 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private CinemachineBrain cinemachineBrain;
     private CinemachineCamera cinemachineCamera;
-
-
-
     private float velocidadActual;
     private bool activo = true;
     private Animator animator;
-
+ 
+    // Inicialización del enemigo. 
     private void Start()
     {
         velocidadActual = velocidadNormal;
@@ -42,6 +44,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         
     }
 
+    // Movimiento constante del enemigo hacia el jugador.
     private void Update()
     {
         if (!activo || jugador == null) return;
@@ -50,6 +53,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         transform.position += direccion * velocidadActual * Time.deltaTime;
     }
 
+    // Detiene el movimiento y animación del enemigo.
     public void Detener()
     {
         activo = false;
@@ -57,6 +61,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
             animator.SetBool("caminar", false);
     }
 
+    // Reanuda el movimiento y animación del enemigo.
     public void Reanudar()
     {
         activo = true;
@@ -64,17 +69,20 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
             animator.SetBool("caminar", true);
     }
 
+    // Aumenta la velocidad del enemigo hasta un límite máximo.
     public void Acelerar()
     {
         velocidadActual += incrementoVelocidad;
         velocidadActual = Mathf.Min(velocidadActual, velocidadMaxima);
     }
 
+    // Restablece la velocidad a la velocidad base.
     public void ResetearVelocidad()
     {
         velocidadActual = velocidadNormal;
     }
 
+    // Si el enemigo colisiona con el jugador, activa Game Over.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -90,6 +98,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         }
     }
 
+    // Ejecuta la secuencia de muerte del enemigo con cámara, sonido y efectos visuales.
     public void Morir()
     {
         activo = false;
@@ -98,6 +107,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         StartCoroutine(MorirDespuesDeTresSegundos());
     }
 
+    // Corrutina que maneja efectos visuales y destrucción del enemigo tras morir.
     private IEnumerator MorirDespuesDeTresSegundos()
     {
         yield return new WaitForSecondsRealtime(1f);
@@ -141,6 +151,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // impia el PlayableGraph si fue usado (buena práctica).
     private void OnDestroy()
     {
         if (graph.IsValid())

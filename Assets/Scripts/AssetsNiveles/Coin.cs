@@ -2,7 +2,8 @@ using UnityEngine;
 
 /*
 Autor: Fernanda Pineda 
-Este código es para gestionar la recolección de monedas en el juego.
+Este código es para gestionar la recolección de monedas por parte del juego.
+Al tocar una moneda, suma su valor al GameManager, reproduce un sonido y se destruye.
 */
 public class Coin : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Coin : MonoBehaviour
     [Header("Sonido de recolección")]
     public AudioClip sonidoMoneda; // Sonido de la moneda
 
+    // Detecta colisiones con el jugador. Si colisiona y la moneda aún está visible, la recoge.
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && GetComponent<SpriteRenderer>().enabled)
