@@ -17,7 +17,6 @@
     { "key": "gender_label", "value": "Género:" },
     { "key": "register_button", "value": "Registrar" },
     { "key": "name_placeholder", "value": "Nombre..." },
-    { "key": "password_placeholder", "value": "Contraseña..." },
     { "key": "gender_female", "value": "Femenino" },
     { "key": "gender_male", "value": "Masculino" },
     { "key": "gender_non_binary", "value": "No binario" },
