@@ -30,11 +30,7 @@ Se comporta de forma diferente en el nivel 5 (escena "Nivel5") donde no se utili
                 //Debug.Log("Nivel 5: Desactivando sistema de vidas.");
                 vidas = 0; // o cualquier valor, ya no importa
             }
-            else
-            {
-                vidasMaximas = GameManager.Instance.MaxVidas;
-                vidas = GameManager.Instance.VidasGuardadas;
-            }
+
         }
         else
         {

@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public bool VolviendoDeTienda { get; set; } = false; // 🏪 Indica si se está volviendo de la tienda
+    public bool VolviendoDeTienda { get; set; } = false; // Indica si se está volviendo de la tienda
     public float DañoBala{ get; private set;}= 20f;
     public int CostoMejoraBala{ get; private set;}= 25;
 
