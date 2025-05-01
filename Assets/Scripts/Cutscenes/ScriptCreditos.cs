@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class ScriptCreditos : MonoBehaviour
 {
     public float scrollSpeed = 20f;
-    public float limiteFinalY = 1000f; // Ajusta este valor según el tamaño de tus créditos
-    public string nombreEscenaMenu = "MenuJuego"; // Nombre de tu escena de menú
+    public float limiteFinalY = 1000f; // Ajusta este valor según el tamaño de los créditos
+    public string nombreEscenaMenu = "MenuJuego"; 
 
     private RectTransform rectTransform;
 

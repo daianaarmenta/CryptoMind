@@ -19,7 +19,7 @@ public class CutsceneEndManager : MonoBehaviour
             personajeAnimator = personaje.GetComponent<Animator>();
             rb = personaje.GetComponent<Rigidbody2D>();
 
-            personaje.SetActive(true); // Asegura que no esté desactivado
+            personaje.SetActive(true); 
 
             if (personajeAnimator != null)
                 personajeAnimator.enabled = true;

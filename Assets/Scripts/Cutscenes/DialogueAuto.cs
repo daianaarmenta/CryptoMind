@@ -53,7 +53,7 @@ public class DialogueAuto : MonoBehaviour
         dialogueMark.SetActive(false);
         lineIndex = 0;
 
-        // Desactivar movimiento del jugador si est� disponible
+        // Desactivar movimiento del jugador si está disponible
         if (playerMovement != null)
         {
             playerMovement.enabled = false;
