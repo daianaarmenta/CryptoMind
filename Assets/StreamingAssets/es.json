@@ -66,7 +66,8 @@
     { "key": "cutscene6_line2", "value": "Eve: Central Core ya no puede tomar el control." },
     { "key": "cutscene6_line3", "value": "Zarek: Buen trabajo, por fin podemos vivir descentralizados. ¡Mostremos a todos cómo usar blockchain! ¡Liberemos NeonCity!" },
     { "key": "credits_intro", "value": "Esta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks\n\n\n\n\n" },
-    { "key": "credits_title", "value": "\n\n\n\nDesarrolladores" }
+    { "key": "credits_title", "value": "\n\n\n\nDesarrolladores" },
+    { "key": "credits_footer", "value": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks" }
 
 
 
