@@ -81,6 +81,7 @@
     { "key": "incorrect_with_life", "value": "¡Incorrecto!\n-1 vida\nRespuesta correcta:\n" },
     { "key": "incorrect_no_life", "value": "¡Incorrecto!\nRespuesta correcta:\n" },
     { "key": "correct_reward", "value": "¡Correcto! +100 monedas" },
+    {"key": "continue", "value": "Continuar"},
 
     { "key": "level0_mentor1_line1", "value": "Zarek: ¡Hola! Soy Zarek, gracias por encontrarme aquí. Quiero hablar contigo sobre algo... Solía trabajar para Central Core hasta que descubrí lo que hacen con nuestra información. \n\n (Presiona E para continuar)" },
     { "key": "level0_mentor1_line2", "value": "Zarek: Central Core controla todos los datos en NeonCity. Lo que ves, compras y sabes... todo está en sus servidores. Si algo no les conviene, lo modifican. Si alguien los desafía, borran su identidad. En otras palabras, modifican y borran la información a su favor." },
