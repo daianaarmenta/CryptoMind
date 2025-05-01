@@ -96,11 +96,14 @@ public class PreguntaManagerBase : MonoBehaviour
         menuGameOver = FindFirstObjectByType<MenuGameOver>();
     }
 
-    public IEnumerator CargarPreguntaPorId(int id)
+    public IEnumerator CargarPreguntaPorIdJSON(int id)
     {
         yield return new WaitForSeconds(0.5f); // simulate delay
 
-        TextAsset jsonFile = Resources.Load<TextAsset>("preguntas_mock_completo");
+        string lang = LanguageManager.instance.GetSystemLanguage();
+        string fileName = lang == "es" ? "preguntas_es": "preguntas_mock_completo";
+
+        TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
         if (jsonFile == null)
         {
             yield break;
@@ -132,7 +135,7 @@ public class PreguntaManagerBase : MonoBehaviour
             enemigo?.Detener();
             if (cuentaRegresivaPregunta != null) 
             {
-            StopCoroutine(cuentaRegresivaPregunta);
+                StopCoroutine(cuentaRegresivaPregunta);
             }
 
             mensajeRespuesta.SetActive(false);
@@ -188,7 +191,7 @@ public class PreguntaManagerBase : MonoBehaviour
             {
                 GameManager.Instance?.SumarMonedas(100);
                 enemigo?.ResetearVelocidad();
-                MostrarMensaje("Correct! +100 coins", Color.green);
+                MostrarMensaje(LanguageManager.instance.GetText("correct_reward"), Color.green);
                 audioSource.PlayOneShot(audioClipCorrecto);
                 respuestasCorrectas++;
                 Debug.Log("Respuestas correctas: " + respuestasCorrectas);
@@ -196,7 +199,7 @@ public class PreguntaManagerBase : MonoBehaviour
             else
             {
                 GameManager.Instance?.SumarMonedas(100);
-                MostrarMensaje("Correct! +100 coins", Color.green);
+                MostrarMensaje(LanguageManager.instance.GetText("correct_reward"), Color.green);
                 audioSource.PlayOneShot(audioClipCorrecto);
             }
 
@@ -206,12 +209,12 @@ public class PreguntaManagerBase : MonoBehaviour
             if (esNivel5)
             {
                 enemigo?.Acelerar();
-                MostrarMensaje("Incorrect!\nCorrect answer:\n" + respuestaCorrecta, Color.red);
+                MostrarMensaje(LanguageManager.instance.GetText("incorrect_no_life") + respuestaCorrecta, Color.red);
                 audioSource.PlayOneShot(audioClipIncorrecto);
             }
             else
             {
-                MostrarMensaje("Incorrect!\n-1 life\nCorrect answer:\n" + respuestaCorrecta, Color.red);
+                MostrarMensaje(LanguageManager.instance.GetText("incorrect_with_life") + respuestaCorrecta, Color.red);
                 audioSource.PlayOneShot(audioClipIncorrecto);
                 SaludPersonaje.instance?.PerderVida();
             }

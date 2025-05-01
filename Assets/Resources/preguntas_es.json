@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "pregunta": {
+        "id_pregunta": 1,
+        "id_nivel": 0,
+        "texto_pregunta": "¿Qué es Blockchain?",
+        "dificultad": 1
+      },
+      "opciones": [
+        { "id_opcion": 1, "id_pregunta": 1, "texto_opcion": "Una base de datos centralizada controlada por una sola entidad", "es_correcta": false },
+        { "id_opcion": 2, "id_pregunta": 1, "texto_opcion": "Una base de datos descentralizada", "es_correcta": true },
+        { "id_opcion": 3, "id_pregunta": 1, "texto_opcion": "Un servidor que se reinicia cada vez que alguien hace una transacción", "es_correcta": false }
+      ]
+    }
+  ]
+}

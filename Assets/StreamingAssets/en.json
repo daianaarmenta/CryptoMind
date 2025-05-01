@@ -78,6 +78,9 @@
     { "key": "credits_title", "value": "\n\n\n\nDevelopers" },
     { "key": "credits_footer", "value": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis app was developed by Tec de Monterrey students for CryptoChicks" },
     {"key": "press_E", "value": "Press E"},
+    { "key": "incorrect_with_life", "value": "Incorrect!\n-1 life\nCorrect answer:\n" },
+    { "key": "incorrect_no_life", "value": "Incorrect!\nCorrect answer:\n" },
+    { "key": "correct_reward", "value": "Correct! +100 coins" },
 
 
     { "key": "level0_mentor1_line1", "value": "Zarek: Hi! I'm Zarek, thank you for meeting me here. I want to talk to you about something... I used to work for Central Core until I found out what they do with our information. \n\n (Press E to continue)" },

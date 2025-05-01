@@ -71,7 +71,7 @@ public class TriggerPreguntasBase : MonoBehaviour
 
     private IEnumerator CargarYMarcarPregunta(int id)
     {
-        yield return PreguntaManagerBase.instance.CargarPreguntaPorId(id); // wait for loading
+        yield return PreguntaManagerBase.instance.CargarPreguntaPorIdJSON(id); // wait for loading
         MarcarComoContestada(); // ✅ mark only if loaded
     }
 
