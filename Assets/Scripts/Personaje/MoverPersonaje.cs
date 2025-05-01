@@ -43,7 +43,7 @@ public class MoverPersonaje : MonoBehaviour
         }
 
         // Salto solo si está en el suelo
-        if (Input.GetKeyDown(KeyCode.UpArrow) && EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && EstadoPersonaje.enPiso && !EstadoPersonaje.enEscalera)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Resetear salto acumulado
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
@@ -60,11 +60,11 @@ public class MoverPersonaje : MonoBehaviour
             Girar(); // Si el personaje se mueve a la izquierda y está mirando a la derecha, giramos
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             estaAgachado = true;
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow)  || Input.GetKeyUp(KeyCode.S))
         {
             estaAgachado = false;
         }
