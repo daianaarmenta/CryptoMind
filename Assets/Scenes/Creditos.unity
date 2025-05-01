@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 276221639}
   - component: {fileID: 276221638}
   - component: {fileID: 276221637}
+  - component: {fileID: 276221640}
   m_Layer: 5
   m_Name: Developers
   m_TagString: Untagged
@@ -363,6 +364,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276221635}
   m_CullTransparentMesh: 1
+--- !u!114 &276221640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276221635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizationKey: credits_title
 --- !u!1 &297829142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,6 +1894,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112094851}
   m_CullTransparentMesh: 1
+--- !u!1 &1204064218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204064220}
+  - component: {fileID: 1204064219}
+  m_Layer: 0
+  m_Name: BootStrapLanguageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1204064219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204064218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47b84161a884b049a31d4b5556fc72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LanguageManager: {fileID: 6815962041253073378, guid: 90bcd565bd998594dae741145ab3505f, type: 3}
+--- !u!4 &1204064220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204064218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.171257, y: 0.6662679, z: 0.6918213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377637139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2449,7 @@ GameObject:
   - component: {fileID: 1620575542}
   - component: {fileID: 1620575541}
   - component: {fileID: 1620575540}
+  - component: {fileID: 1620575543}
   m_Layer: 5
   m_Name: Disclaimer
   m_TagString: Untagged
@@ -2534,6 +2594,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620575538}
   m_CullTransparentMesh: 1
+--- !u!114 &1620575543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620575538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizationKey: credits_intro
 --- !u!1 &1719616296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2860,7 @@ GameObject:
   - component: {fileID: 1948988977}
   - component: {fileID: 1948988976}
   - component: {fileID: 1948988975}
+  - component: {fileID: 1948988978}
   m_Layer: 5
   m_Name: Disclaimer
   m_TagString: Untagged
@@ -2882,11 +2956,8 @@ MonoBehaviour:
 
 
 
-
-
-
-    This app was developed by Tec
-    de Monterrey students for Cryptochicks
+    This app was developed by Tec de
+    Monterrey students for Cryptochicks
 
 
 '
@@ -2968,6 +3039,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948988973}
   m_CullTransparentMesh: 1
+--- !u!114 &1948988978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948988973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea0a9a5d4c12e4f85a325e2e97a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizationKey: credits_footer
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2975,3 +3059,4 @@ SceneRoots:
   - {fileID: 459592119}
   - {fileID: 297829146}
   - {fileID: 202264492}
+  - {fileID: 1204064220}
