@@ -77,7 +77,7 @@
     { "key": "credits_intro", "value": "Esta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks\n\n\n\n\n" },
     { "key": "credits_title", "value": "\n\n\n\nDesarrolladores" },
     { "key": "credits_footer", "value": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEsta aplicación fue desarrollada por estudiantes del Tec de Monterrey para CryptoChicks" },
-    { "key": "press_e", "value": "Presiona E" },
+    { "key": "press_E", "value": "Presiona E" },
     { "key": "incorrect_with_life", "value": "¡Incorrecto!\n-1 vida\nRespuesta correcta:\n" },
     { "key": "incorrect_no_life", "value": "¡Incorrecto!\nRespuesta correcta:\n" },
     { "key": "correct_reward", "value": "¡Correcto! +100 monedas" },
