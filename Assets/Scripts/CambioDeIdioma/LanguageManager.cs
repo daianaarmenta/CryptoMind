@@ -154,5 +154,12 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
-
+    public string GetLanguageFilePath(string fileName)
+    {
+    #if UNITY_WEBGL && !UNITY_EDITOR
+        return Path.Combine(Application.streamingAssetsPath, fileName);
+    #else
+        return "file://" + Path.Combine(Application.streamingAssetsPath, fileName);
+    #endif
+    }
 }

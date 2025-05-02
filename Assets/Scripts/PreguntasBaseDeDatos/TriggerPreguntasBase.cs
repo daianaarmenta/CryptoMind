@@ -75,7 +75,7 @@ public class TriggerPreguntasBase : MonoBehaviour
 
     private IEnumerator CargarYMarcarPregunta(int id)
     {
-        yield return PreguntaManagerBase.instance.CargarPreguntaPorIdJSON(id); // espera para carg
+        yield return PreguntaManagerBase.instance.CargarPreguntaPorIdWeb(id); // espera para carg
         MarcarComoContestada(); // se marca la pregunta como contestada
     }
 

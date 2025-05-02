@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
+using NUnit.Framework.Constraints;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 /*Autores:  Daiana Andrea Armenta Maya
             María Fernanda Pineda Pat 
             Emiliano Plata Cardona 
@@ -54,11 +56,14 @@ public class PreguntaManagerBase : MonoBehaviour
             Destroy(gameObject);
     }
 
-    /*public IEnumerator CargarPreguntaPorId(int id)
+    public IEnumerator CargarPreguntaPorIdWeb(int id)
     {
-        string url = "http://44.210.242.220:8080/unity/pregunta?id=" + id;
+        yield return new WaitForSeconds(0.2f);
 
-        UnityWebRequest request = UnityWebRequest.Get(url);
+        string lang = LanguageManager.instance.GetSystemLanguage();
+
+
+        UnityWebRequest request = UnityWebRequest.Get(ServidorConfig.PreguntaPorId(id, lang));
         yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
@@ -68,33 +73,10 @@ public class PreguntaManagerBase : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Error al cargar pregunta con ID: " + id + " - " + request.error);
+            Debug.LogError($"Error al cargar pregunta con ID {id} en idioma {lang}: {request.error} " );
         }
-    }*/
+    }
 
-    /*public IEnumerator CargarPreguntaPorId(int id)
-    {
-        yield return new WaitForSeconds(0.5f); // simulate delay
-
-        TextAsset jsonFile = Resources.Load<TextAsset>("preguntas_mock_completo");
-        if (jsonFile == null)
-        {
-            Debug.LogError("No se encontró el archivo preguntas_mock.json en Resources.");
-            yield break;
-        }
-
-        PreguntaListWrapper wrapper = JsonUtility.FromJson<PreguntaListWrapper>(jsonFile.text);
-        PreguntaData pregunta = wrapper.items.Find(p => p.pregunta.id_pregunta == id);
-
-        if (pregunta != null)
-        {
-            MostrarPregunta(pregunta);
-        }
-        else
-        {
-            Debug.LogWarning("Pregunta con ID " + id + " no encontrada en el JSON.");
-        }
-    }*/
     
     private void Start()
     {
@@ -104,24 +86,25 @@ public class PreguntaManagerBase : MonoBehaviour
         menuGameOver = FindFirstObjectByType<MenuGameOver>();
     }
 
-    public IEnumerator CargarPreguntaPorIdJSON(int id)
+    /*public IEnumerator CargarPreguntaPorIdJSON(int id)
     {
-        yield return new WaitForSeconds(0.5f); // simulate delay
-
         string lang = LanguageManager.instance.GetSystemLanguage();
-        string fileName = lang == "es" ? "preguntas_es": "preguntas_mock_completo";
+        string fileName = lang == "es" ? "preguntas_es.json" : "preguntas_mock_completo.json";
+        string path = LanguageManager.instance.GetLanguageFilePath(fileName);
 
-        string escena = SceneManager.GetActiveScene().name;
+        UnityWebRequest request = UnityWebRequest.Get(path);
+        yield return request.SendWebRequest();
 
-        TextAsset jsonFile = Resources.Load<TextAsset>(fileName);
-        if (jsonFile == null)
+        if (request.result != UnityWebRequest.Result.Success)
         {
+            Debug.LogError("❌ Error al cargar preguntas: " + request.error);
             yield break;
         }
 
-        PreguntaListWrapper wrapper = JsonUtility.FromJson<PreguntaListWrapper>(jsonFile.text);
+        PreguntaListWrapper wrapper = JsonUtility.FromJson<PreguntaListWrapper>(request.downloadHandler.text);
 
-        if(escena == "Nivel5" || escena.Contains("5"))
+        string escena = SceneManager.GetActiveScene().name;
+        if (escena == "Nivel5" || escena.Contains("5"))
         {
             int idRandom = UnityEngine.Random.Range(0, wrapper.items.Count);
             PreguntaData preguntaAleatoria = wrapper.items[idRandom];
@@ -132,7 +115,8 @@ public class PreguntaManagerBase : MonoBehaviour
             PreguntaData pregunta = wrapper.items.Find(p => p.pregunta.id_pregunta == id);
             MostrarPregunta(pregunta);
         }
-    }
+    }*/
+
 
 
     private void MostrarPregunta(PreguntaData actual)
@@ -184,10 +168,22 @@ public class PreguntaManagerBase : MonoBehaviour
 
     private void ComprobarRespuesta(PreguntaData actual, int seleccion)
     {
+
         bool esCorrecta = actual.opciones[seleccion].es_correcta;
         string respuestaCorrecta = ObtenerRespuestaCorrectaTexto(actual);
-        string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string escena = SceneManager.GetActiveScene().name;
         bool esNivel5 = escena == "Nivel5" || escena.Contains("5");
+
+        RespuestaJugador respuesta = new RespuestaJugador
+        {
+            id_usuario = GameManagerBase.Instance.idUsuario,
+            id_pregunta = actual.pregunta.id_pregunta,
+            id_opcion = actual.opciones[seleccion].id_opcion,
+            es_correcta = esCorrecta,
+            id_nivel = actual.pregunta.id_nivel
+        };
+
+        StartCoroutine(EnviarRespuestaAlServidor(respuesta));
 
         if (esNivel5 && cuentaRegresivaPregunta != null) //verifica que sea el nivel 5 y que la cuenta regresiva no sea nula
         {
@@ -268,8 +264,8 @@ public class PreguntaManagerBase : MonoBehaviour
         panelPregunta.SetActive(false);
         Time.timeScale = 1f; //se reanuda el tiempo del juego 
 
-        string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        Alien controlador = UnityEngine.Object.FindAnyObjectByType<Alien>();
+        string escena = SceneManager.GetActiveScene().name;
+        Alien controlador = FindAnyObjectByType<Alien>();
 
         if (escena == "Nivel5" || escena.Contains("5"))
         {
@@ -363,5 +359,29 @@ public class PreguntaManagerBase : MonoBehaviour
         }
     }
 
+    private IEnumerator EnviarRespuestaAlServidor(RespuestaJugador respuesta)
+    {
+        string json = JsonUtility.ToJson(respuesta);
+
+        UnityWebRequest request = new UnityWebRequest(ServidorConfig.RespuestaPregunta, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if(request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Respuesta enviada");
+        }
+        else
+        {
+            Debug.LogError("Error al enviar: " + request.error);
+        }
+
+        request.Dispose();
+
+    }
 
 }

@@ -36,3 +36,13 @@ public class PreguntaListWrapper
 {
     public List<PreguntaData> items;
 }
+
+[System.Serializable]
+public class RespuestaJugador
+{
+    public int id_usuario;
+    public int id_pregunta;
+    public int id_opcion;
+    public bool es_correcta;
+    public int id_nivel;
+}

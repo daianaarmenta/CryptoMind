@@ -139,16 +139,13 @@ public class Register : MonoBehaviour
         else
         {
 
-            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            if (request.result == UnityWebRequest.Result.ConnectionError)
             {
                 MostrarMensaje("Server is unreachable or check your internet connection", Color.red, "error_server_unreachable");
-                registerMenuGame.SetActive(true);
-                mainMenu.SetActive(false);
-                loginMenu.SetActive(false);
             }
             else
             {
-                MostrarMensaje("Error registering: " + request.downloadHandler.text, Color.red, "error_register_failed");
+                MostrarMensaje(request.downloadHandler.text, Color.red, "error_register_failed");
             }
 
             //Debug.LogError("Register failed: " + request.error + " | Code: " + request.responseCode);

@@ -5,13 +5,14 @@
 public static class ServidorConfig
 {
     // Base URL (puedes cambiar esta línea y todo se actualiza)
-    public const string BaseUrl = "http://3.238.24.38:8080";
+    public const string BaseUrl = "http://3.236.226.211:8080";
 
     // Endpoints específicos
     public static string Login => $"{BaseUrl}/unity/login";
     public static string Register => $"{BaseUrl}/unity/register";
-    public static string CargarProgreso => $"{BaseUrl}/unity/cargar-progreso";
     public static string GuardarProgreso => $"{BaseUrl}/unity/guardar-progreso";
     public static string GuardarProgresoYSalir=>$"{BaseUrl}/sesion/end";
+    public static string PreguntaPorId(int id, string lang)=>$"{BaseUrl}/unity/pregunta/{lang}?id={id}";
+    public static string RespuestaPregunta => $"{BaseUrl}/unity/pregunta/contestar";
 }
 
