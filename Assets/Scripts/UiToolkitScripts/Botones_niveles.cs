@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -68,36 +66,19 @@ public class Botones_niveles : MonoBehaviour
         //StartCoroutine(EnviarYSalir());
     }
 
-    /*private IEnumerator EnviarYSalir()  NO DESCOMENTAR HASTA QUE QUEDE LO DE LA BD
+    /*private IEnumerator EnviarYSalir()
     {
-        string url = "http://44.210.242.220:8080/unity/sesion/end";
-        string json = JsonUtility.ToJson(new 
+        var datos = new 
         {
-            nombre = GameManagerBase.Instance.NombreUsuario,
+            id_usuario = GameManagerBase.Instance.idUsuario,
+            nombre = GameManagerBase.Instance.nombreUsuario,
             tokens = GameManagerBase.Instance.Monedas,
-            puntaje = GameManagerBase.Instance.Puntaje
-        });
+            puntaje = GameManagerBase.Instance.Puntaje,
+            daño_bala = GameManagerBase.Instance.DañoBala,
+            costo_mejora = GameManagerBase.Instance.CostoMejoraBala
+        };
 
-        UnityWebRequest request = new UnityWebRequest(url, "Post");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if(request.result == UnityWebRequest.Result.Success)
-        {
-            Debug.Log("Progreso guardado correctamente.");
-        }
-        else
-        {
-            Debug.Log("Error al guardar progreso: " + request.error);
-        }
-
-        request.Dispose();
-        Application.Quit();
-        Debug.Log("Applicacion cerrada");
+        string json = JsonUtility.
     }*/
 
     private void CambiarEscena(ClickEvent evt, string escena)

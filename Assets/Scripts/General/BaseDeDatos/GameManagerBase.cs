@@ -1,4 +1,17 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Networking;
+
+[System.Serializable]
+public class ProgresoJugador
+{
+    public int id_usuario;
+    public string nombre;
+    public int tokens;
+    public int puntaje;
+    public float daño_bala;
+    public int costo_mejora;
+}
 
 public class GameManagerBase : MonoBehaviour
 {
@@ -140,5 +153,38 @@ public class GameManagerBase : MonoBehaviour
     {
         // Esto es útil si lo manejas localmente
         Debug.Log("📍 Posición del jugador limpiada.");
+    }
+
+    public IEnumerator GuardarProgresoEnServidor(System.Action alTerminar = null)
+    {
+        var progreso = new ProgresoJugador
+        {
+            id_usuario = idUsuario,
+            nombre = nombreUsuario,
+            tokens = Monedas,
+            puntaje = Puntaje,
+            daño_bala = DañoBala,
+            costo_mejora = CostoMejoraBala
+        };
+
+        string json = JsonUtility.ToJson(progreso);
+        UnityWebRequest request = new UnityWebRequest(ServidorConfig.GuardarProgreso, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Progreso enviado correctamente al servidor.");
+        }
+        else
+        {
+            Debug.LogError("Error al guardar progreso: " + request.error);
+        }
+
+        alTerminar?.Invoke(); // Llamar al callback al final
     }
 }

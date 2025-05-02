@@ -50,23 +50,22 @@ public class Alien : MonoBehaviour
             if (checkpointTerminado == cantidadCheckpoint)
             {
                 audiosource.PlayOneShot(siguienteNivel);
-                // Reiniciar vidas para el siguiente nivel
-                if (GameManagerBase.Instance != null)
+                if(GameManagerBase.Instance != null)
                 {
                     GameManagerBase.Instance.ReiniciarVidas();
-                    //Debug.Log(" Vidas reiniciadas para el siguiente nivel.");
-                }
 
-                // Cambiar de escena con o sin transición
-                TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
-                if (transicion != null)
-                {
-
-                    transicion.IrASiguienteEscena();
-                }
-                else
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    StartCoroutine(GameManagerBase.Instance.GuardarProgresoEnServidor(()=>
+                    {
+                        TransicionEscena transicion = FindFirstObjectByType<TransicionEscena>();
+                        if(transicion != null)
+                        {
+                            transicion.IrASiguienteEscena();
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                        }
+                    }));
                 }
             }
             else
