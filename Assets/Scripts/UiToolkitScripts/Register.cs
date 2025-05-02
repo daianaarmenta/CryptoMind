@@ -37,7 +37,7 @@ public class Register : MonoBehaviour
 
     private void OnEnable()
     {
-
+        // Initialize the register menu
         registerMenu = GetComponent<UIDocument>();
         var root = registerMenu.rootVisualElement;
 
@@ -185,7 +185,7 @@ public class Register : MonoBehaviour
             return new List<Country>();
         }
 
-        CountryList lista = JsonUtility.FromJson<CountryList>(file.text);
+        CountryList lista = JsonUtility.FromJson<CountryList>(file.text); // Deserialize the JSON data into a list of countries
         return lista.countries;
     }
 
@@ -213,7 +213,7 @@ public class Register : MonoBehaviour
     {
         try
         {
-            var addr = new System.Net.Mail.MailAddress(email); // Intenta crear una dirección de correo electrónico
+            var addr = new System.Net.Mail.MailAddress(email); // Check if the email is valid
             return addr.Address == email;
         }
         catch

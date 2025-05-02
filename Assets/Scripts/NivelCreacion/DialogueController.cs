@@ -3,6 +3,10 @@ using TMPro;
 using System.Collections;
 using Unity.VisualScripting;
 
+/* Autora: Daiana Andrea Armenta Maya
+ * Descripción: Clase que gestiona el diálogo en el juego, mostrando líneas de texto y controlando la interacción del jugador.
+ * Contiene métodos para iniciar el diálogo, avanzar a la siguiente línea y mostrar el texto con un efecto de escritura.
+ */
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueMark;
@@ -37,8 +41,9 @@ public class DialogueController : MonoBehaviour
             typingAudioSource.Stop(); // Detener el sonido si está sonando al inicio
         }
 
-        dialogueLines = new string[dialoguekeys.Length];
-        for( int i = 0; i<dialoguekeys.Length; i++){
+        dialogueLines = new string[dialoguekeys.Length]; // Inicializar el array de líneas de diálogo
+        // Obtener las líneas de diálogo desde el gestor de lenguaje
+        for( int i = 0; i < dialoguekeys.Length; i++){
             dialogueLines[i] = LanguageManager.instance.GetText(dialoguekeys[i]);
         }
     }
@@ -58,7 +63,7 @@ public class DialogueController : MonoBehaviour
                 StopAllCoroutines();
                 dialogueText.text = dialogueLines[lineIndex];
                 isTyping = false;
-                            // 🔇 Detener el sonido también
+                // Detener el sonido también
                 if (typingAudioSource != null && typingAudioSource.isPlaying)
                 {
                     typingAudioSource.Stop();
@@ -86,7 +91,7 @@ public class DialogueController : MonoBehaviour
         Time.timeScale = 0f;
 
 
-        StartCoroutine(ShowLine());
+        StartCoroutine(ShowLine()); // Iniciar la corutina para mostrar la primera línea de diálogo
     }
 
     private void NextDialogueLine()
@@ -94,7 +99,7 @@ public class DialogueController : MonoBehaviour
         lineIndex++;
         if (lineIndex < dialogueLines.Length)
         {
-            StartCoroutine(ShowLine());
+            StartCoroutine(ShowLine()); // Iniciar la corutina para mostrar la siguiente línea de diálogo
         }
         else
         {
@@ -111,7 +116,7 @@ public class DialogueController : MonoBehaviour
     private IEnumerator ShowLine()
     {
         isTyping = true;
-        dialogueText.text = string.Empty;
+        dialogueText.text = string.Empty; // Limpiar el texto antes de mostrar la nueva línea
 
         if(typingAudioSource != null && !isSoundPlaying)
         {
@@ -123,7 +128,7 @@ public class DialogueController : MonoBehaviour
         foreach (char letter in dialogueLines[lineIndex].ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSecondsRealtime(typingTime);
+            yield return new WaitForSecondsRealtime(typingTime); // Esperar el tiempo de escritura
         }
 
         if (typingAudioSource != null)

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
-/*Autora: Daiana Andrea Armenta Maya
+/*Autores: Daiana Andrea Armenta Maya
           Emiliano Plata Cardona
  * Descripción: Clase que gestiona el trigger de preguntas en el juego.
  * Controla la activación del marcador y la interacción del jugador con el checkpoint.

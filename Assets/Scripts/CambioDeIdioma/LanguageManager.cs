@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la carga y el manejo de archivos de idioma para la localización del juego.
+ * Permite cargar archivos JSON con traducciones y acceder a las cadenas localizadas.
+ */
 [System.Serializable]
 public class LanguageData
 {
@@ -31,7 +34,7 @@ public class LanguageManager : MonoBehaviour
                     _instance = obj.AddComponent<LanguageManager>();
                     DontDestroyOnLoad(obj);
                     
-                    Debug.Log("✅ LanguageManager created dynamically.");
+                    Debug.Log("LanguageManager created dynamically.");
                     _instance.LoadSystemLanguage();
                 }
             }
@@ -46,10 +49,10 @@ public class LanguageManager : MonoBehaviour
     {
         if (_instance == null)
         {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
+            _instance = this; 
+            DontDestroyOnLoad(gameObject); 
 
-            Debug.Log("✅ LanguageManager Awake called.");
+            Debug.Log("LanguageManager Awake called.");
             LoadSystemLanguage();
         }
         else if (_instance != this)
@@ -60,7 +63,7 @@ public class LanguageManager : MonoBehaviour
 
     private void LoadSystemLanguage()
     {
-        string lang = GetSystemLanguage();
+        string lang = GetSystemLanguage(); // Get the system language
         LoadLocalizedText(lang);
     }
 
@@ -83,31 +86,31 @@ public class LanguageManager : MonoBehaviour
 
         if (File.Exists(path))
         {
-            Debug.Log("✅ Found language file: " + path);
+            Debug.Log("Found language file: " + path);
 
             string jsonData = File.ReadAllText(path);
-            Debug.Log("✅ Loaded JSON data: " + jsonData);
+            Debug.Log("Loaded JSON data: " + jsonData);
 
             LanguageData data = JsonUtility.FromJson<LanguageData>(jsonData);
 
             if (data != null && data.items != null)
             {
-                Debug.Log($"✅ Successfully parsed {data.items.Count} localization entries.");
-                localizedText = new Dictionary<string, string>();
+                Debug.Log($"Successfully parsed {data.items.Count} localization entries.");
+                localizedText = new Dictionary<string, string>(); // Initialize the dictionary
 
-                foreach (LocalizationItem item in data.items)
+                foreach (LocalizationItem item in data.items) 
                 {
                     localizedText[item.key] = item.value;
                 }
             }
             else
             {
-                Debug.LogError("❌ Failed to parse language JSON.");
+                Debug.LogError("Failed to parse language JSON.");
             }
         }
         else
         {
-            Debug.LogError("❌ Localization file not found: " + path);
+            Debug.LogError("Localization file not found: " + path);
         }
     }
 
@@ -121,7 +124,7 @@ public class LanguageManager : MonoBehaviour
 
     public string GetFormattedText(string key, params object[] args)
     {
-        string raw = GetText(key);
+        string raw = GetText(key); 
         return string.Format(raw, args);
     }
 

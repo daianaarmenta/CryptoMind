@@ -151,7 +151,7 @@ public class EnemigoSeguidorNivel5 : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // impia el PlayableGraph si fue usado (buena práctica).
+    // Limpia el PlayableGraph si fue usado (buena práctica).
     private void OnDestroy()
     {
         if (graph.IsValid())

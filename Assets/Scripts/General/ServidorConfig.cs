@@ -1,3 +1,7 @@
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la configuración del servidor para la API del juego.
+ * Contiene la clase ServidorConfig que define la URL base y los endpoints específicos para las operaciones de inicio de sesión, registro, carga y guardado de progreso.
+ */
 public static class ServidorConfig
 {
     // Base URL (puedes cambiar esta línea y todo se actualiza)

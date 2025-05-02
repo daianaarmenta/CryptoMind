@@ -1,5 +1,8 @@
 using UnityEngine;
-
+/*Autora: Daiana Andrea Armenta Maya
+ * Descripción: Clase que controla el comportamiento de los enemigos en el juego.
+ * Permite gestionar la vida, efectos de muerte y colisiones con el jugador.
+ */
 public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float vida;
@@ -20,7 +23,7 @@ public class Enemigo : MonoBehaviour
 
     private void Muerte()
     {
-        GameManager.Instance.SumarPuntaje((int)cantidadPuntos);
+        GameManager.Instance.SumarPuntaje((int)cantidadPuntos); // Sumar puntos al jugador
 
         if(sonidoMuerte != null)
         {
@@ -30,11 +33,11 @@ public class Enemigo : MonoBehaviour
 
         if (efectoMuerte != null)
         {
-            Instantiate(efectoMuerte, transform.position, Quaternion.identity);
+            Instantiate(efectoMuerte, transform.position, Quaternion.identity); // Instancia el efecto de muerte en la posición del enemigo
         
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject); // Destruye el objeto enemigo
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
