@@ -145,7 +145,9 @@ public class Register : MonoBehaviour
             }
             else
             {
-                MostrarMensaje(request.downloadHandler.text, Color.red, "error_register_failed");
+                
+                errorMessage.text = request.downloadHandler.text;
+                MostrarMensajeServidor(request.downloadHandler.text, Color.red);
             }
 
             //Debug.LogError("Register failed: " + request.error + " | Code: " + request.responseCode);
@@ -275,6 +277,13 @@ public class Register : MonoBehaviour
             LanguageManager.instance.GetText("gender_prefer_not_say")
         };
         gender.value = gender.choices[0];
+    }
+
+    private void MostrarMensajeServidor(string text, Color color)
+    {
+        errorMessage.style.color = new StyleColor(color);
+        errorMessage.text = text;
+        errorMessage.style.fontSize = 30;
     }
 
 }
