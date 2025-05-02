@@ -1,7 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
-
+/*Autora: Daiana Andrea Armenta Maya
+          Emiliano Plata Cardona
+ * Descripción: Clase que gestiona el trigger de preguntas en el juego.
+ * Controla la activación del marcador y la interacción del jugador con el checkpoint.
+ */
 public class TriggerPreguntasBase : MonoBehaviour
 {
     [SerializeField] private GameObject marker;
@@ -71,8 +75,8 @@ public class TriggerPreguntasBase : MonoBehaviour
 
     private IEnumerator CargarYMarcarPregunta(int id)
     {
-        yield return PreguntaManagerBase.instance.CargarPreguntaPorIdJSON(id); // wait for loading
-        MarcarComoContestada(); // ✅ mark only if loaded
+        yield return PreguntaManagerBase.instance.CargarPreguntaPorIdJSON(id); // espera para carg
+        MarcarComoContestada(); // mark only if loaded
     }
 
     private void MarcarComoContestada()

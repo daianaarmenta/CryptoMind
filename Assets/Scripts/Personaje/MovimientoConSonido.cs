@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/* Autora: Daiana Andrea Armenta Maya
+    Clase que gestiona los sonidos de movimiento del personaje.
+ */
 public class SonidosMovimiento : MonoBehaviour
 {
     [SerializeField] private AudioClip sonidoSalto;
@@ -18,7 +20,7 @@ public class SonidosMovimiento : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("🎧 Falta AudioClip o AudioSource para salto");
+            Debug.LogWarning("Falta AudioClip o AudioSource para salto");
         }
     }
 }

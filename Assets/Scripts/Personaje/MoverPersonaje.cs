@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/* Autora: Daiana Andrea Armenta Maya
+ * Descripción: Clase que gestiona el movimiento del personaje en el juego.
+ */
 public class MoverPersonaje : MonoBehaviour
 {
     [SerializeField] private float velocidadX;

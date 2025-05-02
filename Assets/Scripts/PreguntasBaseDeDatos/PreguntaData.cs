@@ -1,4 +1,8 @@
 using System.Collections.Generic;
+/*Autor: Emiliano Playa Cardona
+ * Descripción: Clase que gestiona la estructura de datos para las preguntas y opciones del juego.
+ * Contiene las clases PreguntaBase, Opcion y PreguntaData que representan la información de las preguntas y sus opciones.
+ */
 [System.Serializable]
 
 public class PreguntaBase

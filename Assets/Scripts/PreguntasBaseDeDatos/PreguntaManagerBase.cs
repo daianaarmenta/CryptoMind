@@ -5,7 +5,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/*Autores:  Daiana Andrea Armenta Maya
+            María Fernanda Pineda Pat 
+            Emiliano Plata Cardona 
+ * Descripción: Clase que gestiona las preguntas y respuestas del juego.
+ * Controla la carga de preguntas desde la base de datos, la presentación de preguntas y respuestas,
+ * y la verificación de respuestas correctas o incorrectas.
+ */
 
 public class PreguntaManagerBase : MonoBehaviour
 {
@@ -62,7 +68,7 @@ public class PreguntaManagerBase : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ Error al cargar pregunta con ID: " + id + " - " + request.error);
+            Debug.LogError("Error al cargar pregunta con ID: " + id + " - " + request.error);
         }
     }*/
 
@@ -132,7 +138,7 @@ public class PreguntaManagerBase : MonoBehaviour
     private void MostrarPregunta(PreguntaData actual)
     {
         preguntaTextoUI.text = actual.pregunta.texto_pregunta;
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; //pausa el tiempo del juego
         panelPregunta.SetActive(true);
 
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
@@ -183,7 +189,7 @@ public class PreguntaManagerBase : MonoBehaviour
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         bool esNivel5 = escena == "Nivel5" || escena.Contains("5");
 
-        if (esNivel5 && cuentaRegresivaPregunta != null) 
+        if (esNivel5 && cuentaRegresivaPregunta != null) //verifica que sea el nivel 5 y que la cuenta regresiva no sea nula
         {
 
             StopCoroutine(cuentaRegresivaPregunta);
@@ -260,14 +266,14 @@ public class PreguntaManagerBase : MonoBehaviour
         mensajeRespuesta.SetActive(false);
         botonSkip.gameObject.SetActive(false);
         panelPregunta.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; //se reanuda el tiempo del juego 
 
         string escena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         Alien controlador = UnityEngine.Object.FindAnyObjectByType<Alien>();
 
         if (escena == "Nivel5" || escena.Contains("5"))
         {
-            controlador?.AumentarCheckpoints(); //los manda al alien 
+            controlador?.AumentarCheckpoints(); //aumenta los checkpoints desde el alien
 
             if (controlador.checkpointTerminado >= controlador.cantidadCheckpoint)
             {
@@ -292,7 +298,7 @@ public class PreguntaManagerBase : MonoBehaviour
         );
 
 
-        yield return new WaitForSecondsRealtime(4f); // Espera 3 segundos
+        yield return new WaitForSecondsRealtime(4f); // Espera 4 segundos
 
         panelMensajeFinal.SetActive(false);
 
@@ -337,7 +343,7 @@ public class PreguntaManagerBase : MonoBehaviour
             tiempoRestante--;
         }
 
-        textoContador.text = "00:00";
+        textoContador.text = "00:00"; 
         audioSource.Stop();
         audioSource.loop = false;
 
@@ -346,13 +352,13 @@ public class PreguntaManagerBase : MonoBehaviour
             tiempoAgotado = true;
 
             enemigo?.Acelerar();
-            MostrarMensaje(LanguageManager.instance.GetText("times_up"), Color.red);//"Time's up!"
+            MostrarMensaje(LanguageManager.instance.GetText("times_up"), Color.red);
             audioSource.PlayOneShot(audioClipIncorrecto);
 
             yield return new WaitForSecondsRealtime(tiempoMensaje);
 
             panelPregunta.SetActive(false);
-            Time.timeScale = 1f;
+            Time.timeScale = 1f; //se reanuda el tiempo del juego
             enemigo?.Reanudar();
         }
     }

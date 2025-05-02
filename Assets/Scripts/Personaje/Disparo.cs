@@ -46,7 +46,7 @@ public class Disparo : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ No se encontró el script Bala en el prefab de la bala.");
+            Debug.LogError("No se encontró el script Bala en el prefab de la bala.");
         }
     }
 
