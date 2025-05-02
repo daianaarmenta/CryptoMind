@@ -1,10 +1,19 @@
-using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
 /*Autor: Emiliano Plata Cardona
  * Descripción: Clase que gestiona la carga y el manejo de archivos de idioma para la localización del juego.
  * Permite cargar archivos JSON con traducciones y acceder a las cadenas localizadas.
  */
+using System.Collections.Generic;
+using UnityEngine;
+using System; 
+using System.IO;
+using UnityEngine.Networking;
+using System.Collections;
+
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la carga y el manejo de archivos de idioma para la localización del juego.
+ * Permite cargar archivos JSON con traducciones y acceder a las cadenas localizadas.
+ */
+
 [System.Serializable]
 public class LanguageData
 {
@@ -34,7 +43,7 @@ public class LanguageManager : MonoBehaviour
                     _instance = obj.AddComponent<LanguageManager>();
                     DontDestroyOnLoad(obj);
                     
-                    Debug.Log("LanguageManager created dynamically.");
+                    Debug.Log("✅ LanguageManager created dynamically.");
                     _instance.LoadSystemLanguage();
                 }
             }
@@ -49,10 +58,10 @@ public class LanguageManager : MonoBehaviour
     {
         if (_instance == null)
         {
-            _instance = this; 
-            DontDestroyOnLoad(gameObject); 
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
 
-            Debug.Log("LanguageManager Awake called.");
+            Debug.Log("✅ LanguageManager Awake called.");
             LoadSystemLanguage();
         }
         else if (_instance != this)
@@ -63,9 +72,10 @@ public class LanguageManager : MonoBehaviour
 
     private void LoadSystemLanguage()
     {
-        string lang = GetSystemLanguage(); // Get the system language
-        LoadLocalizedText(lang);
+        string lang = GetSystemLanguage();
+        StartCoroutine(LoadLocalizedText(lang));
     }
+
 
     public string GetSystemLanguage()
     {
@@ -80,40 +90,6 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
-    private void LoadLocalizedText(string languageCode)
-    {
-        string path = Path.Combine(Application.streamingAssetsPath, languageCode + ".json");
-
-        if (File.Exists(path))
-        {
-            Debug.Log("Found language file: " + path);
-
-            string jsonData = File.ReadAllText(path);
-            Debug.Log("Loaded JSON data: " + jsonData);
-
-            LanguageData data = JsonUtility.FromJson<LanguageData>(jsonData);
-
-            if (data != null && data.items != null)
-            {
-                Debug.Log($"Successfully parsed {data.items.Count} localization entries.");
-                localizedText = new Dictionary<string, string>(); // Initialize the dictionary
-
-                foreach (LocalizationItem item in data.items) 
-                {
-                    localizedText[item.key] = item.value;
-                }
-            }
-            else
-            {
-                Debug.LogError("Failed to parse language JSON.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Localization file not found: " + path);
-        }
-    }
-
     public string GetText(string key)
     {
         if (localizedText != null && localizedText.ContainsKey(key))
@@ -124,7 +100,7 @@ public class LanguageManager : MonoBehaviour
 
     public string GetFormattedText(string key, params object[] args)
     {
-        string raw = GetText(key); 
+        string raw = GetText(key);
         return string.Format(raw, args);
     }
 
@@ -133,4 +109,50 @@ public class LanguageManager : MonoBehaviour
         currentLanguage = languageCode;
         LoadLocalizedText(languageCode);
     }
+
+    public IEnumerator LoadLocalizedText(string languageCode, Action onLoaded = null)
+    {
+        string fileName = languageCode + ".json";
+        string path = Path.Combine(Application.streamingAssetsPath, fileName);
+
+    #if UNITY_WEBGL && !UNITY_EDITOR
+        UnityWebRequest request = UnityWebRequest.Get(path);
+        yield return request.SendWebRequest();
+    #else
+        string uri = "file://" + path;
+        UnityWebRequest request = UnityWebRequest.Get(uri);
+        yield return request.SendWebRequest();
+    #endif
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            ProcessJson(request.downloadHandler.text);
+            onLoaded?.Invoke();
+        }
+        else
+        {
+            Debug.LogError("❌ Error al cargar archivo de idioma: " + request.error);
+        }
+    }
+
+    private void ProcessJson(string jsonData)
+    {
+        LanguageData data = JsonUtility.FromJson<LanguageData>(jsonData);
+
+        if (data != null && data.items != null)
+        {
+            localizedText = new Dictionary<string, string>();
+            foreach (LocalizationItem item in data.items)
+            {
+                localizedText[item.key] = item.value;
+            }
+            Debug.Log($"✅ {localizedText.Count} elementos de idioma cargados.");
+        }
+        else
+        {
+            Debug.LogError("❌ Fallo al deserializar JSON de idioma.");
+        }
+    }
+
+
 }

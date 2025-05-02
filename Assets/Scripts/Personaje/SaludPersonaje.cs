@@ -62,7 +62,7 @@ Se comporta de forma diferente en el nivel 5 (escena "Nivel5") donde no se utili
         {
             vidas--;
 
-            GameManager.Instance.VidasGuardadas = vidas;
+            GameManagerBase.Instance.VidasGuardadas = vidas;
 
             //Debug.Log("Vida perdida. Vidas restantes: " + vidas);
 

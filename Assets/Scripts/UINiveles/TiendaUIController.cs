@@ -64,7 +64,7 @@ public class TiendaCanvasController : MonoBehaviour
         if (botonMejora != null)
         {
             botonMejora.onClick.RemoveAllListeners();
-            botonMejora.onClick.AddListener(() => Comprar(GameManager.Instance.CostoMejoraBala, "Mejora"));
+            botonMejora.onClick.AddListener(() => Comprar(GameManagerBase.Instance.CostoMejoraBala, "Mejora"));
         }
 
         ActualizarUI();
@@ -85,7 +85,7 @@ public class TiendaCanvasController : MonoBehaviour
             //Debug.Log($" SaludPersonaje.vidas = {SaludPersonaje.instance?.vidas}");
             //Debug.Log($" GameManager.VidasGuardadas = {GameManager.Instance.VidasGuardadas}");
 
-            if (!GameManager.Instance.PuedeComprarVida())
+            if (!GameManagerBase.Instance.PuedeComprarVida())
             {
                 MostrarMensaje(LanguageManager.instance.GetText("max_lives_reached"));//Max lives
                 Invoke(nameof(LimpiarMensaje), 3f);
@@ -93,13 +93,13 @@ public class TiendaCanvasController : MonoBehaviour
                 return;
             }
 
-            if (GameManager.Instance.GastarMonedas(precio))
+            if (GameManagerBase.Instance.GastarMonedas(precio))
             {
-                GameManager.Instance.ComprarVida();
+                GameManagerBase.Instance.ComprarVida();
 
                 if (SaludPersonaje.instance != null)
                 {
-                    SaludPersonaje.instance.vidas = GameManager.Instance.VidasGuardadas;
+                    SaludPersonaje.instance.vidas = GameManagerBase.Instance.VidasGuardadas;
                     VidasHUD.instance?.ActualizarVidas();
                 }
                 audioSource.PlayOneShot(sonidoCompra, 1f);
@@ -120,7 +120,7 @@ public class TiendaCanvasController : MonoBehaviour
 
         if (nombre == "Mejora")
         {
-            if (GameManager.Instance.DañoBala >= 100f)
+            if (GameManagerBase.Instance.DañoBala >= 100f)
             {
                 MostrarMensaje(LanguageManager.instance.GetText("damage_max"));//"Damage is at max."
                 Invoke(nameof(LimpiarMensaje), 3f);
@@ -128,13 +128,13 @@ public class TiendaCanvasController : MonoBehaviour
                 return;
             }
 
-            int precioActual = GameManager.Instance.CostoMejoraBala;
+            int precioActual = GameManagerBase.Instance.CostoMejoraBala;
 
-            if (GameManager.Instance.GastarMonedas(precioActual))
+            if (GameManagerBase.Instance.GastarMonedas(precioActual))
             {
-                GameManager.Instance.MejorarBala();
+                GameManagerBase.Instance.MejorarBala();
                 audioSource.PlayOneShot(sonidoCompra, 1f);
-                MostrarMensaje(LanguageManager.instance.GetFormattedText("new_damage", GameManager.Instance.DañoBala));//$"New damage: {GameManager.Instance.DañoBala}"
+                MostrarMensaje(LanguageManager.instance.GetFormattedText("new_damage", GameManagerBase.Instance.DañoBala));//$"New damage: {GameManager.Instance.DañoBala}"
                 Invoke(nameof(LimpiarMensaje), 3f);
 
                 ActualizarUI();
@@ -152,20 +152,20 @@ public class TiendaCanvasController : MonoBehaviour
     // Actualiza los textos y botones de la tienda según el estado actual del jugador.
     void ActualizarUI()
     {
-        monedasTexto.text = GameManager.Instance.Monedas.ToString();
+        monedasTexto.text = GameManagerBase.Instance.Monedas.ToString();
 
-        if (GameManager.Instance.DañoBala >= 100f)
+        if (GameManagerBase.Instance.DañoBala >= 100f)
         {
             precioMejoraTexto.text = "MAX";
             botonMejora.interactable = false;
         }
         else
         {
-            precioMejoraTexto.text = GameManager.Instance.CostoMejoraBala.ToString();
+            precioMejoraTexto.text = GameManagerBase.Instance.CostoMejoraBala.ToString();
             botonMejora.interactable = true;
         }
 
-        botonVida.interactable = GameManager.Instance.PuedeComprarVida();
+        botonVida.interactable = GameManagerBase.Instance.PuedeComprarVida();
     }
 
     // Muestra un mensaje temporal enla tienda.

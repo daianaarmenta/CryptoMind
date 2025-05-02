@@ -25,9 +25,9 @@ public class PuntajeEnemigo : MonoBehaviour
 
     private void Update()
     {
-        if (textMesh == null || GameManager.Instance == null) return;
+        if (textMesh == null || GameManagerBase.Instance == null) return;
 
-        int puntajeActual = GameManager.Instance.Puntaje;
+        int puntajeActual = GameManagerBase.Instance.Puntaje;
 
         if (puntajeActual != puntajeAnterior)
         {
@@ -44,7 +44,7 @@ public class PuntajeEnemigo : MonoBehaviour
             return;
         }
 
-        int puntos = GameManager.Instance.Puntaje;
+        int puntos = GameManagerBase.Instance.Puntaje;
         textMesh.text = puntos.ToString("0");
     }
 }

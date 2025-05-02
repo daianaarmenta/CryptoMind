@@ -12,7 +12,7 @@ public class BootstrapGameManager : MonoBehaviour
     //  Se ejecuta al iniciar el objeto. Verifica si ya existe el GameManager; si no, lo instancia.
     private void Awake()
     {
-        if (GameManager.Instance == null)
+        if (GameManagerBase.Instance == null)
         {
             //Debug.Log(" Instanciando GameManager desde Bootstrapper.");
             Instantiate(gameManagerPrefab);

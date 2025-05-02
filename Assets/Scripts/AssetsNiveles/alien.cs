@@ -51,9 +51,9 @@ public class Alien : MonoBehaviour
             {
                 audiosource.PlayOneShot(siguienteNivel);
                 // Reiniciar vidas para el siguiente nivel
-                if (GameManager.Instance != null)
+                if (GameManagerBase.Instance != null)
                 {
-                    GameManager.Instance.ReiniciarVidas();
+                    GameManagerBase.Instance.ReiniciarVidas();
                     //Debug.Log(" Vidas reiniciadas para el siguiente nivel.");
                 }
 

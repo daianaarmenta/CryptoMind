@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1976276264}
   loginMenuGame: {fileID: 73134029}
-  gameManagerPrefab: {fileID: 0}
+  gameManagerPrefab: {fileID: 884537610402682228, guid: 449c217c167da304d89a419a2a44c170, type: 3}
 --- !u!1 &102733362
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +319,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102733362}
   m_CullTransparentMesh: 1
+--- !u!1 &197239240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197239241}
+  - component: {fileID: 197239242}
+  m_Layer: 0
+  m_Name: BootstrapGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &197239241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197239240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 271.59027, y: 17.94264, z: -0.75158685}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197239242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197239240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f38eb3a316b0d14cb888878f2f93d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerPrefab: {fileID: 884537610402682228, guid: 449c217c167da304d89a419a2a44c170, type: 3}
 --- !u!1 &290648061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,3 +2251,4 @@ SceneRoots:
   - {fileID: 1537949588}
   - {fileID: 1150774174}
   - {fileID: 1898508301}
+  - {fileID: 197239241}

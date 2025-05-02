@@ -11,7 +11,7 @@ public class Bala : MonoBehaviour
 
     private void Start()
 {
-    daño = GameManager.Instance.DañoBala;
+    daño = GameManagerBase.Instance.DañoBala;
 }
 
     public void SetDaño(float nuevoDaño)

@@ -24,7 +24,7 @@ public class MonedasHUB : MonoBehaviour
     {
         if (monedasTexto != null)
         {
-            monedasTexto.text = GameManager.Instance.Monedas.ToString();
+            monedasTexto.text = GameManagerBase.Instance.Monedas.ToString();
         }
     }
 }

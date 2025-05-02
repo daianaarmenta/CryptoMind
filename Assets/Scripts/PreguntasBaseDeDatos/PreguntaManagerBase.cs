@@ -201,7 +201,7 @@ public class PreguntaManagerBase : MonoBehaviour
         {
             if (esNivel5)
             {
-                GameManager.Instance?.SumarMonedas(100);
+                GameManagerBase.Instance?.SumarMonedas(100);
                 enemigo?.ResetearVelocidad();
                 MostrarMensaje(LanguageManager.instance.GetText("correct_reward"), Color.green);
                 audioSource.PlayOneShot(audioClipCorrecto);
@@ -210,7 +210,7 @@ public class PreguntaManagerBase : MonoBehaviour
             }
             else
             {
-                GameManager.Instance?.SumarMonedas(100);
+                GameManagerBase.Instance?.SumarMonedas(100);
                 MostrarMensaje(LanguageManager.instance.GetText("correct_reward"), Color.green);
                 audioSource.PlayOneShot(audioClipCorrecto);
             }

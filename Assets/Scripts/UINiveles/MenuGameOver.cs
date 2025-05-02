@@ -54,10 +54,10 @@ public class MenuGameOver : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (GameManager.Instance != null)
+        if (GameManagerBase.Instance != null)
         {
-            GameManager.Instance.ReiniciarVidas();          // Reinicia las vidas
-            GameManager.Instance.VolviendoDeTienda = false; // No viene de tienda
+            GameManagerBase.Instance.ReiniciarVidas();          // Reinicia las vidas
+            GameManagerBase.Instance.VolviendoDeTienda = false; // No viene de tienda
         }
 
         // Limpia posición guardada

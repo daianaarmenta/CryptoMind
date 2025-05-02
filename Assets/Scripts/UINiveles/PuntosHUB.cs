@@ -8,12 +8,12 @@ actualizandolo constantemente a partir del GameManager.
 */
 public class PuntosHUB : MonoBehaviour
 {
-    private GameManager gameManager;
+    private GameManagerBase gameManager;
     public TextMeshProUGUI puntos;
 
     void Start()
     {
-        gameManager = FindFirstObjectByType<GameManager>();
+        gameManager = FindFirstObjectByType<GameManagerBase>();
 
         if (gameManager == null)
         {

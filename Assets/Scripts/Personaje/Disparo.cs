@@ -42,7 +42,7 @@ public class Disparo : MonoBehaviour
         Bala balaScript = balaPrefab.GetComponent<Bala>();
         if (balaScript != null)
         {
-            balaScript.SetDaño(GameManager.Instance.DañoBala); // Asigna el daño a la bala
+            balaScript.SetDaño(GameManagerBase.Instance.DañoBala); // Asigna el daño a la bala
         }
         else
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-/*Autor: Emiliano Plata Cardona
+/*Autor: Emiliano Plata Cardona, Raúl Maldonado Pineda 
     * Descripción: Clase que gestiona la interfaz de selección de niveles en el juego.
  */
 public class Botones_niveles : MonoBehaviour
@@ -103,9 +103,9 @@ public class Botones_niveles : MonoBehaviour
     private void CambiarEscena(ClickEvent evt, string escena)
     {
         
-        if (GameManager.Instance != null)
+        if (GameManagerBase.Instance != null)
         {
-            GameManager.Instance.ReiniciarVidas(); // Reiniciar vidas al cambiar de nivel
+            GameManagerBase.Instance.ReiniciarVidas(); // Reiniciar vidas al cambiar de nivel
             Debug.Log("Vidas reiniciadas para el siguiente nivel.");
         }
 

@@ -17,9 +17,9 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player") && GetComponent<SpriteRenderer>().enabled)
         {
-            if (GameManager.Instance != null)
+            if (GameManagerBase.Instance != null)
             {
-                GameManager.Instance.SumarMonedas(valor); 
+                GameManagerBase.Instance.SumarMonedas(valor); 
             }
 
             AudioSource.PlayClipAtPoint(sonidoMoneda, transform.position); // Reproducir sonido de la moneda

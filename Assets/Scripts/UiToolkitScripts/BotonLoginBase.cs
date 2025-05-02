@@ -83,43 +83,48 @@ public class BotonLoginBase : MonoBehaviour
 
     private IEnumerator EnviarLoginJson()
     {
-        DatosLogin datos = new DatosLogin{
+        DatosLogin datos = new DatosLogin
+        {
             emailDatos = email.value,
             passwordDatos = password.value
         };
 
         string datosJSON = JsonUtility.ToJson(datos);
-        print(datosJSON);
 
-        UnityWebRequest request = UnityWebRequest.Post("http://44.210.242.220:8080/unity/login", datosJSON, "application/json");
+        UnityWebRequest request = UnityWebRequest.Post(ServidorConfig.Login, datosJSON, "application/json");
         yield return request.SendWebRequest();
 
-        if(request.result == UnityWebRequest.Result.Success){
-            Debug.Log("Login correcto");
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("✅ Login correcto");
             Debug.Log("Respuesta: " + request.downloadHandler.text);
 
-            /*if (GameManagerBase.Instance == null)
+            if (GameManagerBase.Instance == null)
             {
                 Instantiate(gameManagerPrefab);
-                yield return null; // Esperar un frame por seguridad
-            }*/
+                yield return new WaitUntil(() => GameManagerBase.Instance != null);
+            }
 
             RespuestaLogin datosUsuarios = JsonUtility.FromJson<RespuestaLogin>(request.downloadHandler.text);
-           /* GameManagerBase.Instance.GuardarUsuario(datosUsuarios.id_usuario);
-            GameManagerBase.Instance.GuardarNombreUsuario(datosUsuarios.nombre);
-            GameManagerBase.Instance.SetCoinsFromServer(datosUsuarios.tokens);
-            GameManagerBase.Instance.SetScoreFromServer(datosUsuarios.puntaje);
-            GameManagerBase.Instance.SetBulletUpgradeFromServer(datosUsuarios.daño_bala, datosUsuarios.costo_mejora);*/
 
-            MostrarMensaje( Color.green, "login_success");
+            GameManagerBase.Instance.CargarDatosDesdeServidor(
+                datosUsuarios.id_usuario,
+                datosUsuarios.nombre,
+                datosUsuarios.tokens,
+                datosUsuarios.puntaje,
+                datosUsuarios.daño_bala,
+                datosUsuarios.costo_mejora
+            );
+
+            MostrarMensaje(Color.green, "login_success");
             yield return new WaitForSeconds(1f);
             SceneManager.LoadScene("Menu_juego");
         }
         else
         {
-            MostrarMensaje(Color.red,"login_failed");
+            MostrarMensaje(Color.red, "login_failed");
             serverLabel.text = request.downloadHandler.text;
-            Debug.LogError("Login fallido: " + request.responseCode + " " + request.error);
+            Debug.LogError("❌ Login fallido: " + request.responseCode + " " + request.error);
         }
 
         request.Dispose();

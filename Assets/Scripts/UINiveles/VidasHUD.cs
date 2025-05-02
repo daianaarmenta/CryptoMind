@@ -71,7 +71,7 @@ public class VidasHUD : MonoBehaviour
     {
         if (vidasTexto != null)
         {
-            int vidas = GameManager.Instance.VidasGuardadas;
+            int vidas = GameManagerBase.Instance.VidasGuardadas;
             vidasTexto.text = $" {vidas}";
             //Debug.Log(" Texto de vidas actualizado desde GameManager: " + vidas);
         }

@@ -23,7 +23,7 @@ public class Enemigo : MonoBehaviour
 
     private void Muerte()
     {
-        GameManager.Instance.SumarPuntaje((int)cantidadPuntos); // Sumar puntos al jugador
+        GameManagerBase.Instance.SumarPuntaje((int)cantidadPuntos); // Sumar puntos al jugador
 
         if(sonidoMuerte != null)
         {
