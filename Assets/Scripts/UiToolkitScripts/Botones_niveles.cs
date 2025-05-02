@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using System.Collections;
 /*Autor: Emiliano Plata Cardona, Raúl Maldonado Pineda 
     * Descripción: Clase que gestiona la interfaz de selección de niveles en el juego.
  */
@@ -63,12 +64,12 @@ public class Botones_niveles : MonoBehaviour
     private void GuardarProgresoYSalir()
     {
         Debug.Log("Guardado progreso en el servido");
-        //StartCoroutine(EnviarYSalir());
+        StartCoroutine(EnviarYSalir());
     }
 
-    /*private IEnumerator EnviarYSalir()
+    private IEnumerator EnviarYSalir()
     {
-        var datos = new 
+        var datos = new ProgresoJugador 
         {
             id_usuario = GameManagerBase.Instance.idUsuario,
             nombre = GameManagerBase.Instance.nombreUsuario,
@@ -78,8 +79,36 @@ public class Botones_niveles : MonoBehaviour
             costo_mejora = GameManagerBase.Instance.CostoMejoraBala
         };
 
-        string json = JsonUtility.
-    }*/
+        string json = JsonUtility.ToJson(datos);
+
+        UnityWebRequest request = new UnityWebRequest(ServidorConfig.GuardarProgresoYSalir, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if(request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Progreso guardado y sesion cerrada");
+        }
+        else 
+        {
+            Debug.Log("Error al guardar el porgreso");
+        }
+
+        request.Dispose();
+
+        GameManagerBase.Instance.CerrarSesion();
+
+    #if UNITY_WEBGL
+        // En WebGL no puedes usar Application.Quit(), redireccionamos a la escena inicial (login)
+        SceneManager.LoadScene("MenuInicio");
+    #else
+        Application.Quit(); // Para versiones de escritorio
+    #endif
+    }
 
     private void CambiarEscena(ClickEvent evt, string escena)
     {

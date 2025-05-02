@@ -12,6 +12,6 @@ public static class ServidorConfig
     public static string Register => $"{BaseUrl}/unity/register";
     public static string CargarProgreso => $"{BaseUrl}/unity/cargar-progreso";
     public static string GuardarProgreso => $"{BaseUrl}/unity/guardar-progreso";
-    public static string GuardarProgresoYSalir=>$"{BaseUrl}/unity/guardarYsalir";
+    public static string GuardarProgresoYSalir=>$"{BaseUrl}/sesion/end";
 }
 

@@ -63,7 +63,7 @@ public class GameManagerBase : MonoBehaviour
         DañoBala = daño;
         CostoMejoraBala = costo;
 
-        Debug.Log("🛰️ Datos del usuario cargados desde servidor.");
+        Debug.Log("Datos del usuario cargados desde servidor.");
     }
 
     // ✅ MONEDAS
@@ -104,11 +104,11 @@ public class GameManagerBase : MonoBehaviour
         if (PuedeComprarVida())
         {
             VidasGuardadas++;
-            Debug.Log("❤️ Vida comprada. Total: " + VidasGuardadas);
+            Debug.Log("Vida comprada. Total: " + VidasGuardadas);
         }
         else
         {
-            Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
+            Debug.LogWarning("Ya tienes el máximo de vidas.");
         }
     }
 
@@ -175,5 +175,17 @@ public class GameManagerBase : MonoBehaviour
         }
 
         alTerminar?.Invoke(); // Llamar al callback al final
+    }
+
+    public void CerrarSesion()
+    {
+        idUsuario = 0;
+        nombreUsuario = "";
+        monedas = 0;
+        puntaje = 0;
+        DañoBala = 20f;
+        CostoMejoraBala = 25;
+        ReiniciarVidas();
+        Debug.Log("🚪 Sesión cerrada correctamente.");
     }
 }
