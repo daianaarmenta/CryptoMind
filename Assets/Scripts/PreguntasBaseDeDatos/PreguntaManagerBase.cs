@@ -70,7 +70,7 @@ public class PreguntaManagerBase : MonoBehaviour
             // Si ya se mostraron todas, puedes resetear o detener
             if (preguntasMostradas.Count >= maxPreguntas)
             {
-                Debug.LogWarning("✅ Ya se han mostrado todas las preguntas disponibles.");
+                //Debug.LogWarning("✅ Ya se han mostrado todas las preguntas disponibles.");
                 yield break;
             }
 

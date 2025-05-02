@@ -11,12 +11,12 @@ public class BootstrapLanguageManager : MonoBehaviour
     {
         if (FindFirstObjectByType<LanguageManager>() == null)
         {
-            Debug.Log("Instanciando LanguageManager desde Bootstrapper.");
+            //Debug.Log("Instanciando LanguageManager desde Bootstrapper.");
             Instantiate(LanguageManager);
         }
         else
         {
-            Debug.Log("LanguageManager ya está presente.");
+            //Debug.Log("LanguageManager ya está presente.");
         }
     }
 }

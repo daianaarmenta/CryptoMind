@@ -37,7 +37,7 @@ public class GameManagerBase : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log("🟩 GameManager activo");
+            //Debug.Log("🟩 GameManager activo");
         }
         else
         {
@@ -63,7 +63,7 @@ public class GameManagerBase : MonoBehaviour
         DañoBala = daño;
         CostoMejoraBala = costo;
 
-        Debug.Log("Datos del usuario cargados desde servidor.");
+        //Debug.Log("Datos del usuario cargados desde servidor.");
     }
 
     // ✅ MONEDAS
@@ -88,7 +88,7 @@ public class GameManagerBase : MonoBehaviour
     public void SumarPuntaje(int cantidad)
     {
         puntaje += cantidad;
-        Debug.Log("🏆 Puntaje actualizado: " + puntaje);
+        //Debug.Log("🏆 Puntaje actualizado: " + puntaje);
     }
 
     public void ReiniciarPuntaje()
@@ -104,11 +104,11 @@ public class GameManagerBase : MonoBehaviour
         if (PuedeComprarVida())
         {
             VidasGuardadas++;
-            Debug.Log("Vida comprada. Total: " + VidasGuardadas);
+            //Debug.Log("Vida comprada. Total: " + VidasGuardadas);
         }
         else
         {
-            Debug.LogWarning("Ya tienes el máximo de vidas.");
+            //Debug.LogWarning("Ya tienes el máximo de vidas.");
         }
     }
 

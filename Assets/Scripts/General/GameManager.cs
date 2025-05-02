@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log("🟩 GameManager activo");
+            //Debug.Log("🟩 GameManager activo");
         }
         else
         {
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("🧪 Nivel 5 detectado. No se reinician vidas.");
+            //Debug.Log("🧪 Nivel 5 detectado. No se reinician vidas.");
         }
     }
 
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         puntaje += cantidad;
         PlayerPrefs.SetInt("Puntaje", puntaje);
         PlayerPrefs.Save();
-        Debug.Log("🏆 Puntaje: " + puntaje);
+        //Debug.Log("🏆 Puntaje: " + puntaje);
     }
 
     public void ReiniciarPuntaje()
@@ -119,11 +119,11 @@ public class GameManager : MonoBehaviour
         if (PuedeComprarVida())
         {
             VidasGuardadas++;
-            Debug.Log("❤️ Vida comprada. Total ahora: " + VidasGuardadas);
+            //Debug.Log("❤️ Vida comprada. Total ahora: " + VidasGuardadas);
         }
         else
         {
-            Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
+            //Debug.LogWarning("❌ Ya tienes el máximo de vidas.");
         }
     }
 

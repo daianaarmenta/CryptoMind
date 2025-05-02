@@ -13,7 +13,7 @@ public class Enemigo : MonoBehaviour
     public void TomarDaño(float daño)
     {
         vida -= daño;
-        Debug.Log("Vida restante: " + vida);
+        //Debug.Log("Vida restante: " + vida);
 
         if (vida <= 0)
         {

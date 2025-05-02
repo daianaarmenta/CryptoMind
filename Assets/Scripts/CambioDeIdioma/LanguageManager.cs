@@ -43,7 +43,7 @@ public class LanguageManager : MonoBehaviour
                     _instance = obj.AddComponent<LanguageManager>();
                     DontDestroyOnLoad(obj);
                     
-                    Debug.Log("✅ LanguageManager created dynamically.");
+                    //Debug.Log("✅ LanguageManager created dynamically.");
                     _instance.LoadSystemLanguage();
                 }
             }
@@ -61,7 +61,7 @@ public class LanguageManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
 
-            Debug.Log("✅ LanguageManager Awake called.");
+            //Debug.Log("✅ LanguageManager Awake called.");
             LoadSystemLanguage();
         }
         else if (_instance != this)
@@ -131,7 +131,7 @@ public class LanguageManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ Error al cargar archivo de idioma: " + request.error);
+            //Debug.LogError("❌ Error al cargar archivo de idioma: " + request.error);
         }
     }
 
@@ -146,11 +146,11 @@ public class LanguageManager : MonoBehaviour
             {
                 localizedText[item.key] = item.value;
             }
-            Debug.Log($"✅ {localizedText.Count} elementos de idioma cargados.");
+            //Debug.Log($"✅ {localizedText.Count} elementos de idioma cargados.");
         }
         else
         {
-            Debug.LogError("❌ Fallo al deserializar JSON de idioma.");
+            //Debug.LogError("❌ Fallo al deserializar JSON de idioma.");
         }
     }
 

@@ -23,7 +23,7 @@ public class LocalizedTextUniversal : MonoBehaviour
          // Verifica que el LanguageManager esté disponible en la escena
         if (LanguageManager.instance == null)
         {
-            Debug.LogWarning("LanguageManager not found.");
+            //Debug.LogWarning("LanguageManager not found.");
             return;
         }
 
@@ -40,7 +40,7 @@ public class LocalizedTextUniversal : MonoBehaviour
         }
         else
         {
-            Debug.LogError("LocalizedTextUniversal: No Text or TMP_Text component found on " + gameObject.name);
+            //Debug.LogError("LocalizedTextUniversal: No Text or TMP_Text component found on " + gameObject.name);
         }
     }
 }
