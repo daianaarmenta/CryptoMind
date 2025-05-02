@@ -157,6 +157,7 @@ public class GameManagerBase : MonoBehaviour
         };
 
         string json = JsonUtility.ToJson(progreso);
+        Debug.Log("JSON que se envía: " + json);
         UnityWebRequest request = new UnityWebRequest(ServidorConfig.GuardarProgreso, "POST");
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);

@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
-using NUnit.Framework.Constraints;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.IO;
+using System.Collections.Generic;
 /*Autores:  Daiana Andrea Armenta Maya
             María Fernanda Pineda Pat 
             Emiliano Plata Cardona 
@@ -55,13 +54,38 @@ public class PreguntaManagerBase : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    public IEnumerator CargarPreguntaPorIdWeb(int id)
+    private HashSet<int> preguntasMostradas = new HashSet<int>(); 
+    public IEnumerator CargarPreguntaPorIdWeb(int id = -1)
     {
         yield return new WaitForSeconds(0.2f);
 
         string lang = LanguageManager.instance.GetSystemLanguage();
+        string escena = SceneManager.GetActiveScene().name;
 
+        
+        if (escena == "Nivel5" || escena.Contains("5"))
+        {
+            int maxPreguntas = 30; 
+
+            // Si ya se mostraron todas, puedes resetear o detener
+            if (preguntasMostradas.Count >= maxPreguntas)
+            {
+                Debug.LogWarning("✅ Ya se han mostrado todas las preguntas disponibles.");
+                yield break;
+            }
+
+            // Elegir una pregunta aleatoria no repetida
+            int intento = 0;
+            int idAleatorio;
+            do
+            {
+                idAleatorio = UnityEngine.Random.Range(16, maxPreguntas + 1);
+                intento++;
+            } while (preguntasMostradas.Contains(idAleatorio) && intento < 100);
+
+            preguntasMostradas.Add(idAleatorio); // Marcar como usada
+            id = idAleatorio;
+        }
 
         UnityWebRequest request = UnityWebRequest.Get(ServidorConfig.PreguntaPorId(id, lang));
         yield return request.SendWebRequest();
@@ -73,9 +97,10 @@ public class PreguntaManagerBase : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"Error al cargar pregunta con ID {id} en idioma {lang}: {request.error} " );
+            Debug.LogError($"❌ Error al cargar pregunta con ID {id} en idioma {lang}: {request.error}");
         }
     }
+
 
     
     private void Start()
@@ -362,6 +387,7 @@ public class PreguntaManagerBase : MonoBehaviour
     private IEnumerator EnviarRespuestaAlServidor(RespuestaJugador respuesta)
     {
         string json = JsonUtility.ToJson(respuesta);
+        Debug.Log("📤 JSON que se envía: " + json);
 
         UnityWebRequest request = new UnityWebRequest(ServidorConfig.RespuestaPregunta, "POST");
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
