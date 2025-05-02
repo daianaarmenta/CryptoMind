@@ -124,7 +124,7 @@ public class BotonLoginBase : MonoBehaviour
         {
             MostrarMensaje(Color.red, "login_failed");
             serverLabel.text = request.downloadHandler.text;
-            Debug.LogError("❌ Login fallido: " + request.responseCode + " " + request.error);
+            //Debug.LogError("❌ Login fallido: " + request.responseCode + " " + request.error);
         }
 
         request.Dispose();
