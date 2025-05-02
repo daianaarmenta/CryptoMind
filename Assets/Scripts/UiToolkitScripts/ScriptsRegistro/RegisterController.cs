@@ -2,7 +2,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Linq;
-
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la interfaz de registro del usuario en el juego.
+ * Controla la interacción con los campos de entrada y la validación de datos.
+ */
 public class RegisterController : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu; 

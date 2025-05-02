@@ -30,7 +30,7 @@ public class TriggerPreguntasBase : MonoBehaviour
             if (Time.time - tiempoUltimaInteraccion >= cooldown)
             {
                 MostrarPreguntaDesdeServidor();
-                tiempoUltimaInteraccion = Time.time;
+                tiempoUltimaInteraccion = Time.time; // Actualiza el tiempo de la última interacción
             }
         }
     }
@@ -44,7 +44,7 @@ public class TriggerPreguntasBase : MonoBehaviour
             {
                 marker.SetActive(true);
                 //Debug.Log("Jugador entró al checkpoint. Marcador activado.");
-                audioSource.PlayOneShot(sonidoCheckpoint);
+                audioSource.PlayOneShot(sonidoCheckpoint); // Reproducir sonido de checkpoint
             }
         }       
     }
@@ -56,7 +56,7 @@ public class TriggerPreguntasBase : MonoBehaviour
             isPlayerInRange = false;
             if(marker != null)
             {
-                marker.SetActive(false);
+                marker.SetActive(false); //se oculta el marcador al salir del checkpoint
                 //Debug.Log("Jugador salió del checkpoint. Marcador desactivado.");
             }
         }
@@ -70,13 +70,13 @@ public class TriggerPreguntasBase : MonoBehaviour
             return;
         }
         //Debug.Log("Solicitando pregunta con ID: " + idPregunta);
-        StartCoroutine(CargarYMarcarPregunta(idPregunta));
+        StartCoroutine(CargarYMarcarPregunta(idPregunta)); // Llama a la función para cargar la pregunta desde el servidor
     }
 
     private IEnumerator CargarYMarcarPregunta(int id)
     {
         yield return PreguntaManagerBase.instance.CargarPreguntaPorIdJSON(id); // espera para carg
-        MarcarComoContestada(); // mark only if loaded
+        MarcarComoContestada(); // se marca la pregunta como contestada
     }
 
     private void MarcarComoContestada()
@@ -84,7 +84,7 @@ public class TriggerPreguntasBase : MonoBehaviour
         preguntaContestada = true;
         if(marker != null)
         {
-            marker.SetActive(false);
+            marker.SetActive(false); //se oculta el marcador al contestar la pregunta
         }
 
         //Debug.Log("Pregunta marcada como contestada y marcador ocultado.");

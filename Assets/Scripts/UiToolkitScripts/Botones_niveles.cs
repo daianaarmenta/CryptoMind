@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-
+/*Autor: Emiliano Plata Cardona
+    * Descripción: Clase que gestiona la interfaz de selección de niveles en el juego.
+ */
 public class Botones_niveles : MonoBehaviour
 {
     [SerializeField] GameObject seleccionNivel;
@@ -56,8 +58,8 @@ public class Botones_niveles : MonoBehaviour
 
     private void CambiarUIInfo()
     {
-        seleccionNivel.SetActive(false);
-        infoUI.SetActive(true);
+        seleccionNivel.SetActive(false); // Ocultar el menú de selección de niveles
+        infoUI.SetActive(true); // Mostrar la UI de información
     }
 
     private void GuardarProgresoYSalir()
@@ -103,8 +105,8 @@ public class Botones_niveles : MonoBehaviour
         
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.ReiniciarVidas();
-            Debug.Log("🔄 Vidas reiniciadas para el siguiente nivel.");
+            GameManager.Instance.ReiniciarVidas(); // Reiniciar vidas al cambiar de nivel
+            Debug.Log("Vidas reiniciadas para el siguiente nivel.");
         }
 
         SceneManager.LoadScene(escena);
@@ -113,6 +115,6 @@ public class Botones_niveles : MonoBehaviour
     private void TranslateUI()
     {
         // Titles and labels
-        titulo.text = LanguageManager.instance.GetText("select_level");
+        titulo.text = LanguageManager.instance.GetText("select_level"); // "Selecciona un nivel"
     }
 }

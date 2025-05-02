@@ -5,7 +5,10 @@ using System.Linq;
 using System;
 using System.Collections;
 using UnityEngine.Networking;
-
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la interfaz de registro del usuario en el juego.
+ * Controla la interacción con los campos de entrada y la validación de datos.
+ */
 public class Register : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
@@ -41,6 +44,7 @@ public class Register : MonoBehaviour
         botonRegister = root.Q<Button>("Register");
         regresarEscene = root.Q<Button>("botonReturn");
 
+        //Textfield and errors
         titulo = root.Q<Label>("tituloGeneral");
         nameUser = root.Q<TextField>("name");
         email = root.Q<TextField>("email");
@@ -53,6 +57,7 @@ public class Register : MonoBehaviour
         errorMessage = root.Q<Label>("errorMessage");
         errorMessage.text = "";
 
+        // Set the initial state of the error message label
         password.isPasswordField = true; 
         nameUser.Q("unity-text-input").style.color = new Color(0, 0, 0);
         email.Q("unity-text-input").style.color = new Color(0, 0, 0);
@@ -66,6 +71,7 @@ public class Register : MonoBehaviour
             countrys.value = countryNames[0];
         }
 
+        // Populate the dropdowns for date, month, and year
         gender.choices = new List<string>{ "Female", "Male", "Non-binary", "Prefer not to say" };
         gender.value = gender.choices[0];
 
@@ -107,7 +113,7 @@ public class Register : MonoBehaviour
 
     private IEnumerator SubirDatos()
     {
-        string fullDate = FormatDateToMySQL(date.value, month.value, year.value);
+        string fullDate = FormatDateToMySQL(date.value, month.value, year.value); // Convert date to MySQL format
 
         datosUsuario datos = new datosUsuario{
             nombre = nameUser.value,
@@ -118,7 +124,7 @@ public class Register : MonoBehaviour
             gender = gender.value
         };
 
-        string datosJSON = JsonUtility.ToJson(datos);
+        string datosJSON = JsonUtility.ToJson(datos); // Convert data to JSON format
 
         UnityWebRequest request = UnityWebRequest.Post(ServidorConfig.Register, datosJSON, "application/json");
         yield return request.SendWebRequest();
@@ -145,7 +151,7 @@ public class Register : MonoBehaviour
                 MostrarMensaje("Error registering: " + request.downloadHandler.text, Color.red, "error_register_failed");
             }
 
-            //Debug.LogError("⚠️ Register failed: " + request.error + " | Code: " + request.responseCode);
+            //Debug.LogError("Register failed: " + request.error + " | Code: " + request.responseCode);
         }
 
         request.Dispose();
@@ -207,7 +213,7 @@ public class Register : MonoBehaviour
     {
         try
         {
-            var addr = new System.Net.Mail.MailAddress(email);
+            var addr = new System.Net.Mail.MailAddress(email); // Intenta crear una dirección de correo electrónico
             return addr.Address == email;
         }
         catch

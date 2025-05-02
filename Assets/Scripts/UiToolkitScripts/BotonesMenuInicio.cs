@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/*Autor: Emiliano Plata Cardona
+    * Descripción: Clase que gestiona la interfaz de inicio de sesión y registro en el juego.
+ */
 public class BotonesMenuInicio : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu; 

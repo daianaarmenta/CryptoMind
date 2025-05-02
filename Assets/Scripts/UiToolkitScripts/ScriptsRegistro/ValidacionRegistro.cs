@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
-
+/*Autor: Emiliano Plata Cardona
+ * Descripción: Clase que gestiona la validación de los datos de registro del usuario en el juego.
+ * Contiene métodos para validar campos vacíos, fechas y correos electrónicos.
+ */
 public static class ValidacionRegistro 
 {
     public static bool Vacio(string value){

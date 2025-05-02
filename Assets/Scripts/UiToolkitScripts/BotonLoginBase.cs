@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-
+/*Autor: Emiliano Plata Cardona
+    * Descripción: Clase que gestiona la interfaz de inicio de sesión en el juego.
+ */
 public class BotonLoginBase : MonoBehaviour
 {
 
@@ -40,7 +42,7 @@ public class BotonLoginBase : MonoBehaviour
 
     private void OnEnable()
     {
-
+        // Inicializar el menú de inicio de sesión
         loginMenu = GetComponent<UIDocument>();
         var root = loginMenu.rootVisualElement;
 
@@ -55,22 +57,23 @@ public class BotonLoginBase : MonoBehaviour
         errorMessage.text = "";
         serverLabel = root.Q<Label>("serverMessage");
 
+        // Configurar el campo de contraseña
         password.isPasswordField = true;
         email.Q("unity-text-input").style.color = new Color(0, 0, 0);
         password.Q("unity-text-input").style.color = new Color(0, 0, 0);
 
-        regresarEscene.RegisterCallback<ClickEvent>(CambiarUI);
-        botonLogin.clicked += EnviarDatos;
+        regresarEscene.RegisterCallback<ClickEvent>(CambiarUI); // Cambiar a la pantalla principal
+        botonLogin.clicked += EnviarDatos; // Enviar datos al servidor
 
-        TranslateUI();
+        TranslateUI(); // Traducir la interfaz de usuario
     }
 
     private void EnviarDatos()
     {
         if (!AllFieldsValidLogin())
         {
-            MostrarMensaje(Color.red, "error_empty_fields");
-            Debug.LogWarning("Some fields are empty");
+            MostrarMensaje(Color.red, "error_empty_fields"); // Mensaje de error si hay campos vacíos
+            Debug.LogWarning("Some fields are empty"); // Advertencia en la consola
             return;
         }
 
@@ -123,22 +126,22 @@ public class BotonLoginBase : MonoBehaviour
     }
 
     private void CambiarUI(ClickEvent evt){
-        loginMenuGame.SetActive(false);
-        mainMenu.SetActive(true);
+        loginMenuGame.SetActive(false); //oculta el menu de login
+        mainMenu.SetActive(true); //muestra el menu principal
     }
 
     private bool AllFieldsValidLogin()
     {
-        return !string.IsNullOrWhiteSpace(email.value)
-            && !string.IsNullOrWhiteSpace(password.value);
+        return !string.IsNullOrWhiteSpace(email.value) // Verifica que el campo de email no esté vacío
+            && !string.IsNullOrWhiteSpace(password.value); // Verifica que el campo de contraseña no esté vacío
     }
 
 
     private void MostrarMensaje(Color color, string label)
     {
-        errorMessage.style.color = new StyleColor(color);
-        errorMessage.text = LanguageManager.instance.GetText(label);
-        errorMessage.style.fontSize = 35;
+        errorMessage.style.color = new StyleColor(color); // Cambia el color del mensaje de error
+        errorMessage.text = LanguageManager.instance.GetText(label); // Cambia el texto del mensaje de error
+        errorMessage.style.fontSize = 35; // Cambia el tamaño de la fuente del mensaje de error
     }
 
 
