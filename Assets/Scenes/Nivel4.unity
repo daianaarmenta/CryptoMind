@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f38eb3a316b0d14cb888878f2f93d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerPrefab: {fileID: 1395664435509634634, guid: 4dbdb56ad50122c4196bade07bea54a0, type: 3}
+  gameManagerPrefab: {fileID: 884537610402682228, guid: 449c217c167da304d89a419a2a44c170, type: 3}
 --- !u!4 &225302574
 Transform:
   m_ObjectHideFlags: 0
@@ -1925,11 +1925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2838149
+      value: -5.7749996
       objectReference: {fileID: 0}
     - target: {fileID: 3948120151719918874, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22832909
+      value: -0.22833264
       objectReference: {fileID: 0}
     - target: {fileID: 5539248037692919503, guid: f2977628ca5209f489d378507cac96d1, type: 3}
       propertyPath: Target.TrackingTarget
